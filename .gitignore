@@ -1,0 +1,147 @@
+# ═══════════════════════════════════════════════════════════
+# KAINORA KIDS - .GITIGNORE (SECURITY HARDENED)
+# ═══════════════════════════════════════════════════════════
+
+# ═══ LOGS ═══
+logs
+*.log
+firebase_logs.txt
+logs.txt
+logs5000.txt
+logs_new.txt
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+<<<<<<< HEAD
+node_modules
+dist
+dist-ssr
+*.local
+.env.example
+.env
+.env.*
+!.env.example
+=======
+# ═══ DEPENDENCIES ═══
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+>>>>>>> 227cb23 (🔒 SECURITY: Hardening .gitignore untuk prevent .env leak)
+
+# ═══ BUILD OUTPUTS ═══
+dist/
+dist-ssr/
+build/
+out/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vite/
+
+# ═══ LOCAL FILES ═══
+*.local
+*.private
+
+# ═══════════════════════════════════════════════════════════
+# 🚨 CRITICAL: ENVIRONMENT VARIABLES (API KEYS)
+# ═══════════════════════════════════════════════════════════
+# Block ALL .env variants - contain sensitive API keys!
+.env
+.env.*
+.env.local
+.env.development
+.env.development.local
+.env.production
+.env.production.local
+.env.test
+.env.test.local
+.env.staging
+.env.staging.local
+
+# Allow .env.example (template only, no real keys)
+!.env.example
+
+# ═══ EDITOR / IDE ═══
+.vscode/*
+!.vscode/extensions.json
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+<<<<<<< HEAD
+# Firebase service account key (jangan commit — akses penuh Firestore)
+serviceAccountKey.json
+functions/serviceAccountKey.json
+**/serviceAccountKey.json
+
+.vercel
+
+# Build artifacts
+functions/lib/
+
+# AI Context
+memory/
+=======
+# ═══ SECURITY: CREDENTIALS & SECRETS ═══
+# API keys, tokens, certificates
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+*.keystore
+secrets/
+credentials/
+.firebaserc
+.firebase/
+
+# Service account files
+serviceAccountKey.json
+firebase-adminsdk-*.json
+gcloud-service-key.json
+aws-credentials.json
+
+# SSH / GPG
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+*.gpg
+
+# ═══ INTERNAL SCRIPTS ═══
+*.cjs
+scripts/private/
+run_tunnel.bat
+
+# ═══ TESTING ═══
+coverage/
+.nyc_output/
+*.lcov
+
+# ═══ MISC ═══
+*.tgz
+.npmrc
+.yarnrc
+.eslintcache
+.stylelintcache
+
+# ═══ DEPLOY ═══
+.vercel/
+.netlify/
+.vercel-build/
+>>>>>>> 227cb23 (🔒 SECURITY: Hardening .gitignore untuk prevent .env leak)

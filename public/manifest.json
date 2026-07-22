@@ -1,0 +1,16 @@
+{
+  "name": "Kainora Kids",
+  "short_name": "Kainora",
+  "description": "Toko baju anak premium Indonesia - 100% katun, adem, nyaman",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#111827",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
