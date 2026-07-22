@@ -1,4 +1,5 @@
 import { SEO, formatPrice, generateDummyReviews } from '../constants/data';
+import { productSchema, reviewSchema, SITE_URL } from '../utils/seoHelpers';
 import React, { useState, useEffect, useMemo } from 'react';
 import { useStore } from '../context/StoreContext';
 import { auth, db, ADMIN_EMAIL, WA_NUMBER, appId } from '../firebase';
@@ -148,40 +149,10 @@ Buat dengan bahasa Indonesia yang santai dan menginspirasi Bunda/Ayah. Tanpa poi
 
   return (
     <main className="min-h-screen py-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-left">
-      <SEO title={`Jual ${activeProduct.name} — Baju Anak Premium Katun Adem | Kainora Kids`} description={`Beli ${activeProduct.name} Kainora Kids. Bahan ${activeProduct.bahan}, jahitan ${activeProduct.jahitan}. Model ${activeProduct.model} Korean style. Ukuran ${(activeProduct.sizes || []).join(', ')}. Harga mulai ${formatPrice(activeProduct.price)}. Gratis ongkir Jawa!`} keywords={`${activeProduct.name}, baju anak premium, ${activeProduct.type} anak ${activeProduct.gender}, bahan katun adem, Korean style oversize boxy, kainora kids`} />
-      
+      <SEO title={`Jual ${activeProduct.name} — Baju Anak Premium Katun Adem | Kainora Kids`} description={`Beli ${activeProduct.name} Kainora Kids. Bahan ${activeProduct.bahan}, jahitan ${activeProduct.jahitan}. Model ${activeProduct.model} Korean style. Ukuran ${(activeProduct.sizes || []).join(', ')}. Harga mulai ${formatPrice(activeProduct.price)}. Gratis ongkir Jawa!`} keywords={`${activeProduct.name}, baju anak premium, ${activeProduct.type} anak ${activeProduct.gender}, bahan katun adem, Korean style oversize boxy, kainora kids`} image={activeProduct.img} url={`${SITE_URL}/?view=productDetail&id=${activeProduct.id}`} type="product" />
+
       {/* JSON-LD Product Schema — Google Rich Snippet per Produk */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": activeProduct.name,
-        "image": activeProduct.images || [activeProduct.img],
-        "description": `${activeProduct.name} — ${activeProduct.desc || 'Baju anak premium Kainora Kids'}. Bahan ${activeProduct.bahan}. Model ${activeProduct.model}.`,
-        "brand": { "@type": "Brand", "name": "Kainora Kids" },
-        "sku": `KNR-${activeProduct.id}`,
-        "material": activeProduct.bahan,
-        "color": activeProduct.warna,
-        "audience": { "@type": "PeopleAudience", "suggestedMinAge": "1", "suggestedMaxAge": "10" },
-        "offers": {
-          "@type": "Offer",
-          "url": `https://kainorakids.com/?view=productDetail&id=${activeProduct.id}`,
-          "priceCurrency": "IDR",
-          "price": activeProduct.price,
-          "availability": "https://schema.org/InStock",
-          "seller": { "@type": "Organization", "name": "Kainora Kids" },
-          "shippingDetails": {
-            "@type": "OfferShippingDetails",
-            "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "ID" },
-            "deliveryTime": { "@type": "ShippingDeliveryTime", "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 3, "unitCode": "DAY" }, "transitTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 5, "unitCode": "DAY" } }
-          }
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": String(Math.max(activeProduct.sold || 50, 50)),
-          "bestRating": "5"
-        }
-      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema(activeProduct)) }} />
 
       <button onClick={() => setView('products')} className="font-black uppercase text-[10px] mb-8 flex items-center gap-2 transition-colors hover:text-amber-500 tracking-widest"><ChevronRight className="rotate-180" size={16} strokeWidth={3}/> Kembali Ke Katalog</button>
       

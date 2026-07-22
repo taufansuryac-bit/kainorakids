@@ -4,6 +4,7 @@ import { useStore } from '../context/StoreContext';
 import { db } from '../firebase';
 import { collection, getDocs, query, orderBy } from 'firebase/firestore';
 import { SEO } from '../constants/data';
+import { blogPostSchema } from '../utils/seoHelpers';
 
 // === STYLES & FONTS ===
 const GlobalStyles = () => (
@@ -593,19 +594,8 @@ const ArticleView = ({ post, onBack }) => {
         const script = document.createElement('script');
         script.type = 'application/ld+json';
         script.id = 'blog-article-jsonld';
-        script.textContent = JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "headline": post.title,
-            "description": post.excerpt || '',
-            "image": post.img || '',
-            "datePublished": post.date || '2026-01-01',
-            "author": { "@type": "Organization", "name": "Kainora Kids" },
-            "publisher": { "@type": "Organization", "name": "Kainora Kids", "logo": { "@type": "ImageObject", "url": "https://kainorakids.com/favicon.png" } },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://kainorakids.com/?view=blog" },
-            "articleSection": post.category || 'Blog'
-        });
-        // Remove old one if exists
+        const schema = blogPostSchema(post);
+        if (schema) script.textContent = JSON.stringify(schema);
         const old = document.getElementById('blog-article-jsonld');
         if (old) old.remove();
         document.head.appendChild(script);

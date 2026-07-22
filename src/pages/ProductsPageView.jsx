@@ -1,4 +1,5 @@
 import { SEO, COLOR_SWATCHES } from '../constants/data';
+import { productListSchema } from '../utils/seoHelpers';
 import React, { useState, useEffect, useMemo } from 'react';
 import { useStore } from '../context/StoreContext';
 import { auth, db, ADMIN_EMAIL, WA_NUMBER } from '../firebase';
@@ -67,7 +68,10 @@ export const ProductsPageView = ({ setActiveProduct }) => {
 
   return (
     <main className="min-h-screen pb-12 bg-white">
-      <SEO title="Katalog Baju Anak Premium 2026 — Kaos, Dress & Setelan | Kainora Kids" description="Jelajahi koleksi lengkap baju anak premium Kainora Kids. Kaos anak laki-laki, dress anak perempuan, setelan unisex bahan 100% katun tebal, adem, ramah kulit sensitif. Korean style oversize boxy mulai Rp89.000." keywords="katalog baju anak premium, baju anak murah bagus, kaos anak laki-laki premium, dress anak perempuan Korean style, setelan anak katun adem, baju anak oversize boxy, baju anak estetik minimalis 2026, baju anak ramah kulit sensitif" />
+      <SEO title="Katalog Baju Anak Premium 2026 — Kaos, Dress & Setelan | Kainora Kids" description="Jelajahi koleksi lengkap baju anak premium Kainora Kids. Kaos anak laki-laki, dress anak perempuan, setelan unisex bahan 100% katun tebal, adem, ramah kulit sensitif. Korean style oversize boxy mulai Rp89.000." keywords="katalog baju anak premium, baju anak murah bagus, kaos anak laki-laki premium, dress anak perempuan Korean style, setelan anak katun adem, baju anak oversize boxy, baju anak estetik minimalis 2026, baju anak ramah kulit sensitif" image="https://kainorakids.com/link-logo.jpg" url="https://kainorakids.com/?view=products" type="website" />
+
+      {/* JSON-LD ItemList Schema — Google Shopping */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productListSchema(filtered)) }} />
       
       <div className="pt-10 pb-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
