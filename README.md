@@ -78,7 +78,7 @@ Priority order dengan auto-fallback:
 12. Ollama Cloud (Free)
 13. Hyperbolic (Free)
 
-Lihat detail di [CLOUD_AI_SETUP.md](CLOUD_AI_SETUP.md)
+Lihat detail di [CLOUD_AI_SETUP.md](docs/CLOUD_AI_SETUP.md)
 
 ## 🔒 Security
 
@@ -89,3 +89,6 @@ Lihat detail di [CLOUD_AI_SETUP.md](CLOUD_AI_SETUP.md)
 ## 📄 License
 
 Private - KAINORA Kids © 2026
+
+## Desain
+Sistem desain neo-brutalist (token, papan catur, tipografi kinetik): lihat [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md).

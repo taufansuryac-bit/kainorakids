@@ -2,29 +2,322 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ==========================================================================
+   KAINORA KIDS — NEO-BRUTALIST DESIGN SYSTEM
+   Token + primitif visual: checkerboard (strip / tepi / frame / lantai perspektif),
+   panel, tombol tekan, sticker, dan gaya cetak retro.
+   ========================================================================== */
+
+:root {
+  --ink: #14110f;
+  --paper: #fff9ea;
+  --cream: #f3e9d2;
+  --red: #e0322b;
+  --brick: #c23f2b;
+  --yellow: #ffe11a;
+  --pink: #f59dc2;
+  --teal: #62c6b3;
+  --blue: #6b8fda;
+  --sky: #3b8fd9;
+  --orange: #f28a2e;
+  --green: #1fa86b;
+
+  --ease-pop: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --frame: 3px;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
   }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: var(--yellow);
+    color: var(--ink);
+  }
+  :focus-visible {
+    outline: 3px solid var(--ink);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  img { -webkit-user-drag: none; }
 }
 
 @layer utilities {
   .hover-magnetic {
     @apply transition-transform duration-300 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:-translate-y-1 hover:scale-[1.02] active:translate-y-0.5 active:scale-[0.98];
   }
+  .hide-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .custom-scrollbar { scrollbar-width: thin; scrollbar-color: var(--ink) transparent; }
+
+  /* Tipografi display: ekstra-berat, melebar (sumbu wdth Archivo), rapat */
+  .display {
+    font-family: 'Archivo', system-ui, sans-serif;
+    font-weight: 900;
+    font-stretch: 125%;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    line-height: 0.84;
+  }
+  .display-narrow {
+    font-weight: 900;
+    font-stretch: 75%;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 0.9;
+  }
+  .font-arcade { font-family: 'Bungee', 'Archivo', sans-serif; }
+  .font-pixel { font-family: 'Pixelify Sans', 'Archivo', monospace; }
+
+  /* Teks ber-outline + bayangan blok, seperti huruf pada referensi poster */
+  .type-outline {
+    -webkit-text-stroke: 3px var(--ink);
+    paint-order: stroke fill;
+  }
+  .type-block {
+    text-shadow: 4px 4px 0 var(--ink);
+  }
 }
 
+/* ---------- Checkerboard: strip 2 baris (ref. strip merah-putih) ---------- */
+.checker-strip {
+  --cs: 16px;
+  --c1: var(--red);
+  --c2: transparent;
+  width: 100%;
+  height: calc(var(--cs) * 2);
+  background: repeating-conic-gradient(var(--c1) 0 25%, var(--c2) 0 50%) 0 0 / calc(var(--cs) * 2) calc(var(--cs) * 2);
+}
+.checker-strip--ink { --c1: var(--ink); --c2: var(--paper); }
+.checker-strip--blue { --c1: var(--sky); --c2: var(--paper); }
+
+/* ---------- Checkerboard: tepi bergerigi di atas blok solid (ref. strip bawah) ---------- */
+.checker-edge {
+  --cs: 18px;
+  --c1: var(--red);
+  width: 100%;
+  padding-top: var(--cs);
+  background:
+    repeating-linear-gradient(90deg, var(--c1) 0 var(--cs), transparent var(--cs) calc(var(--cs) * 2)) top left / 100% var(--cs) no-repeat,
+    linear-gradient(var(--c1), var(--c1)) bottom left / 100% calc(100% - var(--cs)) no-repeat;
+}
+
+/* ---------- Checkerboard: frame/border dekoratif ---------- */
+.checker-frame {
+  --cs: 10px;
+  --c1: var(--red);
+  --c2: var(--paper);
+  padding: var(--cs);
+  border: var(--frame) solid var(--ink);
+  border-radius: 26px;
+  background: repeating-conic-gradient(var(--c1) 0 25%, var(--c2) 0 50%) 0 0 / calc(var(--cs) * 2) calc(var(--cs) * 2);
+}
+.checker-frame > .checker-frame__inner {
+  border: var(--frame) solid var(--ink);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+/* ---------- Lantai checkerboard dengan perspektif nyata ---------- */
+.floor {
+  --cell: 88px;
+  --floor-cell-double: calc(var(--cell) * 2);
+  --f1: var(--sky);
+  --f2: var(--paper);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--floor-h, 48%);
+  overflow: hidden;
+  perspective: 380px;
+  perspective-origin: 50% 0%;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 18%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 18%);
+}
+.floor__plane {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 280%;
+  height: 320%;
+  margin-left: -140%;
+  transform-origin: 50% 0;
+  transform: rotateX(var(--tilt, 70deg)) rotateZ(var(--roll, 0deg));
+  will-change: transform;
+}
+.floor__tiles {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(var(--cell) * -2);
+  height: calc(100% + var(--cell) * 2);
+  background: repeating-conic-gradient(var(--f1) 0 25%, var(--f2) 0 50%) 0 0 / var(--floor-cell-double) var(--floor-cell-double);
+  animation: floor-run 1.6s linear infinite;
+}
+
+@layer components {
+/* ---------- Panel, pill, tombol tekan ---------- */
+.neo-panel {
+  border: var(--frame) solid var(--ink);
+  border-radius: 22px;
+  background: var(--paper);
+}
+.neo-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: var(--frame) solid var(--ink);
+  border-radius: 999px;
+  background: var(--paper);
+  padding: 0.55rem 1.1rem;
+  font-weight: 800;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+.neo-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border: var(--frame) solid var(--ink);
+  border-radius: 999px;
+  background: var(--yellow);
+  color: var(--ink);
+  padding: 0.95rem 1.6rem;
+  font-weight: 900;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  box-shadow: 4px 4px 0 0 var(--ink);
+  transition: transform 0.18s var(--ease-pop), box-shadow 0.18s var(--ease-pop), background-color 0.15s;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.neo-btn:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 0 var(--ink); }
+.neo-btn:active { transform: translate(4px, 4px); box-shadow: 0 0 0 0 var(--ink); }
+.neo-btn--ink { background: var(--ink); color: var(--paper); box-shadow: 4px 4px 0 0 var(--red); }
+.neo-btn--ink:hover { box-shadow: 7px 7px 0 0 var(--red); }
+.neo-btn--pink { background: var(--pink); }
+.neo-btn--teal { background: var(--teal); }
+
+/* Bidang yang bisa ditekan (kartu, sticker) */
+.press {
+  transition: transform 0.2s var(--ease-pop), box-shadow 0.2s var(--ease-pop);
+  box-shadow: 5px 5px 0 0 var(--ink);
+}
+.press:hover { transform: translate(-3px, -3px) rotate(-0.6deg); box-shadow: 9px 9px 0 0 var(--ink); }
+.press:active { transform: translate(4px, 4px); box-shadow: 0 0 0 0 var(--ink); }
+
+/* ---------- Efek cetak retro (halftone) pada foto ---------- */
+.print {
+  position: relative;
+  isolation: isolate;
+}
+.print::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 50% 50%, rgba(20, 17, 15, 0.22) 0 1.1px, transparent 1.6px);
+  background-size: 6px 6px;
+  mix-blend-mode: multiply;
+  opacity: 0.55;
+}
+
+}
+
+/* ---------- Karakter kinetik ---------- */
+.k-char {
+  display: inline-block;
+  will-change: transform;
+  transform-origin: 50% 80%;
+}
+.k-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding: 0.04em 0.02em 0.1em;
+  margin: -0.04em -0.02em -0.1em;
+}
+
+/* ---------- Animasi utilitas ---------- */
+@keyframes floor-run {
+  to { transform: translateY(var(--floor-cell-double)); }
+}
+@keyframes slideDown {
+  0% { transform: translateY(-150%); opacity: 0; }
+  10% { transform: translateY(10px); opacity: 1; }
+  15% { transform: translateY(0); opacity: 1; }
+  90% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-150%); opacity: 0; }
+}
+.animate-toast { animation: slideDown 4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+@keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-15px) rotate(5deg); } }
+.animate-float { animation: float 4s ease-in-out infinite; }
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-
 .animate-marquee {
   display: inline-flex;
   white-space: nowrap;
   animation: marquee 15s linear infinite;
 }
+.animate-marquee:hover { animation-play-state: paused; }
+@keyframes blink { 0%, 92%, 100% { transform: scaleY(1); } 96% { transform: scaleY(0.1); } }
+.eye-blink { transform-origin: center; animation: blink 4.5s infinite; }
 
-.animate-marquee:hover {
-  animation-play-state: paused;
+/* ---------- Aksesibilitas gerak ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .floor__tiles { animation: none !important; }
+}
+
+/* Mobile: lantai lebih rapat & gerak lebih ringan */
+@media (max-width: 640px) {
+  .floor { --cell: 56px; perspective: 300px; }
+  .checker-strip { --cs: 12px; }
+  .checker-edge { --cs: 14px; }
+}
+
+/* ---------- TextRoll: huruf berguling 3D (hover pada .roll atau ancestor .roll-host) ---------- */
+.roll { display: inline-block; vertical-align: bottom; }
+.roll__row { display: inline-flex; perspective: 400px; }
+.roll__c { position: relative; display: inline-block; overflow: hidden; line-height: 1.15; }
+.roll__a {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.55s var(--ease-pop);
+  transition-delay: calc(var(--i, 0) * 16ms);
+}
+.roll__a::after {
+  content: attr(data-c);
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+.roll:hover .roll__a, .roll-host:hover .roll__a, .roll-host:focus-visible .roll__a { transform: translateY(-100%); }
+@media (hover: none) {
+  .roll:hover .roll__a, .roll-host:hover .roll__a { transform: none; }
 }
