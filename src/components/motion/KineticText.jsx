@@ -3,7 +3,6 @@
  *  - SplitReveal : huruf naik dari balik mask, pegas + rotasi kecil
  *  - TextRoll    : huruf berguling 3D saat di-hover (kelas `roll-host` / hover pada elemen sendiri)
  *  - GooeyMorph  : morf antar kata dengan blur + threshold SVG (efek "cairan")
- *  - TypeRemix   : satu kata disusun ulang lewat beberapa gaya huruf sebelum menetap
  *  - WeightHover : huruf menebal/melebar mengikuti jarak kursor (sumbu wdth/wght Archivo)
  * Semua mengikuti prefers-reduced-motion.
  */
@@ -175,66 +174,6 @@ export const GooeyMorph = ({ texts, morphTime = 1.1, cooldown = 1.5, className =
       <span aria-hidden="true" className="inline-grid" style={{ filter: `url(#gooey-${id})` }}>
         <span ref={a} className="col-start-1 row-start-1 text-center" />
         <span ref={b} className="col-start-1 row-start-1 text-center" />
-      </span>
-    </span>
-  );
-};
-
-/* ------------------------------------------------------------------ */
-/* TypeRemix — satu kata, banyak perawatan huruf                       */
-/* ------------------------------------------------------------------ */
-const REMIX = [
-  { fontFamily: 'Archivo', fontWeight: 900, fontStretch: '125%', color: 'var(--ink)' },
-  { fontFamily: 'Bungee', fontWeight: 400, color: 'var(--red)' },
-  { fontFamily: '"Pixelify Sans"', fontWeight: 700, color: 'var(--sky)' },
-  { fontFamily: 'Archivo', fontWeight: 900, fontStretch: '125%', color: 'var(--ink)', background: 'var(--pink)', rotate: -4, padding: '0 0.06em', border: '3px solid var(--ink)' },
-  { fontFamily: 'Archivo', fontWeight: 200, fontStretch: '62%', color: 'var(--ink)' },
-  { fontFamily: 'Archivo', fontWeight: 900, fontStretch: '125%', color: 'var(--paper)', background: 'var(--ink)', rotate: 3, padding: '0 0.06em' },
-  { fontFamily: 'Bungee', fontWeight: 400, color: 'var(--ink)', background: 'var(--yellow)', rotate: -2, padding: '0 0.05em', border: '3px solid var(--ink)' },
-  { fontFamily: '"Pixelify Sans"', fontWeight: 700, color: 'var(--paper)', background: 'var(--teal)', rotate: 2, padding: '0 0.06em', border: '3px solid var(--ink)' },
-];
-
-export const TypeRemix = ({ text, progress = 0, className = '', final = REMIX[0], tickMs = 95 }) => {
-  const reduce = useReducedMotion();
-  const [tick, setTick] = useState(0);
-  const letters = useMemo(() => chars(text), [text]);
-
-  useEffect(() => {
-    if (reduce) return undefined;
-    const t = setInterval(() => setTick((v) => v + 1), tickMs);
-    return () => clearInterval(t);
-  }, [reduce, tickMs]);
-
-  // huruf ke-i menetap saat progress melewati ambangnya
-  return (
-    <span className={className}>
-      <span className="sr-only">{text}</span>
-      <span aria-hidden="true" className="inline-flex flex-wrap justify-center">
-        {letters.map((ch, i) => {
-          const threshold = (i + 1) / (letters.length + 1);
-          const settled = reduce || progress >= 0.35 + threshold * 0.65;
-          const s = settled ? final : REMIX[(tick + i * 3) % REMIX.length];
-          return (
-            <span
-              key={i}
-              className="inline-block leading-[0.9]"
-              style={{
-                fontFamily: s.fontFamily,
-                fontWeight: s.fontWeight,
-                fontStretch: s.fontStretch,
-                color: s.color,
-                background: s.background,
-                border: s.border,
-                padding: s.padding,
-                transform: s.rotate ? `rotate(${s.rotate}deg)` : undefined,
-                borderRadius: s.border ? '0.12em' : undefined,
-                transition: settled ? 'all 0.25s var(--ease-pop)' : 'none',
-              }}
-            >
-              {ch}
-            </span>
-          );
-        })}
       </span>
     </span>
   );
