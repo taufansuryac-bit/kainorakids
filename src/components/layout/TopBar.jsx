@@ -25,6 +25,6 @@ export const TopBar = () => (
         <Row /><Row /><Row />
       </div>
     </div>
-    <CheckerStrip size={5} />
+    <CheckerStrip size={6} />
   </div>
 );

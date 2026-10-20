@@ -13,7 +13,6 @@ const IG_POSTS = [
   { id: 6, image: '/images/shop/shop-boys.jpg', likes: '3.1K', comments: 210 },
 ];
 
-const TILT = [-2, 1.5, -1, 2, -1.5, 1];
 const HOVER = ['var(--pink)', 'var(--yellow)', 'var(--teal)', 'var(--blue)', 'var(--orange)', 'var(--pink)'];
 
 export default function InstagramFeed() {
@@ -40,7 +39,6 @@ export default function InstagramFeed() {
               target="_blank"
               rel="noopener noreferrer"
               className="neo-panel press group relative block aspect-square overflow-hidden"
-              style={{ rotate: `${TILT[i]}deg` }}
               aria-label={`Postingan Instagram Kainora Kids ${i + 1}`}
             >
               <CheckerReveal cols={4} rows={4} delay={i * 0.06} className="h-full w-full">

@@ -25,6 +25,7 @@
   --ease-pop: cubic-bezier(0.34, 1.56, 0.64, 1);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --frame: 3px;
+  --r-panel: 18px;
 }
 
 @layer base {
@@ -94,7 +95,7 @@
   --c2: transparent;
   width: 100%;
   height: calc(var(--cs) * 2);
-  background: repeating-conic-gradient(var(--c1) 0 25%, var(--c2) 0 50%) 0 0 / calc(var(--cs) * 2) calc(var(--cs) * 2);
+  background: repeating-conic-gradient(var(--c1) 0 25%, var(--c2) 0 50%) 0 0 / calc(var(--cs) * 2) calc(var(--cs) * 2) round no-repeat;
 }
 .checker-strip--ink { --c1: var(--ink); --c2: var(--paper); }
 .checker-strip--blue { --c1: var(--sky); --c2: var(--paper); }
@@ -106,7 +107,7 @@
   width: 100%;
   padding-top: var(--cs);
   background:
-    repeating-linear-gradient(90deg, var(--c1) 0 var(--cs), transparent var(--cs) calc(var(--cs) * 2)) top left / 100% var(--cs) no-repeat,
+    linear-gradient(90deg, var(--c1) 50%, transparent 50%) top left / calc(var(--cs) * 2) var(--cs) round no-repeat,
     linear-gradient(var(--c1), var(--c1)) bottom left / 100% calc(100% - var(--cs)) no-repeat;
 }
 
@@ -117,8 +118,8 @@
   --c2: var(--paper);
   padding: var(--cs);
   border: var(--frame) solid var(--ink);
-  border-radius: 26px;
-  background: repeating-conic-gradient(var(--c1) 0 25%, var(--c2) 0 50%) 0 0 / calc(var(--cs) * 2) calc(var(--cs) * 2);
+  border-radius: 22px;
+  background: repeating-conic-gradient(var(--c1) 0 25%, var(--c2) 0 50%) 0 0 / calc(var(--cs) * 2) calc(var(--cs) * 2) round;
 }
 .checker-frame > .checker-frame__inner {
   border: var(--frame) solid var(--ink);
@@ -170,7 +171,7 @@
 /* ---------- Panel, pill, tombol tekan ---------- */
 .neo-panel {
   border: var(--frame) solid var(--ink);
-  border-radius: 22px;
+  border-radius: var(--r-panel);
   background: var(--paper);
 }
 .neo-pill {
@@ -220,7 +221,7 @@
   transition: transform 0.2s var(--ease-pop), box-shadow 0.2s var(--ease-pop);
   box-shadow: 5px 5px 0 0 var(--ink);
 }
-.press:hover { transform: translate(-3px, -3px) rotate(-0.6deg); box-shadow: 9px 9px 0 0 var(--ink); }
+.press:hover { transform: translate(-3px, -3px); box-shadow: 9px 9px 0 0 var(--ink); }
 .press:active { transform: translate(4px, 4px); box-shadow: 0 0 0 0 var(--ink); }
 
 /* ---------- Efek cetak retro (halftone) pada foto ---------- */
