@@ -18,7 +18,7 @@ Model Context Protocol (MCP) server untuk expose project tools ke AI clients (Cl
 ## 📦 Install
 
 ```bash
-cd src/mcp
+cd tools/mcp
 npm install
 ```
 
@@ -45,7 +45,7 @@ Edit file `claude_desktop_config.json` (atau settings):
     "kainora-kids": {
       "command": "node",
       "args": [
-        "D:/Developer/KAINORA KIDS WEBSITE/kainorakids-web/src/mcp/server.js"
+        "D:/Developer/KAINORA KIDS WEBSITE/kainorakids-web/tools/mcp/server.js"
       ]
     }
   }
@@ -64,7 +64,7 @@ Edit `~/.cursor/mcp.json`:
     "kainora-kids": {
       "command": "node",
       "args": [
-        "D:/Developer/KAINORA KIDS WEBSITE/kainorakids-web/src/mcp/server.js"
+        "D:/Developer/KAINORA KIDS WEBSITE/kainorakids-web/tools/mcp/server.js"
       ]
     }
   }
@@ -92,7 +92,7 @@ Setelah MCP aktif, kamu bisa nanya di Claude Desktop:
 ## 📁 File Structure
 
 ```
-src/mcp/
+tools/mcp/
 ├── package.json    # MCP server config
 ├── server.js       # Main server
 └── README.md       # This file

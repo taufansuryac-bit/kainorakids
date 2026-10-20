@@ -30,7 +30,7 @@ export const useAIHealth = () => {
     try {
       const result = await cloudAIService.healthCheck();
 
-      setHealth({
+      setHealth(prev => ({
         isAvailable: result.isAvailable,
         isChecking: false,
         lastCheck: new Date(),
@@ -41,7 +41,7 @@ export const useAIHealth = () => {
           ? 'API keys belum dikonfigurasi. Tambahkan di file .env.local'
           : 'Semua provider AI sedang unavailable',
         retryCount: result.isAvailable ? 0 : (prev?.retryCount || 0) + 1
-      });
+      }));
 
       return result.isAvailable;
     } catch (error) {

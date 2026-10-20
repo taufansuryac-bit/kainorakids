@@ -4,7 +4,7 @@
  * ke AI clients (Claude Desktop, Cursor, etc.)
  *
  * Usage:
- *   node src/mcp/server.js
+ *   node server.js
  *
  * Tools exposed:
  *   - list_products: List all Kainora Kids products

@@ -15,7 +15,6 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-<<<<<<< HEAD
 node_modules
 dist
 dist-ssr
@@ -24,13 +23,11 @@ dist-ssr
 .env
 .env.*
 !.env.example
-=======
 # ═══ DEPENDENCIES ═══
 node_modules/
 .pnp
 .pnp.js
 .yarn/install-state.gz
->>>>>>> 227cb23 (🔒 SECURITY: Hardening .gitignore untuk prevent .env leak)
 
 # ═══ BUILD OUTPUTS ═══
 dist/
@@ -82,7 +79,6 @@ Thumbs.db
 *.sln
 *.sw?
 
-<<<<<<< HEAD
 # Firebase service account key (jangan commit — akses penuh Firestore)
 serviceAccountKey.json
 functions/serviceAccountKey.json
@@ -95,7 +91,6 @@ functions/lib/
 
 # AI Context
 memory/
-=======
 # ═══ SECURITY: CREDENTIALS & SECRETS ═══
 # API keys, tokens, certificates
 *.pem
@@ -144,4 +139,3 @@ coverage/
 .vercel/
 .netlify/
 .vercel-build/
->>>>>>> 227cb23 (🔒 SECURITY: Hardening .gitignore untuk prevent .env leak)

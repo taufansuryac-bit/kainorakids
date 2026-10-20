@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "Model Context Protocol server untuk Kainora Kids project",
   "type": "module",
-  "main": "src/mcp/server.js",
+  "main": "server.js",
   "bin": {
-    "kainora-mcp": "src/mcp/server.js"
+    "kainora-mcp": "server.js"
   },
   "scripts": {
-    "mcp": "node src/mcp/server.js",
-    "mcp:dev": "node --watch src/mcp/server.js"
+    "mcp": "node server.js",
+    "mcp:dev": "node --watch server.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^0.5.0"

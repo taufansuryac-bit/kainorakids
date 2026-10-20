@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import Fuse from 'fuse.js';
 import { Terminal, Send, X, Bot, Loader2 } from 'lucide-react';
-import { useStore } from '../context/StoreContext';
-import { useAIHealth } from '../hooks/useAIHealth';
-import { cloudAIService } from '../services/cloudAIService';
-import { conversationMemory } from '../services/conversationMemory';
-import { KAINORA_SYSTEM_PROMPT } from '../prompts/kainoraPrompts';
+import { useStore } from '../../context/StoreContext';
+import { useAIHealth } from '../../hooks/useAIHealth';
+import { cloudAIService } from '../../services/cloudAIService';
+import { conversationMemory } from '../../services/conversationMemory';
+import { KAINORA_SYSTEM_PROMPT } from '../../prompts/kainoraPrompts';
 
 // --- SALES PSYCHOLOGY ARRAYS ---
 const CONVERSATIONAL_OPENERS = [
@@ -421,14 +421,14 @@ const KainoraAI = () => {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 z-50 bg-[#111827] text-amber-500 border-2 border-amber-500 px-4 py-3 shadow-[4px_4px_0_0_rgba(245,158,11,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_rgba(245,158,11,1)] transition-all flex items-center gap-2 group"
+          className="fixed bottom-4 right-4 z-50 flex items-center gap-2 rounded-full border-[3px] border-ink bg-brand-yellow px-4 py-3 text-ink shadow-solid-sm transition-all hover:-translate-y-0.5 hover:translate-x-0 hover:shadow-solid active:translate-x-[3px] active:translate-y-[3px] active:shadow-none group sm:bottom-6 sm:right-6"
           aria-label="Open KAINORA AI Chat"
         >
           <Terminal className="w-5 h-5 animate-pulse" />
-          <span className="font-mono-tech text-xs font-bold tracking-widest uppercase group-hover:text-[#F9F9F6] flex items-center gap-2">
+          <span className="font-arcade text-xs font-bold tracking-widest uppercase flex items-center gap-2">
             [ TANYA KAINORA ]
             {!aiHealth.isChecking && (
-              <span className={`text-[9px] px-1.5 py-0.5 border ${aiHealth.isAvailable ? 'text-green-500 border-green-500' : 'text-red-500 border-red-500'}`}>
+              <span className={`text-[9px] rounded-full px-1.5 py-0.5 border-2 border-ink ${aiHealth.isAvailable ? 'bg-brand-green text-paper' : 'bg-brand-red text-paper'}`}>
                 {aiHealth.isAvailable ? 'ONLINE' : 'OFFLINE'}
               </span>
             )}
@@ -438,10 +438,10 @@ const KainoraAI = () => {
 
       {/* CHAT WINDOW */}
       {isOpen && (
-        <div className="fixed top-20 left-4 right-4 bottom-4 sm:inset-6 md:inset-auto md:bottom-6 md:right-6 md:w-[420px] md:h-[650px] max-h-[85vh] bg-[#111827] border-4 border-amber-500 shadow-[8px_8px_0_0_rgba(245,158,11,1)] z-[9999] flex flex-col font-mono-tech text-[#F9F9F6]">
+        <div className="fixed top-20 left-4 right-4 bottom-4 sm:inset-6 md:inset-auto md:bottom-6 md:right-6 md:w-[420px] md:h-[650px] max-h-[85vh] overflow-hidden rounded-[22px] bg-ink border-[3px] border-ink shadow-solid-lg z-[9999] flex flex-col text-paper">
 
           {/* HEADER */}
-          <div className="flex justify-between items-center bg-amber-500 text-[#111827] p-4 border-b-4 border-amber-500">
+          <div className="flex justify-between items-center bg-brand-yellow text-ink p-4 border-b-[3px] border-ink">
             <div className="flex items-center gap-2">
               <Bot className="w-6 h-6" />
               <div>
@@ -451,29 +451,29 @@ const KainoraAI = () => {
             </div>
             <div className="flex items-center gap-2">
               {aiHealth.isChecking ? (
-                <div className="flex items-center gap-1 bg-[#111827] px-2 py-1 border border-gray-600">
+                <div className="flex items-center gap-1 bg-ink px-2 py-1 border border-gray-600">
                   <Loader2 className="w-3 h-3 animate-spin text-gray-400" />
                   <span className="text-[10px] font-bold text-gray-400 tracking-widest uppercase">CHECKING</span>
                 </div>
               ) : aiHealth.isAvailable ? (
-                <div className="flex items-center gap-1 bg-[#111827] px-2 py-1 border border-green-500">
+                <div className="flex items-center gap-1 bg-ink px-2 py-1 border border-green-500">
                   <span className="text-green-500 text-[10px] animate-pulse">●</span>
                   <span className="text-[10px] font-bold text-green-500 tracking-widest uppercase">
                     {aiHealth.primaryProvider || 'ONLINE'}
                   </span>
                 </div>
               ) : (
-                <div className="flex items-center gap-1 bg-[#111827] px-2 py-1 border border-red-500">
+                <div className="flex items-center gap-1 bg-ink px-2 py-1 border border-red-500">
                   <span className="text-red-500 text-[10px]">○</span>
                   <span className="text-[10px] font-bold text-red-500 tracking-widest uppercase">OFFLINE</span>
                 </div>
               )}
               {userProfile.isLoyal && (
-                <span className="text-[10px] bg-[#111827] text-amber-500 px-2 py-1 font-bold border border-[#111827]">⭐ VIP</span>
+                <span className="text-[10px] bg-ink text-amber-500 px-2 py-1 font-bold border border-ink">⭐ VIP</span>
               )}
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-1 hover:bg-[#111827] hover:text-amber-500 transition-colors border-2 border-transparent hover:border-current"
+                className="p-1 hover:bg-ink hover:text-amber-500 transition-colors border-2 border-transparent hover:border-current"
                 aria-label="Close chat (Esc)"
               >
                 <X className="w-5 h-5" />
@@ -487,7 +487,7 @@ const KainoraAI = () => {
               <div key={idx} className={`flex flex-col ${msg.sender === 'user' ? 'items-end' : 'items-start'}`}>
                 <div className={`max-w-[85%] p-3 border-2 ${
                   msg.sender === 'user'
-                    ? 'bg-[#F9F9F6] text-[#111827] border-[#F9F9F6] rounded-tl-lg rounded-bl-lg rounded-br-lg'
+                    ? 'bg-paper text-ink border-paper rounded-tl-lg rounded-bl-lg rounded-br-lg'
                     : 'bg-transparent text-amber-500 border-amber-500 rounded-tr-lg rounded-br-lg rounded-bl-lg'
                 } ${msg.isUpsell ? 'border-amber-400 bg-amber-500/10' : ''}`}>
                   <p className="text-xs leading-relaxed font-bold font-sans whitespace-pre-wrap">{msg.text}</p>
@@ -499,10 +499,10 @@ const KainoraAI = () => {
                       setIsOpen(false);
                       window.dispatchEvent(new CustomEvent('OPEN_PRODUCT', { detail: msg.product }));
                     }}
-                    className="mt-2 w-[85%] max-w-[250px] bg-[#F9F9F6] border-2 border-[#111827] p-2 cursor-pointer hover:translate-x-[2px] hover:translate-y-[2px] shadow-[4px_4px_0_0_#111827] hover:shadow-[2px_2px_0_0_#111827] transition-all"
+                    className="mt-2 w-[85%] max-w-[250px] bg-paper border-2 border-ink p-2 cursor-pointer hover:translate-x-[2px] hover:translate-y-[2px] shadow-solid-sm hover:shadow-[2px_2px_0_0_var(--ink)] transition-all"
                   >
-                    <img src={msg.product.img} alt={msg.product.name} className="w-full h-32 object-cover border-2 border-[#111827] mb-2 grayscale hover:grayscale-0 transition-all duration-300" />
-                    <h4 className="text-[#111827] font-black tracking-widest text-[10px] uppercase">{msg.product.name}</h4>
+                    <img src={msg.product.img} alt={msg.product.name} className="w-full h-32 object-cover border-2 border-ink mb-2 grayscale hover:grayscale-0 transition-all duration-300" />
+                    <h4 className="text-ink font-black tracking-widest text-[10px] uppercase">{msg.product.name}</h4>
                     <p className="text-amber-600 font-bold text-xs mt-1">Rp {msg.product.price?.toLocaleString('id-ID') || 'N/A'}</p>
                   </div>
                 )}
@@ -513,11 +513,11 @@ const KainoraAI = () => {
                       setIsOpen(false);
                       window.dispatchEvent(new CustomEvent('OPEN_BLOG', { detail: msg.post }));
                     }}
-                    className="mt-2 w-[85%] max-w-[250px] bg-[#F9F9F6] border-2 border-[#111827] p-2 cursor-pointer hover:translate-x-[2px] hover:translate-y-[2px] shadow-[4px_4px_0_0_#111827] hover:shadow-[2px_2px_0_0_#111827] transition-all"
+                    className="mt-2 w-[85%] max-w-[250px] bg-paper border-2 border-ink p-2 cursor-pointer hover:translate-x-[2px] hover:translate-y-[2px] shadow-solid-sm hover:shadow-[2px_2px_0_0_var(--ink)] transition-all"
                   >
-                    <img src={msg.post.img} alt={msg.post.title} className="w-full h-24 object-cover border-2 border-[#111827] mb-2 grayscale hover:grayscale-0 transition-all duration-300" />
+                    <img src={msg.post.img} alt={msg.post.title} className="w-full h-24 object-cover border-2 border-ink mb-2 grayscale hover:grayscale-0 transition-all duration-300" />
                     <p className="text-amber-600 font-bold text-[9px] uppercase tracking-widest mb-1">{msg.post.category}</p>
-                    <h4 className="text-[#111827] font-black tracking-wider text-[10px] uppercase line-clamp-2">{msg.post.title}</h4>
+                    <h4 className="text-ink font-black tracking-wider text-[10px] uppercase line-clamp-2">{msg.post.title}</h4>
                   </div>
                 )}
               </div>
@@ -563,7 +563,7 @@ const KainoraAI = () => {
           </div>
 
           {/* INPUT */}
-          <div className="p-4 border-t-4 border-amber-500 bg-[#111827]">
+          <div className="p-4 border-t-4 border-amber-500 bg-ink">
             <div className="flex gap-2">
               <input
                 type="text"
@@ -571,12 +571,12 @@ const KainoraAI = () => {
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={(e) => { if (e.key === 'Enter') handleSend(); }}
                 placeholder="KETIK DI SINI... (Enter untuk kirim, Esc untuk tutup)"
-                className="flex-grow bg-transparent border-2 border-amber-500 p-3 text-xs text-[#F9F9F6] placeholder-amber-500/50 focus:outline-none focus:bg-amber-500/10 font-bold tracking-widest"
+                className="flex-grow bg-transparent border-2 border-amber-500 p-3 text-xs text-paper placeholder-amber-500/50 focus:outline-none focus:bg-amber-500/10 font-bold tracking-widest"
                 aria-label="Chat input"
               />
               <button
                 onClick={handleSend}
-                className="bg-amber-500 text-[#111827] p-3 border-2 border-amber-500 hover:bg-[#111827] hover:text-amber-500 transition-colors"
+                className="bg-amber-500 text-ink p-3 border-2 border-amber-500 hover:bg-ink hover:text-amber-500 transition-colors"
                 aria-label="Send message"
               >
                 <Send className="w-5 h-5" />
