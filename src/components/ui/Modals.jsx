@@ -110,7 +110,7 @@ export const FadeIn = ({ children, delay = 0, className = '' }) => {
     return () => { if (currentRef) observer.unobserve(currentRef); };
   }, []);
   return (
-    <div ref={domRef} className={`transform transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'} ${className}`} style={{ transitionDelay: `${delay}ms` }}>
+    <div ref={domRef} className={`transform transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${isVisible ? 'opacity-100 translate-y-0 rotate-0 scale-100' : 'opacity-0 translate-y-8 -rotate-1 scale-[0.96]'} ${className}`} style={{ transitionDelay: `${delay}ms` }}>
       {children}
     </div>
   );
@@ -132,7 +132,7 @@ export const TopBanner = () => {
   }, []);
 
   return (
-    <div className="bg-gray-900 text-amber-500 py-2.5 z-[1001] relative w-full overflow-hidden flex items-center justify-center border-b border-gray-800 min-h-[36px]">
+    <div className="bg-gray-900 text-brand-red py-2.5 z-[1001] relative w-full overflow-hidden flex items-center justify-center border-b border-gray-800 min-h-[36px]">
       <div className="relative w-full text-center h-4">
         {messages.map((msg, idx) => (
           <p key={idx} className={`absolute left-0 right-0 top-0 text-[10px] md:text-xs font-black uppercase tracking-[0.2em] transition-opacity duration-1000 ${idx === msgIdx ? 'opacity-100' : 'opacity-0'}`}>
@@ -148,7 +148,7 @@ export const CustomVideoPlayer = ({ src, poster, className = '' }) => {
   if (src.startsWith('PLACEHOLDER')) {
      return (
        <div className={`w-full max-w-[300px] mx-auto md:max-w-none aspect-[9/16] bg-gray-100 border-4 border-gray-900 shadow-solid flex flex-col items-center justify-center p-6 text-center group cursor-pointer hover:bg-amber-100 transition-colors ${className}`}>
-          <VideoIcon size={48} className="mb-4 text-gray-400 group-hover:text-amber-500 transition-colors" />
+          <VideoIcon size={48} className="mb-4 text-gray-400 group-hover:text-brand-red transition-colors" />
           <p className="font-black text-gray-900 uppercase tracking-widest text-sm mb-2">Slot Video MP4</p>
           <p className="text-[10px] text-gray-500 font-bold uppercase">Ganti atribut src dengan nama file video Anda.</p>
        </div>
@@ -182,7 +182,7 @@ export const ToastNotification = () => {
       <div className="bg-white text-gray-900 px-6 py-4 rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] border-4 border-gray-900 font-black text-[10px] md:text-xs uppercase tracking-widest flex items-center gap-4 animate-toast pointer-events-auto">
         <div className="bg-amber-500 p-2 rounded-full text-white"><Star size={16} fill="currentColor"/></div>
         <span>{toastMessage}</span>
-        <button onClick={() => showToast(null)} className="ml-2 hover:text-amber-500 transition-colors p-1"><X size={16} strokeWidth={3}/></button>
+        <button onClick={() => showToast(null)} className="ml-2 hover:text-brand-red transition-colors p-1"><X size={16} strokeWidth={3}/></button>
       </div>
     </div>
   );
@@ -236,8 +236,8 @@ export const EditProfileModal = ({ isOpen, onClose }) => {
           <div>
              <label className="block text-[10px] font-black uppercase mb-3 text-gray-500 tracking-widest">Panggilan Profil</label>
              <div className="flex gap-6 mb-2 border-b-2 border-gray-100 pb-4">
-               <label className="flex items-center gap-2 text-xs font-bold cursor-pointer hover:text-amber-600 transition-colors"><input type="radio" name="edit_gender" value="bunda" checked={gender === 'bunda'} onChange={(e) => setGender(e.target.value)} className="w-4 h-4 accent-amber-500" /> Bunda</label>
-               <label className="flex items-center gap-2 text-xs font-bold cursor-pointer hover:text-amber-600 transition-colors"><input type="radio" name="edit_gender" value="ayah" checked={gender === 'ayah'} onChange={(e) => setGender(e.target.value)} className="w-4 h-4 accent-amber-500" /> Ayah</label>
+               <label className="flex items-center gap-2 text-xs font-bold cursor-pointer hover:text-brand-red transition-colors"><input type="radio" name="edit_gender" value="bunda" checked={gender === 'bunda'} onChange={(e) => setGender(e.target.value)} className="w-4 h-4 accent-amber-500" /> Bunda</label>
+               <label className="flex items-center gap-2 text-xs font-bold cursor-pointer hover:text-brand-red transition-colors"><input type="radio" name="edit_gender" value="ayah" checked={gender === 'ayah'} onChange={(e) => setGender(e.target.value)} className="w-4 h-4 accent-amber-500" /> Ayah</label>
              </div>
           </div>
           <div>
@@ -320,7 +320,7 @@ Balas HANYA dengan nama ukuran yang direkomendasikan secara tepat (contoh: "3-4Y
       <div className="absolute -top-4 -right-4 text-amber-200 opacity-50"><Ruler size={120} strokeWidth={1} /></div>
       <div className="relative z-10">
         <div className="flex items-center gap-3 mb-4 border-b-2 border-amber-200 pb-3">
-          <Star className="text-amber-500 w-6 h-6" fill="currentColor" />
+          <Star className="text-brand-red w-6 h-6" fill="currentColor" />
           <div>
             <h3 className="font-black uppercase text-amber-900 tracking-wider text-sm md:text-base">Kalkulator Ukuran Cerdas</h3>
             <p className="text-[10px] font-bold text-amber-700 uppercase tracking-widest mt-1">Cari ukuran pas pola Boxy Kainora Kids</p>
@@ -387,7 +387,7 @@ export const MiniCartDrawer = () => {
         <div className="flex-1">
           <h3 className="font-bold text-[10px] uppercase line-clamp-1 text-gray-900">{latestItem.name}</h3>
           <p className="text-[9px] text-gray-500 font-bold uppercase mt-1">Sz: {latestItem.size} | Qty: {latestItem.qty}</p>
-          <p className="font-black text-amber-500 text-xs mt-1">{formatPrice(latestItem.price)}</p>
+          <p className="font-black text-brand-red text-xs mt-1">{formatPrice(latestItem.price)}</p>
         </div>
       </div>
 
@@ -500,7 +500,7 @@ export const ReviewModal = ({ isOpen, onClose, activeProduct, editData }) => {
           </div>
           <div>
              <label className="block text-[10px] font-black uppercase mb-3 text-gray-500 tracking-widest">Penilaian</label>
-             <div className="flex gap-2">{[1,2,3,4,5].map(star => <button key={star} type="button" onClick={() => setRating(star)} className="focus:outline-none hover:scale-110 transition-transform"><Star size={32} className={`${rating >= star ? 'text-amber-500 fill-amber-500' : 'text-gray-300'}`} /></button>)}</div>
+             <div className="flex gap-2">{[1,2,3,4,5].map(star => <button key={star} type="button" onClick={() => setRating(star)} className="focus:outline-none hover:scale-110 transition-transform"><Star size={32} className={`${rating >= star ? 'text-brand-red fill-amber-500' : 'text-gray-300'}`} /></button>)}</div>
           </div>
           <div>
              <label className="block text-[10px] font-black uppercase mb-2 text-gray-500 tracking-widest">Komentar</label>
@@ -589,8 +589,8 @@ export const AuthModal = ({ isOpen, onClose }) => {
             <div>
               <label className="block text-[10px] font-black uppercase mb-3 text-gray-500 tracking-widest">Pilihan Profil</label>
               <div className="flex gap-6 mb-5 border-b-2 border-gray-100 pb-4">
-                <label className="flex items-center gap-2 text-xs font-bold cursor-pointer hover:text-amber-600 transition-colors"><input type="radio" name="gender" value="bunda" checked={gender === 'bunda'} onChange={(e) => setGender(e.target.value)} className="w-4 h-4 accent-amber-500" /> Bunda</label>
-                <label className="flex items-center gap-2 text-xs font-bold cursor-pointer hover:text-amber-600 transition-colors"><input type="radio" name="gender" value="ayah" checked={gender === 'ayah'} onChange={(e) => setGender(e.target.value)} className="w-4 h-4 accent-amber-500" /> Ayah</label>
+                <label className="flex items-center gap-2 text-xs font-bold cursor-pointer hover:text-brand-red transition-colors"><input type="radio" name="gender" value="bunda" checked={gender === 'bunda'} onChange={(e) => setGender(e.target.value)} className="w-4 h-4 accent-amber-500" /> Bunda</label>
+                <label className="flex items-center gap-2 text-xs font-bold cursor-pointer hover:text-brand-red transition-colors"><input type="radio" name="gender" value="ayah" checked={gender === 'ayah'} onChange={(e) => setGender(e.target.value)} className="w-4 h-4 accent-amber-500" /> Ayah</label>
               </div>
               <label className="block text-[10px] font-black uppercase mb-2 text-gray-500 tracking-widest">Nama Lengkap</label>
               <input required type="text" value={name} onChange={e => setName(e.target.value)} className="w-full border-2 border-gray-900 p-3 font-bold text-sm outline-none focus:border-amber-500" placeholder={`Nama ${gender === 'bunda' ? 'Bunda' : 'Ayah'}`} />
@@ -601,7 +601,7 @@ export const AuthModal = ({ isOpen, onClose }) => {
             <div>
               <div className="flex justify-between items-center mb-2">
                  <label className="block text-[10px] font-black uppercase text-gray-500 tracking-widest">Password</label>
-                 {isLogin && <button type="button" onClick={() => setIsResetPass(true)} className="text-[10px] font-black underline uppercase text-gray-500 hover:text-amber-500">Lupa Password?</button>}
+                 {isLogin && <button type="button" onClick={() => setIsResetPass(true)} className="text-[10px] font-black underline uppercase text-gray-500 hover:text-brand-red">Lupa Password?</button>}
               </div>
               <input required type="password" value={password} onChange={e => setPassword(e.target.value)} className="w-full border-2 border-gray-900 p-3 font-bold text-sm outline-none focus:border-amber-500" placeholder="••••••••" />
             </div>
@@ -839,18 +839,18 @@ export const HomeQuickViewModal = ({ selectedProduct, setSelectedProduct, setAct
         <button className="absolute top-2 right-2 md:top-4 md:right-4 z-[30] p-2 bg-white border-2 border-gray-900 hover:bg-amber-500 hover:text-gray-900 transition-colors shadow-sm" onClick={() => setSelectedProduct(null)}><X size={20} strokeWidth={3}/></button>
         <div className="md:w-1/2 p-4 bg-gray-50 border-r-0 md:border-r-4 border-b-4 md:border-b-0 border-gray-900 relative">
           <img src={selectedProduct.img || (selectedProduct.images && selectedProduct.images[0])} className="w-full aspect-square object-cover border-2 border-gray-900" alt={selectedProduct.alt} />
-          <button className="absolute bottom-6 right-6 md:top-6 md:right-6 md:bottom-auto z-20 bg-white/90 p-3 border-2 border-gray-900 hover:border-amber-500 transition-colors shadow-sm" onClick={(e) => toggleWishlist(e, selectedProduct.id)}><Heart size={20} fill={wishlist.includes(selectedProduct.id) ? 'currentColor' : 'none'} className={wishlist.includes(selectedProduct.id) ? 'text-amber-500' : 'text-gray-900'} /></button>
+          <button className="absolute bottom-6 right-6 md:top-6 md:right-6 md:bottom-auto z-20 bg-white/90 p-3 border-2 border-gray-900 hover:border-amber-500 transition-colors shadow-sm" onClick={(e) => toggleWishlist(e, selectedProduct.id)}><Heart size={20} fill={wishlist.includes(selectedProduct.id) ? 'currentColor' : 'none'} className={wishlist.includes(selectedProduct.id) ? 'text-brand-red' : 'text-gray-900'} /></button>
         </div>
         <div className="md:w-1/2 p-6 md:p-10 flex flex-col justify-center text-left bg-white">
           <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">{selectedProduct.type} / {selectedProduct.gender}</p>
           <h2 className="text-2xl md:text-3xl font-black uppercase mb-4 tracking-tighter leading-tight">{selectedProduct.name}</h2>
-          <p className="text-2xl md:text-3xl font-black text-amber-500 mb-6 md:mb-8 border-b-2 border-gray-100 pb-4 md:pb-6">{formatPrice(selectedProduct.price)}</p>
+          <p className="text-2xl md:text-3xl font-black text-brand-red mb-6 md:mb-8 border-b-2 border-gray-100 pb-4 md:pb-6">{formatPrice(selectedProduct.price)}</p>
           <div className="mb-6 md:mb-8">
-            <div className="flex justify-between items-center mb-4"><span className="text-xs font-black uppercase text-gray-900 tracking-widest">Pilih Ukuran Anak</span><button onClick={() => setIsSizeGuideOpen(true)} className="text-[10px] underline uppercase font-black text-gray-500 hover:text-amber-500">Size Guide</button></div>
+            <div className="flex justify-between items-center mb-4"><span className="text-xs font-black uppercase text-gray-900 tracking-widest">Pilih Ukuran Anak</span><button onClick={() => setIsSizeGuideOpen(true)} className="text-[10px] underline uppercase font-black text-gray-500 hover:text-brand-red">Size Guide</button></div>
             <div className="flex gap-2 md:gap-3 flex-wrap">{selectedProduct.sizes?.map(s => <button key={s} onClick={() => setSize(s)} className={`px-3 py-1.5 md:px-5 md:py-3 border-2 text-[10px] md:text-xs font-black uppercase tracking-widest transition-all ${size === s ? 'border-gray-900 bg-gray-900 text-white shadow-solid-sm -translate-y-1' : 'border-gray-300 text-gray-600 hover:border-gray-900 hover:text-gray-900'}`}>{s}</button>)}</div>
           </div>
           <button onClick={() => { addToCart(selectedProduct, size, 1); setSelectedProduct(null); }} className="w-full bg-amber-500 text-gray-900 h-14 md:h-16 font-black uppercase text-xs md:text-sm border-4 border-gray-900 shadow-solid-sm hover:shadow-solid hover:-translate-y-1 transition-all active:shadow-none flex items-center justify-center gap-3 mb-4 md:mb-6"><ShoppingCart size={18} strokeWidth={2.5}/> Tambah Ke Keranjang</button>
-          <button onClick={() => { setActiveProduct(selectedProduct); setView('productDetail'); setSelectedProduct(null); }} className="text-[10px] md:text-xs font-bold text-center underline uppercase text-gray-500 hover:text-amber-500 tracking-widest transition-colors">Lihat Spesifikasi Lengkap</button>
+          <button onClick={() => { setActiveProduct(selectedProduct); setView('productDetail'); setSelectedProduct(null); }} className="text-[10px] md:text-xs font-bold text-center underline uppercase text-gray-500 hover:text-brand-red tracking-widest transition-colors">Lihat Spesifikasi Lengkap</button>
         </div>
       </div>
       <SizeGuideModal isOpen={isSizeGuideOpen} onClose={() => setIsSizeGuideOpen(false)} onSelectSize={(sz) => { setSize(sz); setIsSizeGuideOpen(false); }} availableSizes={selectedProduct.sizes} />
@@ -894,7 +894,7 @@ export const ModernDropdown = ({ label, value, options, onChange }) => {
               <button
                 key={opt}
                 onClick={() => { onChange(opt); setIsOpen(false); }}
-                className={`block w-full text-left px-4 py-2.5 text-[11px] md:text-sm font-bold transition-colors ${value === opt ? 'bg-amber-50 text-amber-600' : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'}`}
+                className={`block w-full text-left px-4 py-2.5 text-[11px] md:text-sm font-bold transition-colors ${value === opt ? 'bg-amber-50 text-brand-red' : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'}`}
               >
                 {opt === 'Semua' ? `Semua ${label}` : opt}
               </button>
@@ -946,11 +946,11 @@ export const ColorDropdown = ({ value, options, onChange }) => {
               <button
                 key={opt.name}
                 onClick={() => { onChange(opt.name); setIsOpen(false); }}
-                className={`flex items-center gap-3 w-full text-left px-4 py-2.5 text-[11px] md:text-sm font-bold transition-colors ${value === opt.name ? 'bg-amber-50 text-amber-600' : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'}`}
+                className={`flex items-center gap-3 w-full text-left px-4 py-2.5 text-[11px] md:text-sm font-bold transition-colors ${value === opt.name ? 'bg-amber-50 text-brand-red' : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'}`}
               >
                 <span className="w-4 h-4 rounded-full border border-gray-300 shrink-0 shadow-sm" style={{ background: opt.hex }}></span>
                 <span className="truncate">{opt.name === 'Semua' ? 'Semua Warna' : opt.name}</span>
-                {value === opt.name && <Check size={14} className="ml-auto text-amber-600 shrink-0" />}
+                {value === opt.name && <Check size={14} className="ml-auto text-brand-red shrink-0" />}
               </button>
             ))}
           </div>
@@ -1005,7 +1005,7 @@ export const WriteReviewModal = ({ isOpen, onClose, product }) => {
             <div className="flex gap-2">
               {[1,2,3,4,5].map(star => (
                 <button key={star} type="button" onClick={() => setRating(star)} className="focus:outline-none hover:scale-110 transition-transform">
-                  <Star size={32} fill={star <= rating ? "#f59e0b" : "none"} className={star <= rating ? "text-amber-500" : "text-gray-300"} />
+                  <Star size={32} fill={star <= rating ? "#f59e0b" : "none"} className={star <= rating ? "text-brand-red" : "text-gray-300"} />
                 </button>
               ))}
             </div>

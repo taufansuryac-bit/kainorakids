@@ -76,7 +76,7 @@ export const AdminDashboardView = () => {
           <button onClick={()=>setActiveTab('products')} className={`flex-1 font-black uppercase text-xs py-4 transition-colors ${activeTab === 'products' ? 'bg-gray-900 text-white' : 'hover:bg-gray-100 text-gray-500'}`}>Katalog Produk</button>
           <button onClick={()=>setActiveTab('reviews')} className={`flex-1 font-black uppercase text-xs py-4 transition-colors ${activeTab === 'reviews' ? 'bg-gray-900 text-white' : 'hover:bg-gray-100 text-gray-500'}`}>Ulasan</button>
           <button onClick={()=>setActiveTab('promos')} className={`flex-1 font-black uppercase text-xs py-4 transition-colors ${activeTab === 'promos' ? 'bg-gray-900 text-white' : 'hover:bg-gray-100 text-gray-500'}`}>Kode Promo</button>
-          <button onClick={()=>setActiveTab('ai')} className={`flex-1 font-black uppercase text-xs py-4 transition-colors ${activeTab === 'ai' ? 'bg-gray-900 text-amber-500' : 'hover:bg-gray-100 text-gray-500'}`}>Pengaturan AI</button>
+          <button onClick={()=>setActiveTab('ai')} className={`flex-1 font-black uppercase text-xs py-4 transition-colors ${activeTab === 'ai' ? 'bg-gray-900 text-brand-red' : 'hover:bg-gray-100 text-gray-500'}`}>Pengaturan AI</button>
         </div>
 
         {activeTab === 'products' && (
@@ -121,10 +121,10 @@ export const AdminDashboardView = () => {
                        <div className="p-3 flex-1 flex flex-col justify-between">
                          <p className="text-[9px] font-bold text-gray-500 uppercase tracking-widest mb-1">{p.type}</p>
                          <h3 className="font-bold text-xs uppercase line-clamp-1">{p.name}</h3>
-                         <p className="font-black text-amber-600 mt-2 text-sm">{formatPrice(p.price)}</p>
+                         <p className="font-black text-brand-red mt-2 text-sm">{formatPrice(p.price)}</p>
                        </div>
                        <div className="absolute top-2 right-2 flex gap-1 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
-                         <button onClick={() => { setEditingProduct(p); setIsProductModalOpen(true); }} className="p-2 bg-amber-100 text-amber-600 border border-gray-900 hover:bg-amber-500 hover:text-gray-900 shadow-sm"><Pencil size={12}/></button>
+                         <button onClick={() => { setEditingProduct(p); setIsProductModalOpen(true); }} className="p-2 bg-amber-100 text-brand-red border border-gray-900 hover:bg-amber-500 hover:text-gray-900 shadow-sm"><Pencil size={12}/></button>
                          <button onClick={() => handleDeleteProduct(p.id)} className="p-2 bg-red-100 text-red-600 border border-gray-900 hover:bg-red-500 hover:text-white shadow-sm"><Trash size={12}/></button>
                        </div>
                     </div>
@@ -201,11 +201,11 @@ export const AdminDashboardView = () => {
               {allReviews.map(r => (
                 <div key={r.id} className="border-2 border-gray-200 p-6 flex flex-col relative">
                   <div className="absolute top-2 right-2 flex gap-1 z-10">
-                     <button onClick={() => { setEditingReview(r); setIsReviewModalOpen(true); }} className="p-1.5 bg-amber-100 text-amber-600 border border-gray-900 hover:bg-amber-500 hover:text-gray-900"><Pencil size={12}/></button>
+                     <button onClick={() => { setEditingReview(r); setIsReviewModalOpen(true); }} className="p-1.5 bg-amber-100 text-brand-red border border-gray-900 hover:bg-amber-500 hover:text-gray-900"><Pencil size={12}/></button>
                      <button onClick={() => handleDeleteReview(r.id)} className="p-1.5 bg-red-100 text-red-600 border border-gray-900 hover:bg-red-500 hover:text-white"><Trash size={12}/></button>
                   </div>
                   <div>
-                    <div className="flex text-amber-500 mb-2 mt-4">{[...Array(5)].map((_, j) => <Star key={j} size={12} fill={j < r.rating ? "currentColor" : "none"} className={j >= r.rating ? "text-gray-300" : ""}/>)}</div>
+                    <div className="flex text-brand-red mb-2 mt-4">{[...Array(5)].map((_, j) => <Star key={j} size={12} fill={j < r.rating ? "currentColor" : "none"} className={j >= r.rating ? "text-gray-300" : ""}/>)}</div>
                     <p className="text-sm font-medium text-gray-700 mb-4 line-clamp-3">"{r.text.replace(/"/g, '')}"</p>
                   </div>
                   <div className="border-t-2 border-gray-100 pt-3"><p className="font-black text-[10px] uppercase">{r.name}</p><p className="text-[9px] font-bold text-gray-400 uppercase truncate">Produk: {r.productName}</p></div>
@@ -219,7 +219,7 @@ export const AdminDashboardView = () => {
           <div>
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
               <div>
-                <h2 className="font-black text-xl uppercase text-amber-500 flex items-center gap-2"><Bot size={24} /> Konfigurasi AI (Gemini)</h2>
+                <h2 className="font-black text-xl uppercase text-brand-red flex items-center gap-2"><Bot size={24} /> Konfigurasi AI (Gemini)</h2>
                 <p className="text-xs font-bold text-gray-500 mt-1">Data di bawah ini akan dibaca secara real-time oleh Kainora AI dan Kalkulator Ukuran.</p>
               </div>
               <button onClick={async () => {

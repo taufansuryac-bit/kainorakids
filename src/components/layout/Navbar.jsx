@@ -1,35 +1,25 @@
-import React, { useState } from 'react';
-import { ShoppingCart, Heart, ChevronRight, Menu, User, Package, Star, LogOut, Sparkles, Loader2, Search } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { ShoppingCart, Heart, ChevronDown, Menu, X, User, Package, Star, LogOut, Sparkles, Loader2, Search, ArrowUpRight } from 'lucide-react';
 import { useStore } from '../../context/StoreContext';
 import { auth, LOGO_URL, ADMIN_EMAIL } from '../../firebase';
 import { signOut, signInAnonymously } from 'firebase/auth';
 import { cloudAIService } from '../../services/cloudAIService';
+import { TextRoll } from '../motion/KineticText';
+import { CheckerStrip } from '../neo/Checker';
 
-export const Navbar = () => {
-  const { setView, cart, wishlist, setGlobalGenderFilter, user, showToast, setIsAuthModalOpen } = useStore();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const nav = (v) => { if (v === 'products') setGlobalGenderFilter('Semua'); setView(v); setIsMobileMenuOpen(false); };
-  const cartCount = cart.reduce((s, i) => s + i.qty, 0);
+/** Pencarian pintar AI — dipisah dari Navbar agar input tidak ter-remount tiap render. */
+const SmartSearchInput = ({ isMobile, onNavigate }) => {
+  const { setGlobalSearchState, showToast } = useStore();
+  const [query, setQuery] = useState('');
+  const [isSearching, setIsSearching] = useState(false);
 
-  const handleSignOut = () => {
-    signOut(auth).then(() => {
-      showToast("Sampai jumpa lagi! 👋");
-      setView('home'); setIsMobileMenuOpen(false); signInAnonymously(auth); 
-    });
-  };
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    if (!query.trim()) return;
 
-  const SmartSearchInput = ({ isMobile }) => {
-    const { setGlobalSearchState, showToast } = useStore();
-    const [query, setQuery] = useState('');
-    const [isSearching, setIsSearching] = useState(false);
-
-    const handleSearch = async (e) => {
-      e.preventDefault();
-      if (!query.trim()) return;
-      
-      setIsSearching(true);
-      try {
-        const prompt = `Anda adalah asisten pencarian toko baju anak Kainora Kids.
+    setIsSearching(true);
+    try {
+      const prompt = `Anda adalah asisten pencarian toko baju anak Kainora Kids.
 Tugas Anda adalah mengekstrak niat pencarian pelanggan menjadi 3 filter:
 1. "gender": (Pilih salah satu: "Laki-laki", "Perempuan", "Unisex", atau "Semua")
 2. "age": (Pilih salah satu: "1-2Y", "3-4Y", "5-6Y", "7-8Y", "9-10Y", atau "Semua")
@@ -42,139 +32,242 @@ Kalimat pencarian: "${query}"
 
 Kembalikan HANYA JSON object dengan 3 keys di atas tanpa markdown \`\`\`json.`;
 
-        const text = await cloudAIService.chat([
-          { role: 'system', content: 'Anda adalah asisten yang hanya membalas dengan JSON valid.' },
-          { role: 'user', content: prompt }
-        ], { temperature: 0.3, maxTokens: 100, stream: false });
+      const text = await cloudAIService.chat([
+        { role: 'system', content: 'Anda adalah asisten yang hanya membalas dengan JSON valid.' },
+        { role: 'user', content: prompt }
+      ], { temperature: 0.3, maxTokens: 100, stream: false });
 
-        let cleaned = text.trim();
-        if(cleaned.startsWith('```json')) cleaned = cleaned.replace(/```json/g, '').replace(/```/g, '').trim();
-        if(cleaned.startsWith('```')) cleaned = cleaned.replace(/```/g, '').trim();
+      let cleaned = text.trim();
+      if (cleaned.startsWith('```json')) cleaned = cleaned.replace(/```json/g, '').replace(/```/g, '').trim();
+      if (cleaned.startsWith('```')) cleaned = cleaned.replace(/```/g, '').trim();
 
-        const parsed = JSON.parse(cleaned);
+      const parsed = JSON.parse(cleaned);
 
-        setGlobalSearchState({
-          query: parsed.query || '',
-          gender: parsed.gender || 'Semua',
-          age: parsed.age || 'Semua'
-        });
-        
-        nav('products');
-        if (isMobile) setIsMobileMenuOpen(false);
-      } catch (err) {
-        console.error(err);
-        showToast("Pencarian AI gagal. Coba kata kunci yang lebih singkat.");
-        // Fallback pencarian biasa
-        setGlobalSearchState({ query: query, gender: 'Semua', age: 'Semua' });
-        nav('products');
-      } finally {
-        setIsSearching(false);
-      }
-    };
+      setGlobalSearchState({
+        query: parsed.query || '',
+        gender: parsed.gender || 'Semua',
+        age: parsed.age || 'Semua'
+      });
 
-    return (
-      <form onSubmit={handleSearch} className={`relative flex items-center w-full ${isMobile ? 'mb-4' : ''}`}>
-        <input 
-          type="text" 
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Cari Pintar AI ✨" 
-          className="w-full bg-amber-50 border-2 border-gray-900 rounded-full py-2 pl-4 pr-10 text-xs font-bold outline-none focus:border-amber-500 focus:bg-amber-100 transition-colors placeholder-amber-700/50"
-          disabled={isSearching}
-        />
-        <button type="submit" className="absolute right-2 text-amber-600 hover:text-gray-900" disabled={isSearching}>
-          {isSearching ? <Loader2 size={16} className="animate-spin" /> : <Sparkles size={16} />}
-        </button>
-      </form>
-    );
+      onNavigate('products');
+    } catch (err) {
+      console.error(err);
+      showToast("Pencarian AI gagal. Coba kata kunci yang lebih singkat.");
+      // Fallback pencarian biasa
+      setGlobalSearchState({ query: query, gender: 'Semua', age: 'Semua' });
+      onNavigate('products');
+    } finally {
+      setIsSearching(false);
+    }
   };
 
   return (
-    <header className="bg-white sticky top-0 z-[1000] border-b-[3px] border-gray-900 shadow-[0_2px_0_0_#111827] w-full">
-      <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16 h-20 flex justify-between items-center">
-        <div className="flex-shrink-0 cursor-pointer flex items-center" onClick={() => nav('home')}>
-           <img src={LOGO_URL} alt="Kainora Kids Logo" className="h-6 sm:h-8 md:h-10 w-auto object-contain" />
-        </div>
-        <nav className="hidden lg:flex items-center space-x-3 xl:space-x-8">
-          <button onClick={() => nav('home')} className="font-bold uppercase text-xs xl:text-sm tracking-widest hover:text-amber-500 transition-colors whitespace-nowrap">Beranda</button>
-          <button onClick={() => nav('products')} className="font-bold uppercase text-xs xl:text-sm tracking-widest hover:text-amber-500 transition-colors whitespace-nowrap">Produk</button>
-          <div className="relative group py-6">
-            <button className="font-bold uppercase text-xs xl:text-sm tracking-widest group-hover:text-amber-500 transition-colors flex items-center gap-1 whitespace-nowrap">Marketplace <ChevronRight size={14} className="transform rotate-90 transition-transform group-hover:-rotate-90" /></button>
-            <div className="absolute left-0 top-full -mt-2 w-56 bg-white border-4 border-gray-900 shadow-solid opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 flex flex-col translate-y-2 group-hover:translate-y-0">
-              <button onClick={() => window.open('https://shopee.co.id', '_blank')} className="text-left font-bold text-xs uppercase p-4 border-b-2 border-gray-100 hover:bg-amber-100 transition-colors flex items-center gap-2"><ChevronRight size={14} className="text-amber-500"/> Shopee</button>
-              <button onClick={() => window.open('https://tokopedia.com', '_blank')} className="text-left font-bold text-xs uppercase p-4 hover:bg-amber-100 transition-colors flex items-center gap-2"><ChevronRight size={14} className="text-amber-500"/> Tiktok/Tokopedia</button>
-            </div>
-          </div>
-          <button onClick={() => nav('affiliate')} className="font-bold uppercase text-xs xl:text-sm tracking-widest hover:text-amber-500 transition-colors whitespace-nowrap">Affiliate</button>
-          <button onClick={() => nav('blog')} className="font-bold uppercase text-xs xl:text-sm tracking-widest hover:text-amber-500 transition-colors whitespace-nowrap">Blog</button>
-        </nav>
-        <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-4">
-          <button onClick={() => nav('products')} className="lg:hidden font-black uppercase text-[9px] sm:text-[10px] tracking-widest text-gray-900 hover:text-amber-500 transition-colors">Produk</button>
-          <button onClick={() => nav('blog')} className="lg:hidden font-black uppercase text-[9px] sm:text-[10px] tracking-widest text-gray-900 hover:text-amber-500 transition-colors">Blog</button>
-          <button onClick={() => nav('affiliate')} className="lg:hidden font-black uppercase text-[9px] sm:text-[10px] tracking-widest text-gray-900 hover:text-amber-500 transition-colors">Affiliate</button>
-          
-          <div className="relative group hidden lg:block py-6">
-            <button className="relative hover:text-amber-500 transition-colors flex items-center" aria-label="Search">
-              <Search size={20} strokeWidth={2.5} className="md:w-6 md:h-6" />
+    <form onSubmit={handleSearch} className={`relative flex w-full items-center ${isMobile ? 'mb-2' : ''}`}>
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Cari Pintar AI ✨"
+        aria-label="Pencarian pintar AI"
+        className="w-full rounded-full border-[3px] border-ink bg-brand-yellow/60 py-2.5 pl-4 pr-11 text-xs font-extrabold uppercase tracking-wide text-ink outline-none transition-colors placeholder:text-ink/50 focus:bg-brand-yellow"
+        disabled={isSearching}
+      />
+      <button type="submit" className="absolute right-3 text-ink hover:text-brand-red" disabled={isSearching} aria-label="Cari">
+        {isSearching ? <Loader2 size={16} className="animate-spin" /> : <Sparkles size={16} />}
+      </button>
+    </form>
+  );
+};
+
+const NAV = [
+  { key: 'home', label: 'Beranda', views: ['home'] },
+  { key: 'products', label: 'Produk', views: ['products', 'productDetail'] },
+  { key: 'affiliate', label: 'Affiliate', views: ['affiliate'] },
+  { key: 'blog', label: 'Blog', views: ['blog'] },
+];
+
+const CountDot = ({ n }) => (n > 0 ? (
+  <span className="absolute -right-2.5 -top-2.5 grid h-5 min-w-5 place-items-center rounded-full border-[2.5px] border-ink bg-brand-red px-1 text-[10px] font-black leading-none text-paper">{n}</span>
+) : null);
+
+export const Navbar = () => {
+  const { view, setView, cart, wishlist, setGlobalGenderFilter, user, showToast, setIsAuthModalOpen } = useStore();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [menuTop, setMenuTop] = useState(80);
+  const barRef = useRef(null);
+  const nav = (v) => { if (v === 'products') setGlobalGenderFilter('Semua'); setView(v); setIsMobileMenuOpen(false); };
+  const cartCount = cart.reduce((s, i) => s + i.qty, 0);
+  const isMember = !!(user && user.email);
+
+  useEffect(() => {
+    if (isMobileMenuOpen && barRef.current) setMenuTop(Math.round(barRef.current.getBoundingClientRect().bottom + 10));
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [isMobileMenuOpen]);
+
+  const handleSignOut = () => {
+    signOut(auth).then(() => {
+      showToast("Sampai jumpa lagi! 👋");
+      setView('home'); setIsMobileMenuOpen(false); signInAnonymously(auth);
+    });
+  };
+
+  const linkCls = (active) =>
+    `roll-host relative rounded-full px-3.5 py-2 text-[0.72rem] font-extrabold uppercase tracking-[0.08em] transition-colors xl:px-4 ${active ? 'bg-brand-yellow ring-[3px] ring-ink' : 'hover:bg-ink hover:text-paper'}`;
+
+  return (
+    <header className="sticky top-0 z-[1000] w-full px-2.5 pt-2.5 sm:px-4 sm:pt-3">
+      <div ref={barRef} className="mx-auto flex h-[60px] max-w-[1600px] items-center justify-between gap-2 rounded-full border-[3px] border-ink bg-paper pl-2 pr-2 shadow-solid-sm sm:h-[68px] sm:pl-2.5 sm:pr-3">
+        {/* Logo */}
+        <button onClick={() => nav('home')} className="roll-host flex shrink-0 items-center gap-2.5 rounded-full" aria-label="Kainora Kids — ke beranda">
+          <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-full border-[3px] border-ink bg-brand-yellow sm:h-12 sm:w-12">
+            <img src={LOGO_URL} alt="" className="h-6 w-6 object-contain sm:h-7 sm:w-7" />
+          </span>
+          <span className="display hidden text-[1.15rem] leading-none sm:block">
+            <TextRoll>KAINORA</TextRoll>
+          </span>
+        </button>
+
+        {/* Menu desktop */}
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Navigasi utama">
+          {NAV.slice(0, 2).map((n) => (
+            <button key={n.key} onClick={() => nav(n.key)} className={linkCls(n.views.includes(view))} aria-current={n.views.includes(view) ? 'page' : undefined}>
+              <TextRoll>{n.label}</TextRoll>
             </button>
-            <div className="absolute right-0 top-full -mt-2 w-72 bg-white border-4 border-gray-900 shadow-solid opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 p-4 translate-y-2 group-hover:translate-y-0">
-               <p className="text-xs font-black uppercase tracking-widest text-gray-900 mb-3">Pencarian Pintar AI</p>
-               <SmartSearchInput isMobile={false} />
+          ))}
+          <div className="group relative">
+            <button className={`${linkCls(false)} inline-flex items-center gap-1`} aria-haspopup="menu">
+              <TextRoll>Marketplace</TextRoll> <ChevronDown size={14} strokeWidth={3} className="transition-transform group-hover:rotate-180" />
+            </button>
+            <div className="invisible absolute left-0 top-full z-50 w-60 pt-3 opacity-0 transition-all group-hover:visible group-hover:opacity-100">
+              <div className="neo-panel overflow-hidden bg-paper shadow-solid">
+                <button onClick={() => window.open('https://shopee.co.id', '_blank')} className="flex w-full items-center justify-between border-b-[3px] border-ink p-4 text-left text-xs font-black uppercase tracking-wider transition-colors hover:bg-brand-yellow">
+                  Shopee <ArrowUpRight size={16} strokeWidth={3} />
+                </button>
+                <button onClick={() => window.open('https://tokopedia.com', '_blank')} className="flex w-full items-center justify-between p-4 text-left text-xs font-black uppercase tracking-wider transition-colors hover:bg-brand-pink">
+                  TikTok / Tokopedia <ArrowUpRight size={16} strokeWidth={3} />
+                </button>
+              </div>
             </div>
           </div>
-          <button onClick={() => nav('wishlist')} className="relative" aria-label="Wishlist"><Heart size={20} strokeWidth={2.5} className="md:w-6 md:h-6 hover:text-amber-500 transition-colors" />{wishlist.length > 0 && <span className="absolute -top-2 -right-2 bg-amber-500 text-gray-900 text-[9px] md:text-[10px] font-black w-4 h-4 md:w-5 md:h-5 flex items-center justify-center border-2 border-gray-900">{wishlist.length}</span>}</button>
-          <button onClick={() => nav('cart')} className="relative" aria-label="Keranjang"><ShoppingCart size={20} strokeWidth={2.5} className="md:w-6 md:h-6 hover:text-amber-500 transition-colors" />{cartCount > 0 && <span className="absolute -top-2 -right-2 bg-amber-500 text-gray-900 text-[9px] md:text-[10px] font-black w-4 h-4 md:w-5 md:h-5 flex items-center justify-center border-2 border-gray-900">{cartCount}</span>}</button>
-          {user && user.email ? (
-            <div className="relative group py-6 hidden lg:block">
-              <div className="flex items-center gap-3 border-l-2 border-gray-200 pl-6 ml-2 cursor-pointer group">
-                 {user.photoURL ? <img src={user.photoURL} alt="Profile" className="w-8 h-8 rounded-full border-2 border-gray-900 object-cover group-hover:border-amber-500 transition-colors bg-amber-50" /> : <div className="w-8 h-8 rounded-full bg-amber-100 border-2 border-gray-900 flex items-center justify-center font-black text-xs uppercase text-gray-900 group-hover:border-amber-500 transition-colors">{user.name.charAt(0)}</div>}
-                 <div className="flex flex-col text-left group-hover:text-amber-500 transition-colors"><span className="text-[10px] font-black text-gray-400 uppercase tracking-widest leading-none">Halo {user.nickname || (user.gender === 'ayah' ? 'Ayah' : 'Bunda')},</span><span className="text-xs font-bold text-gray-900 leading-none mt-1 truncate w-24">{user.name}</span></div>
-                 <ChevronRight size={14} className="transform rotate-90 transition-transform group-hover:-rotate-90 text-gray-400 group-hover:text-amber-500 ml-1" />
+          {NAV.slice(2).map((n) => (
+            <button key={n.key} onClick={() => nav(n.key)} className={linkCls(n.views.includes(view))} aria-current={n.views.includes(view) ? 'page' : undefined}>
+              <TextRoll>{n.label}</TextRoll>
+            </button>
+          ))}
+        </nav>
+
+        {/* Aksi */}
+        <div className="flex items-center gap-1.5 sm:gap-2.5">
+          <div className="group relative hidden lg:block">
+            <button className="grid h-11 w-11 place-items-center rounded-full border-[3px] border-transparent transition-colors hover:border-ink hover:bg-brand-yellow" aria-label="Cari produk">
+              <Search size={20} strokeWidth={2.75} />
+            </button>
+            <div className="invisible absolute right-0 top-full z-50 w-80 pt-3 opacity-0 transition-all group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
+              <div className="neo-panel bg-paper p-4 shadow-solid">
+                <p className="mb-3 text-[0.68rem] font-black uppercase tracking-[0.18em]">Pencarian Pintar AI</p>
+                <SmartSearchInput isMobile={false} onNavigate={nav} />
               </div>
-              <div className="absolute right-0 top-full w-52 bg-white border-4 border-gray-900 shadow-solid opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 flex flex-col translate-y-2 group-hover:translate-y-0">
-                <button onClick={() => nav('profile')} className="text-left font-bold text-xs uppercase p-4 border-b-2 border-gray-100 hover:bg-pink-100 transition-colors flex items-center gap-2"><User size={14} className="text-gray-900"/> Profil Lucu</button>
-                <button onClick={() => nav('orders')} className="text-left font-bold text-xs uppercase p-4 border-b-2 border-gray-100 hover:bg-amber-100 transition-colors flex items-center gap-2"><Package size={14} className="text-gray-900"/> Pesanan & Promo</button>
-                {user?.email === ADMIN_EMAIL && <button onClick={() => nav('admin')} className="text-left font-bold text-xs uppercase p-4 border-b-2 border-gray-100 hover:bg-indigo-100 transition-colors flex items-center gap-2"><Star size={14} className="text-indigo-600"/> Admin Panel</button>}
-                <button onClick={handleSignOut} className="text-left font-bold text-xs uppercase p-4 hover:bg-red-100 text-red-600 transition-colors flex items-center gap-2"><LogOut size={14} /> Logout Akun</button>
+            </div>
+          </div>
+
+          <button onClick={() => nav('wishlist')} className="relative grid h-10 w-10 place-items-center rounded-full border-[3px] border-transparent transition-colors hover:border-ink hover:bg-brand-pink sm:h-11 sm:w-11" aria-label={`Wishlist (${wishlist.length})`}>
+            <Heart size={20} strokeWidth={2.75} />
+            <CountDot n={wishlist.length} />
+          </button>
+          <button onClick={() => nav('cart')} className="relative grid h-10 w-10 place-items-center rounded-full border-[3px] border-transparent transition-colors hover:border-ink hover:bg-brand-teal sm:h-11 sm:w-11" aria-label={`Keranjang (${cartCount})`}>
+            <ShoppingCart size={20} strokeWidth={2.75} />
+            <CountDot n={cartCount} />
+          </button>
+
+          {isMember ? (
+            <div className="group relative hidden lg:block">
+              <button className="flex items-center gap-2.5 rounded-full border-[3px] border-ink bg-brand-yellow py-1 pl-1 pr-3.5 transition-transform hover:-translate-y-0.5" aria-haspopup="menu">
+                {user.photoURL
+                  ? <img src={user.photoURL} alt="" className="h-8 w-8 rounded-full border-[3px] border-ink object-cover" />
+                  : <span className="grid h-8 w-8 place-items-center rounded-full border-[3px] border-ink bg-paper text-xs font-black uppercase">{(user.name || 'B').charAt(0)}</span>}
+                <span className="text-left leading-none">
+                  <span className="block text-[9px] font-black uppercase tracking-widest opacity-70">Halo {user.nickname || (user.gender === 'ayah' ? 'Ayah' : 'Bunda')},</span>
+                  <span className="mt-0.5 block w-24 truncate text-xs font-extrabold">{user.name}</span>
+                </span>
+              </button>
+              <div className="invisible absolute right-0 top-full z-50 w-56 pt-3 opacity-0 transition-all group-hover:visible group-hover:opacity-100">
+                <div className="neo-panel overflow-hidden bg-paper shadow-solid">
+                  <button onClick={() => nav('profile')} className="flex w-full items-center gap-2 border-b-[3px] border-ink p-4 text-left text-xs font-black uppercase tracking-wider hover:bg-brand-pink"><User size={14} /> Profil Lucu</button>
+                  <button onClick={() => nav('orders')} className="flex w-full items-center gap-2 border-b-[3px] border-ink p-4 text-left text-xs font-black uppercase tracking-wider hover:bg-brand-yellow"><Package size={14} /> Pesanan & Promo</button>
+                  {user?.email === ADMIN_EMAIL && <button onClick={() => nav('admin')} className="flex w-full items-center gap-2 border-b-[3px] border-ink p-4 text-left text-xs font-black uppercase tracking-wider hover:bg-brand-blue"><Star size={14} /> Admin Panel</button>}
+                  <button onClick={handleSignOut} className="flex w-full items-center gap-2 p-4 text-left text-xs font-black uppercase tracking-wider text-brand-red hover:bg-brand-red hover:text-paper"><LogOut size={14} /> Logout Akun</button>
+                </div>
               </div>
             </div>
           ) : (
-            <button onClick={() => setIsAuthModalOpen(true)} className="hidden lg:block bg-gray-900 text-white border-2 border-gray-900 px-3 py-1.5 xl:px-5 xl:py-2 font-black uppercase tracking-widest text-[10px] hover:bg-amber-500 hover:text-gray-900 transition-colors ml-2 xl:ml-4 shadow-solid-sm whitespace-nowrap">Masuk / Daftar</button>
+            <button onClick={() => setIsAuthModalOpen(true)} className="neo-btn neo-btn--ink hidden !px-5 !py-3 !text-[0.68rem] lg:inline-flex">
+              <span className="roll-host"><TextRoll>Masuk / Daftar</TextRoll></span> <ArrowUpRight size={14} strokeWidth={3} />
+            </button>
           )}
-          <button className="lg:hidden ml-1" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Menu Mobile"><Menu size={24} className="md:w-7 md:h-7" strokeWidth={2.5} /></button>
+
+          <button
+            className="grid h-10 w-10 place-items-center rounded-full border-[3px] border-ink bg-brand-orange transition-transform active:scale-90 sm:h-11 sm:w-11 lg:hidden"
+            onClick={() => setIsMobileMenuOpen((v) => !v)}
+            aria-label={isMobileMenuOpen ? 'Tutup menu' : 'Buka menu'}
+            aria-expanded={isMobileMenuOpen}
+          >
+            {isMobileMenuOpen ? <X size={20} strokeWidth={3} /> : <Menu size={20} strokeWidth={3} />}
+          </button>
         </div>
       </div>
-      <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} lg:hidden bg-white border-b-4 border-gray-900 p-6 shadow-xl w-full`}>
-        <div className="flex flex-col space-y-6">
-          <SmartSearchInput isMobile={true} />
-          {user && user.email ? (
-             <div className="border-b-2 border-gray-100 pb-4 mb-2">
-               <div className="flex items-center gap-3 mb-4">
-                  {user.photoURL ? <img src={user.photoURL} alt="Profile" className="w-10 h-10 rounded-full border-2 border-gray-900 object-cover bg-amber-50" /> : <div className="w-10 h-10 rounded-full bg-amber-100 border-2 border-gray-900 flex items-center justify-center font-black text-sm uppercase text-gray-900">{user.name.charAt(0)}</div>}
-                  <div className="flex flex-col text-left"><span className="text-[10px] font-black text-gray-400 uppercase tracking-widest leading-none">Halo {user.nickname || (user.gender === 'ayah' ? 'Ayah' : 'Bunda')},</span><span className="text-sm font-bold text-gray-900 mt-1">{user.name}</span></div>
-               </div>
-               <div className="grid grid-cols-2 gap-2">
-                 <button onClick={() => nav('profile')} className="flex items-center justify-center gap-2 text-[10px] font-black uppercase border-2 border-gray-900 p-2 hover:bg-pink-100"><User size={14}/> Profil</button>
-                 <button onClick={() => nav('orders')} className="flex items-center justify-center gap-2 text-[10px] font-black uppercase border-2 border-gray-900 p-2 hover:bg-amber-100"><Package size={14}/> Pesanan</button>
-                 {user?.email === ADMIN_EMAIL && <button onClick={() => nav('admin')} className="col-span-2 flex items-center justify-center gap-2 text-[10px] font-black uppercase border-2 border-gray-900 p-2 hover:bg-indigo-100"><Star size={14}/> Admin Panel</button>}
-                 <button onClick={handleSignOut} className="col-span-2 flex items-center justify-center gap-2 text-[10px] font-black uppercase border-2 border-red-500 text-red-600 p-2 hover:bg-red-50 mt-1"><LogOut size={14}/> Logout</button>
-               </div>
-             </div>
-          ) : (
-             <button onClick={() => { setIsMobileMenuOpen(false); setIsAuthModalOpen(true); }} className="w-full bg-gray-900 text-white border-2 border-gray-900 px-5 py-3 font-black uppercase tracking-widest text-xs hover:bg-amber-500 hover:text-gray-900 transition-colors shadow-solid-sm mb-2">Masuk / Daftar</button>
-          )}
-          <button onClick={() => nav('home')} className="w-full text-left font-black uppercase text-sm">Beranda</button>
-          <button onClick={() => nav('products')} className="w-full text-left font-black uppercase text-sm">Produk</button>
-          <button onClick={() => nav('affiliate')} className="w-full text-left font-black uppercase text-sm">Affiliate</button>
-          <div className="pt-2 pb-2">
-            <p className="block w-full text-left font-black uppercase text-sm mb-4 text-gray-400">Marketplace</p>
-            <div className="pl-4 space-y-4 border-l-4 border-amber-500">
-              <button onClick={() => window.open('https://shopee.co.id', '_blank')} className="block w-full text-left font-bold uppercase text-xs">Shopee</button>
-              <button onClick={() => window.open('https://tokopedia.com', '_blank')} className="block w-full text-left font-bold uppercase text-xs">Tiktok/Tokopedia</button>
-            </div>
+
+      {/* Menu mobile: panel penuh gaya poster */}
+      {isMobileMenuOpen && (
+        <div style={{ top: menuTop }} className="fixed inset-x-0 bottom-0 z-[999] overflow-y-auto bg-brand-yellow px-4 pb-10 pt-4 lg:hidden">
+          <div className="neo-panel mb-4 bg-paper p-3 shadow-solid-sm">
+            <SmartSearchInput isMobile onNavigate={nav} />
           </div>
+
+          {isMember ? (
+            <div className="neo-panel mb-4 bg-paper p-3 shadow-solid-sm">
+              <div className="mb-3 flex items-center gap-3">
+                {user.photoURL
+                  ? <img src={user.photoURL} alt="" className="h-10 w-10 rounded-full border-[3px] border-ink object-cover" />
+                  : <span className="grid h-10 w-10 place-items-center rounded-full border-[3px] border-ink bg-brand-pink text-sm font-black uppercase">{(user.name || 'B').charAt(0)}</span>}
+                <div className="text-left leading-tight">
+                  <span className="block text-[10px] font-black uppercase tracking-widest opacity-60">Halo {user.nickname || (user.gender === 'ayah' ? 'Ayah' : 'Bunda')},</span>
+                  <span className="text-sm font-extrabold">{user.name}</span>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                <button onClick={() => nav('profile')} className="flex items-center justify-center gap-2 rounded-full border-[3px] border-ink bg-brand-pink p-2.5 text-[10px] font-black uppercase"><User size={14} /> Profil</button>
+                <button onClick={() => nav('orders')} className="flex items-center justify-center gap-2 rounded-full border-[3px] border-ink bg-brand-teal p-2.5 text-[10px] font-black uppercase"><Package size={14} /> Pesanan</button>
+                {user?.email === ADMIN_EMAIL && <button onClick={() => nav('admin')} className="col-span-2 flex items-center justify-center gap-2 rounded-full border-[3px] border-ink bg-brand-blue p-2.5 text-[10px] font-black uppercase"><Star size={14} /> Admin Panel</button>}
+                <button onClick={handleSignOut} className="col-span-2 flex items-center justify-center gap-2 rounded-full border-[3px] border-ink bg-brand-red p-2.5 text-[10px] font-black uppercase text-paper"><LogOut size={14} /> Logout</button>
+              </div>
+            </div>
+          ) : (
+            <button onClick={() => { setIsMobileMenuOpen(false); setIsAuthModalOpen(true); }} className="neo-btn neo-btn--ink mb-4 w-full">Masuk / Daftar</button>
+          )}
+
+          <nav className="flex flex-col" aria-label="Navigasi mobile">
+            {[...NAV.slice(0, 2), ...NAV.slice(2)].map((n, i) => (
+              <button
+                key={n.key}
+                onClick={() => nav(n.key)}
+                className="display flex items-center justify-between border-b-[3px] border-ink py-3 text-left text-[clamp(2.2rem,11vw,3.4rem)]"
+                style={{ animation: `slideIn 0.4s var(--ease-out) ${i * 0.06}s both` }}
+              >
+                {n.label}
+                <ArrowUpRight size={34} strokeWidth={3} />
+              </button>
+            ))}
+          </nav>
+
+          <p className="mb-3 mt-6 text-[10px] font-black uppercase tracking-[0.22em]">Marketplace</p>
+          <div className="grid grid-cols-2 gap-3">
+            <button onClick={() => window.open('https://shopee.co.id', '_blank')} className="neo-btn neo-btn--pink">Shopee</button>
+            <button onClick={() => window.open('https://tokopedia.com', '_blank')} className="neo-btn neo-btn--teal">TikTok</button>
+          </div>
+          <div className="mt-8"><CheckerStrip size={14} tone="ink" /></div>
         </div>
-      </div>
+      )}
     </header>
   );
 };

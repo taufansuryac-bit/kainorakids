@@ -7,7 +7,9 @@ import {
 } from 'lucide-react';
 import { collection, query, where, onSnapshot, addDoc, updateDoc, doc, deleteDoc, serverTimestamp } from "firebase/firestore";
 import { formatPrice } from '../constants/data';
-import { FadeIn, SizeGuideModal, ColorDropdown, ModernDropdown } from '../components/ui/Modals';
+import { SplitReveal } from '../components/motion/KineticText';
+import { CheckerStrip } from '../components/neo/Checker';
+import { Cloud, Burst } from '../components/neo/Stickers';
 
 export const CartView = () => {
   const { cart, setView, updateCartQty, removeFromCart } = useStore();
@@ -15,12 +17,21 @@ export const CartView = () => {
   const cartCount = cart.reduce((s, item) => s + item.qty, 0);
 
   if (cart.length === 0) return (
-    <main className="min-h-[70vh] flex flex-col items-center justify-center px-4 text-center max-w-6xl mx-auto"><SEO title="Keranjang Belanja Kainora Kids" description="Keranjang belanja kaos anak premium." /><ShoppingCart size={100} className="text-gray-200 mb-10" strokeWidth={1}/><h1 className="text-4xl font-black uppercase mb-6 tracking-tighter">Keranjang Kosong</h1><button onClick={() => setView('products')} className="px-12 py-5 mt-6 bg-gray-900 text-white font-black uppercase border-4 border-gray-900 shadow-solid hover:translate-y-1 transition-all tracking-widest text-sm">Cek Katalog Produk</button></main>
+    <main className="mx-auto flex min-h-[70vh] max-w-6xl flex-col items-center justify-center px-4 text-center">
+      <SEO title="Keranjang Belanja Kainora Kids" description="Keranjang belanja kaos anak premium." />
+      <div className="relative mb-6">
+        <Cloud width={190} className="animate-bob" />
+        <Burst fill="var(--yellow)" className="absolute -right-10 -top-6 h-20 w-20 rotate-12" textClass="text-[0.55rem]">YUK<br />BELANJA</Burst>
+      </div>
+      <h1 className="display mb-6 text-[clamp(2.4rem,8vw,5.5rem)]">Keranjang<br />Kosong</h1>
+      <button onClick={() => setView('products')} className="neo-btn">Cek Katalog Produk</button>
+    </main>
   );
   return (
     <main className="min-h-screen py-24 px-4 max-w-6xl mx-auto">
       <SEO title="Keranjang Belanja Pakaian Anak | Kainora Kids" description="Selesaikan pesanan pakaian anak premium dari Kainora Kids." />
-      <h1 className="text-4xl font-black uppercase mb-10 md:mb-16 border-b-4 border-gray-900 pb-6 tracking-tighter text-center md:text-left">Keranjang Pakaian ({cartCount})</h1>
+      <h1 className="display mb-6 text-[clamp(2.4rem,7.5vw,6rem)]"><SplitReveal text={`Keranjang Pakaian (${cartCount})`} /></h1>
+      <div className="mb-10 md:mb-14"><CheckerStrip size={12} /></div>
       <div className="flex flex-col lg:flex-row gap-8 md:gap-16">
         <div className="lg:w-2/3 bg-white border-4 border-gray-900 p-4 md:p-8 shadow-solid-sm space-y-6 md:space-y-8">
           {cart.map(item => (
@@ -41,7 +52,7 @@ export const CartView = () => {
         </div>
         <div className="lg:w-1/3 bg-white border-4 border-gray-900 p-6 md:p-10 shadow-solid h-fit sticky top-32">
           <h3 className="font-black text-2xl uppercase mb-8 border-b-4 border-gray-900 pb-4 tracking-tighter">Total Belanja</h3>
-          <div className="flex justify-between items-center mb-10 font-black text-xl uppercase tracking-tighter"><span>Subtotal</span><span className="text-amber-500">{formatPrice(cartTotal)}</span></div>
+          <div className="flex justify-between items-center mb-10 font-black text-xl uppercase tracking-tighter"><span>Subtotal</span><span className="text-brand-red">{formatPrice(cartTotal)}</span></div>
           <button onClick={() => setView('checkout')} className="w-full bg-amber-500 text-gray-900 font-black py-5 uppercase text-base border-4 border-gray-900 shadow-solid hover:translate-y-1 transition-all tracking-widest">Lanjut Pembayaran</button>
         </div>
       </div>

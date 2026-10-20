@@ -154,12 +154,12 @@ Buat dengan bahasa Indonesia yang santai dan menginspirasi Bunda/Ayah. Tanpa poi
       {/* JSON-LD Product Schema — Google Rich Snippet per Produk */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema(activeProduct)) }} />
 
-      <button onClick={() => setView('products')} className="font-black uppercase text-[10px] mb-8 flex items-center gap-2 transition-colors hover:text-amber-500 tracking-widest"><ChevronRight className="rotate-180" size={16} strokeWidth={3}/> Kembali Ke Katalog</button>
+      <button onClick={() => setView('products')} className="font-black uppercase text-[10px] mb-8 flex items-center gap-2 transition-colors hover:text-brand-red tracking-widest"><ChevronRight className="rotate-180" size={16} strokeWidth={3}/> Kembali Ke Katalog</button>
       
       {/* Lightbox / Fullscreen Image Viewer */}
       {isFullscreen && (
         <div className="fixed inset-0 z-[7000] bg-black/95 flex flex-col items-center justify-center p-4 backdrop-blur-sm" onClick={() => setIsFullscreen(false)}>
-          <button className="absolute top-6 right-6 text-white hover:text-amber-500 z-50 bg-gray-900/50 p-2 rounded-full transition-colors"><X size={24} strokeWidth={3}/></button>
+          <button className="absolute top-6 right-6 text-white hover:text-brand-red z-50 bg-gray-900/50 p-2 rounded-full transition-colors"><X size={24} strokeWidth={3}/></button>
           <div className="relative w-full max-w-4xl flex items-center justify-center h-full" onClick={e => e.stopPropagation()}>
              {productImages.length > 1 && <button onClick={(e) => { e.stopPropagation(); const i = productImages.indexOf(mainImg); setMainImg(productImages[i === 0 ? productImages.length - 1 : i - 1]); }} className="absolute left-2 md:left-4 p-3 bg-white/10 hover:bg-amber-500 text-white hover:text-gray-900 rounded-full transition-colors z-20"><ChevronRight className="rotate-180" size={24} strokeWidth={3}/></button>}
              <img src={mainImg} alt={activeProduct.alt} className="max-w-full max-h-[80vh] object-contain cursor-zoom-out" onClick={() => setIsFullscreen(false)} />
@@ -207,7 +207,7 @@ Buat dengan bahasa Indonesia yang santai dan menginspirasi Bunda/Ayah. Tanpa poi
             )}
           </div>
           <h1 className="text-4xl md:text-5xl font-black uppercase mb-4 tracking-tighter leading-tight">{activeProduct.name}</h1>
-          <p className="text-4xl font-black text-amber-500 mb-6">{formatPrice(activeProduct.price)}</p>
+          <p className="text-4xl font-black text-brand-red mb-6">{formatPrice(activeProduct.price)}</p>
 
           <div className="flex flex-wrap items-center gap-4 mb-8 pb-8 border-b-4 border-gray-900">
              <div className="font-bold text-[10px] uppercase bg-gray-900 text-white px-3 py-2 tracking-widest">{activeProduct.sold || 0} Terjual</div>
@@ -218,10 +218,10 @@ Buat dengan bahasa Indonesia yang santai dan menginspirasi Bunda/Ayah. Tanpa poi
             <h2 className="font-black uppercase text-xl tracking-widest mb-4 text-gray-900 border-b-4 border-gray-900 pb-3">Tentang Produk Ini</h2>
             <p className="text-sm font-medium text-gray-600 leading-relaxed mb-8">{activeProduct.desc}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="flex gap-4 items-start"><div className="p-2 bg-amber-50 text-amber-500 shrink-0"><Check size={18} strokeWidth={3}/></div><div><h3 className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Material / Bahan</h3><p className="text-sm font-black text-gray-900 uppercase tracking-wider mb-1">{activeProduct.bahan || '-'}</p></div></div>
-              <div className="flex gap-4 items-start"><div className="p-2 bg-amber-50 text-amber-500 shrink-0"><Check size={18} strokeWidth={3}/></div><div><h3 className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Konstruksi Jahitan</h3><p className="text-sm font-black text-gray-900 uppercase tracking-wider mb-1">{activeProduct.jahitan || '-'}</p></div></div>
-              <div className="flex gap-4 items-start"><div className="p-2 bg-amber-50 text-amber-500 shrink-0"><Check size={18} strokeWidth={3}/></div><div><h3 className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Warna</h3><p className="text-sm font-black text-gray-900 uppercase tracking-wider mb-1">{activeProduct.warna || 'Sesuai Gambar'}</p></div></div>
-              <div className="flex gap-4 items-start"><div className="p-2 bg-amber-50 text-amber-500 shrink-0"><Star size={18} strokeWidth={3} className="fill-amber-500"/></div><div><h3 className="text-[10px] font-black text-amber-600 uppercase tracking-widest mb-1">Model / Potongan</h3><p className="text-sm font-black text-gray-900 uppercase tracking-wider mb-1">{activeProduct.model || '-'}</p></div></div>
+              <div className="flex gap-4 items-start"><div className="p-2 bg-amber-50 text-brand-red shrink-0"><Check size={18} strokeWidth={3}/></div><div><h3 className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Material / Bahan</h3><p className="text-sm font-black text-gray-900 uppercase tracking-wider mb-1">{activeProduct.bahan || '-'}</p></div></div>
+              <div className="flex gap-4 items-start"><div className="p-2 bg-amber-50 text-brand-red shrink-0"><Check size={18} strokeWidth={3}/></div><div><h3 className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Konstruksi Jahitan</h3><p className="text-sm font-black text-gray-900 uppercase tracking-wider mb-1">{activeProduct.jahitan || '-'}</p></div></div>
+              <div className="flex gap-4 items-start"><div className="p-2 bg-amber-50 text-brand-red shrink-0"><Check size={18} strokeWidth={3}/></div><div><h3 className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Warna</h3><p className="text-sm font-black text-gray-900 uppercase tracking-wider mb-1">{activeProduct.warna || 'Sesuai Gambar'}</p></div></div>
+              <div className="flex gap-4 items-start"><div className="p-2 bg-amber-50 text-brand-red shrink-0"><Star size={18} strokeWidth={3} className="fill-amber-500"/></div><div><h3 className="text-[10px] font-black text-brand-red uppercase tracking-widest mb-1">Model / Potongan</h3><p className="text-sm font-black text-gray-900 uppercase tracking-wider mb-1">{activeProduct.model || '-'}</p></div></div>
             </div>
 
             {/* AI Outfit Generator */}
@@ -243,12 +243,12 @@ Buat dengan bahasa Indonesia yang santai dan menginspirasi Bunda/Ayah. Tanpa poi
           </div>
           
           <div className="mb-2 bg-white border-4 border-gray-900 p-6 md:p-8 shadow-solid-sm">
-            <div className="flex justify-between items-center mb-5 border-b-2 border-gray-100 pb-3"><span className="font-black uppercase text-xs tracking-widest text-gray-900">Pilih Ukuran</span><button onClick={() => setIsSizeGuideOpen(true)} className="text-[10px] font-black underline uppercase hover:text-amber-500 transition-colors text-gray-500">Panduan & Kalkulator</button></div>
+            <div className="flex justify-between items-center mb-5 border-b-2 border-gray-100 pb-3"><span className="font-black uppercase text-xs tracking-widest text-gray-900">Pilih Ukuran</span><button onClick={() => setIsSizeGuideOpen(true)} className="text-[10px] font-black underline uppercase hover:text-brand-red transition-colors text-gray-500">Panduan & Kalkulator</button></div>
             <div className="flex flex-wrap gap-2 md:gap-3">{activeProduct.sizes?.map(s => <button key={s} onClick={() => setSize(s)} className={`px-3 py-1.5 md:px-6 md:py-4 border-2 font-black uppercase text-[10px] md:text-sm tracking-widest transition-all ${size === s ? 'border-gray-900 bg-gray-900 text-white shadow-solid-sm -translate-y-1' : 'border-gray-300 text-gray-600 hover:border-gray-900 hover:text-gray-900'}`}>{s}</button>)}</div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-12 mt-4">
-            <div className="flex items-center border-4 border-gray-900 bg-white min-h-[56px] md:min-h-[64px] w-full sm:w-40 shadow-solid-sm"><button className="px-4 md:px-5 hover:text-amber-500 transition-colors h-full flex items-center justify-center text-gray-900" onClick={() => setQty(Math.max(1, qty-1))}><Minus size={18} strokeWidth={3}/></button><span className="flex-1 text-center font-black text-xl md:text-2xl text-gray-900">{qty}</span><button className="px-4 md:px-5 hover:text-amber-500 transition-colors h-full flex items-center justify-center text-gray-900" onClick={() => setQty(qty+1)}><Plus size={18} strokeWidth={3}/></button></div>
+            <div className="flex items-center border-4 border-gray-900 bg-white min-h-[56px] md:min-h-[64px] w-full sm:w-40 shadow-solid-sm"><button className="px-4 md:px-5 hover:text-brand-red transition-colors h-full flex items-center justify-center text-gray-900" onClick={() => setQty(Math.max(1, qty-1))}><Minus size={18} strokeWidth={3}/></button><span className="flex-1 text-center font-black text-xl md:text-2xl text-gray-900">{qty}</span><button className="px-4 md:px-5 hover:text-brand-red transition-colors h-full flex items-center justify-center text-gray-900" onClick={() => setQty(qty+1)}><Plus size={18} strokeWidth={3}/></button></div>
             <button onClick={() => addToCart(activeProduct, size, qty)} className="flex-1 bg-amber-500 text-gray-900 font-black uppercase tracking-widest text-xs md:text-sm py-4 md:py-5 min-h-[56px] md:min-h-[64px] border-4 border-gray-900 shadow-solid hover:-translate-y-1 transition-all active:shadow-none flex items-center justify-center gap-3"><ShoppingCart size={20} strokeWidth={2.5}/> Masukkan Keranjang</button>
           </div>
         </div>
@@ -266,7 +266,7 @@ Buat dengan bahasa Indonesia yang santai dan menginspirasi Bunda/Ayah. Tanpa poi
         {/* AI Summarizer UI */}
         <div className="mb-6 border-4 border-amber-500 bg-amber-50 p-4 md:p-6 shadow-solid-sm relative">
           <div className="flex items-center gap-2 mb-3 border-b-2 border-amber-200 pb-3">
-             <Bot className="text-amber-500" size={24} />
+             <Bot className="text-brand-red" size={24} />
              <div>
                <h3 className="font-black uppercase text-amber-900 tracking-wider text-sm">Ringkasan Ulasan AI</h3>
                <p className="text-[10px] font-bold text-amber-700 uppercase tracking-widest">Apa kata pembeli tentang produk ini?</p>
@@ -289,12 +289,12 @@ Buat dengan bahasa Indonesia yang santai dan menginspirasi Bunda/Ayah. Tanpa poi
               <div key={r.id} className="border-2 border-gray-900 p-3 md:p-4 bg-white shadow-solid-sm relative flex flex-col">
                 {isOwnerOrAdmin && !r.isDummy && r.id.length > 5 && (
                   <div className="absolute top-2 right-2 flex gap-1 z-20">
-                    <button onClick={() => { setEditingReview(r); setIsReviewModalOpen(true); }} className="p-1 md:p-1.5 bg-amber-100 text-amber-600 border border-gray-900 hover:bg-amber-500 hover:text-gray-900 transition-colors"><Pencil size={10}/></button>
+                    <button onClick={() => { setEditingReview(r); setIsReviewModalOpen(true); }} className="p-1 md:p-1.5 bg-amber-100 text-brand-red border border-gray-900 hover:bg-amber-500 hover:text-gray-900 transition-colors"><Pencil size={10}/></button>
                     <button onClick={() => handleDeleteReview(r.id)} className="p-1 md:p-1.5 bg-red-100 text-red-600 border border-gray-900 hover:bg-red-500 hover:text-white transition-colors"><Trash size={10}/></button>
                   </div>
                 )}
                 <div className="flex items-start justify-between mb-2 md:mb-3">
-                  <div className="flex text-amber-500">{[...Array(5)].map((_, j) => <Star key={j} className={`w-2 h-2 md:w-3 md:h-3 ${j >= r.rating ? "text-gray-300" : ""}`} fill={j < r.rating ? "currentColor" : "none"} strokeWidth={j < r.rating ? 0 : 2} />)}</div>
+                  <div className="flex text-brand-red">{[...Array(5)].map((_, j) => <Star key={j} className={`w-2 h-2 md:w-3 md:h-3 ${j >= r.rating ? "text-gray-300" : ""}`} fill={j < r.rating ? "currentColor" : "none"} strokeWidth={j < r.rating ? 0 : 2} />)}</div>
                   <Quote className="w-3 h-3 md:w-3.5 md:h-3.5 text-gray-200" />
                 </div>
                 <p className="italic text-[10px] md:text-xs font-bold text-gray-700 leading-relaxed mb-3 md:mb-4 line-clamp-3 flex-1 relative z-10">"{r.text.replace(/^"|"$/g, '')}"</p>
@@ -320,7 +320,7 @@ Buat dengan bahasa Indonesia yang santai dan menginspirasi Bunda/Ayah. Tanpa poi
             <article key={p.id} className="bg-white border-2 border-gray-200 hover:border-gray-900 transition-colors cursor-pointer group flex flex-col h-full relative" onClick={() => { setActiveProduct(p); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
               <div className="relative aspect-square bg-gray-100 overflow-hidden border-b-2 border-gray-200 group-hover:border-gray-900 transition-colors">
                 <img src={p.img || (p.images && p.images[0])} alt={p.alt} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <button className="absolute top-2 right-2 z-20 bg-white/80 p-2 border-2 border-transparent hover:border-red-500 transition-colors" onClick={(e) => toggleWishlist(e, p.id)}><Heart size={18} fill={wishlist.includes(p.id) ? 'currentColor' : 'none'} className={wishlist.includes(p.id) ? 'text-amber-500' : 'text-gray-900'} /></button>
+                <button className="absolute top-2 right-2 z-20 bg-white/80 p-2 border-2 border-transparent hover:border-red-500 transition-colors" onClick={(e) => toggleWishlist(e, p.id)}><Heart size={18} fill={wishlist.includes(p.id) ? 'currentColor' : 'none'} className={wishlist.includes(p.id) ? 'text-brand-red' : 'text-gray-900'} /></button>
               </div>
               <div className="p-4 md:p-5 flex-grow flex flex-col justify-between bg-white relative z-10"><div><p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">{p.type}</p><h3 className="font-bold text-gray-900 uppercase text-xs leading-snug line-clamp-2">{p.name}</h3></div><p className="text-gray-900 font-black tracking-wider mt-4 text-sm">{formatPrice(p.price)}</p></div>
             </article>

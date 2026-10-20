@@ -161,7 +161,7 @@ export const INITIAL_PRODUCTS = [
   { id: 8, order: 8, label: '', type: 'Kaos', gender: 'Unisex', name: 'Kaos Cloud Signature', price: 95000, sold: 520, img: IMG8, images: [IMG8, IMG1], colors: [BROKEN_WHITE_HEX], sizes: ['1-2Y', '3-4Y', '5-6Y'], ages: [1, 2, 3, 4, 5, 6], alt: 'Baju anak santai motif awan katun adem murah bagus rekomendasi baju bayi 1-6 tahun', bahan: 'Heavyweight 100% Cotton (16s-24s)', jahitan: 'Rantai & Overdeck 3 Benang', warna: 'Broken White', model: 'Oversize Boxy', desc: PREM_DESC },
 ];
 
-export const HERO_SLIDES = [ { id: 1, type: 'image', media: 'banner-hero-1.jpg' }, { id: 2, type: 'image', media: 'banner-hero-2.jpg' }, { id: 3, type: 'image', media: 'banner-hero-3.jpg' } ];
+export const HERO_SLIDES = [ { id: 1, type: 'image', media: '/images/banners/banner-hero-1.jpg' }, { id: 2, type: 'image', media: '/images/banners/banner-hero-2.jpg' }, { id: 3, type: 'image', media: '/images/banners/banner-hero-3.jpg' } ];
 
 export const FOOTER_INFO = {
   'cara': { title: 'Cara Belanja', content: '1. Eksplorasi Katalog: Temukan koleksi pakaian premium pilihan Bunda di halaman "Katalog Produk".\n\n2. Pilih Spesifikasi: Tentukan warna dan ukuran yang paling pas untuk si kecil (jangan lupa merujuk pada "Panduan Ukuran").\n\n3. Tambahkan ke Keranjang: Klik tombol "Tambah Ke Keranjang" setelah memastikan produk dan ukuran sesuai.\n\n4. Lanjut Checkout: Keranjang akan otomatis terbuka di sebelah kanan layar, periksa kembali pesanan Bunda, lalu klik "Lanjut Checkout".\n\n5. Pesan via WhatsApp: Isi formulir data pengiriman dengan lengkap (termasuk KODE POS), lalu tekan tombol "Kirim Order WA". Detail pesanan Bunda akan otomatis tersusun rapi dan dikirimkan langsung ke Admin kami untuk diproses tanpa ribet!' },

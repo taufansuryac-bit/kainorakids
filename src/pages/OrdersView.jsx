@@ -53,7 +53,7 @@ export const OrdersView = () => {
   return (
     <main className="min-h-screen py-16 px-4 max-w-4xl mx-auto text-left">
       <SEO title="Riwayat Pesanan | Kainora Kids" description="Cek status riwayat pesanan pakaian anak Anda." />
-      <button onClick={() => setView('home')} className="font-black mb-8 uppercase text-[10px] tracking-widest flex items-center gap-2 hover:text-amber-500 transition-colors"><ChevronRight className="rotate-180" size={16}/> KEMBALI KE BERANDA</button>
+      <button onClick={() => setView('home')} className="font-black mb-8 uppercase text-[10px] tracking-widest flex items-center gap-2 hover:text-brand-red transition-colors"><ChevronRight className="rotate-180" size={16}/> KEMBALI KE BERANDA</button>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
         <div className="bg-amber-100 border-4 border-gray-900 p-6 flex flex-col justify-center items-center text-center shadow-solid-sm cursor-pointer hover:-translate-y-1 transition-transform" onClick={() => setView('products')}>
@@ -69,7 +69,7 @@ export const OrdersView = () => {
       <div className="bg-white border-4 border-gray-900 shadow-solid p-8 md:p-12">
         <h1 className="text-3xl font-black uppercase tracking-tighter mb-8 border-b-4 border-gray-900 pb-4">Riwayat Pesanan Bunda</h1>
         {isLoading ? (
-          <div className="flex justify-center py-10"><Loader2 size={32} className="animate-spin text-amber-500"/></div>
+          <div className="flex justify-center py-10"><Loader2 size={32} className="animate-spin text-brand-red"/></div>
         ) : orders.length === 0 ? (
           <div className="text-center py-10">
             <Package size={48} className="mx-auto text-gray-300 mb-4" strokeWidth={1}/>

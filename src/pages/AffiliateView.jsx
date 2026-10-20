@@ -31,15 +31,15 @@ export const AffiliateView = () => {
   return (
     <main className="min-h-screen py-16 px-4 max-w-6xl mx-auto text-left mt-10">
       <SEO title="Program Affiliate & Reseller Baju Anak — Komisi Jutaan Rupiah | Kainora Kids" description="Gabung program affiliate & reseller Kainora Kids. Bagikan link produk baju anak premium, dapatkan komisi jutaan rupiah per bulan. Tanpa modal, tanpa stok. Cocok untuk Ibu rumah tangga & content creator TikTok." keywords="affiliate baju anak, reseller baju anak premium, program affiliate kainora kids, komisi reseller baju anak, bisnis baju anak tanpa modal, content creator baju anak tiktok" />
-      <button onClick={() => setView('home')} className="font-black mb-10 uppercase text-[10px] tracking-widest flex items-center gap-2 hover:text-amber-500 transition-colors"><ChevronRight className="rotate-180" size={16}/> KEMBALI KE BERANDA</button>
+      <button onClick={() => setView('home')} className="font-black mb-10 uppercase text-[10px] tracking-widest flex items-center gap-2 hover:text-brand-red transition-colors"><ChevronRight className="rotate-180" size={16}/> KEMBALI KE BERANDA</button>
       
       <div className="space-y-20 md:space-y-32 mb-20 relative mx-auto mt-8">
         <div className="hidden md:block absolute left-1/2 top-4 bottom-4 w-1 bg-gray-200 transform -translate-x-1/2" aria-hidden="true"></div>
         {[
-          { step: "01", title: "Registrasi Reseller/Affiliate", desc: "Pendaftaran 100% gratis. Tanpa syarat rumit untuk mendaftar program pakaian anak premium.", img: "aff-1.jpg" },
-          { step: "02", title: "Sampel Baju Anak", desc: "Dapatkan koleksi eksklusif Kainora Kids langsung ke alamat Anda sebagai bahan promosi.", img: 'aff-2.jpg' },
-          { step: "03", title: "Promosi Online", desc: "Kreasikan konten visual baju anak berkualitas di platform media sosial Anda.", img: "aff-3.jpg" },
-          { step: "04", title: "Pencairan Komisi", desc: "Nikmati komisi transparan untuk setiap transaksi kaos dan pakaian yang berhasil dari penjualan Anda.", img: "aff-4.jpg" }
+          { step: "01", title: "Registrasi Reseller/Affiliate", desc: "Pendaftaran 100% gratis. Tanpa syarat rumit untuk mendaftar program pakaian anak premium.", img: "/images/affiliate/aff-1.jpg" },
+          { step: "02", title: "Sampel Baju Anak", desc: "Dapatkan koleksi eksklusif Kainora Kids langsung ke alamat Anda sebagai bahan promosi.", img: '/images/affiliate/aff-2.jpg' },
+          { step: "03", title: "Promosi Online", desc: "Kreasikan konten visual baju anak berkualitas di platform media sosial Anda.", img: "/images/affiliate/aff-3.jpg" },
+          { step: "04", title: "Pencairan Komisi", desc: "Nikmati komisi transparan untuk setiap transaksi kaos dan pakaian yang berhasil dari penjualan Anda.", img: "/images/affiliate/aff-4.jpg" }
         ].map((item, index) => (
           <FadeIn key={index} delay={index * 150}>
             <div className={`flex flex-col ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8 md:gap-20 relative`}>
@@ -55,7 +55,7 @@ export const AffiliateView = () => {
 
       <section className="mb-20 bg-white border-4 border-gray-900 shadow-solid p-6 md:p-10 max-w-2xl mx-auto">
         <div className="flex items-center gap-3 mb-6 border-b-4 border-gray-900 pb-4">
-           <Star size={32} className="text-amber-500 fill-amber-500" />
+           <Star size={32} className="text-brand-red fill-amber-500" />
            <div><h2 className="text-2xl font-black uppercase tracking-tighter">Kalkulator Komisi</h2><p className="text-xs font-bold text-gray-500 uppercase tracking-widest mt-1">Cek komisi penjualan dari setiap produk Kainora Kids</p></div>
         </div>
         <div className="space-y-6">

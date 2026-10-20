@@ -27,7 +27,7 @@ export const ProfileView = () => {
   return (
     <main className="min-h-screen py-16 px-4 max-w-4xl mx-auto text-left">
       <SEO title={`Profil ${user.name} | Kainora Kids`} description="Manajemen profil pengguna Kainora Kids." />
-      <button onClick={() => setView('home')} className="font-black mb-10 uppercase text-[10px] tracking-widest flex items-center gap-2 hover:text-amber-500 transition-colors"><ChevronRight className="rotate-180" size={16}/> KEMBALI KE BERANDA</button>
+      <button onClick={() => setView('home')} className="font-black mb-10 uppercase text-[10px] tracking-widest flex items-center gap-2 hover:text-brand-red transition-colors"><ChevronRight className="rotate-180" size={16}/> KEMBALI KE BERANDA</button>
       
       <div className="bg-white border-4 border-gray-900 shadow-solid p-8 md:p-12">
         <div className="flex flex-col md:flex-row items-center gap-8 border-b-4 border-gray-900 pb-8 mb-8">

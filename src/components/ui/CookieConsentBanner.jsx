@@ -31,59 +31,42 @@ export const CookieConsentBanner = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 w-full z-[9999] p-4 pointer-events-none flex justify-center items-end">
-      {/* Animasi muncul dari bawah */}
+    <div className="pointer-events-none fixed bottom-0 left-0 z-[9999] flex w-full items-end justify-center p-3 sm:p-4" role="dialog" aria-label="Izin cache dan cookie">
       <style>{`
-        @keyframes slideUpBanner {
-          from { transform: translateY(100%); opacity: 0; }
-          to { transform: translateY(0); opacity: 1; }
+        @keyframes popBanner {
+          0% { transform: translateY(120%) rotate(-2deg); opacity: 0; }
+          70% { transform: translateY(-6px) rotate(0.5deg); opacity: 1; }
+          100% { transform: translateY(0) rotate(0); opacity: 1; }
         }
-        .animate-slide-up-banner {
-          animation: slideUpBanner 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
+        .animate-pop-banner { animation: popBanner 0.7s var(--ease-out) forwards; }
       `}</style>
-      
-      <div className="bg-gray-900 text-white shadow-2xl rounded-sm w-full max-w-4xl p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pointer-events-auto border-t-4 border-amber-500 animate-slide-up-banner">
-        
-        <div className="flex items-start gap-4 flex-1">
-          <div className="hidden sm:flex bg-gray-800 p-3 rounded-full shrink-0">
-            <Cookie size={24} className="text-amber-500" />
+
+      <div className="neo-panel animate-pop-banner pointer-events-auto relative flex w-full max-w-4xl flex-col items-start justify-between gap-5 bg-brand-yellow p-5 pr-12 shadow-solid-lg md:flex-row md:items-center md:p-6 md:pr-14">
+        <div className="flex flex-1 items-start gap-4">
+          <div className="hidden shrink-0 place-items-center rounded-full border-[3px] border-ink bg-paper p-3 sm:grid">
+            <Cookie size={26} strokeWidth={2.5} />
           </div>
           <div>
-            <h3 className="font-black text-lg md:text-xl uppercase tracking-widest text-white mb-2 flex items-center gap-2">
-              <span className="sm:hidden text-amber-500"><Cookie size={20} /></span>
-              Izinkan Cache & Cookie?
-            </h3>
-            <p className="text-gray-400 text-sm md:text-base leading-relaxed font-medium">
-              Kami menggunakan <em>cache</em> dan teknologi serupa untuk memastikan Anda mendapatkan pengalaman berbelanja yang super cepat, personal, dan aman di website Kainora Kids. 
-              <a href="#" className="text-amber-500 hover:text-amber-400 underline ml-1">Pelajari lebih lanjut.</a>
+            <h3 className="display mb-2 text-xl md:text-2xl">Izinkan Cache & Cookie?</h3>
+            <p className="text-sm font-semibold leading-relaxed">
+              Kami menggunakan <em>cache</em> dan teknologi serupa untuk memastikan Anda mendapatkan pengalaman berbelanja yang super cepat, personal, dan aman di website Kainora Kids.
+              <a href="#" className="ml-1 underline decoration-[3px] underline-offset-2 hover:text-brand-red">Pelajari lebih lanjut.</a>
             </p>
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto shrink-0">
-          <button 
-            onClick={handleDecline}
-            className="w-full sm:w-auto px-6 py-3 border border-gray-700 text-gray-300 font-bold uppercase text-xs tracking-widest hover:bg-gray-800 hover:text-white transition-colors"
-          >
-            Tolak
-          </button>
-          <button 
-            onClick={handleAccept}
-            className="w-full sm:w-auto px-8 py-3 bg-amber-500 text-gray-900 font-black uppercase text-xs tracking-widest hover:bg-amber-400 transition-colors shadow-lg shadow-amber-500/20"
-          >
-            Izinkan Semua
-          </button>
+        <div className="flex w-full shrink-0 flex-col items-center gap-3 sm:flex-row md:w-auto">
+          <button onClick={handleDecline} className="neo-btn w-full !bg-paper sm:w-auto">Tolak</button>
+          <button onClick={handleAccept} className="neo-btn neo-btn--ink w-full sm:w-auto">Izinkan Semua</button>
         </div>
 
-        <button 
-          onClick={handleDecline} 
-          className="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors p-1"
+        <button
+          onClick={handleDecline}
+          className="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border-[3px] border-ink bg-paper transition-transform hover:rotate-90"
           aria-label="Tutup"
         >
-          <X size={20} />
+          <X size={18} strokeWidth={3} />
         </button>
-
       </div>
     </div>
   );

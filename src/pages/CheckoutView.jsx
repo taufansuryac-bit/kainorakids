@@ -134,13 +134,13 @@ Mohon dihitungkan total dengan ongkos kirimnya ya kak. Terima kasih! ✨`;
   return (
     <main className="min-h-screen py-24 px-4 max-w-7xl mx-auto">
       <SEO title="Checkout Pakaian Anak | Kainora Kids" description="Selesaikan pesanan baju anak Anda melalui WhatsApp Admin yang responsif." />
-      <button onClick={() => setView('cart')} className="text-gray-900 font-black uppercase tracking-widest text-[10px] hover:text-amber-500 mb-10 flex items-center gap-2 transition-colors"><ChevronRight size={16} className="transform rotate-180" strokeWidth={3}/> KEMBALI KE KERANJANG</button>
+      <button onClick={() => setView('cart')} className="text-gray-900 font-black uppercase tracking-widest text-[10px] hover:text-brand-red mb-10 flex items-center gap-2 transition-colors"><ChevronRight size={16} className="transform rotate-180" strokeWidth={3}/> KEMBALI KE KERANJANG</button>
       <div className="border-b-4 border-gray-900 pb-6 mb-12"><h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-left">Pemesanan Pakaian</h1></div>
       
       <div className="flex flex-col lg:flex-row gap-12">
         <div className="lg:w-2/3">
           <form id="checkoutForm" onSubmit={handleWA} className="bg-white border-4 border-gray-900 p-8 md:p-12 shadow-solid text-left space-y-8">
-            <div className="flex justify-between items-center mb-8 border-b-2 border-gray-900 pb-4"><h3 className="font-black text-xl text-gray-900 uppercase tracking-wider">Informasi Penerima</h3>{!user?.email && <button type="button" onClick={() => setIsAuthModalOpen(true)} className="text-[10px] font-black underline uppercase text-gray-500 hover:text-amber-500">Punya Akun? Masuk</button>}</div>
+            <div className="flex justify-between items-center mb-8 border-b-2 border-gray-900 pb-4"><h3 className="font-black text-xl text-gray-900 uppercase tracking-wider">Informasi Penerima</h3>{!user?.email && <button type="button" onClick={() => setIsAuthModalOpen(true)} className="text-[10px] font-black underline uppercase text-gray-500 hover:text-brand-red">Punya Akun? Masuk</button>}</div>
             <div><label className="block text-[10px] font-black uppercase mb-3 tracking-widest text-gray-500">Nama Lengkap Bunda *</label><input required className="w-full border-4 border-gray-900 p-5 font-bold outline-none focus:border-amber-500 transition-colors text-sm" value={form.name} onChange={e => setForm({...form, name: e.target.value})} placeholder="Cth: Bunda Kainora" /></div>
             <div><label className="block text-[10px] font-black uppercase mb-3 tracking-widest text-gray-500">WhatsApp Aktif *</label><input required type="tel" className="w-full border-4 border-gray-900 p-5 font-bold outline-none focus:border-amber-500 transition-colors text-sm" value={form.wa} onChange={e => setForm({...form, wa: e.target.value})} placeholder="Cth: 081234567890" /></div>
             <div><label className="block text-[10px] font-black uppercase mb-3 tracking-widest text-gray-500">Alamat Lengkap (Kecamatan & Kota) *</label><textarea required className="w-full border-4 border-gray-900 p-5 font-bold outline-none h-32 focus:border-amber-500 transition-colors resize-none text-sm leading-relaxed" value={form.address} onChange={e => setForm({...form, address: e.target.value})} placeholder="Nama Jalan, RT/RW, No. Rumah, Kecamatan, Kota/Kabupaten" /></div>
@@ -148,7 +148,7 @@ Mohon dihitungkan total dengan ongkos kirimnya ya kak. Terima kasih! ✨`;
             <div>
                <div className="flex justify-between items-center mb-3">
                  <label className="block text-[10px] font-black uppercase tracking-widest text-gray-500">Catatan Baju / Ucapan Kado</label>
-                 <button type="button" onClick={handleGenerateGiftMessage} disabled={isGeneratingMessage} className="text-[10px] font-black uppercase flex items-center gap-1 text-amber-600 hover:text-amber-500 transition-colors bg-amber-50 px-2 py-1 border-2 border-amber-200">
+                 <button type="button" onClick={handleGenerateGiftMessage} disabled={isGeneratingMessage} className="text-[10px] font-black uppercase flex items-center gap-1 text-brand-red hover:text-brand-red transition-colors bg-amber-50 px-2 py-1 border-2 border-amber-200">
                    {isGeneratingMessage ? <Loader2 size={12} className="animate-spin" /> : <Sparkles size={12} />} Tulis Ucapan AI
                  </button>
                </div>
@@ -175,7 +175,7 @@ Mohon dihitungkan total dengan ongkos kirimnya ya kak. Terima kasih! ✨`;
 
             <div className="flex justify-between items-end mb-2"><span className="font-black text-gray-500 text-xs uppercase tracking-widest">Subtotal</span><span className="font-bold text-gray-900">{formatPrice(cartTotal)}</span></div>
             {appliedPromo && <div className="flex justify-between items-end mb-2"><span className="font-black text-green-600 text-xs uppercase tracking-widest flex items-center gap-1"><CheckCircle size={12}/> Diskon</span><span className="font-bold text-green-600">-{formatPrice(discountAmount)}</span></div>}
-            <div className="flex justify-between items-end mb-10 mt-4 border-t-2 border-gray-900 pt-4"><span className="font-black text-gray-900 text-sm uppercase tracking-widest">Total Belanja</span><span className="font-black text-2xl text-amber-500 tracking-widest">{formatPrice(finalTotal)}</span></div>
+            <div className="flex justify-between items-end mb-10 mt-4 border-t-2 border-gray-900 pt-4"><span className="font-black text-gray-900 text-sm uppercase tracking-widest">Total Belanja</span><span className="font-black text-2xl text-brand-red tracking-widest">{formatPrice(finalTotal)}</span></div>
             <button disabled={isSaving} onClick={() => { const f = document.getElementById('checkoutForm'); if(f.reportValidity()) f.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true })); }} className="hidden lg:flex w-full bg-amber-500 text-gray-900 font-black py-5 uppercase text-sm border-4 border-gray-900 shadow-solid hover:translate-y-1 transition-all tracking-widest items-center justify-center gap-3">{isSaving ? <Loader2 size={18} className="animate-spin"/> : <><Send size={18} strokeWidth={3}/> Kirim Pesanan WA</>}</button>
           </div>
         </aside>
