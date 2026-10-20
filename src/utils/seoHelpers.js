@@ -3,9 +3,9 @@
  * Generate JSON-LD schemas untuk product, blog, review, dll
  */
 
-const SITE_URL = 'https://kainorakids.com';
-const SITE_NAME = 'Kainora Kids';
-const DEFAULT_IMAGE = `${SITE_URL}/link-logo.jpg`;
+export const SITE_URL = 'https://kainorakids.com';
+export const SITE_NAME = 'Kainora Kids';
+export const DEFAULT_IMAGE = `${SITE_URL}/link-logo.jpg`;
 
 /**
  * Generate Product schema
