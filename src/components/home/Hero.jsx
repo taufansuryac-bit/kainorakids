@@ -1,44 +1,49 @@
 /**
- * HERO — poster neo-brutalist di atas panggung kuning dengan lantai papan catur
- * berperspektif. Judul raksasa bergerak per huruf, kata morf cair, awan bermata,
- * lencana berputar, dan "jendela" slider (slide hero asli) berdiri di atas lantai.
+ * HERO — poster neo-brutalist di atas panggung kuning dengan lantai papan catur berperspektif
+ * yang terus berlari. Judul KAINORA muncul per huruf, KIDS bereaksi pada kursor, kata di
+ * bawahnya berubah bentuk (gooey morph), stiker bisa diseret, dan "jendela" foto berdiri
+ * utuh di atas lantai (slide hero asli, dengan kontrol & progres autoplay).
  */
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion, useScroll, useTransform } from 'motion/react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
 import { HERO_SLIDES } from '../../constants/data';
-import { SplitReveal, GooeyMorph, WeightHover } from '../motion/KineticText';
-import { CheckerReveal } from '../motion/CheckerReveal';
+import { SplitReveal, GooeyMorph, WeightHover, TextRoll } from '../motion/KineticText';
+import { MaskReveal } from '../motion/MaskReveal';
+import { DragSticker } from '../motion/DragSticker';
+import { ScrambleText } from '../motion/ScrambleText';
 import { CheckerFloor } from '../neo/Checker';
 import { Burst, Bubble, Cloud, RotatingBadge } from '../neo/Stickers';
 
 const SIZE = 'text-[clamp(2.7rem,15.4vw,15.2rem)]';
+const DURATION = 5200;
 
 export const Hero = ({ onShop }) => {
   const reduce = useReducedMotion();
   const ref = useRef(null);
   const [slide, setSlide] = useState(0);
+  const [dir, setDir] = useState(1);
+  const n = HERO_SLIDES.length;
+  const go = useCallback((to, d = 1) => { setDir(d); setSlide(((to % n) + n) % n); }, [n]);
 
   useEffect(() => {
     if (reduce) return undefined;
-    const t = setInterval(() => setSlide((s) => (s + 1) % HERO_SLIDES.length), 5000);
-    return () => clearInterval(t);
-  }, [reduce]);
+    const t = setTimeout(() => go(slide + 1, 1), DURATION);
+    return () => clearTimeout(t);
+  }, [slide, go, reduce]);
 
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] });
   const titleY = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : -90]);
-  const windowY = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : 70]);
-  const cloudY = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : -160]);
+  const windowY = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : 50]);
 
   return (
     <section ref={ref} className="relative isolate overflow-hidden bg-brand-yellow">
-      {/* cetak halftone tipis di kanvas kuning */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-[0.16]" style={{ backgroundImage: 'radial-gradient(var(--ink) 1.2px, transparent 1.7px)', backgroundSize: '14px 14px' }} />
 
-      <CheckerFloor height="58%" tilt={72} speed={1.9} pointer />
+      <CheckerFloor height="62%" tilt={72} speed={1.9} pointer />
       <div aria-hidden="true" className="absolute inset-x-0 bottom-0 z-[5] h-3 bg-brand-green sm:h-4" />
 
-      <div className="relative z-10 mx-auto max-w-[1600px] px-3 pb-20 pt-6 sm:px-6 sm:pb-28 lg:px-10 lg:pt-10">
+      <div className="relative z-10 mx-auto max-w-[1600px] px-3 pb-24 pt-6 sm:px-6 sm:pb-32 lg:px-10 lg:pt-10">
         <motion.div style={{ y: titleY }} className="relative">
           <div aria-hidden="true">
             <SplitReveal as="p" text="KAINORA" className={`display block ${SIZE}`} delay={0.2} stagger={0.045} />
@@ -51,9 +56,14 @@ export const Hero = ({ onShop }) => {
                   className={`display block text-brand-pink ${SIZE} [-webkit-text-stroke:0.022em_var(--ink)] [text-shadow:0.04em_0.04em_0_var(--ink)]`}
                 />
               </div>
-              <p className="display-narrow mt-2 flex flex-wrap items-center gap-x-3 text-[clamp(1.25rem,3.6vw,2.7rem)]">
-                <span className="neo-pill !text-[0.6rem] sm:!text-xs">Baju Anak</span>
-                <GooeyMorph texts={['KAOS KEREN', 'DRESS LUCU', 'SETELAN SERU', 'KATUN ADEM']} className="min-w-[11ch] text-brand-red" />
+              <p className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
+                <ScrambleText as="span" text="Baju Anak" className="neo-pill !text-[0.6rem] sm:!text-xs" />
+                <GooeyMorph
+                  texts={['KAOS KEREN', 'DRESS LUCU', 'SETELAN SERU', 'KATUN ADEM']}
+                  morphTime={1.1}
+                  cooldown={1.5}
+                  className="display-narrow min-w-[12ch] text-[clamp(1.5rem,3.8vw,3rem)] text-brand-red"
+                />
               </p>
             </div>
 
@@ -66,35 +76,44 @@ export const Hero = ({ onShop }) => {
                 Baju anak 100% katun heavyweight, potongan boxy oversize ala Korea — nyaman untuk kulit sensitif dan tahan seharian bermain.
               </p>
               <button onClick={onShop} className="neo-btn roll-host mt-4 w-full sm:w-auto">
-                Belanja Koleksi <ArrowUpRight size={16} strokeWidth={3} />
+                <TextRoll>Belanja Koleksi</TextRoll> <ArrowUpRight size={16} strokeWidth={3} />
               </button>
             </aside>
           </div>
         </motion.div>
 
-        {/* Stiker melayang */}
-        <motion.div style={{ y: cloudY }} aria-hidden="true" className="pointer-events-none absolute inset-0">
-          <RotatingBadge text="GRATIS ONGKIR SE-JAWA" size={132} className="absolute right-[2%] top-[2%] hidden rotate-6 sm:block lg:right-auto lg:left-[47%] lg:top-[30%] lg:!h-[150px] lg:!w-[150px]" />
-          <RotatingBadge text="GRATIS ONGKIR SE-JAWA" size={74} className="absolute right-1.5 top-[56px] rotate-6 sm:hidden" />
-          <Cloud width={150} className="absolute left-[2%] top-[46%] hidden animate-bob lg:block" />
-          <Cloud width={96} fill="var(--pink)" className="absolute right-[4%] top-[52%] animate-bob [animation-delay:-2s] max-sm:hidden" />
-        </motion.div>
+        {/* Stiker yang bisa diseret */}
+        <div className="pointer-events-none absolute inset-0 z-20">
+          <DragSticker className="pointer-events-auto absolute right-[2%] top-[1%] hidden sm:block lg:right-auto lg:left-[47%] lg:top-[24%]" tilt={16}>
+            <RotatingBadge text="GRATIS ONGKIR SE-JAWA" size={130} className="rotate-6" />
+          </DragSticker>
+          <DragSticker className="pointer-events-auto absolute right-1.5 top-[56px] sm:hidden" tilt={14}>
+            <RotatingBadge text="GRATIS ONGKIR SE-JAWA" size={74} className="rotate-6" />
+          </DragSticker>
+        </div>
 
-        {/* Jendela slider berdiri di atas lantai */}
-        <motion.div style={{ y: windowY }} className="relative mx-auto mt-10 w-full max-w-[940px] sm:mt-14">
+        {/* Jendela foto — utuh di atas lantai */}
+        <motion.div style={{ y: windowY }} className="relative mx-auto mt-10 w-full max-w-[960px] sm:mt-14">
           <Bubble className="absolute -left-1 -top-10 z-20 h-16 w-28 -rotate-6 sm:-left-8 sm:-top-12 sm:h-20 sm:w-36" textClass="text-lg sm:text-2xl">WOW!</Bubble>
-          <Burst fill="var(--teal)" className="absolute -bottom-6 -right-2 z-20 h-24 w-24 rotate-12 sm:-bottom-8 sm:-right-10 sm:h-32 sm:w-32" textClass="text-[0.6rem] sm:text-[0.75rem]">100%<br />KATUN</Burst>
+          <DragSticker className="absolute -bottom-6 -right-2 z-20 sm:-bottom-8 sm:-right-10" tilt={16}>
+            <Burst fill="var(--teal)" className="h-24 w-24 rotate-12 sm:h-32 sm:w-32" textClass="text-[0.6rem] sm:text-[0.75rem]">100%<br />KATUN</Burst>
+          </DragSticker>
+          <DragSticker className="absolute -bottom-10 -left-4 z-20 hidden sm:block lg:-left-24" tilt={-12}>
+            <Cloud width={130} className="animate-bob" />
+          </DragSticker>
 
-          <CheckerReveal cols={8} rows={4} delay={0.9} amount={0.08} color="var(--ink)" color2="var(--red)" className="rounded-[22px] shadow-solid-lg">
+          <MaskReveal shape="iris" amount={0.05} delay={0.4} className="rounded-[18px] shadow-solid-lg">
             <div className="neo-panel overflow-hidden bg-paper">
               <div className="flex items-center gap-2 border-b-[3px] border-ink bg-brand-pink px-3 py-2">
                 <span className="h-3.5 w-3.5 rounded-full border-[2.5px] border-ink bg-brand-red" />
                 <span className="h-3.5 w-3.5 rounded-full border-[2.5px] border-ink bg-brand-yellow" />
                 <span className="h-3.5 w-3.5 rounded-full border-[2.5px] border-ink bg-brand-green" />
                 <span className="font-arcade ml-2 truncate text-[0.58rem] uppercase tracking-wider sm:text-[0.66rem]">kainorakids.com / new-drop</span>
+                <span className="font-arcade ml-auto rounded-full border-[2.5px] border-ink bg-paper px-2.5 py-0.5 text-[0.6rem]">{String(slide + 1).padStart(2, '0')}/{String(n).padStart(2, '0')}</span>
               </div>
+
               <div className="relative aspect-[4/3] bg-ink sm:aspect-[16/9]">
-                <AnimatePresence initial={false}>
+                <AnimatePresence initial={false} custom={dir}>
                   <motion.div
                     key={slide}
                     className="absolute inset-0"
@@ -111,20 +130,35 @@ export const Hero = ({ onShop }) => {
                     />
                   </motion.div>
                 </AnimatePresence>
-                <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 gap-2">
+              </div>
+
+              <div className="flex items-center gap-3 border-t-[3px] border-ink bg-paper p-2.5 sm:p-3">
+                <button onClick={() => go(slide - 1, -1)} className="grid h-10 w-10 shrink-0 place-items-center rounded-full border-[3px] border-ink bg-brand-yellow transition-transform hover:-translate-x-0.5 active:scale-90" aria-label="Slide sebelumnya">
+                  <ArrowLeft size={18} strokeWidth={3} />
+                </button>
+                <div className="flex flex-1 gap-2" role="tablist" aria-label="Pilih slide">
                   {HERO_SLIDES.map((s, i) => (
-                    <button
-                      key={s.id}
-                      onClick={() => setSlide(i)}
-                      aria-label={`Slide ${i + 1}`}
-                      aria-current={i === slide}
-                      className={`h-3.5 rounded-full border-[2.5px] border-ink transition-all ${i === slide ? 'w-9 bg-brand-yellow' : 'w-3.5 bg-paper'}`}
-                    />
+                    <button key={s.id} onClick={() => go(i, i > slide ? 1 : -1)} role="tab" aria-selected={i === slide} aria-label={`Slide ${i + 1}`} className="relative h-4 flex-1 overflow-hidden rounded-full border-[3px] border-ink bg-paper">
+                      {i === slide && (
+                        <motion.span
+                          key={`p-${slide}`}
+                          className="absolute inset-y-0 left-0"
+                          style={{ background: 'repeating-conic-gradient(var(--red) 0 25%, var(--paper) 0 50%) 0 0 / 12px 12px' }}
+                          initial={{ width: reduce ? '100%' : '0%' }}
+                          animate={{ width: '100%' }}
+                          transition={{ duration: reduce ? 0 : DURATION / 1000, ease: 'linear' }}
+                        />
+                      )}
+                      {i < slide && <span className="absolute inset-0 bg-ink" />}
+                    </button>
                   ))}
                 </div>
+                <button onClick={() => go(slide + 1, 1)} className="grid h-10 w-10 shrink-0 place-items-center rounded-full border-[3px] border-ink bg-brand-yellow transition-transform hover:translate-x-0.5 active:scale-90" aria-label="Slide berikutnya">
+                  <ArrowRight size={18} strokeWidth={3} />
+                </button>
               </div>
             </div>
-          </CheckerReveal>
+          </MaskReveal>
         </motion.div>
       </div>
     </section>

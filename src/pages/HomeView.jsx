@@ -1,25 +1,27 @@
 import { SEO } from '../constants/data';
 import React, { useMemo } from 'react';
-import { ChevronRight, Search } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { useStore } from '../context/StoreContext';
 import { CustomVideoPlayer, Parallax } from '../components/ui/Modals';
 import InstagramFeed from '../components/layout/InstagramFeed';
 import { Hero } from '../components/home/Hero';
 import { QualityStory } from '../components/home/QualityStory';
+import { NewDropRail } from '../components/home/NewDropRail';
 import { Lookbook } from '../components/home/Lookbook';
-import { ProductCard } from '../components/neo/ProductCard';
 import { CheckerFrame, CheckerStrip } from '../components/neo/Checker';
 import { Bubble, Cloud, Flower } from '../components/neo/Stickers';
 import { SplitReveal, TextRoll } from '../components/motion/KineticText';
+import { ScrambleText } from '../components/motion/ScrambleText';
 import { ScrollMarquee } from '../components/motion/ScrollMarquee';
-import { CheckerReveal } from '../components/motion/CheckerReveal';
+import { MaskReveal } from '../components/motion/MaskReveal';
+import { DragSticker } from '../components/motion/DragSticker';
 
 const TICKER = ['New Drop', 'Katun Adem', 'Anti Alergi', 'Boxy Oversize', 'Gratis Ongkir Jawa', 'Kulit Sensitif Aman'];
 
 const SectionHead = ({ kicker, title, accent, action, onAction }) => (
   <div className="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-end md:mb-10">
     <div>
-      {kicker && <p className="neo-pill mb-4 bg-paper">{kicker}</p>}
+      {kicker && <ScrambleText as="p" text={kicker} className="neo-pill mb-4 bg-paper" />}
       <h2 className="display text-[clamp(2.1rem,6vw,5.2rem)]">
         <SplitReveal text={title} className="block" />
         {accent && <SplitReveal text={accent} className="block text-brand-red" delay={0.2} />}
@@ -73,40 +75,16 @@ export const HomeView = ({ setSelectedProduct }) => {
           ))}
         </ScrollMarquee>
       </div>
-      <CheckerStrip size={16} />
 
       <QualityStory />
 
-      {/* KOLEKSI TERBARU */}
-      <section className="mx-auto max-w-[1500px] px-3 py-16 sm:px-6 lg:px-10" aria-labelledby="newdrop">
-        <div id="newdrop">
-          <SectionHead kicker="Ditambahkan 7 Hari Terakhir" title="Koleksi" accent="Terbaru" action="Lihat Semua Katalog" onAction={goProducts} />
-        </div>
-
-        {recentProducts.length > 0 ? (
-          <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-4 md:gap-6">
-            {recentProducts.map((p, idx) => (
-              <ProductCard
-                key={p.id}
-                product={p}
-                index={idx}
-                onOpen={setSelectedProduct}
-                wishlisted={wishlist.includes(p.id)}
-                onToggleWishlist={toggleWishlist}
-              />
-            ))}
-          </div>
-        ) : (
-          <div className="neo-panel bg-paper py-16 text-center shadow-solid-sm">
-            <Search size={40} className="mx-auto mb-4" strokeWidth={2.5} />
-            <p className="display text-2xl">Belum ada baju baru minggu ini.</p>
-            <p className="mt-2 text-xs font-bold uppercase tracking-widest opacity-70">Cek katalog untuk koleksi lainnya Bunda!</p>
-          </div>
-        )}
-        <div className="mt-8 md:hidden">
-          <button onClick={goProducts} className="neo-btn neo-btn--ink w-full">Lihat Semua Katalog <ChevronRight size={16} strokeWidth={3} /></button>
-        </div>
-      </section>
+      <NewDropRail
+        products={recentProducts}
+        wishlist={wishlist}
+        onToggleWishlist={toggleWishlist}
+        onOpen={setSelectedProduct}
+        onAll={goProducts}
+      />
 
       <Lookbook onPick={pickGender} />
 
@@ -116,9 +94,9 @@ export const HomeView = ({ setSelectedProduct }) => {
           <SectionHead kicker={'Proses "Behind The Scene" Baju Anak Kainora'} title="Perjalanan" accent="Pesanan Bunda" />
         </div>
         <div className="relative">
-          <Cloud width={130} className="absolute -left-3 -top-16 z-20 hidden animate-bob md:block" />
+          <DragSticker className="absolute -left-3 -top-16 z-20 hidden md:block" tilt={-12}><Cloud width={130} className="animate-bob" /></DragSticker>
           <Bubble className="absolute -right-2 -top-10 z-20 h-16 w-36 rotate-6 sm:-right-6 sm:h-20 sm:w-44" textClass="text-sm sm:text-lg">BEHIND THE SCENES</Bubble>
-          <CheckerReveal cols={8} rows={5} className="rounded-[22px] shadow-solid-lg">
+          <MaskReveal shape="blinds" stripes={10} amount={0.12} className="rounded-[18px] shadow-solid-lg">
             <div className="neo-panel overflow-hidden bg-paper">
               <div className="flex items-center gap-2 border-b-[3px] border-ink bg-brand-teal px-3 py-2">
                 <span className="h-3.5 w-3.5 rounded-full border-[2.5px] border-ink bg-brand-red" />
@@ -130,7 +108,7 @@ export const HomeView = ({ setSelectedProduct }) => {
                 <source src="/video/VIDEO-WEB-PERJALANAN.mp4" type="video/mp4" />
               </video>
             </div>
-          </CheckerReveal>
+          </MaskReveal>
         </div>
       </section>
 
