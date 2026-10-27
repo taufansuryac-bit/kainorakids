@@ -1,0 +1,26 @@
+{
+  "units":"cm unless explicitly marked inch",
+  "body_columns":["nominal_height_anchor_cm","height_min_cm","height_max_cm","chest_min_cm","chest_max_cm","waist_min_cm","waist_max_cm"],
+  "body":[
+    {"source":"hm-id","cohort":"baby_unisex","rows":[[68,null,null,45,47,null,null],[80,null,null,49,51,null,null]]},
+    {"source":"hm-id","cohort":"kids_unisex","rows":[[92,null,null,52,54,50,52],[98,null,null,54,56,52,54],[104,null,null,56,58,54,55],[110,null,null,58,60,55,56],[116,null,null,60,63,56,57]]},
+    {"source":"adidas-body-ae","cohort":"baby_unisex","rows":[[68,63,68,45.5,45.5,45,45],[80,75,80,49.5,49.5,49,49],[92,87,92,52.5,52.5,50.5,50.5],[98,93,98,54.5,54.5,52.5,52.5]]},
+    {"source":"adidas-body-ae","cohort":"kids_unisex","rows":[[104,99,104,56,56,54.5,54.5],[110,105,110,58,58,55,55],[116,111,116,60.5,60.5,56,56]]},
+    {"source":"mothercare-sg","cohort":"baby_and_kids","rows":[[68,63,68,42.5,42.5,46.5,46.5],[80,75,80,49,49,50,50],[92,87,92,53,53,52,52],[98,93,98,55.5,55.5,53.5,53.5],[104,99,104,57,57,54,54],[110,105,110,58.5,58.5,54.5,54.5],[116,111,116,60,60,55,55]]},
+    {"source":"uniqlo-id","cohort":"kids_body_common_chest_boys_waist","rows":[[110,105,115,53,59,49,55],[120,115,125,57,63,51,57],[130,125,135,61,67,53,59],[140,135,145,65,71,56,62],[150,145,155,71,77,59,65],[160,155,165,76,82,62,68]],"excluded_from_nominal_anchor_mean":"Different height grid and product context; retained for comparison, not silently pooled."}
+  ],
+  "nike_body_columns_inch":["size","height_min","height_max","chest_min","chest_max","waist_min","waist_max","hip_min","hip_max"],
+  "nike_body_inch":[["XS",48,50,24,25.5,19.5,22,25,26.5],["S",50,54,25.5,27.5,22,24.5,26.5,29],["M",54,58,27.5,30,24.5,26.5,29,31.5],["L",58,62,30,33,26.5,29,31.5,34.5],["XL",62,67,33,36,29,31.5,34.5,38]],
+  "nike_notes":"source nike-global; core Kids Fit sizes only, plus sizes intentionally not pooled; not used in anchor mean",
+  "garment_columns":["size_label","garment_chest_circumference_cm","front_length_cm"],
+  "garment":[
+    {"source":"cotton-regular","category":"tee_short_sleeve","cut":"regular","aggregation_status":"historical_only","rows":[["2",71,40],["3",73,43],["4",75,45],["5",77,47],["6",79,49],["7",81,51],["8",83,53],["9-10",89,56.5]]},
+    {"source":"cotton-boxy","category":"tee_long_sleeve","cut":"boxy","aggregation_status":"single_brand_single_sku","rows":[["2",72,38],["3",74,41],["4",76,43],["5",78,45],["6",80,47],["7",82,49],["8",84,51],["9-10",90,54]]},
+    {"source":"cotton-fitted","category":"tee_short_sleeve","cut":"slim_stretch","aggregation_status":"single_brand_single_sku","rows":[["2",51,35],["3",53,37],["4",55,39],["5",57,41],["6",59,43],["7",61,45],["8",63,46.5],["9-10",69,48]]}
+  ],
+  "footwear_columns":["EU_label","foot_length_cm"],
+  "footwear":[
+    {"source":"adidas-shoe-ae","basis":"heel_to_toe","aggregation_status":"single_brand_not_universal","rows":[[18,9.8],[20,11.5],[24,14],[26,15.3],[28,16.6],[30,17.8],[32,19.5],[34,20.8]]},
+    {"source":"bata-id","basis":"Indonesian_table_foot_length","aggregation_status":"quarantined_conflicting_response","rows":[[18,11],[20,12.4],[24,15],[26,16.5],[28,17.8],[30,19.1],[32,20.4],[34,21.7]]}
+  ]
+}

@@ -1,0 +1,76 @@
+.f-scroll-manifesto{height:320svh;position:relative;background:#fff;isolation:isolate;--story-top:78px}
+.f-scroll-manifesto-stage{position:sticky;top:var(--story-top);height:calc(100svh - var(--story-top));min-height:440px;padding:40px var(--pad);display:flex;flex-direction:column;justify-content:center;overflow:hidden;border-top:1px solid var(--line);background:white}
+.f-scroll-manifesto-top{position:absolute;top:32px;left:var(--pad);right:var(--pad);display:flex;justify-content:space-between;gap:20px;font-size:9px;font-weight:750;letter-spacing:.12em}
+.f-scroll-type{font-size:clamp(75px,12.3vw,235px);height:2.12em;position:relative;font-weight:900;letter-spacing:-.075em}
+.f-scroll-phrase{position:absolute;inset:0}
+.f-scroll-word{display:block;overflow:hidden;height:1.06em;line-height:.95}
+.f-scroll-word>span{display:block;white-space:nowrap;padding-bottom:.1em}
+.f-scroll-word.is-outline{color:transparent;-webkit-text-stroke:1.5px var(--ink)}
+.f-scroll-manifesto-bottom{position:absolute;left:var(--pad);right:var(--pad);bottom:35px;display:flex;align-items:end;justify-content:space-between;gap:22px}
+.f-scroll-manifesto-bottom>p{font-size:14px;line-height:1.65;letter-spacing:-.02em}
+.f-manifesto-steps{display:flex;gap:13px}
+.f-manifesto-steps>button{display:flex;flex-direction:column;gap:9px;min-height:44px;min-width:49px;text-align:left;font-size:11px;font-weight:750;color:#6b6b61}
+.f-manifesto-steps>button>i{height:2px;width:100%;background:#d9d9d1}
+.f-manifesto-steps>button[aria-current=step]{color:var(--ink)}
+.f-manifesto-steps>button[aria-current=step]>i{background:var(--ink)}
+.f-manifesto-progress{position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--ink);transform-origin:left;pointer-events:none}
+.f-scroll-manifesto.is-static{height:auto}
+.f-scroll-manifesto.is-static .f-scroll-manifesto-stage{position:relative;top:auto;height:auto;min-height:0;padding-block:100px 40px}
+.f-scroll-manifesto.is-static .f-scroll-type{height:auto;display:grid;gap:35px;font-size:clamp(52px,8vw,115px)}
+.f-scroll-manifesto.is-static .f-scroll-phrase{position:relative}
+.f-scroll-manifesto.is-static .f-scroll-phrase{opacity:1!important}
+.f-scroll-manifesto.is-static .f-scroll-word>span{transform:none!important}
+.f-scroll-manifesto.is-static .f-scroll-manifesto-bottom{position:static;margin-top:40px}
+.f-movement-story{position:relative;height:290svh;background:#f4f4ef;isolation:isolate;--story-top:78px}
+.f-movement-stage{position:sticky;top:var(--story-top);height:calc(100svh - var(--story-top));min-height:500px;overflow:hidden}
+.f-movement-intro{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:45px var(--pad)}
+.f-movement-intro>.f-cap{position:absolute;top:36px;left:var(--pad);font-size:10px}
+.f-movement-intro h2{font-size:clamp(66px,9.2vw,165px);line-height:.88;font-weight:900;letter-spacing:-.075em}
+.f-movement-intro-bottom{position:absolute;left:var(--pad);right:var(--pad);bottom:38px;display:flex;align-items:end;justify-content:space-between;gap:20px}
+.f-movement-intro-bottom>p{font-size:14px;line-height:1.6}
+.f-movement-intro-bottom>span{display:flex;align-items:center;gap:17px;font-size:9px;font-weight:700;letter-spacing:.06em}
+.f-movement-photo{position:absolute;inset:0;z-index:1;overflow:hidden;background:#deded7;pointer-events:none}
+.f-movement-photo>img{width:100%;height:100%;object-fit:cover;object-position:65% 50%}
+.f-movement-credit{position:absolute;bottom:22px;right:var(--pad);font-size:8px;font-weight:700;letter-spacing:.07em;background:#ffffffb8;padding:7px 10px}
+.f-movement-final{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:start;justify-content:center;padding:40px var(--pad);pointer-events:none}
+.f-movement-final>.f-cap{font-size:9px;margin-bottom:28px}
+.f-movement-final-title{font-size:clamp(68px,9.5vw,175px);font-weight:900;line-height:.83;letter-spacing:-.075em;max-width:60%}
+.f-movement-final>button{display:inline-flex;align-items:center;justify-content:space-between;gap:34px;padding:16px 22px;background:var(--ink);color:white;border:1px solid var(--ink);min-height:56px;font-size:11px;font-weight:750;margin-top:34px;pointer-events:auto}
+.f-movement-final>button:hover{background:var(--acid);color:var(--ink)}
+.f-movement-story.is-static{height:auto}
+.f-movement-story.is-static .f-movement-stage{position:relative;top:auto;height:auto;min-height:0}
+.f-movement-story.is-static .f-movement-intro{position:relative;inset:auto;padding-block:100px 65px}
+.f-movement-story.is-static .f-movement-intro h2{font-size:clamp(48px,7vw,110px)}
+.f-movement-story.is-static .f-movement-intro-bottom{display:none}
+.f-movement-story.is-static .f-movement-photo{position:relative;height:85svh;min-height:600px}
+.f-movement-story.is-static .f-movement-final{top:auto;bottom:0;height:85svh;min-height:600px}
+.f-movement-story.is-static .f-movement-intro,.f-movement-story.is-static .f-movement-photo,.f-movement-story.is-static .f-movement-final{opacity:1!important;transform:none!important;clip-path:none!important}
+.f-movement-story.is-static .f-movement-photo>img{transform:none!important}
+@media(max-width:767px){.f-scroll-manifesto,.f-movement-story{--story-top:66px}.f-scroll-manifesto{height:290svh}.f-scroll-manifesto-stage{padding-inline:22px;min-height:430px}.f-scroll-manifesto-top{font-size:7px;top:26px}.f-scroll-manifesto-top>span:last-child{display:none}.f-scroll-type{font-size:clamp(42px,15.5vw,106px);height:2.22em;letter-spacing:-.065em}.f-scroll-manifesto-bottom{bottom:26px;align-items:center}.f-scroll-manifesto-bottom>p{font-size:11px}.f-manifesto-steps{gap:7px}.f-manifesto-steps>button{min-width:29px;font-size:9px}.f-scroll-word.is-outline{-webkit-text-stroke:1px var(--ink)}.f-scroll-manifesto.is-static .f-scroll-type{font-size:clamp(40px,11vw,76px)}.f-scroll-manifesto.is-static .f-scroll-manifesto-stage{padding-top:85px}.f-movement-story{height:260svh}.f-movement-stage{min-height:460px}.f-movement-intro{padding-inline:22px}.f-movement-intro>.f-cap{top:27px;font-size:8px}.f-movement-intro h2{font-size:clamp(43px,10vw,80px)}.f-movement-intro-bottom{bottom:27px;display:block}.f-movement-intro-bottom>p{font-size:12px}.f-movement-intro-bottom>span{font-size:7px;margin-top:20px}.f-movement-final{padding:35px 22px;justify-content:start}.f-movement-final>.f-cap{margin:18px 0 25px;font-size:8px}.f-movement-final-title{font-size:clamp(55px,14vw,100px);max-width:none}.f-movement-final>button{font-size:9px;margin-top:25px;padding:14px 17px;min-height:50px;gap:28px}.f-movement-photo>img{object-position:65% center}.f-movement-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#ffffffb8,transparent 65%)}.f-movement-credit{bottom:15px;right:15px;left:15px;font-size:6px;text-align:center}.f-movement-story.is-static .f-movement-intro{padding-top:85px;padding-bottom:45px}.f-movement-story.is-static .f-movement-photo,.f-movement-story.is-static .f-movement-final{height:700px;min-height:0}}
+@media(min-width:768px) and (max-height:760px){.f-scroll-manifesto-stage{min-height:0}.f-scroll-type{font-size:11vw}.f-movement-stage{min-height:0}.f-movement-intro h2{font-size:8vw}.f-movement-final-title{font-size:8vw}}
+@media(max-height:600px){.f-scroll-manifesto:not(.is-static) .f-scroll-manifesto-stage,.f-movement-story:not(.is-static) .f-movement-stage{min-height:0}.f-scroll-manifesto:not(.is-static) .f-scroll-type{font-size:min(12vw,22svh)}.f-scroll-manifesto-top{top:18px}.f-scroll-manifesto-bottom{bottom:18px}.f-scroll-manifesto-bottom>p{font-size:11px}.f-movement-story:not(.is-static) .f-movement-intro h2{font-size:min(9vw,19svh)}.f-movement-story:not(.is-static) .f-movement-final{padding-block:22px;justify-content:center}.f-movement-story:not(.is-static) .f-movement-final-title{font-size:min(9vw,15svh)}.f-movement-final>.f-cap{margin:0 0 12px}.f-movement-final>button{margin-top:16px;min-height:44px;padding-block:10px}.f-movement-intro>.f-cap{top:18px}.f-movement-intro-bottom{bottom:18px}}
+.f-movement-film-inner,.f-order-journey{position:relative;width:100%;height:100%}.f-movement-photo.f-movement-film{background:#12170e}.f-movement-film:after{display:none!important}.f-order-journey>video{display:block;width:100%;height:100%;object-fit:cover;object-position:center;background:#12170e}.f-order-video-error{position:absolute;left:25px;right:25px;top:45%;text-align:center;color:white;font-size:14px}.f-movement-with-film .f-movement-final{top:auto;bottom:0;height:auto;min-height:0;display:grid;grid-template-columns:1fr auto;gap:12px 30px;align-items:end;justify-content:stretch;background:linear-gradient(0deg,#10160ee8,#10160e9c 70%,transparent);color:white;padding:65px var(--pad) 28px}.f-movement-with-film .f-movement-final>.f-cap{grid-column:1;margin:0;font-size:10px;color:#e4edce}.f-movement-with-film .f-movement-final-title{grid-column:1;font-size:clamp(27px,3vw,48px);font-weight:750;letter-spacing:-.05em;line-height:1.1;max-width:none}.f-journey-chapters{grid-column:1;display:flex;gap:22px;font-size:9px;letter-spacing:.06em;color:#dae5c8;margin-top:7px}.f-movement-with-film .f-movement-final>button{grid-column:2;grid-row:2/4;margin:0;background:white;color:#17200e;border-color:white;min-height:50px;border-radius:5px;font-size:11px;gap:25px}.f-movement-with-film .f-movement-final>button:hover{background:var(--acid);border-color:var(--acid)}.f-movement-with-film.is-static .f-movement-final{height:auto;min-height:0}.f-hero-photo-motion img{object-position:52% center}
+@media(max-width:767px){.f-movement-with-film .f-movement-final{grid-template-columns:1fr;padding:55px 22px 25px;gap:15px}.f-movement-with-film .f-movement-final-title{font-size:32px}.f-journey-chapters{gap:14px;font-size:8px;flex-wrap:wrap}.f-movement-with-film .f-movement-final>button{grid-column:1;grid-row:auto;justify-self:start;margin-top:7px}.f-movement-with-film .f-movement-final>.f-cap{margin:0}.f-movement-with-film.is-static .f-movement-photo{height:660px}.f-hero-photo-motion img{object-position:54% center}}
+
+
+
+/* Order-journey film on phones. The reveal stays (title, then the film opens, then the
+   caption) but the section is only as tall as its slim stage — the 16:9 film with the
+   caption below — and is not pinned: the animation follows the section as it scrolls
+   through the screen (MovementReveal), so the sections before and after stay visible.
+   A full-height pinned stage either cropped the film or left tall empty bands. */
+@media(max-width:767px){
+  .f-movement-with-film:not(.is-static){--film-h:calc(100vw * 9 / 16);--caption-h:236px;height:auto}
+  .f-movement-with-film:not(.is-static) .f-movement-stage{position:relative;top:auto;display:grid;grid-template-rows:var(--film-h) auto;height:auto;min-height:0}
+  .f-movement-with-film:not(.is-static) .f-movement-photo{position:relative;inset:auto;grid-row:1}
+  .f-movement-with-film:not(.is-static) .f-movement-final{position:relative;inset:auto;grid-row:2;min-height:var(--caption-h);align-content:center;background:#10160e;padding:22px 22px 26px}
+  .f-movement-with-film:not(.is-static) .f-movement-intro{z-index:0;padding-block:28px}
+  .f-movement-with-film:not(.is-static) .f-movement-intro>.f-cap{top:14px}
+  .f-movement-with-film:not(.is-static) .f-movement-intro-bottom{bottom:16px}
+  /* Reduced motion: the same pieces stacked without the scroll animation. */
+  .f-movement-with-film.is-static .f-movement-intro{padding-block:44px 26px}
+  .f-movement-with-film.is-static .f-movement-intro>.f-cap{position:static;margin-bottom:18px}
+  .f-movement-with-film.is-static .f-movement-intro-bottom{display:block;position:static;margin-top:16px}
+  .f-movement-with-film.is-static .f-movement-photo{height:auto;min-height:0;aspect-ratio:16/9}
+  .f-movement-with-film.is-static .f-movement-final{position:relative;inset:auto;height:auto;min-height:0;background:#10160e;padding:22px 22px 28px}
+}

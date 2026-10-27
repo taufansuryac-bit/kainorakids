@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { X, Cookie } from 'lucide-react';
+import { CONSENT_KEY, updateAnalyticsConsent } from '../../utils/analytics';
 
 export const CookieConsentBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Mengecek apakah user sudah pernah menyetujui cookie/cache sebelumnya
-    const consent = localStorage.getItem('kainora_cookie_consent');
+    let consent = 'unavailable';
+    try { consent = localStorage.getItem(CONSENT_KEY); } catch { /* Storage blocked: do not nag on every view. */ }
     if (!consent) {
       // Menunda kemunculan banner agar tidak mengganggu loading awal (muncul setelah 2 detik)
       const timer = setTimeout(() => {
@@ -17,14 +19,16 @@ export const CookieConsentBanner = () => {
   }, []);
 
   const handleAccept = () => {
-    localStorage.setItem('kainora_cookie_consent', 'accepted');
+    try { localStorage.setItem(CONSENT_KEY, 'accepted'); } catch { /* Storage is optional. */ }
+    updateAnalyticsConsent(true);
     setIsVisible(false);
   };
 
   const handleDecline = () => {
     // Meskipun menolak, kita simpan agar tidak terus-terusan muncul,
     // tapi tandai sebagai declined
-    localStorage.setItem('kainora_cookie_consent', 'declined');
+    try { localStorage.setItem(CONSENT_KEY, 'declined'); } catch { /* Storage is optional. */ }
+    updateAnalyticsConsent(false);
     setIsVisible(false);
   };
 
@@ -41,7 +45,7 @@ export const CookieConsentBanner = () => {
         .animate-pop-banner { animation: popBanner 0.7s var(--ease-out) forwards; }
       `}</style>
 
-      <div className="neo-panel animate-pop-banner pointer-events-auto relative flex w-full max-w-4xl flex-col items-start justify-between gap-5 bg-brand-yellow p-5 pr-12 shadow-solid-lg md:flex-row md:items-center md:p-6 md:pr-14">
+      <div className="cookie-notice neo-panel animate-pop-banner pointer-events-auto relative flex w-full max-w-4xl flex-col items-start justify-between gap-5 bg-brand-yellow p-5 pr-12 shadow-solid-lg md:flex-row md:items-center md:p-6 md:pr-14">
         <div className="flex flex-1 items-start gap-4">
           <div className="hidden shrink-0 place-items-center rounded-full border-[3px] border-ink bg-paper p-3 sm:grid">
             <Cookie size={26} strokeWidth={2.5} />
@@ -50,7 +54,7 @@ export const CookieConsentBanner = () => {
             <h3 className="display mb-2 text-xl md:text-2xl">Izinkan Cache & Cookie?</h3>
             <p className="text-sm font-semibold leading-relaxed">
               Kami menggunakan <em>cache</em> dan teknologi serupa untuk memastikan Anda mendapatkan pengalaman berbelanja yang super cepat, personal, dan aman di website Kainora Kids.
-              <a href="#" className="ml-1 underline decoration-[3px] underline-offset-2 hover:text-brand-red">Pelajari lebih lanjut.</a>
+              <a href="/kebijakan-privasi/" className="ml-1 underline decoration-[3px] underline-offset-2 hover:text-brand-red">Pelajari lebih lanjut.</a>
             </p>
           </div>
         </div>

@@ -1,11 +1,11 @@
 /**
  * Kartu produk neo-brutalist yang dipakai di beranda & katalog:
- * panel warna bergantian, foto muncul lewat disolve papan catur, label sticker,
+ * panel warna bergantian, foto langsung terlihat, label sticker,
  * tombol wishlist bulat, dan efek tekan fisik.
  */
-import { Heart } from 'lucide-react';
+import { ArrowUpRight, Heart } from 'lucide-react';
 import { formatPrice } from '../../constants/data';
-import { CheckerReveal } from '../motion/CheckerReveal';
+import { productImages } from '../../utils/productMedia';
 
 const TONES = ['var(--pink)', 'var(--teal)', 'var(--yellow)', 'var(--blue)', 'var(--orange)'];
 
@@ -16,37 +16,31 @@ const labelStyle = (label) =>
 
 export const ProductCard = ({ product: p, index = 0, onOpen, wishlisted, onToggleWishlist, headingLevel = 'h3' }) => {
   const Heading = headingLevel;
-  const first = p.img || (p.images && p.images[0]);
-  const second = p.images && p.images.length > 1 ? p.images[1] : null;
+  const [first, second] = productImages(p);
   const open = () => onOpen?.(p);
 
   return (
     <article
-      className="neo-panel press group relative flex h-full cursor-pointer flex-col overflow-hidden text-left"
-      style={{ background: TONES[index % TONES.length] }}
-      onClick={open}
-      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } }}
-      role="link"
-      tabIndex={0}
-      aria-label={p.name}
+      className="product-card neo-panel press group relative flex h-full cursor-pointer flex-col overflow-hidden text-left"
+      style={{ background: TONES[index % TONES.length], '--card-accent': TONES[index % TONES.length] }}
     >
-      <div className="relative aspect-square border-b-[3px] border-ink bg-paper">
-        <CheckerReveal cols={4} rows={4} delay={(index % 4) * 0.07} className="absolute inset-0">
+      <div className="product-image relative aspect-square border-b-[3px] border-ink bg-paper">
+        <div className="absolute inset-0">
           <img
             src={first}
             alt={p.alt}
             loading="lazy"
-            className={`absolute inset-0 h-full w-full object-cover transition-all duration-500 group-hover:scale-105 ${second ? 'group-hover:opacity-0' : ''}`}
+            className={`product-photo absolute inset-0 h-full w-full object-cover transition-all duration-500 ${first?.endsWith('-2.jpg') ? 'product-photo-model' : ''} ${second ? 'group-hover:opacity-0' : ''}`}
           />
           {second && (
             <img
               src={second}
               alt={p.alt}
               loading="lazy"
-              className="absolute inset-0 h-full w-full scale-100 object-cover opacity-0 transition-all duration-500 group-hover:scale-105 group-hover:opacity-100"
+              className={`absolute inset-0 h-full w-full scale-100 object-cover opacity-0 transition-all duration-500 group-hover:scale-105 group-hover:opacity-100 ${second?.endsWith('-2.jpg') ? 'product-photo-model' : ''}`}
             />
           )}
-        </CheckerReveal>
+        </div>
 
         {p.label && (
           <span
@@ -58,7 +52,7 @@ export const ProductCard = ({ product: p, index = 0, onOpen, wishlisted, onToggl
         )}
 
         <button
-          className="absolute right-2 top-2 z-30 grid h-9 w-9 place-items-center rounded-full border-[3px] border-ink bg-paper transition-transform hover:scale-110 active:scale-90"
+          className="absolute right-2 top-2 z-30 grid h-11 w-11 place-items-center rounded-full border-[2px] border-ink bg-paper transition-transform hover:scale-110 active:scale-90"
           onClick={(e) => { e.stopPropagation(); onToggleWishlist?.(e, p.id); }}
           aria-label={wishlisted ? 'Hapus dari wishlist' : 'Tambah ke wishlist'}
           aria-pressed={wishlisted}
@@ -70,11 +64,9 @@ export const ProductCard = ({ product: p, index = 0, onOpen, wishlisted, onToggl
       <div className="flex flex-1 flex-col justify-between gap-3 p-3 sm:p-4">
         <div>
           {p.type && <p className="mb-1 text-[0.62rem] font-black uppercase tracking-[0.2em] opacity-70">{p.type}</p>}
-          <Heading className="line-clamp-2 text-[0.8rem] font-extrabold uppercase leading-[1.1] sm:text-sm">{p.name}</Heading>
+          <Heading className="product-title text-[0.8rem] font-extrabold uppercase leading-[1.25] sm:text-sm"><button onClick={open} className="product-open">{p.name}<span className="sr-only"> — Lihat produk</span></button></Heading>
         </div>
-        <p className="font-arcade inline-block w-fit rounded-full border-[3px] border-ink bg-paper px-3 py-1.5 text-[0.7rem] leading-none sm:text-xs">
-          {formatPrice(p.price)}
-        </p>
+        <div className="product-price-row"><p>{formatPrice(p.price)}</p><span aria-hidden="true"><ArrowUpRight size={19} /></span></div>
       </div>
     </article>
   );

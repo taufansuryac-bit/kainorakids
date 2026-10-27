@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-23",
+  "measurement": "Limited-session Event Timing, not field INP",
+  "viewport": {"width": 390, "height": 844, "deviceScaleFactor": 1.75},
+  "cpuSlowdown": 4,
+  "durationThresholdMs": 16,
+  "notes": "Only entries with a nonzero interactionId were grouped. Multiple pointer/keyboard events from one interaction were not summed. Entries below the observation threshold are not reported as zero. Homepage first filter remains above 200ms.",
+  "sessions": [
+    {"page": "home", "maxObservedDurationMs": 240, "recordedInteractionIds": 5, "maxTarget": "Foto lengkap", "otherObservedDurationsMs": [72,72,64,56]},
+    {"page": "catalog", "maxObservedDurationMs": 128, "recordedInteractionIds": 4, "actions": ["Boys", "Girls", "Semua motif", "FILTER", "Filter ukuran XXL"]},
+    {"page": "detail-to-guide-to-cart", "maxObservedDurationMs": 144, "recordedInteractionIds": 9, "maxTarget": "TAMBAH KE KERANJANG", "interactionDurationsMs": [72,40,64,40,24,144,56,72,40]}
+  ]
+}

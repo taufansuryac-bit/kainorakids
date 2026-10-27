@@ -1,0 +1,152 @@
+[
+  {
+    "category": "Atasan",
+    "errors": [],
+    "inputs": [
+      {
+        "fontSize": "16px",
+        "id": "ss-height"
+      },
+      {
+        "fontSize": "16px",
+        "id": "ss-chest"
+      },
+      {
+        "fontSize": "16px",
+        "id": "ss-weight"
+      }
+    ],
+    "result": "PANDUAN PENGUKURAN\nIni catatan ukuran si kecil.\nTinggi badan\n110 cm\n\nUkuran tubuh / kebutuhan panjang yang Anda masukkan.\n\nLingkar dada\n56 cm\n\nUkuran tubuh / kebutuhan panjang yang Anda masukkan.\n\nCari size chart yang mencakup ukuran tubuh ini. Lingkar dada tubuh bukan lebar dada pakaian.\nRegular: periksa kenyamanan dada, bahu dan panjang pada chart produk.\nPanduan ini belum menentukan satu label ukuran universal. Gunakan mode banding bila sudah memiliki ukuran pakaian yang nyaman.\nLanjut bandingkan dengan size chart",
+    "scrollWidth": 305,
+    "type": "tee",
+    "width": 305
+  },
+  {
+    "category": "Bawahan",
+    "errors": [],
+    "inputs": [
+      {
+        "fontSize": "16px",
+        "id": "ss-waist"
+      },
+      {
+        "fontSize": "16px",
+        "id": "ss-hip"
+      },
+      {
+        "fontSize": "16px",
+        "id": "ss-inseam"
+      }
+    ],
+    "result": "PANDUAN PENGUKURAN\nIni catatan ukuran si kecil.\nLingkar pinggang\n54 cm\n\nUkuran tubuh / kebutuhan panjang yang Anda masukkan.\n\nLingkar pinggul\n60 cm\n\nUkuran tubuh / kebutuhan panjang yang Anda masukkan.\n\nPanjang kaki bagian dalam\n43 cm\n\nUkuran tubuh / kebutuhan panjang yang Anda masukkan.\n\nCari size chart yang mencakup ukuran tubuh ini. Lingkar dada tubuh bukan lebar dada pakaian.\nPeriksa metode ukur, bahan dan cakupan pada produk yang dipilih.\nPanduan ini belum menentukan satu label ukuran universal. Gunakan mode banding bila sudah memiliki ukuran pakaian yang nyaman.\nLanjut bandingkan dengan size chart",
+    "scrollWidth": 305,
+    "type": "trousers",
+    "width": 305
+  },
+  {
+    "category": "Sepatu",
+    "errors": [],
+    "inputs": [
+      {
+        "fontSize": "16px",
+        "id": "ss-leftFoot"
+      },
+      {
+        "fontSize": "16px",
+        "id": "ss-rightFoot"
+      }
+    ],
+    "result": "PANDUAN PENGUKURAN\nMulai dari kaki yang lebih panjang.\nPanjang kaki acuan\n14,8 cm\n\nDari kaki yang lebih panjang. Cari chart berdasarkan panjang kaki.\n\nBandingkan dengan kolom panjang kaki pada chart. Panjang insole dan sol luar tidak sama; ruang depan mengikuti panduan model.\nPeriksa metode ukur, bahan dan cakupan pada produk yang dipilih.\nPanduan ini belum menentukan satu label ukuran universal. Gunakan mode banding bila sudah memiliki ukuran pakaian yang nyaman.\nLanjut bandingkan dengan size chart",
+    "scrollWidth": 305,
+    "type": "sneaker",
+    "width": 305
+  },
+  {
+    "category": "Bayi",
+    "errors": [],
+    "inputs": [
+      {
+        "fontSize": "16px",
+        "id": "ss-height"
+      },
+      {
+        "fontSize": "16px",
+        "id": "ss-chest"
+      },
+      {
+        "fontSize": "16px",
+        "id": "ss-torso"
+      }
+    ],
+    "result": "PANDUAN PENGUKURAN\nIni catatan ukuran si kecil.\nTinggi badan\n110 cm\n\nUkuran tubuh / kebutuhan panjang yang Anda masukkan.\n\nLingkar dada\n56 cm\n\nUkuran tubuh / kebutuhan panjang yang Anda masukkan.\n\nBahu ke selangkangan\n38 cm\n\nUkuran tubuh / kebutuhan panjang yang Anda masukkan.\n\nCari size chart yang mencakup ukuran tubuh ini. Lingkar dada tubuh bukan lebar dada pakaian.\nPeriksa metode ukur, bahan dan cakupan pada produk yang dipilih.\nPanduan ini belum menentukan satu label ukuran universal. Gunakan mode banding bila sudah memiliki ukuran pakaian yang nyaman.\nLanjut bandingkan dengan size chart",
+    "scrollWidth": 305,
+    "type": "bodysuit",
+    "width": 305
+  },
+  {
+    "category": "Dress",
+    "errors": [],
+    "inputs": [
+      {
+        "fontSize": "16px",
+        "id": "ss-height"
+      },
+      {
+        "fontSize": "16px",
+        "id": "ss-chest"
+      },
+      {
+        "fontSize": "16px",
+        "id": "ss-length"
+      }
+    ],
+    "result": "PANDUAN PENGUKURAN\nIni catatan ukuran si kecil.\nTinggi badan\n110 cm\n\nUkuran tubuh / kebutuhan panjang yang Anda masukkan.\n\nLingkar dada\n56 cm\n\nUkuran tubuh / kebutuhan panjang yang Anda masukkan.\n\nPanjang yang diinginkan\n55 cm\n\nUkuran tubuh / kebutuhan panjang yang Anda masukkan.\n\nCari size chart yang mencakup ukuran tubuh ini. Lingkar dada tubuh bukan lebar dada pakaian.\nRegular: periksa kenyamanan dada, bahu dan panjang pada chart produk.\nPanduan ini belum menentukan satu label ukuran universal. Gunakan mode banding bila sudah memiliki ukuran pakaian yang nyaman.\nLanjut bandingkan dengan size chart",
+    "scrollWidth": 305,
+    "type": "dress",
+    "width": 305
+  },
+  {
+    "category": "Pakaian rumah",
+    "errors": [],
+    "inputs": [
+      {
+        "fontSize": "16px",
+        "id": "ss-height"
+      },
+      {
+        "fontSize": "16px",
+        "id": "ss-chest"
+      },
+      {
+        "fontSize": "16px",
+        "id": "ss-waist"
+      }
+    ],
+    "result": "PANDUAN PENGUKURAN\nIni catatan ukuran si kecil.\nTinggi badan\n110 cm\n\nUkuran tubuh / kebutuhan panjang yang Anda masukkan.\n\nLingkar dada\n56 cm\n\nUkuran tubuh / kebutuhan panjang yang Anda masukkan.\n\nLingkar pinggang\n54 cm\n\nUkuran tubuh / kebutuhan panjang yang Anda masukkan.\n\nCari size chart yang mencakup ukuran tubuh ini. Lingkar dada tubuh bukan lebar dada pakaian.\nPeriksa metode ukur, bahan dan cakupan pada produk yang dipilih.\nPanduan ini belum menentukan satu label ukuran universal. Gunakan mode banding bila sudah memiliki ukuran pakaian yang nyaman.\nLanjut bandingkan dengan size chart",
+    "scrollWidth": 305,
+    "type": "pyjamas",
+    "width": 305
+  },
+  {
+    "category": "Muslim",
+    "errors": [],
+    "inputs": [
+      {
+        "fontSize": "16px",
+        "id": "ss-height"
+      },
+      {
+        "fontSize": "16px",
+        "id": "ss-chest"
+      },
+      {
+        "fontSize": "16px",
+        "id": "ss-arm"
+      }
+    ],
+    "result": "PANDUAN PENGUKURAN\nIni catatan ukuran si kecil.\nTinggi badan\n110 cm\n\nUkuran tubuh / kebutuhan panjang yang Anda masukkan.\n\nLingkar dada\n56 cm\n\nUkuran tubuh / kebutuhan panjang yang Anda masukkan.\n\nPanjang lengan\n35 cm\n\nUkuran tubuh / kebutuhan panjang yang Anda masukkan.\n\nCari size chart yang mencakup ukuran tubuh ini. Lingkar dada tubuh bukan lebar dada pakaian.\nPeriksa metode ukur, bahan dan cakupan pada produk yang dipilih.\nPanduan ini belum menentukan satu label ukuran universal. Gunakan mode banding bila sudah memiliki ukuran pakaian yang nyaman.\nLanjut bandingkan dengan size chart",
+    "scrollWidth": 305,
+    "type": "koko",
+    "width": 305
+  }
+]

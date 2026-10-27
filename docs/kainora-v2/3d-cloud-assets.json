@@ -1,0 +1,22 @@
+{
+  "pipeline": "Blender 4.5.9 LTS / Cycles CPU / 32 samples / neutral Principled Volume / transparent render / cropped cloud region / WebP",
+  "runtime": "Four transparent planes at different depths, not live VDB raymarching. Two textures reused. Original source volumes unchanged.",
+  "assets": [
+    {
+      "url": "/models/kainora/clouds/cloud-01.webp",
+      "source": "ASSET3D/AWAN/Example/Cumulonimbus_Field_1.f165.eighth.vdb",
+      "sourceSha256": "f2c1be849af7e392ab55759e3b58062633cd678036c4754a2425d1369c05557a",
+      "bytes": 31766,
+      "width": 431,
+      "height": 343
+    },
+    {
+      "url": "/models/kainora/clouds/cloud-02.webp",
+      "source": "ASSET3D/AWAN/Cumulonimbus_Field_12/f135/Cumulonimbus_Field_12.f135.eighth.vdb",
+      "sourceSha256": "d23e91f685a4e9f1687d38eeb0a95e5be2032868c64fb5823d6844cccc883854",
+      "bytes": 175410,
+      "width": 960,
+      "height": 545
+    }
+  ]
+}

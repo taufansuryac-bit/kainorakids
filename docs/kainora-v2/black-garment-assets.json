@@ -1,0 +1,182 @@
+[
+  {
+    "source": "public/Design Png Depan Belakang/DINOREX/All Pages-15.png",
+    "sourceSHA256": "447cc249b78edfac9c0487e896c4b90d3d2a4f63fc6526b3779563b1bf466118",
+    "sourceSize": [
+      5373,
+      6850
+    ],
+    "alphaBounds": [
+      80,
+      49,
+      5334,
+      6748
+    ],
+    "texture": "/models/kainora/dinorex-back.webp",
+    "size": [
+      1205,
+      1536
+    ],
+    "bytes": 641298
+  },
+  {
+    "source": "public/Design Png Depan Belakang/DINOREX/All Pages-15 - Copy.png",
+    "sourceSHA256": "2a73a30060d9fad777324ee537a1a370ff3165991d0fb2accd3474cecae19501",
+    "sourceSize": [
+      2731,
+      3307
+    ],
+    "alphaBounds": [
+      29,
+      61,
+      2686,
+      3249
+    ],
+    "texture": "/models/kainora/dinorex-front.webp",
+    "size": [
+      427,
+      512
+    ],
+    "bytes": 68278
+  },
+  {
+    "source": "public/Design Png Depan Belakang/KAINORAFRESH/All Pages-6.png",
+    "sourceSHA256": "bf0d3ce85b372c7faa5dc819e6b7cfdcadb4c3e286c5617ab31df2e4ccd4fc28",
+    "sourceSize": [
+      5229,
+      6821
+    ],
+    "alphaBounds": [
+      23,
+      98,
+      5144,
+      6657
+    ],
+    "texture": "/models/kainora/kainora-fresh-back.webp",
+    "size": [
+      1199,
+      1536
+    ],
+    "bytes": 982052
+  },
+  {
+    "source": "public/Design Png Depan Belakang/KAINORAFRESH/All Pages-6 - Copy.png",
+    "sourceSHA256": "98034fff0fb955db6aea4f57cf027c8b24b4ffbf472e4fa7a0e0f97d0b9cdec4",
+    "sourceSize": [
+      3002,
+      3369
+    ],
+    "alphaBounds": [
+      59,
+      127,
+      2962,
+      3244
+    ],
+    "texture": "/models/kainora/kainora-fresh-front.webp",
+    "size": [
+      477,
+      512
+    ],
+    "bytes": 81128
+  },
+  {
+    "source": "public/Design Png Depan Belakang/KEY/All Pages-2.png",
+    "sourceSHA256": "ce49748194f98fdf4e44b35d6de2d0ae41f3a4ff3396157ecec80b45d8174f83",
+    "sourceSize": [
+      5569,
+      6705
+    ],
+    "alphaBounds": [
+      93,
+      185,
+      5500,
+      6651
+    ],
+    "texture": "/models/kainora/key-back.webp",
+    "size": [
+      1284,
+      1536
+    ],
+    "bytes": 622184
+  },
+  {
+    "source": "public/Design Png Depan Belakang/KEY/All Pages-2 - Copy.png",
+    "sourceSHA256": "a47c3189138c300bfe1527e61e1985c647e192d29e41e231447cdf2630c10cb4",
+    "sourceSize": [
+      2726,
+      2833
+    ],
+    "alphaBounds": [
+      51,
+      79,
+      2681,
+      2771
+    ],
+    "texture": "/models/kainora/key-front.webp",
+    "size": [
+      500,
+      512
+    ],
+    "bytes": 114990
+  },
+  {
+    "source": "public/Design Png Depan Belakang/EGG/All Pages-4.png",
+    "sourceSHA256": "2869ebeb26a1cd9e0db7264158ad1fb5287b4681d93c072a2adfe6485d225146",
+    "sourceSize": [
+      5331,
+      4558
+    ],
+    "alphaBounds": [
+      90,
+      132,
+      5218,
+      4411
+    ],
+    "texture": "/models/kainora/egg-artwork.webp",
+    "size": [
+      1536,
+      1282
+    ],
+    "bytes": 634560
+  },
+  {
+    "source": "public/Design Png Depan Belakang/CANDY FRONT ONLY/All Pages-16.png",
+    "sourceSHA256": "6e882f5739631a2348e765346752ab8f77949b55722c4d747cbef4bfc5b530a9",
+    "sourceSize": [
+      6850,
+      11811
+    ],
+    "alphaBounds": [
+      1020,
+      2268,
+      5831,
+      9543
+    ],
+    "texture": "/models/kainora/candy-front.webp",
+    "size": [
+      1016,
+      1536
+    ],
+    "bytes": 486830
+  },
+  {
+    "source": "public/Design Png Depan Belakang/ICECREAM/All Pages-7.png",
+    "sourceSHA256": "2128084369e908092087677b3483910042785b590618a4a85211a607d7f500f9",
+    "sourceSize": [
+      6850,
+      11811
+    ],
+    "alphaBounds": [
+      640,
+      1508,
+      5887,
+      10397
+    ],
+    "texture": "/models/kainora/icecream-front.webp",
+    "size": [
+      907,
+      1536
+    ],
+    "bytes": 547254
+  }
+]

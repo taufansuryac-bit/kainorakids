@@ -1,0 +1,28 @@
+[
+  {
+    "source": "Design Png Depan Belakang/Depan.png",
+    "url": "/models/kainora/kainora-park-front.webp",
+    "transparentBounds": [
+      1035,
+      0,
+      4548,
+      2672
+    ],
+    "width": 768,
+    "height": 584,
+    "bytes": 186828
+  },
+  {
+    "source": "Design Png Depan Belakang/Belakang.png",
+    "url": "/models/kainora/kainora-park-back.webp",
+    "transparentBounds": [
+      0,
+      326,
+      5302,
+      6810
+    ],
+    "width": 1256,
+    "height": 1536,
+    "bytes": 907584
+  }
+]

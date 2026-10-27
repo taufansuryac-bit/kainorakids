@@ -1,3 +1,6 @@
+import { journalSchema } from './journalRoutes';
+import { WA_PHONE_E164 } from '../config/shop';
+
 /**
  * KAINORA KIDS - SEO HELPERS
  * Generate JSON-LD schemas untuk product, blog, review, dll
@@ -10,104 +13,12 @@ export const DEFAULT_IMAGE = `${SITE_URL}/link-logo.jpg`;
 /**
  * Generate Product schema
  */
-export const productSchema = (product) => {
-  if (!product) return null;
-
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: product.name,
-    description: product.description || `${product.name} - ${product.category || 'Baju anak'} premium dari Kainora Kids.`,
-    image: product.images || product.img || [DEFAULT_IMAGE],
-    sku: product.sku || `KK-${product.id || '000'}`,
-    brand: {
-      '@type': 'Brand',
-      name: SITE_NAME
-    },
-    manufacturer: {
-      '@type': 'Organization',
-      name: 'CV Marbella Utama Mandiri'
-    },
-    category: product.category || 'Baju Anak',
-    material: product.bahan || '100% Premium Cotton',
-    color: product.warna || 'Various',
-    offers: {
-      '@type': 'Offer',
-      url: `${SITE_URL}/?view=productDetail&id=${product.id}`,
-      priceCurrency: 'IDR',
-      price: product.price || 0,
-      availability: product.stock > 0
-        ? 'https://schema.org/InStock'
-        : 'https://schema.org/OutOfStock',
-      seller: {
-        '@type': 'Organization',
-        name: SITE_NAME
-      },
-      shippingDetails: {
-        '@type': 'OfferShippingDetails',
-        shippingDestination: {
-          '@type': 'DefinedRegion',
-          addressCountry: 'ID'
-        },
-        deliveryTime: {
-          '@type': 'ShippingDeliveryTime',
-          handlingTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 2, unitCode: 'DAY' },
-          transitTime: { '@type': 'QuantitativeValue', minValue: 2, maxValue: 5, unitCode: 'DAY' }
-        }
-      },
-      hasMerchantReturnPolicy: {
-        '@type': 'MerchantReturnPolicy',
-        returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
-        merchantReturnDays: 7,
-        returnMethod: 'https://schema.org/ReturnByMail',
-        returnFees: 'https://schema.org/FreeReturn'
-      }
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '854',
-      bestRating: '5',
-      worstRating: '1'
-    }
-  };
-};
+export { productSchema } from './productSeo.js';
 
 /**
  * Generate BlogPosting schema
  */
-export const blogPostSchema = (post) => {
-  if (!post) return null;
-
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    description: post.excerpt || post.content?.substring(0, 160),
-    image: post.img || DEFAULT_IMAGE,
-    author: {
-      '@type': 'Organization',
-      name: SITE_NAME,
-      url: SITE_URL
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: SITE_NAME,
-      logo: {
-        '@type': 'ImageObject',
-        url: `${SITE_URL}/favicon.png`
-      }
-    },
-    datePublished: post.datePublished || '2026-01-01T00:00:00+07:00',
-    dateModified: post.dateModified || post.datePublished || '2026-01-01T00:00:00+07:00',
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `${SITE_URL}/?view=blog&id=${post.id}`
-    },
-    articleSection: post.category || 'Parenting',
-    keywords: post.tags || ['parenting', 'anak', 'kainora kids']
-  };
-};
+export const blogPostSchema = post => !post || post.preview ? null : journalSchema(post);
 
 /**
  * Generate Review schema
@@ -141,33 +52,7 @@ export const reviewSchema = (review) => {
 /**
  * Generate ItemList schema untuk product listing
  */
-export const productListSchema = (products) => {
-  if (!products || products.length === 0) return null;
-
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: 'Koleksi Baju Anak Premium Kainora Kids',
-    description: 'Daftar koleksi baju anak premium dari Kainora Kids',
-    numberOfItems: products.length,
-    itemListElement: products.slice(0, 20).map((product, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      item: {
-        '@type': 'Product',
-        name: product.name,
-        image: product.img || DEFAULT_IMAGE,
-        url: `${SITE_URL}/?view=productDetail&id=${product.id}`,
-        offers: {
-          '@type': 'Offer',
-          priceCurrency: 'IDR',
-          price: product.price || 0,
-          availability: 'https://schema.org/InStock'
-        }
-      }
-    }))
-  };
-};
+export { productListSchema } from './productSeo.js';
 
 /**
  * Generate HowTo schema untuk tutorial
@@ -199,8 +84,8 @@ export const localBusinessSchema = () => ({
   name: SITE_NAME,
   image: DEFAULT_IMAGE,
   url: SITE_URL,
-  telephone: '+6285822222430',
-  priceRange: 'Rp89.000 - Rp200.000',
+  telephone: WA_PHONE_E164,
+  priceRange: 'Rp69.000',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Jl. Meranti I No.5, Rancaekek Wetan, Kec. Rancaekek',

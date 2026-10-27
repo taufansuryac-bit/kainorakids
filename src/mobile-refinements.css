@@ -1,0 +1,36 @@
+/* The source logo has transparent padding. Crop that padding in its viewport;
+   keep the original artwork and its natural aspect ratio. */
+.site-nav .nav-brand{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:4px;min-height:44px}
+.site-nav .nav-brand>.nav-logo{position:relative;display:block;width:145px;aspect-ratio:400 / 76;overflow:hidden;margin:0}
+.site-nav .nav-brand .nav-logo>img{position:absolute;left:0;top:-26.315789%;width:100%;height:auto;max-width:none;object-fit:unset}
+.site-nav .nav-brand>.nav-brand-tagline{margin:0;font-size:6px;line-height:1.3;letter-spacing:.18em;white-space:nowrap}
+.f-footer-mobile-wordmark{display:none}
+
+@media(max-width:767px){
+  .site-nav .nav-brand>.nav-logo{width:134px}
+  .site-nav .nav-brand>.nav-brand-tagline{font-size:5.5px}
+  .f-garment-theater .f-product-cta{min-width:198px;min-height:48px;padding:5px 5px 5px 17px;gap:28px;margin-top:17px;font-size:10px;box-shadow:3px 3px 0 #8e8e80}
+  .f-garment-theater .f-product-cta-icon{width:36px;height:36px}
+  .f-garment-theater .f-product-cta-icon>svg{width:19px;height:19px}
+  .f-footer.f-inset{padding-top:38px;padding-bottom:calc(24px + env(safe-area-inset-bottom))}
+  .f-footer .f-footer-top{gap:27px 20px;padding-bottom:24px}
+  .f-footer .f-footer-intro>h2{font-size:clamp(29px,8.5vw,48px);line-height:.96;margin-top:14px;letter-spacing:-.06em}
+  .f-footer .f-footer-intro>.f-text-link{margin-top:14px;font-size:9px;gap:28px}
+  .f-footer .f-footer-links{gap:0;border-top:1px solid var(--line);padding-top:17px}
+  .f-footer .f-footer-links>.f-cap{margin-bottom:8px;font-size:8px}
+  .f-footer .f-footer-links>button,.f-footer .f-footer-links>a{min-height:44px;line-height:1.4;font-size:12px}
+  .f-footer .f-newsletter{border-top:1px solid var(--line);padding-top:22px}
+  .f-footer .f-newsletter>p:not(.f-cap){margin-top:12px;font-size:13px}
+  .f-footer .f-newsletter>form{margin-top:9px}
+  .f-footer .f-newsletter input{min-height:46px;font-size:12px}
+  .f-footer .f-newsletter>.f-newsletter-note{font-size:9px!important;margin-top:9px!important;max-width:270px}
+  .f-footer .f-newsletter-message:empty{display:none}
+  .f-footer .f-footer-wordmark{margin-inline:0;padding-bottom:20px}
+  .f-footer .f-halftone-fallback{display:none}
+  .f-footer-mobile-wordmark{display:block;width:100%;height:auto;overflow:visible}
+  .f-footer-mobile-wordmark>text{font-family:Archivo,Arial,sans-serif;font-size:200px;font-weight:900;fill:currentColor;letter-spacing:-10px}
+  .f-footer .f-footer-bottom{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;padding-top:12px;padding-right:54px;font-size:8px;letter-spacing:.025em}
+  .f-footer .f-footer-bottom>button{margin:0;font-size:8px;gap:7px;min-height:44px}
+}
+@media(max-width:359px){.site-nav .nav-brand>.nav-logo{width:126px}.f-footer .f-footer-top{column-gap:15px}.f-footer .f-footer-intro>h2{font-size:29px}}
+@media(min-width:1024px) and (max-width:1199px){.site-nav{padding-inline:24px}}

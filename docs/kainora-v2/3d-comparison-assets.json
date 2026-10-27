@@ -1,0 +1,11 @@
+[
+  {
+    "key": "compare-source-2",
+    "source": "ASSET3D/2/Hi_T-shirt.obj",
+    "url": "/models/kainora/compare-source-2.glb",
+    "sourceTriangles": 55002,
+    "triangles": 23999,
+    "bytes": 443432,
+    "normalizedMaxDimension": 2
+  }
+]

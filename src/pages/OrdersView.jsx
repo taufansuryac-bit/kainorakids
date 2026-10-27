@@ -17,12 +17,7 @@ export const OrdersView = () => {
   useEffect(() => {
     if (!user?.email) return;
     
-    let q;
-    if (user.email === ADMIN_EMAIL) {
-        q = collection(db, 'artifacts', appId, 'public', 'data', 'orders');
-    } else {
-        q = query(collection(db, 'artifacts', appId, 'public', 'data', 'orders'), where('userEmail', '==', user.email));
-    }
+    const q = query(collection(db, 'artifacts', appId, 'public', 'data', 'orders'), where('userId', '==', user.uid));
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
       let fetchedOrders = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
@@ -43,6 +38,7 @@ export const OrdersView = () => {
   if (!user?.email) {
       return (
         <main className="min-h-[70vh] flex flex-col items-center justify-center px-4 text-center max-w-6xl mx-auto">
+           <SEO title="Riwayat Pesanan | Kainora Kids" description="Cek status riwayat pesanan pakaian anak Anda." canonicalPath="/?view=orders" robots="noindex, follow" />
            <Package size={100} className="text-gray-200 mb-10" strokeWidth={1}/>
            <h1 className="text-4xl font-black uppercase mb-6 tracking-tighter">Belum Masuk</h1>
            <button onClick={() => setView('home')} className="px-12 py-5 mt-6 bg-gray-900 text-white font-black uppercase border-4 border-gray-900 shadow-solid hover:translate-y-1 transition-all tracking-widest text-sm">Kembali ke Beranda</button>
@@ -52,7 +48,7 @@ export const OrdersView = () => {
 
   return (
     <main className="min-h-screen py-16 px-4 max-w-4xl mx-auto text-left">
-      <SEO title="Riwayat Pesanan | Kainora Kids" description="Cek status riwayat pesanan pakaian anak Anda." />
+      <SEO title="Riwayat Pesanan | Kainora Kids" description="Cek status riwayat pesanan pakaian anak Anda." canonicalPath="/?view=orders" robots="noindex, follow" />
       <button onClick={() => setView('home')} className="font-black mb-8 uppercase text-[10px] tracking-widest flex items-center gap-2 hover:text-brand-red transition-colors"><ChevronRight className="rotate-180" size={16}/> KEMBALI KE BERANDA</button>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">

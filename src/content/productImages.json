@@ -1,0 +1,576 @@
+{
+  "/PRODUCT/avocado-1.jpg": {
+    "src": "/images/shop/avocado-1-309c50bd10-640.webp",
+    "srcSet": "/images/shop/avocado-1-309c50bd10-320.webp 320w, /images/shop/avocado-1-309c50bd10-640.webp 640w, /images/shop/avocado-1-309c50bd10-800.webp 800w, /images/shop/avocado-1-309c50bd10-1000.webp 1000w",
+    "thumbnail": "/images/shop/avocado-1-309c50bd10-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/avocado-2.jpg": {
+    "src": "/images/shop/avocado-2-7e84f14098-640.webp",
+    "srcSet": "/images/shop/avocado-2-7e84f14098-320.webp 320w, /images/shop/avocado-2-7e84f14098-640.webp 640w, /images/shop/avocado-2-7e84f14098-800.webp 800w, /images/shop/avocado-2-7e84f14098-1000.webp 1000w",
+    "thumbnail": "/images/shop/avocado-2-7e84f14098-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/beyou-1.jpg": {
+    "src": "/images/shop/beyou-1-4f7f8117e7-640.webp",
+    "srcSet": "/images/shop/beyou-1-4f7f8117e7-320.webp 320w, /images/shop/beyou-1-4f7f8117e7-640.webp 640w, /images/shop/beyou-1-4f7f8117e7-800.webp 800w, /images/shop/beyou-1-4f7f8117e7-1000.webp 1000w",
+    "thumbnail": "/images/shop/beyou-1-4f7f8117e7-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/beyou-2.jpg": {
+    "src": "/images/shop/beyou-2-eda1d5b5f6-640.webp",
+    "srcSet": "/images/shop/beyou-2-eda1d5b5f6-320.webp 320w, /images/shop/beyou-2-eda1d5b5f6-640.webp 640w, /images/shop/beyou-2-eda1d5b5f6-800.webp 800w, /images/shop/beyou-2-eda1d5b5f6-1000.webp 1000w",
+    "thumbnail": "/images/shop/beyou-2-eda1d5b5f6-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/borntoplay-1.jpg": {
+    "src": "/images/shop/borntoplay-1-ce18f9de3b-640.webp",
+    "srcSet": "/images/shop/borntoplay-1-ce18f9de3b-320.webp 320w, /images/shop/borntoplay-1-ce18f9de3b-640.webp 640w, /images/shop/borntoplay-1-ce18f9de3b-800.webp 800w, /images/shop/borntoplay-1-ce18f9de3b-1000.webp 1000w",
+    "thumbnail": "/images/shop/borntoplay-1-ce18f9de3b-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/breakfast-1.jpg": {
+    "src": "/images/shop/breakfast-1-98ada86970-640.webp",
+    "srcSet": "/images/shop/breakfast-1-98ada86970-320.webp 320w, /images/shop/breakfast-1-98ada86970-640.webp 640w, /images/shop/breakfast-1-98ada86970-800.webp 800w, /images/shop/breakfast-1-98ada86970-1000.webp 1000w",
+    "thumbnail": "/images/shop/breakfast-1-98ada86970-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/breakfast-2.jpg": {
+    "src": "/images/shop/breakfast-2-c9caeddcd7-640.webp",
+    "srcSet": "/images/shop/breakfast-2-c9caeddcd7-320.webp 320w, /images/shop/breakfast-2-c9caeddcd7-640.webp 640w, /images/shop/breakfast-2-c9caeddcd7-800.webp 800w, /images/shop/breakfast-2-c9caeddcd7-1000.webp 1000w",
+    "thumbnail": "/images/shop/breakfast-2-c9caeddcd7-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/breakfastmorning-1.jpg": {
+    "src": "/images/shop/breakfastmorning-1-a0bc793af6-640.webp",
+    "srcSet": "/images/shop/breakfastmorning-1-a0bc793af6-320.webp 320w, /images/shop/breakfastmorning-1-a0bc793af6-640.webp 640w, /images/shop/breakfastmorning-1-a0bc793af6-800.webp 800w, /images/shop/breakfastmorning-1-a0bc793af6-1000.webp 1000w",
+    "thumbnail": "/images/shop/breakfastmorning-1-a0bc793af6-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/breakfastmorning-2.jpg": {
+    "src": "/images/shop/breakfastmorning-2-8030418ff2-640.webp",
+    "srcSet": "/images/shop/breakfastmorning-2-8030418ff2-320.webp 320w, /images/shop/breakfastmorning-2-8030418ff2-640.webp 640w, /images/shop/breakfastmorning-2-8030418ff2-800.webp 800w, /images/shop/breakfastmorning-2-8030418ff2-1000.webp 1000w",
+    "thumbnail": "/images/shop/breakfastmorning-2-8030418ff2-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/breakfasttime-1.jpg": {
+    "src": "/images/shop/breakfasttime-1-4dcec0ffee-640.webp",
+    "srcSet": "/images/shop/breakfasttime-1-4dcec0ffee-320.webp 320w, /images/shop/breakfasttime-1-4dcec0ffee-640.webp 640w, /images/shop/breakfasttime-1-4dcec0ffee-800.webp 800w, /images/shop/breakfasttime-1-4dcec0ffee-1000.webp 1000w",
+    "thumbnail": "/images/shop/breakfasttime-1-4dcec0ffee-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/breakfasttime-2.jpg": {
+    "src": "/images/shop/breakfasttime-2-0de88eb3b7-640.webp",
+    "srcSet": "/images/shop/breakfasttime-2-0de88eb3b7-320.webp 320w, /images/shop/breakfasttime-2-0de88eb3b7-640.webp 640w, /images/shop/breakfasttime-2-0de88eb3b7-800.webp 800w, /images/shop/breakfasttime-2-0de88eb3b7-1000.webp 1000w",
+    "thumbnail": "/images/shop/breakfasttime-2-0de88eb3b7-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/candy-1.jpg": {
+    "src": "/images/shop/candy-1-5baf48862f-640.webp",
+    "srcSet": "/images/shop/candy-1-5baf48862f-320.webp 320w, /images/shop/candy-1-5baf48862f-640.webp 640w, /images/shop/candy-1-5baf48862f-800.webp 800w, /images/shop/candy-1-5baf48862f-1000.webp 1000w",
+    "thumbnail": "/images/shop/candy-1-5baf48862f-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/candy-2.jpg": {
+    "src": "/images/shop/candy-2-56ef2ebbbc-640.webp",
+    "srcSet": "/images/shop/candy-2-56ef2ebbbc-320.webp 320w, /images/shop/candy-2-56ef2ebbbc-640.webp 640w, /images/shop/candy-2-56ef2ebbbc-800.webp 800w, /images/shop/candy-2-56ef2ebbbc-1000.webp 1000w",
+    "thumbnail": "/images/shop/candy-2-56ef2ebbbc-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/catchu-1.jpg": {
+    "src": "/images/shop/catchu-1-fb1500eddf-640.webp",
+    "srcSet": "/images/shop/catchu-1-fb1500eddf-320.webp 320w, /images/shop/catchu-1-fb1500eddf-640.webp 640w, /images/shop/catchu-1-fb1500eddf-800.webp 800w, /images/shop/catchu-1-fb1500eddf-1000.webp 1000w",
+    "thumbnail": "/images/shop/catchu-1-fb1500eddf-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/catchu-2.jpg": {
+    "src": "/images/shop/catchu-2-2529dc42f9-640.webp",
+    "srcSet": "/images/shop/catchu-2-2529dc42f9-320.webp 320w, /images/shop/catchu-2-2529dc42f9-640.webp 640w, /images/shop/catchu-2-2529dc42f9-800.webp 800w, /images/shop/catchu-2-2529dc42f9-1000.webp 1000w",
+    "thumbnail": "/images/shop/catchu-2-2529dc42f9-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/cerealkai-1.jpg": {
+    "src": "/images/shop/cerealkai-1-9f8ca8d425-640.webp",
+    "srcSet": "/images/shop/cerealkai-1-9f8ca8d425-320.webp 320w, /images/shop/cerealkai-1-9f8ca8d425-640.webp 640w, /images/shop/cerealkai-1-9f8ca8d425-800.webp 800w, /images/shop/cerealkai-1-9f8ca8d425-1000.webp 1000w",
+    "thumbnail": "/images/shop/cerealkai-1-9f8ca8d425-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/cerealkai-2.jpg": {
+    "src": "/images/shop/cerealkai-2-25047ada64-640.webp",
+    "srcSet": "/images/shop/cerealkai-2-25047ada64-320.webp 320w, /images/shop/cerealkai-2-25047ada64-640.webp 640w, /images/shop/cerealkai-2-25047ada64-800.webp 800w, /images/shop/cerealkai-2-25047ada64-1000.webp 1000w",
+    "thumbnail": "/images/shop/cerealkai-2-25047ada64-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/cherryblos-1.jpg": {
+    "src": "/images/shop/cherryblos-1-1660c30780-640.webp",
+    "srcSet": "/images/shop/cherryblos-1-1660c30780-320.webp 320w, /images/shop/cherryblos-1-1660c30780-640.webp 640w, /images/shop/cherryblos-1-1660c30780-800.webp 800w, /images/shop/cherryblos-1-1660c30780-1000.webp 1000w",
+    "thumbnail": "/images/shop/cherryblos-1-1660c30780-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/cherryblos-2.jpg": {
+    "src": "/images/shop/cherryblos-2-877a7aff10-640.webp",
+    "srcSet": "/images/shop/cherryblos-2-877a7aff10-320.webp 320w, /images/shop/cherryblos-2-877a7aff10-640.webp 640w, /images/shop/cherryblos-2-877a7aff10-800.webp 800w, /images/shop/cherryblos-2-877a7aff10-1000.webp 1000w",
+    "thumbnail": "/images/shop/cherryblos-2-877a7aff10-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/cherryharvest-1.jpg": {
+    "src": "/images/shop/cherryharvest-1-7bb0d634a8-640.webp",
+    "srcSet": "/images/shop/cherryharvest-1-7bb0d634a8-320.webp 320w, /images/shop/cherryharvest-1-7bb0d634a8-640.webp 640w, /images/shop/cherryharvest-1-7bb0d634a8-800.webp 800w, /images/shop/cherryharvest-1-7bb0d634a8-1000.webp 1000w",
+    "thumbnail": "/images/shop/cherryharvest-1-7bb0d634a8-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/cherryharvest-2.jpg": {
+    "src": "/images/shop/cherryharvest-2-aa0d07bc20-640.webp",
+    "srcSet": "/images/shop/cherryharvest-2-aa0d07bc20-320.webp 320w, /images/shop/cherryharvest-2-aa0d07bc20-640.webp 640w, /images/shop/cherryharvest-2-aa0d07bc20-800.webp 800w, /images/shop/cherryharvest-2-aa0d07bc20-1000.webp 1000w",
+    "thumbnail": "/images/shop/cherryharvest-2-aa0d07bc20-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/cherrypick-1.jpg": {
+    "src": "/images/shop/cherrypick-1-675f15371c-640.webp",
+    "srcSet": "/images/shop/cherrypick-1-675f15371c-320.webp 320w, /images/shop/cherrypick-1-675f15371c-640.webp 640w, /images/shop/cherrypick-1-675f15371c-800.webp 800w, /images/shop/cherrypick-1-675f15371c-1000.webp 1000w",
+    "thumbnail": "/images/shop/cherrypick-1-675f15371c-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/cherrypick-2.jpg": {
+    "src": "/images/shop/cherrypick-2-80704e31e6-640.webp",
+    "srcSet": "/images/shop/cherrypick-2-80704e31e6-320.webp 320w, /images/shop/cherrypick-2-80704e31e6-640.webp 640w, /images/shop/cherrypick-2-80704e31e6-800.webp 800w, /images/shop/cherrypick-2-80704e31e6-1000.webp 1000w",
+    "thumbnail": "/images/shop/cherrypick-2-80704e31e6-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/dragonfruit-1.jpg": {
+    "src": "/images/shop/dragonfruit-1-fea9325cfb-640.webp",
+    "srcSet": "/images/shop/dragonfruit-1-fea9325cfb-320.webp 320w, /images/shop/dragonfruit-1-fea9325cfb-640.webp 640w, /images/shop/dragonfruit-1-fea9325cfb-800.webp 800w, /images/shop/dragonfruit-1-fea9325cfb-1000.webp 1000w",
+    "thumbnail": "/images/shop/dragonfruit-1-fea9325cfb-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/dragonfruit-2.jpg": {
+    "src": "/images/shop/dragonfruit-2-44af17f08f-640.webp",
+    "srcSet": "/images/shop/dragonfruit-2-44af17f08f-320.webp 320w, /images/shop/dragonfruit-2-44af17f08f-640.webp 640w, /images/shop/dragonfruit-2-44af17f08f-800.webp 800w, /images/shop/dragonfruit-2-44af17f08f-1000.webp 1000w",
+    "thumbnail": "/images/shop/dragonfruit-2-44af17f08f-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/farmermarket-1.jpg": {
+    "src": "/images/shop/farmermarket-1-335b5cbb82-640.webp",
+    "srcSet": "/images/shop/farmermarket-1-335b5cbb82-320.webp 320w, /images/shop/farmermarket-1-335b5cbb82-640.webp 640w, /images/shop/farmermarket-1-335b5cbb82-800.webp 800w, /images/shop/farmermarket-1-335b5cbb82-1000.webp 1000w",
+    "thumbnail": "/images/shop/farmermarket-1-335b5cbb82-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/farmermarket-2.jpg": {
+    "src": "/images/shop/farmermarket-2-553eb3a28f-640.webp",
+    "srcSet": "/images/shop/farmermarket-2-553eb3a28f-320.webp 320w, /images/shop/farmermarket-2-553eb3a28f-640.webp 640w, /images/shop/farmermarket-2-553eb3a28f-800.webp 800w, /images/shop/farmermarket-2-553eb3a28f-1000.webp 1000w",
+    "thumbnail": "/images/shop/farmermarket-2-553eb3a28f-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/fruitbasket-1.jpg": {
+    "src": "/images/shop/fruitbasket-1-f84d6548d7-640.webp",
+    "srcSet": "/images/shop/fruitbasket-1-f84d6548d7-320.webp 320w, /images/shop/fruitbasket-1-f84d6548d7-640.webp 640w, /images/shop/fruitbasket-1-f84d6548d7-800.webp 800w, /images/shop/fruitbasket-1-f84d6548d7-1000.webp 1000w",
+    "thumbnail": "/images/shop/fruitbasket-1-f84d6548d7-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/fruitbasket-2.jpg": {
+    "src": "/images/shop/fruitbasket-2-b7160dc4c7-640.webp",
+    "srcSet": "/images/shop/fruitbasket-2-b7160dc4c7-320.webp 320w, /images/shop/fruitbasket-2-b7160dc4c7-640.webp 640w, /images/shop/fruitbasket-2-b7160dc4c7-800.webp 800w, /images/shop/fruitbasket-2-b7160dc4c7-1000.webp 1000w",
+    "thumbnail": "/images/shop/fruitbasket-2-b7160dc4c7-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/fruitofspirit-1.jpg": {
+    "src": "/images/shop/fruitofspirit-1-2f575da1e0-640.webp",
+    "srcSet": "/images/shop/fruitofspirit-1-2f575da1e0-320.webp 320w, /images/shop/fruitofspirit-1-2f575da1e0-640.webp 640w, /images/shop/fruitofspirit-1-2f575da1e0-800.webp 800w, /images/shop/fruitofspirit-1-2f575da1e0-1000.webp 1000w",
+    "thumbnail": "/images/shop/fruitofspirit-1-2f575da1e0-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/fruitofspirit-2.jpg": {
+    "src": "/images/shop/fruitofspirit-2-0a42306384-640.webp",
+    "srcSet": "/images/shop/fruitofspirit-2-0a42306384-320.webp 320w, /images/shop/fruitofspirit-2-0a42306384-640.webp 640w, /images/shop/fruitofspirit-2-0a42306384-800.webp 800w, /images/shop/fruitofspirit-2-0a42306384-1000.webp 1000w",
+    "thumbnail": "/images/shop/fruitofspirit-2-0a42306384-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/fruitspirit-1.jpg": {
+    "src": "/images/shop/fruitspirit-1-f56f25b001-640.webp",
+    "srcSet": "/images/shop/fruitspirit-1-f56f25b001-320.webp 320w, /images/shop/fruitspirit-1-f56f25b001-640.webp 640w, /images/shop/fruitspirit-1-f56f25b001-800.webp 800w, /images/shop/fruitspirit-1-f56f25b001-1000.webp 1000w",
+    "thumbnail": "/images/shop/fruitspirit-1-f56f25b001-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/fruitspirit-2.jpg": {
+    "src": "/images/shop/fruitspirit-2-9cbe8f1980-640.webp",
+    "srcSet": "/images/shop/fruitspirit-2-9cbe8f1980-320.webp 320w, /images/shop/fruitspirit-2-9cbe8f1980-640.webp 640w, /images/shop/fruitspirit-2-9cbe8f1980-800.webp 800w, /images/shop/fruitspirit-2-9cbe8f1980-1000.webp 1000w",
+    "thumbnail": "/images/shop/fruitspirit-2-9cbe8f1980-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/goodlife-1.jpg": {
+    "src": "/images/shop/goodlife-1-ea5bcee84e-640.webp",
+    "srcSet": "/images/shop/goodlife-1-ea5bcee84e-320.webp 320w, /images/shop/goodlife-1-ea5bcee84e-640.webp 640w, /images/shop/goodlife-1-ea5bcee84e-800.webp 800w, /images/shop/goodlife-1-ea5bcee84e-1000.webp 1000w",
+    "thumbnail": "/images/shop/goodlife-1-ea5bcee84e-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/goodlife-2.jpg": {
+    "src": "/images/shop/goodlife-2-1ce9b87c80-640.webp",
+    "srcSet": "/images/shop/goodlife-2-1ce9b87c80-320.webp 320w, /images/shop/goodlife-2-1ce9b87c80-640.webp 640w, /images/shop/goodlife-2-1ce9b87c80-800.webp 800w, /images/shop/goodlife-2-1ce9b87c80-1000.webp 1000w",
+    "thumbnail": "/images/shop/goodlife-2-1ce9b87c80-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/helloworld-1.jpg": {
+    "src": "/images/shop/helloworld-1-90b899c4d2-640.webp",
+    "srcSet": "/images/shop/helloworld-1-90b899c4d2-320.webp 320w, /images/shop/helloworld-1-90b899c4d2-640.webp 640w, /images/shop/helloworld-1-90b899c4d2-800.webp 800w, /images/shop/helloworld-1-90b899c4d2-1000.webp 1000w",
+    "thumbnail": "/images/shop/helloworld-1-90b899c4d2-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/helloworld-2.jpg": {
+    "src": "/images/shop/helloworld-2-8552039f9c-640.webp",
+    "srcSet": "/images/shop/helloworld-2-8552039f9c-320.webp 320w, /images/shop/helloworld-2-8552039f9c-640.webp 640w, /images/shop/helloworld-2-8552039f9c-800.webp 800w, /images/shop/helloworld-2-8552039f9c-1000.webp 1000w",
+    "thumbnail": "/images/shop/helloworld-2-8552039f9c-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/kaimarket-1.jpg": {
+    "src": "/images/shop/kaimarket-1-86fe9b571d-640.webp",
+    "srcSet": "/images/shop/kaimarket-1-86fe9b571d-320.webp 320w, /images/shop/kaimarket-1-86fe9b571d-640.webp 640w, /images/shop/kaimarket-1-86fe9b571d-800.webp 800w, /images/shop/kaimarket-1-86fe9b571d-1000.webp 1000w",
+    "thumbnail": "/images/shop/kaimarket-1-86fe9b571d-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/kaimarket-2.jpg": {
+    "src": "/images/shop/kaimarket-2-f00f569e9b-640.webp",
+    "srcSet": "/images/shop/kaimarket-2-f00f569e9b-320.webp 320w, /images/shop/kaimarket-2-f00f569e9b-640.webp 640w, /images/shop/kaimarket-2-f00f569e9b-800.webp 800w, /images/shop/kaimarket-2-f00f569e9b-1000.webp 1000w",
+    "thumbnail": "/images/shop/kaimarket-2-f00f569e9b-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/kainorapark-1.jpg": {
+    "src": "/images/shop/kainorapark-1-e03efcaa84-640.webp",
+    "srcSet": "/images/shop/kainorapark-1-e03efcaa84-320.webp 320w, /images/shop/kainorapark-1-e03efcaa84-640.webp 640w, /images/shop/kainorapark-1-e03efcaa84-800.webp 800w, /images/shop/kainorapark-1-e03efcaa84-1000.webp 1000w",
+    "thumbnail": "/images/shop/kainorapark-1-e03efcaa84-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/kainorapark-2.jpg": {
+    "src": "/images/shop/kainorapark-2-855bc4e4b9-640.webp",
+    "srcSet": "/images/shop/kainorapark-2-855bc4e4b9-320.webp 320w, /images/shop/kainorapark-2-855bc4e4b9-640.webp 640w, /images/shop/kainorapark-2-855bc4e4b9-800.webp 800w, /images/shop/kainorapark-2-855bc4e4b9-1000.webp 1000w",
+    "thumbnail": "/images/shop/kainorapark-2-855bc4e4b9-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/kidsclub-1.jpg": {
+    "src": "/images/shop/kidsclub-1-6cad524e3f-640.webp",
+    "srcSet": "/images/shop/kidsclub-1-6cad524e3f-320.webp 320w, /images/shop/kidsclub-1-6cad524e3f-640.webp 640w, /images/shop/kidsclub-1-6cad524e3f-800.webp 800w, /images/shop/kidsclub-1-6cad524e3f-1000.webp 1000w",
+    "thumbnail": "/images/shop/kidsclub-1-6cad524e3f-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/kidsdinner-1.jpg": {
+    "src": "/images/shop/kidsdinner-1-aa17e52270-640.webp",
+    "srcSet": "/images/shop/kidsdinner-1-aa17e52270-320.webp 320w, /images/shop/kidsdinner-1-aa17e52270-640.webp 640w, /images/shop/kidsdinner-1-aa17e52270-800.webp 800w, /images/shop/kidsdinner-1-aa17e52270-1000.webp 1000w",
+    "thumbnail": "/images/shop/kidsdinner-1-aa17e52270-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/kidsdinner-2.jpg": {
+    "src": "/images/shop/kidsdinner-2-4fe4fe9bf0-640.webp",
+    "srcSet": "/images/shop/kidsdinner-2-4fe4fe9bf0-320.webp 320w, /images/shop/kidsdinner-2-4fe4fe9bf0-640.webp 640w, /images/shop/kidsdinner-2-4fe4fe9bf0-800.webp 800w, /images/shop/kidsdinner-2-4fe4fe9bf0-1000.webp 1000w",
+    "thumbnail": "/images/shop/kidsdinner-2-4fe4fe9bf0-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/lemarche-1.jpg": {
+    "src": "/images/shop/lemarche-1-d03b13b36a-640.webp",
+    "srcSet": "/images/shop/lemarche-1-d03b13b36a-320.webp 320w, /images/shop/lemarche-1-d03b13b36a-640.webp 640w, /images/shop/lemarche-1-d03b13b36a-800.webp 800w, /images/shop/lemarche-1-d03b13b36a-1000.webp 1000w",
+    "thumbnail": "/images/shop/lemarche-1-d03b13b36a-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/lemarche-2.jpg": {
+    "src": "/images/shop/lemarche-2-8a93e46ff9-640.webp",
+    "srcSet": "/images/shop/lemarche-2-8a93e46ff9-320.webp 320w, /images/shop/lemarche-2-8a93e46ff9-640.webp 640w, /images/shop/lemarche-2-8a93e46ff9-800.webp 800w, /images/shop/lemarche-2-8a93e46ff9-1000.webp 1000w",
+    "thumbnail": "/images/shop/lemarche-2-8a93e46ff9-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/lemon-1.jpg": {
+    "src": "/images/shop/lemon-1-c3810495e8-640.webp",
+    "srcSet": "/images/shop/lemon-1-c3810495e8-320.webp 320w, /images/shop/lemon-1-c3810495e8-640.webp 640w, /images/shop/lemon-1-c3810495e8-800.webp 800w, /images/shop/lemon-1-c3810495e8-1000.webp 1000w",
+    "thumbnail": "/images/shop/lemon-1-c3810495e8-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/lemon-2.jpg": {
+    "src": "/images/shop/lemon-2-6421410173-640.webp",
+    "srcSet": "/images/shop/lemon-2-6421410173-320.webp 320w, /images/shop/lemon-2-6421410173-640.webp 640w, /images/shop/lemon-2-6421410173-800.webp 800w, /images/shop/lemon-2-6421410173-1000.webp 1000w",
+    "thumbnail": "/images/shop/lemon-2-6421410173-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/lovepeach-1.jpg": {
+    "src": "/images/shop/lovepeach-1-d2bdf53642-640.webp",
+    "srcSet": "/images/shop/lovepeach-1-d2bdf53642-320.webp 320w, /images/shop/lovepeach-1-d2bdf53642-640.webp 640w, /images/shop/lovepeach-1-d2bdf53642-800.webp 800w, /images/shop/lovepeach-1-d2bdf53642-1000.webp 1000w",
+    "thumbnail": "/images/shop/lovepeach-1-d2bdf53642-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/lovepeach-2.jpg": {
+    "src": "/images/shop/lovepeach-2-b0d6a17cce-640.webp",
+    "srcSet": "/images/shop/lovepeach-2-b0d6a17cce-320.webp 320w, /images/shop/lovepeach-2-b0d6a17cce-640.webp 640w, /images/shop/lovepeach-2-b0d6a17cce-800.webp 800w, /images/shop/lovepeach-2-b0d6a17cce-1000.webp 1000w",
+    "thumbnail": "/images/shop/lovepeach-2-b0d6a17cce-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/mangkok-1.jpg": {
+    "src": "/images/shop/mangkok-1-985f73e29b-640.webp",
+    "srcSet": "/images/shop/mangkok-1-985f73e29b-320.webp 320w, /images/shop/mangkok-1-985f73e29b-640.webp 640w, /images/shop/mangkok-1-985f73e29b-800.webp 800w, /images/shop/mangkok-1-985f73e29b-1000.webp 1000w",
+    "thumbnail": "/images/shop/mangkok-1-985f73e29b-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/mangkok-2.jpg": {
+    "src": "/images/shop/mangkok-2-de7220ab07-640.webp",
+    "srcSet": "/images/shop/mangkok-2-de7220ab07-320.webp 320w, /images/shop/mangkok-2-de7220ab07-640.webp 640w, /images/shop/mangkok-2-de7220ab07-800.webp 800w, /images/shop/mangkok-2-de7220ab07-1000.webp 1000w",
+    "thumbnail": "/images/shop/mangkok-2-de7220ab07-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/orangeluch-1.jpg": {
+    "src": "/images/shop/orangeluch-1-f4da006bb8-640.webp",
+    "srcSet": "/images/shop/orangeluch-1-f4da006bb8-320.webp 320w, /images/shop/orangeluch-1-f4da006bb8-640.webp 640w, /images/shop/orangeluch-1-f4da006bb8-800.webp 800w, /images/shop/orangeluch-1-f4da006bb8-1000.webp 1000w",
+    "thumbnail": "/images/shop/orangeluch-1-f4da006bb8-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/orangeluch-2.jpg": {
+    "src": "/images/shop/orangeluch-2-0ff7743558-640.webp",
+    "srcSet": "/images/shop/orangeluch-2-0ff7743558-320.webp 320w, /images/shop/orangeluch-2-0ff7743558-640.webp 640w, /images/shop/orangeluch-2-0ff7743558-800.webp 800w, /images/shop/orangeluch-2-0ff7743558-1000.webp 1000w",
+    "thumbnail": "/images/shop/orangeluch-2-0ff7743558-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/pancakemorning-1.jpg": {
+    "src": "/images/shop/pancakemorning-1-62964b3cf1-640.webp",
+    "srcSet": "/images/shop/pancakemorning-1-62964b3cf1-320.webp 320w, /images/shop/pancakemorning-1-62964b3cf1-640.webp 640w, /images/shop/pancakemorning-1-62964b3cf1-800.webp 800w, /images/shop/pancakemorning-1-62964b3cf1-1000.webp 1000w",
+    "thumbnail": "/images/shop/pancakemorning-1-62964b3cf1-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/pancakemorning-2.jpg": {
+    "src": "/images/shop/pancakemorning-2-2fbfb02480-640.webp",
+    "srcSet": "/images/shop/pancakemorning-2-2fbfb02480-320.webp 320w, /images/shop/pancakemorning-2-2fbfb02480-640.webp 640w, /images/shop/pancakemorning-2-2fbfb02480-800.webp 800w, /images/shop/pancakemorning-2-2fbfb02480-1000.webp 1000w",
+    "thumbnail": "/images/shop/pancakemorning-2-2fbfb02480-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/picnictime-1.jpg": {
+    "src": "/images/shop/picnictime-1-fec13e459e-640.webp",
+    "srcSet": "/images/shop/picnictime-1-fec13e459e-320.webp 320w, /images/shop/picnictime-1-fec13e459e-640.webp 640w, /images/shop/picnictime-1-fec13e459e-800.webp 800w, /images/shop/picnictime-1-fec13e459e-1000.webp 1000w",
+    "thumbnail": "/images/shop/picnictime-1-fec13e459e-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/picnictime-2.jpg": {
+    "src": "/images/shop/picnictime-2-cbe40fff1f-640.webp",
+    "srcSet": "/images/shop/picnictime-2-cbe40fff1f-320.webp 320w, /images/shop/picnictime-2-cbe40fff1f-640.webp 640w, /images/shop/picnictime-2-cbe40fff1f-800.webp 800w, /images/shop/picnictime-2-cbe40fff1f-1000.webp 1000w",
+    "thumbnail": "/images/shop/picnictime-2-cbe40fff1f-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/playground-1.jpg": {
+    "src": "/images/shop/playground-1-368935871a-640.webp",
+    "srcSet": "/images/shop/playground-1-368935871a-320.webp 320w, /images/shop/playground-1-368935871a-640.webp 640w, /images/shop/playground-1-368935871a-800.webp 800w, /images/shop/playground-1-368935871a-1000.webp 1000w",
+    "thumbnail": "/images/shop/playground-1-368935871a-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/playground-2.jpg": {
+    "src": "/images/shop/playground-2-814cd52ee8-640.webp",
+    "srcSet": "/images/shop/playground-2-814cd52ee8-320.webp 320w, /images/shop/playground-2-814cd52ee8-640.webp 640w, /images/shop/playground-2-814cd52ee8-800.webp 800w, /images/shop/playground-2-814cd52ee8-1000.webp 1000w",
+    "thumbnail": "/images/shop/playground-2-814cd52ee8-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/raspberry-1.jpg": {
+    "src": "/images/shop/raspberry-1-6c33cd83f3-640.webp",
+    "srcSet": "/images/shop/raspberry-1-6c33cd83f3-320.webp 320w, /images/shop/raspberry-1-6c33cd83f3-640.webp 640w, /images/shop/raspberry-1-6c33cd83f3-800.webp 800w, /images/shop/raspberry-1-6c33cd83f3-1000.webp 1000w",
+    "thumbnail": "/images/shop/raspberry-1-6c33cd83f3-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/raspberry-2.jpg": {
+    "src": "/images/shop/raspberry-2-ed18936031-640.webp",
+    "srcSet": "/images/shop/raspberry-2-ed18936031-320.webp 320w, /images/shop/raspberry-2-ed18936031-640.webp 640w, /images/shop/raspberry-2-ed18936031-800.webp 800w, /images/shop/raspberry-2-ed18936031-1000.webp 1000w",
+    "thumbnail": "/images/shop/raspberry-2-ed18936031-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/raspberrytart-1.jpg": {
+    "src": "/images/shop/raspberrytart-1-2dee84f292-640.webp",
+    "srcSet": "/images/shop/raspberrytart-1-2dee84f292-320.webp 320w, /images/shop/raspberrytart-1-2dee84f292-640.webp 640w, /images/shop/raspberrytart-1-2dee84f292-800.webp 800w, /images/shop/raspberrytart-1-2dee84f292-1000.webp 1000w",
+    "thumbnail": "/images/shop/raspberrytart-1-2dee84f292-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/raspberrytart-2.jpg": {
+    "src": "/images/shop/raspberrytart-2-bb1b7d58de-640.webp",
+    "srcSet": "/images/shop/raspberrytart-2-bb1b7d58de-320.webp 320w, /images/shop/raspberrytart-2-bb1b7d58de-640.webp 640w, /images/shop/raspberrytart-2-bb1b7d58de-800.webp 800w, /images/shop/raspberrytart-2-bb1b7d58de-1000.webp 1000w",
+    "thumbnail": "/images/shop/raspberrytart-2-bb1b7d58de-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/soleil-1.jpg": {
+    "src": "/images/shop/soleil-1-713ca7a59c-640.webp",
+    "srcSet": "/images/shop/soleil-1-713ca7a59c-320.webp 320w, /images/shop/soleil-1-713ca7a59c-640.webp 640w, /images/shop/soleil-1-713ca7a59c-800.webp 800w, /images/shop/soleil-1-713ca7a59c-1000.webp 1000w",
+    "thumbnail": "/images/shop/soleil-1-713ca7a59c-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/soleil-2.jpg": {
+    "src": "/images/shop/soleil-2-68e1497fa6-640.webp",
+    "srcSet": "/images/shop/soleil-2-68e1497fa6-320.webp 320w, /images/shop/soleil-2-68e1497fa6-640.webp 640w, /images/shop/soleil-2-68e1497fa6-800.webp 800w, /images/shop/soleil-2-68e1497fa6-1000.webp 1000w",
+    "thumbnail": "/images/shop/soleil-2-68e1497fa6-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/speedchamp-1.jpg": {
+    "src": "/images/shop/speedchamp-1-6fdde8515e-640.webp",
+    "srcSet": "/images/shop/speedchamp-1-6fdde8515e-320.webp 320w, /images/shop/speedchamp-1-6fdde8515e-640.webp 640w, /images/shop/speedchamp-1-6fdde8515e-800.webp 800w, /images/shop/speedchamp-1-6fdde8515e-1000.webp 1000w",
+    "thumbnail": "/images/shop/speedchamp-1-6fdde8515e-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/speedchamp-2.jpg": {
+    "src": "/images/shop/speedchamp-2-05fe4770c5-640.webp",
+    "srcSet": "/images/shop/speedchamp-2-05fe4770c5-320.webp 320w, /images/shop/speedchamp-2-05fe4770c5-640.webp 640w, /images/shop/speedchamp-2-05fe4770c5-800.webp 800w, /images/shop/speedchamp-2-05fe4770c5-1000.webp 1000w",
+    "thumbnail": "/images/shop/speedchamp-2-05fe4770c5-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/strawdream-1.jpg": {
+    "src": "/images/shop/strawdream-1-6ae307f4d1-640.webp",
+    "srcSet": "/images/shop/strawdream-1-6ae307f4d1-320.webp 320w, /images/shop/strawdream-1-6ae307f4d1-640.webp 640w, /images/shop/strawdream-1-6ae307f4d1-800.webp 800w, /images/shop/strawdream-1-6ae307f4d1-1000.webp 1000w",
+    "thumbnail": "/images/shop/strawdream-1-6ae307f4d1-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/strawdream-2.jpg": {
+    "src": "/images/shop/strawdream-2-26b33d860b-640.webp",
+    "srcSet": "/images/shop/strawdream-2-26b33d860b-320.webp 320w, /images/shop/strawdream-2-26b33d860b-640.webp 640w, /images/shop/strawdream-2-26b33d860b-800.webp 800w, /images/shop/strawdream-2-26b33d860b-1000.webp 1000w",
+    "thumbnail": "/images/shop/strawdream-2-26b33d860b-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/summer-1.jpg": {
+    "src": "/images/shop/summer-1-65859ca781-640.webp",
+    "srcSet": "/images/shop/summer-1-65859ca781-320.webp 320w, /images/shop/summer-1-65859ca781-640.webp 640w, /images/shop/summer-1-65859ca781-800.webp 800w, /images/shop/summer-1-65859ca781-1000.webp 1000w",
+    "thumbnail": "/images/shop/summer-1-65859ca781-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/summer-2.jpg": {
+    "src": "/images/shop/summer-2-7be630227f-640.webp",
+    "srcSet": "/images/shop/summer-2-7be630227f-320.webp 320w, /images/shop/summer-2-7be630227f-640.webp 640w, /images/shop/summer-2-7be630227f-800.webp 800w, /images/shop/summer-2-7be630227f-1000.webp 1000w",
+    "thumbnail": "/images/shop/summer-2-7be630227f-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/sunbalon-1.jpg": {
+    "src": "/images/shop/sunbalon-1-343b2bde32-640.webp",
+    "srcSet": "/images/shop/sunbalon-1-343b2bde32-320.webp 320w, /images/shop/sunbalon-1-343b2bde32-640.webp 640w, /images/shop/sunbalon-1-343b2bde32-800.webp 800w, /images/shop/sunbalon-1-343b2bde32-1000.webp 1000w",
+    "thumbnail": "/images/shop/sunbalon-1-343b2bde32-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/sunbalon-2.jpg": {
+    "src": "/images/shop/sunbalon-2-e95356c100-640.webp",
+    "srcSet": "/images/shop/sunbalon-2-e95356c100-320.webp 320w, /images/shop/sunbalon-2-e95356c100-640.webp 640w, /images/shop/sunbalon-2-e95356c100-800.webp 800w, /images/shop/sunbalon-2-e95356c100-1000.webp 1000w",
+    "thumbnail": "/images/shop/sunbalon-2-e95356c100-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/sunshine-1.jpg": {
+    "src": "/images/shop/sunshine-1-0416336b86-640.webp",
+    "srcSet": "/images/shop/sunshine-1-0416336b86-320.webp 320w, /images/shop/sunshine-1-0416336b86-640.webp 640w, /images/shop/sunshine-1-0416336b86-800.webp 800w, /images/shop/sunshine-1-0416336b86-1000.webp 1000w",
+    "thumbnail": "/images/shop/sunshine-1-0416336b86-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/sunshine-2.jpg": {
+    "src": "/images/shop/sunshine-2-977b2b5f78-640.webp",
+    "srcSet": "/images/shop/sunshine-2-977b2b5f78-320.webp 320w, /images/shop/sunshine-2-977b2b5f78-640.webp 640w, /images/shop/sunshine-2-977b2b5f78-800.webp 800w, /images/shop/sunshine-2-977b2b5f78-1000.webp 1000w",
+    "thumbnail": "/images/shop/sunshine-2-977b2b5f78-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/sweetscoops-1.jpg": {
+    "src": "/images/shop/sweetscoops-1-7b7e43b9ac-640.webp",
+    "srcSet": "/images/shop/sweetscoops-1-7b7e43b9ac-320.webp 320w, /images/shop/sweetscoops-1-7b7e43b9ac-640.webp 640w, /images/shop/sweetscoops-1-7b7e43b9ac-800.webp 800w, /images/shop/sweetscoops-1-7b7e43b9ac-1000.webp 1000w",
+    "thumbnail": "/images/shop/sweetscoops-1-7b7e43b9ac-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/sweetscoops-2.jpg": {
+    "src": "/images/shop/sweetscoops-2-1cb519fa8c-640.webp",
+    "srcSet": "/images/shop/sweetscoops-2-1cb519fa8c-320.webp 320w, /images/shop/sweetscoops-2-1cb519fa8c-640.webp 640w, /images/shop/sweetscoops-2-1cb519fa8c-800.webp 800w, /images/shop/sweetscoops-2-1cb519fa8c-1000.webp 1000w",
+    "thumbnail": "/images/shop/sweetscoops-2-1cb519fa8c-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/thepicnic-1.jpg": {
+    "src": "/images/shop/thepicnic-1-21da0f2fae-640.webp",
+    "srcSet": "/images/shop/thepicnic-1-21da0f2fae-320.webp 320w, /images/shop/thepicnic-1-21da0f2fae-640.webp 640w, /images/shop/thepicnic-1-21da0f2fae-800.webp 800w, /images/shop/thepicnic-1-21da0f2fae-1000.webp 1000w",
+    "thumbnail": "/images/shop/thepicnic-1-21da0f2fae-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/thepicnic-2.jpg": {
+    "src": "/images/shop/thepicnic-2-d15755334e-640.webp",
+    "srcSet": "/images/shop/thepicnic-2-d15755334e-320.webp 320w, /images/shop/thepicnic-2-d15755334e-640.webp 640w, /images/shop/thepicnic-2-d15755334e-800.webp 800w, /images/shop/thepicnic-2-d15755334e-1000.webp 1000w",
+    "thumbnail": "/images/shop/thepicnic-2-d15755334e-320.webp",
+    "width": 1015,
+    "height": 1015
+  },
+  "/PRODUCT/tomatoes-1.jpg": {
+    "src": "/images/shop/tomatoes-1-be36434c93-640.webp",
+    "srcSet": "/images/shop/tomatoes-1-be36434c93-320.webp 320w, /images/shop/tomatoes-1-be36434c93-640.webp 640w, /images/shop/tomatoes-1-be36434c93-800.webp 800w, /images/shop/tomatoes-1-be36434c93-1000.webp 1000w",
+    "thumbnail": "/images/shop/tomatoes-1-be36434c93-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/PRODUCT/tomatoes-2.jpg": {
+    "src": "/images/shop/tomatoes-2-2f203df6fd-640.webp",
+    "srcSet": "/images/shop/tomatoes-2-2f203df6fd-320.webp 320w, /images/shop/tomatoes-2-2f203df6fd-640.webp 640w, /images/shop/tomatoes-2-2f203df6fd-800.webp 800w, /images/shop/tomatoes-2-2f203df6fd-1000.webp 1000w",
+    "thumbnail": "/images/shop/tomatoes-2-2f203df6fd-320.webp",
+    "width": 1015,
+    "height": 1015
+  }
+}

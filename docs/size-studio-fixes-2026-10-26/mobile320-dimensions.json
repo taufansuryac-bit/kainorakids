@@ -1,0 +1,1532 @@
+[
+  {
+    "type": "tee",
+    "id": "width",
+    "contained": true,
+    "dimension": "Lebar dada",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"width\" x1=\"24\" y1=\"48\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"77\" y2=\"48\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "tee",
+    "id": "length",
+    "contained": true,
+    "dimension": "Panjang pakaian",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"length\" x1=\"63\" y1=\"14\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"63\" y2=\"84\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "shirt",
+    "id": "width",
+    "contained": true,
+    "dimension": "Lebar dada",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"width\" x1=\"29\" y1=\"55\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"70\" y2=\"55\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "shirt",
+    "id": "length",
+    "contained": true,
+    "dimension": "Panjang pakaian",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"length\" x1=\"62\" y1=\"21\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"62\" y2=\"81\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "shirt",
+    "id": "sleeve",
+    "contained": true,
+    "dimension": "Panjang lengan",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"sleeve\" x1=\"66\" y1=\"23\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"87\" y2=\"69\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 201.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -65.15625,
+      "width": 267,
+      "x": 19,
+      "y": -65.15625
+    },
+    "space": {
+      "bottom": 218.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -81.65625,
+      "width": 267,
+      "x": 19,
+      "y": -81.65625
+    }
+  },
+  {
+    "type": "outer",
+    "id": "width",
+    "contained": true,
+    "dimension": "Lebar dada",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"width\" x1=\"25\" y1=\"56\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"76\" y2=\"56\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "outer",
+    "id": "length",
+    "contained": true,
+    "dimension": "Panjang pakaian",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"length\" x1=\"64\" y1=\"32\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"64\" y2=\"86\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "outer",
+    "id": "sleeve",
+    "contained": true,
+    "dimension": "Panjang lengan",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"sleeve\" x1=\"70\" y1=\"35\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"88\" y2=\"75\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 201.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -65.15625,
+      "width": 267,
+      "x": 19,
+      "y": -65.15625
+    },
+    "space": {
+      "bottom": 218.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -81.65625,
+      "width": 267,
+      "x": 19,
+      "y": -81.65625
+    }
+  },
+  {
+    "type": "trousers",
+    "id": "waistWidth",
+    "contained": true,
+    "dimension": "Lebar pinggang",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"waistWidth\" x1=\"32\" y1=\"13\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"66\" y2=\"13\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "trousers",
+    "id": "hipWidth",
+    "contained": true,
+    "dimension": "Lebar pinggul",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"hipWidth\" x1=\"31\" y1=\"28\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"68\" y2=\"28\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "trousers",
+    "id": "inseam",
+    "contained": true,
+    "dimension": "Panjang kaki dalam",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"inseam\" x1=\"50\" y1=\"38\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"58\" y2=\"86\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 201.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -65.15625,
+      "width": 267,
+      "x": 19,
+      "y": -65.15625
+    },
+    "space": {
+      "bottom": 218.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -81.65625,
+      "width": 267,
+      "x": 19,
+      "y": -81.65625
+    }
+  },
+  {
+    "type": "shorts",
+    "id": "waistWidth",
+    "contained": true,
+    "dimension": "Lebar pinggang",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"waistWidth\" x1=\"29\" y1=\"24\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"70\" y2=\"24\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "shorts",
+    "id": "hipWidth",
+    "contained": true,
+    "dimension": "Lebar pinggul",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"hipWidth\" x1=\"25\" y1=\"40\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"74\" y2=\"40\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "shorts",
+    "id": "length",
+    "contained": true,
+    "dimension": "Panjang pakaian",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"length\" x1=\"69\" y1=\"24\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"69\" y2=\"76\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 201.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -65.15625,
+      "width": 267,
+      "x": 19,
+      "y": -65.15625
+    },
+    "space": {
+      "bottom": 218.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -81.65625,
+      "width": 267,
+      "x": 19,
+      "y": -81.65625
+    }
+  },
+  {
+    "type": "legging",
+    "id": "waistWidth",
+    "contained": true,
+    "dimension": "Lebar pinggang",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"waistWidth\" x1=\"35\" y1=\"9\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"65\" y2=\"9\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "legging",
+    "id": "hipWidth",
+    "contained": true,
+    "dimension": "Lebar pinggul",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"hipWidth\" x1=\"34\" y1=\"23\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"66\" y2=\"23\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "legging",
+    "id": "inseam",
+    "contained": true,
+    "dimension": "Panjang kaki dalam",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"inseam\" x1=\"50\" y1=\"35\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"60\" y2=\"91\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 201.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -65.15625,
+      "width": 267,
+      "x": 19,
+      "y": -65.15625
+    },
+    "space": {
+      "bottom": 218.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -81.65625,
+      "width": 267,
+      "x": 19,
+      "y": -81.65625
+    }
+  },
+  {
+    "type": "skirt",
+    "id": "waistWidth",
+    "contained": true,
+    "dimension": "Lebar pinggang",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"waistWidth\" x1=\"34\" y1=\"24\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"68\" y2=\"24\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "skirt",
+    "id": "hipWidth",
+    "contained": true,
+    "dimension": "Lebar pinggul",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"hipWidth\" x1=\"28\" y1=\"44\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"74\" y2=\"44\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "skirt",
+    "id": "length",
+    "contained": true,
+    "dimension": "Panjang pakaian",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"length\" x1=\"64\" y1=\"24\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"64\" y2=\"75\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 201.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -65.15625,
+      "width": 267,
+      "x": 19,
+      "y": -65.15625
+    },
+    "space": {
+      "bottom": 218.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -81.65625,
+      "width": 267,
+      "x": 19,
+      "y": -81.65625
+    }
+  },
+  {
+    "type": "sneaker",
+    "id": "footLength",
+    "contained": true,
+    "dimension": "Panjang kaki",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"footLength\" x1=\"68\" y1=\"19\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"68\" y2=\"80\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "sandal",
+    "id": "footLength",
+    "contained": true,
+    "dimension": "Panjang kaki",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"footLength\" x1=\"68\" y1=\"19\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"68\" y2=\"80\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "bodysuit",
+    "id": "width",
+    "contained": true,
+    "dimension": "Lebar dada",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"width\" x1=\"30\" y1=\"39\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"71\" y2=\"39\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "bodysuit",
+    "id": "torsoLength",
+    "contained": true,
+    "dimension": "Bahu ke selangkangan",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"torsoLength\" x1=\"60\" y1=\"13\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"50\" y2=\"81\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "sleepsuit",
+    "id": "width",
+    "contained": true,
+    "dimension": "Lebar dada",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"width\" x1=\"31\" y1=\"39\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"70\" y2=\"39\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "sleepsuit",
+    "id": "torsoLength",
+    "contained": true,
+    "dimension": "Bahu ke selangkangan",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"torsoLength\" x1=\"61\" y1=\"13\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"50\" y2=\"59\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "sleepsuit",
+    "id": "inseam",
+    "contained": true,
+    "dimension": "Panjang kaki dalam",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"inseam\" x1=\"50\" y1=\"59\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"57\" y2=\"84\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 201.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -65.15625,
+      "width": 267,
+      "x": 19,
+      "y": -65.15625
+    },
+    "space": {
+      "bottom": 218.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -81.65625,
+      "width": 267,
+      "x": 19,
+      "y": -81.65625
+    }
+  },
+  {
+    "type": "dress",
+    "id": "width",
+    "contained": true,
+    "dimension": "Lebar dada",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"width\" x1=\"34\" y1=\"33\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"67\" y2=\"33\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "dress",
+    "id": "waistWidth",
+    "contained": true,
+    "dimension": "Lebar pinggang",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"waistWidth\" x1=\"32\" y1=\"44\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"69\" y2=\"44\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "dress",
+    "id": "length",
+    "contained": true,
+    "dimension": "Panjang pakaian",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"length\" x1=\"62\" y1=\"11\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"62\" y2=\"85\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 201.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -65.15625,
+      "width": 267,
+      "x": 19,
+      "y": -65.15625
+    },
+    "space": {
+      "bottom": 218.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -81.65625,
+      "width": 267,
+      "x": 19,
+      "y": -81.65625
+    }
+  },
+  {
+    "type": "jumpsuit",
+    "id": "width",
+    "contained": true,
+    "dimension": "Lebar dada",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"width\" x1=\"34\" y1=\"25\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"65\" y2=\"25\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "jumpsuit",
+    "id": "torsoLength",
+    "contained": true,
+    "dimension": "Bahu ke selangkangan",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"torsoLength\" x1=\"60\" y1=\"9\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"50\" y2=\"56\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "jumpsuit",
+    "id": "inseam",
+    "contained": true,
+    "dimension": "Panjang kaki dalam",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"inseam\" x1=\"50\" y1=\"56\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"56\" y2=\"91\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 201.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -65.15625,
+      "width": 267,
+      "x": 19,
+      "y": -65.15625
+    },
+    "space": {
+      "bottom": 218.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -81.65625,
+      "width": 267,
+      "x": 19,
+      "y": -81.65625
+    }
+  },
+  {
+    "type": "pyjamas",
+    "id": "width",
+    "contained": true,
+    "dimension": "Lebar dada",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"width\" x1=\"13\" y1=\"43\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"46\" y2=\"43\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "pyjamas",
+    "id": "length",
+    "contained": true,
+    "dimension": "Panjang pakaian",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"length\" x1=\"35\" y1=\"24\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"35\" y2=\"66\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "pyjamas",
+    "id": "waistWidth",
+    "contained": true,
+    "dimension": "Lebar pinggang",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"waistWidth\" x1=\"64\" y1=\"17\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"87\" y2=\"17\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 201.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -65.15625,
+      "width": 267,
+      "x": 19,
+      "y": -65.15625
+    },
+    "space": {
+      "bottom": 218.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -81.65625,
+      "width": 267,
+      "x": 19,
+      "y": -81.65625
+    }
+  },
+  {
+    "type": "singlet",
+    "id": "width",
+    "contained": true,
+    "dimension": "Lebar dada",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"width\" x1=\"35\" y1=\"35\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"65\" y2=\"35\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "singlet",
+    "id": "length",
+    "contained": true,
+    "dimension": "Panjang pakaian",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"length\" x1=\"59\" y1=\"13\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"59\" y2=\"85\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "underwear",
+    "id": "waistWidth",
+    "contained": true,
+    "dimension": "Lebar pinggang",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"waistWidth\" x1=\"24\" y1=\"26\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"77\" y2=\"26\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "underwear",
+    "id": "rise",
+    "contained": true,
+    "dimension": "Tinggi pesak",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"rise\" x1=\"50\" y1=\"27\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"50\" y2=\"75\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "socks",
+    "id": "footLength",
+    "contained": true,
+    "dimension": "Panjang kaki",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"footLength\" x1=\"68\" y1=\"19\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"68\" y2=\"80\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "koko",
+    "id": "width",
+    "contained": true,
+    "dimension": "Lebar dada",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"width\" x1=\"29\" y1=\"55\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"70\" y2=\"55\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "koko",
+    "id": "length",
+    "contained": true,
+    "dimension": "Panjang pakaian",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"length\" x1=\"62\" y1=\"21\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"62\" y2=\"81\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "koko",
+    "id": "sleeve",
+    "contained": true,
+    "dimension": "Panjang lengan",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"sleeve\" x1=\"66\" y1=\"23\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"87\" y2=\"69\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 201.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -65.15625,
+      "width": 267,
+      "x": 19,
+      "y": -65.15625
+    },
+    "space": {
+      "bottom": 218.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -81.65625,
+      "width": 267,
+      "x": 19,
+      "y": -81.65625
+    }
+  },
+  {
+    "type": "gamis",
+    "id": "width",
+    "contained": true,
+    "dimension": "Lebar dada",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"width\" x1=\"31\" y1=\"35\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"67\" y2=\"35\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "gamis",
+    "id": "waistWidth",
+    "contained": true,
+    "dimension": "Lebar pinggang",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"waistWidth\" x1=\"29\" y1=\"47\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"69\" y2=\"47\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "gamis",
+    "id": "length",
+    "contained": true,
+    "dimension": "Panjang pakaian",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"length\" x1=\"61\" y1=\"11\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"61\" y2=\"91\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 201.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -65.15625,
+      "width": 267,
+      "x": 19,
+      "y": -65.15625
+    },
+    "space": {
+      "bottom": 218.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -81.65625,
+      "width": 267,
+      "x": 19,
+      "y": -81.65625
+    }
+  },
+  {
+    "type": "hijab",
+    "id": "faceOpening",
+    "contained": true,
+    "dimension": "Lingkar bukaan wajah",
+    "line": "<path class=\"ss-dimension\" d=\"M49 12 C30 12 25 42 49 43 C73 42 69 12 49 12 Z\" style=\"opacity: 0;\"></path>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "hijab",
+    "id": "coverage",
+    "contained": true,
+    "dimension": "Panjang penutup depan",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"coverage\" x1=\"48\" y1=\"9\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"48\" y2=\"88\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 201.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -65.15625,
+      "width": 267,
+      "x": 19,
+      "y": -65.15625
+    },
+    "space": {
+      "bottom": 218.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -81.65625,
+      "width": 267,
+      "x": 19,
+      "y": -81.65625
+    }
+  },
+  {
+    "type": "mukena",
+    "id": "upperLength",
+    "contained": true,
+    "dimension": "Panjang atasan",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"upperLength\" x1=\"25\" y1=\"10\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"25\" y2=\"77\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  },
+  {
+    "type": "mukena",
+    "id": "lowerLength",
+    "contained": true,
+    "dimension": "Panjang bawahan",
+    "line": "<line class=\"ss-dimension\" data-dimension=\"lowerLength\" x1=\"72\" y1=\"27\" marker-start=\"url(#ss-arrow-r1)\" marker-end=\"url(#ss-arrow-r1)\" x2=\"72\" y2=\"90\"></line>",
+    "marker": "auto-start-reverse",
+    "overflow": 0,
+    "overlap": false,
+    "plane": {
+      "bottom": 252.84375,
+      "height": 267,
+      "left": 19,
+      "right": 286,
+      "top": -14.15625,
+      "width": 267,
+      "x": 19,
+      "y": -14.15625
+    },
+    "space": {
+      "bottom": 269.34375,
+      "height": 300,
+      "left": 19,
+      "right": 286,
+      "top": -30.65625,
+      "width": 267,
+      "x": 19,
+      "y": -30.65625
+    }
+  }
+]

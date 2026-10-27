@@ -1,0 +1,49 @@
+import { relatedProducts } from '../src/utils/productRelated.js';
+import { storeDocument, imageAttributes } from './storefront-document.mjs';
+import { COMMERCE_POLICY } from '../src/content/commercePolicies.js';
+import { availabilityLabel } from '../src/utils/productAvailability.js';
+import { SIZE_CHART } from '../src/content/sizeChart.js';
+import { readFile, writeFile, mkdir, stat } from 'node:fs/promises';
+import { join, resolve } from 'node:path';
+import { validateContent } from '../shared/contentSchema.js';
+import { catalogHref, productHref, PRODUCT_SITE as SITE } from '../src/utils/productRoutes.js';
+import { productSchema, productListSchema, productBreadcrumb, productDescription, productMetaDescription, productTitle, catalogTitle, catalogDescription, schemaJSON } from '../src/utils/productSeo.js';
+
+const { products } = validateContent(JSON.parse(await readFile('src/content/store.json', 'utf8')));
+const output = resolve('dist'), template = await readFile(join(output, 'index.html'), 'utf8');
+const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+const money = price => typeof price === 'number' ? new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(price) : 'Info harga menyusul';
+const nav = `<header class="site-header"><nav class="site-nav" style="display:flex;align-items:center;justify-content:space-between" aria-label="Menu toko"><a class="nav-brand" href="/"><img src="/website-logo.png" alt="Kainora Kids" width="145" height="33"><span>LITTLE FITS. BIG DAYS.</span></a><a class="ks-inline-link" href="/products/">KOLEKSI KAOS ↗</a></nav></header>`;
+const footer = '<footer class="ks-catalog-signoff ks-section"><span class="ks-eyebrow">KAINORA KIDS</span><p>Little fits. Big possibilities.</p><a class="ks-inline-link" href="/products/">JELAJAHI SEMUA MOTIF ↗</a></footer>';
+const card = (product, heading = 'h2') => `<article class="ks-card"><div class="ks-card-visual"><a class="ks-card-link" href="${productHref(product)}"><img class="ks-card-cover" ${imageAttributes(product.img)} alt="${esc(product.alt || product.name)}" width="1254" height="1254" loading="lazy" decoding="async"></a></div><div class="ks-card-copy"><span class="ks-eyebrow">${esc(product.model || product.type)}</span><a href="${productHref(product)}"><${heading}>${esc(product.name)}</${heading}><span>↗</span></a><div class="ks-card-price"><strong>${esc(money(product.price))}</strong><span>${esc(product.warna)}</span></div></div></article>`;
+
+const documentHTML = options => storeDocument(template, {header:nav,footer,...options});
+async function save(path, html) {
+  const dir = join(output, path.slice(1));await mkdir(dir, { recursive: true });await writeFile(join(dir, 'index.html'), html);
+}
+const urls = [];
+const totalPages = Math.max(1, Math.ceil(products.length / 12));
+for (let page = 1; page <= totalPages; page++) {
+  const path = catalogHref(page), visible = products.slice((page - 1) * 12, page * 12);
+  const pages = Array.from({ length: totalPages }, (_, i) => `<a href="${catalogHref(i + 1)}"${page === i + 1 ? ' aria-current="page"' : ''}>${String(i + 1).padStart(2, '0')}</a>`).join('');
+  const body = `<main class="ks-shop ks-catalog"><header class="ks-catalog-heading ks-section"><div><span class="ks-eyebrow">KAINORA KIDS / THE GRAPHIC EDIT</span><h1>Kaos anak oversize.</h1></div><p>${products.length} motif. Temukan favorit si kecil.<br><strong>Semua kaos putih Rp69.000</strong></p></header><div class="ks-catalog-toolbar"><div class="ks-tool-row"><label class="ks-search"><span aria-hidden="true">⌕</span><input type="search" placeholder="Temukan motif favorit…" aria-label="Cari motif kaos"></label><div class="ks-tool-options"><button type="button">FILTER</button><label><select aria-label="Urutkan produk"><option>Pilihan Kainora</option></select></label></div></div><div class="ks-category-row"><div class="ks-gender-tabs"><button aria-pressed="true">Semua motif</button><button>Boys</button><button>Girls</button><button>Unisex</button></div><p>${products.length} <span>pilihan</span></p></div></div><section class="ks-section ks-results"><div class="ks-results-meta"><span>HALAMAN ${page} / ${totalPages}</span><span>${visible.length} MOTIF</span></div><div class="ks-product-grid">${visible.map(product => card(product)).join('')}</div><nav class="ks-pagination" aria-label="Halaman katalog"><div>${pages}</div></nav></section></main>`;
+  await save(path, documentHTML({ title: catalogTitle(page), description: catalogDescription(products, page), path, image: products[0]?.img || '/website-logo.png', body, schema: [productListSchema(visible, page), productBreadcrumb(null, page)] }));
+  urls.push(path);
+}
+for (const product of products) {
+  for (const image of new Set([product.img, ...product.images])) await stat(resolve('public', `.${image}`));
+  const path = productHref(product);
+  const facts = [['Bahan', product.bahan], ['Potongan', product.model], ['Warna', product.warna], ['Ukuran', product.sizes.join(', ')]].filter(([,value]) => value);
+  const related = relatedProducts(product, products);
+  const body = `<main class="ks-shop ks-detail"><nav class="ks-breadcrumb ks-section" aria-label="Breadcrumb"><a href="/">Beranda</a><span>/</span><a href="/products/">Koleksi kaos</a><span>/</span><span aria-current="page">${esc(product.name)}</span></nav><section class="ks-detail-grid ks-section"><div class="ks-detail-gallery"><div class="ks-gallery-main"><a class="ks-gallery-open" href="${esc(product.img)}"><img ${imageAttributes(product.img, '(max-width: 767px) calc(100vw - 44px), 52vw')} alt="${esc(product.alt || product.name)}" width="1254" height="1254" fetchpriority="high"></a></div><div class="ks-thumbnails">${product.images.map((src, index) => `<a href="${esc(src)}"><img ${imageAttributes(src, '80px')} alt="${esc(product.name)} foto ${index + 1}" width="68" height="75" loading="lazy"></a>`).join('')}</div></div><div class="ks-product-info"><span class="ks-eyebrow">KAINORA KIDS / THE GRAPHIC EDIT</span><h1>${esc(product.name)}</h1><p class="ks-availability">${esc(availabilityLabel(product))} · Ukuran ${esc(product.sizes.join(', '))}</p><div class="ks-product-price"><strong>${esc(money(product.price))}</strong><span>${esc(product.warna)}</span></div><p class="ks-product-lead">Grafis yang punya karakter. ${esc(product.model || '')} untuk gaya si kecil.</p><div class="ks-product-facts">${facts.map(([label, value]) => `<div><span class="ks-eyebrow">${esc(label)}</span><strong>${esc(value)}</strong></div>`).join('')}</div><div class="ks-buy-box"><strong>Pilihan ukuran</strong><p>${esc(product.sizes.join(' · '))}</p><noscript><p>Aktifkan JavaScript untuk memilih ukuran dan menggunakan keranjang.</p></noscript><details class="ks-static-chart"><summary>Size chart & panduan</summary><table class="ks-size-table"><thead><tr><th>Ukuran</th><th>Lebar</th><th>Panjang</th></tr></thead><tbody>${SIZE_CHART.map(([size,cm,length]) => `<tr><th>${size}</th><td>${cm} cm</td><td>${length} cm</td></tr>`).join('')}</tbody></table><p>Toleransi jahitan 1–2 cm.</p></details></div><div class="ks-detail-accordions"><details open><summary>Tentang motif ini</summary><p>${esc(productDescription(product))}</p></details><details><summary>Pemesanan & pengiriman</summary><p>${esc(COMMERCE_POLICY.shippingSummary)}</p><p>${esc(COMMERCE_POLICY.returnSummary)}</p><p><a href="/pengiriman/">Pengiriman & ongkir</a> · <a href="/retur/">Ketentuan retur</a> · <a href="/panduan/ukuran-kaos-anak/">Cara mengukur</a> · <a href="/panduan/perawatan-sablon/">Perawatan sablon</a></p></details></div></div></section><section class="ks-section ks-related"><div class="ks-related-heading"><h2>CERITA LAINNYA.</h2><a href="/products/">SEMUA MOTIF ↗</a></div><div class="ks-product-grid">${related.map(product => card(product, 'h3')).join('')}</div></section></main>`;
+  await save(path, documentHTML({ title: productTitle(product), description: productMetaDescription(product), path, image: product.img, body, schema: [productSchema(product), productBreadcrumb(product)] }));urls.push(path);
+}
+if (new Set(urls).size !== urls.length) throw new Error('Duplicate product/canonical URLs.');
+const entries = urls.map(path => `<url><loc>${SITE}${path}</loc></url>`).join('\n');
+await writeFile(join(output, 'sitemap-products.xml'), `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${entries}</urlset>`);
+const sitemapPath = join(output, 'sitemap.xml');
+let sitemap = await readFile(sitemapPath, 'utf8');
+sitemap = sitemap.replace(/<url>\s*<loc>https:\/\/kainorakids\.com\/\?view=(?:products|productDetail|orders|reviews)[^<]*<\/loc>[\s\S]*?<\/url>/g, '').replace('</urlset>', `${entries}\n</urlset>`);
+await writeFile(sitemapPath, sitemap);
+await writeFile(join(output, '404.html'), documentHTML({ title: 'Halaman tidak ditemukan | Kainora Kids', description: 'Halaman yang dicari tidak tersedia. Jelajahi koleksi kaos Kainora Kids.', path: '/404.html', image: '/website-logo.png', noindex: true, staticOnly: true, body: '<main class="ks-shop ks-not-found"><span class="ks-eyebrow">KAINORA / 404</span><h1>HALAMAN INI<br/>BELUM KETEMU.</h1><p>Tautan mungkin berubah atau produk sudah tidak tersedia.</p><a href="/products/" class="ks-button">KEMBALI KE KOLEKSI ↗</a></main>' }));
+console.log(`Products: ${products.length} detail HTML pages, ${totalPages} catalogue pages, ${urls.length} canonical URLs and static 404.`);

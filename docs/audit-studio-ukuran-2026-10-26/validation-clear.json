@@ -1,0 +1,11 @@
+{
+  "validationBefore": [
+    "Isi tinggi badan antara 35–190 cm.",
+    "Isi lingkar dada antara 25–130 cm."
+  ],
+  "validationAfter": {
+    "chest": "",
+    "chestInvalid": "false",
+    "errors": []
+  }
+}

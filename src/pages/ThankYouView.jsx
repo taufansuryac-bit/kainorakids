@@ -12,7 +12,7 @@ export const ThankYouView = () => {
 
   return (
     <main className="min-h-screen bg-gray-950 flex flex-col items-center justify-center py-24 px-4 relative overflow-hidden selection:bg-amber-500 selection:text-black">
-      <SEO title="Pesanan Berhasil | Kainora Kids Exclusive" description="Pesanan eksklusif Bunda sedang diproses." />
+      <SEO title="Pesanan Berhasil | Kainora Kids Exclusive" description="Pesanan eksklusif Bunda sedang diproses." canonicalPath="/?view=thankyou" robots="noindex, follow" />
       
       {/* Background Effects */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none"></div>

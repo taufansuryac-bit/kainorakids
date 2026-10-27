@@ -74,11 +74,11 @@ const CONVERSATION_STAGES = {
   CLOSING: 'closing'
 };
 
-const KainoraAI = () => {
+const KainoraAI = ({ initialOpen = false }) => {
   const { posts, products } = useStore();
   const aiHealth = useAIHealth();
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(initialOpen);
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -421,7 +421,7 @@ const KainoraAI = () => {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-4 right-4 z-50 flex items-center gap-2 rounded-full border-[3px] border-ink bg-brand-yellow px-4 py-3 text-ink shadow-solid-sm transition-all hover:-translate-y-0.5 hover:translate-x-0 hover:shadow-solid active:translate-x-[3px] active:translate-y-[3px] active:shadow-none group sm:bottom-6 sm:right-6"
+          className="ai-launcher fixed bottom-4 right-4 z-50 flex items-center gap-2 rounded-full border-[3px] border-ink bg-brand-yellow px-4 py-3 text-ink shadow-solid-sm transition-all hover:-translate-y-0.5 hover:translate-x-0 hover:shadow-solid active:translate-x-[3px] active:translate-y-[3px] active:shadow-none group sm:bottom-6 sm:right-6"
           aria-label="Open KAINORA AI Chat"
         >
           <Terminal className="w-5 h-5 animate-pulse" />

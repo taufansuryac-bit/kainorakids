@@ -1,0 +1,18 @@
+[
+  {
+    "source": "shop-boys.jpg",
+    "sourceSha256": "973f3fc6d2703f2e89aa8186b17b593bcecfeb6fbcd3eff3c8356a7e11f2136a",
+    "url": "/images/kainora-categories/boys.webp",
+    "bytes": 94580,
+    "width": 1280,
+    "height": 1280
+  },
+  {
+    "source": "shop-girl.jpg",
+    "sourceSha256": "20675636e91189817c05a87ab1173a87ed5d4f9e82758195fe4c1a811700e663",
+    "url": "/images/kainora-categories/girls.webp",
+    "bytes": 87822,
+    "width": 1280,
+    "height": 1280
+  }
+]

@@ -1,0 +1,24 @@
+.f-hero-image .f-hero-photo-reveal,
+.f-hero-image .f-hero-slideshow {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.f-hero-image .f-hero-slideshow > img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: 52% center;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .f-hero-image .f-hero-slideshow > img { object-position: 54% center; }
+}

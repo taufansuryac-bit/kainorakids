@@ -1,0 +1,68 @@
+{
+  "note": "Single-sample Lighthouse mobile production-preview lab measurements, not field CWV. TBT is not INP; target LCP <=2500ms and CLS <=0.1.",
+  "rows": [
+    {
+      "page": "home",
+      "label": "Beranda",
+      "url": "http://127.0.0.1:4173/",
+      "before": {
+        "LCPms": 5565.3869,
+        "CLS": 0,
+        "TBTms": 140.49999999999955,
+        "performanceScore": 69,
+        "seoScore": 100,
+        "measuredAt": "2026-10-23T00:28:31.577Z"
+      },
+      "after": {
+        "LCPms": 3541.223,
+        "CLS": 0,
+        "TBTms": 31,
+        "performanceScore": 90,
+        "seoScore": 100,
+        "measuredAt": "2026-10-23T01:35:59.459Z"
+      }
+    },
+    {
+      "page": "catalog",
+      "label": "Katalog",
+      "url": "http://127.0.0.1:4173/products/",
+      "before": {
+        "LCPms": 12052.6371,
+        "CLS": 0.0002167926068417483,
+        "TBTms": 129.5,
+        "performanceScore": 67,
+        "seoScore": 100,
+        "measuredAt": "2026-10-23T00:29:09.679Z"
+      },
+      "after": {
+        "LCPms": 2634.8940000000002,
+        "CLS": 0,
+        "TBTms": 12.49999999999983,
+        "performanceScore": 97,
+        "seoScore": 100,
+        "measuredAt": "2026-10-23T01:33:31.941Z"
+      }
+    },
+    {
+      "page": "detail",
+      "label": "Detail Sunshine",
+      "url": "http://127.0.0.1:4173/products/kaos-sunshine--1/",
+      "before": {
+        "LCPms": 8264.779600000002,
+        "CLS": 0.02147875441982727,
+        "TBTms": 52.5,
+        "performanceScore": 66,
+        "seoScore": 100,
+        "measuredAt": "2026-10-23T00:29:29.523Z"
+      },
+      "after": {
+        "LCPms": 3468.3632,
+        "CLS": 0,
+        "TBTms": 7.5,
+        "performanceScore": 91,
+        "seoScore": 100,
+        "measuredAt": "2026-10-23T01:33:48.888Z"
+      }
+    }
+  ]
+}

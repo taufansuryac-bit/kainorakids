@@ -1,31 +1,50 @@
-import React, { useState, useEffect, useCallback, createContext, useContext, useMemo } from 'react';
-import { db, auth, appId, ADMIN_EMAIL } from '../firebase';
-import { collection, addDoc, onSnapshot, query, orderBy, serverTimestamp, doc, setDoc, getDoc, where, deleteDoc, updateDoc } from "firebase/firestore";
+import React, { useState, useEffect, useCallback, createContext, useContext, useMemo, useRef } from 'react';
+import storeContent from '../content/store.json';
+import { canOrder } from '../utils/pricing';
+import { storefrontView, viewHref } from '../utils/productRoutes';
 import { INITIAL_PRODUCTS } from '../constants/data';
-import { signOut, signInAnonymously } from "firebase/auth";
+import { analyticsItem, track } from '../utils/analytics';
 
 // ============================================================================
 // 3. STORE CONTEXT (GLOBAL STATE)
 // ============================================================================
 const StoreContext = createContext();
 export const useStore = () => useContext(StoreContext);
+const viewFromURL = (location = window.location) => storefrontView(location);
+const GUEST_CART_KEY = 'kainora-guest-cart';
+// Only id/size/qty are stored; price and photos are refreshed from the current
+// catalogue so a returning guest never checks out a stale price or a removed motif.
+function readGuestCart(products) {
+  try {
+    const saved = JSON.parse(localStorage.getItem(GUEST_CART_KEY) || '[]');
+    if (!Array.isArray(saved)) return [];
+    return saved.flatMap(item => {
+      const product = products.find(p => String(p.id) === String(item?.id));
+      const qty = Number(item?.qty);
+      if (!product || !canOrder(product, item.size) || !Number.isInteger(qty) || qty < 1) return [];
+      return [{ ...product, catalogPreview: product.catalogPreview === true, size: item.size, qty: Math.min(99, qty), cartId: item.cartId || Date.now() + Math.random() }];
+    });
+  } catch { return []; }
+}
 
-export const StoreProvider = ({ children }) => {
+export const StoreProvider = ({ children, initialLocation = globalThis.location }) => {
   const [view, setViewState] = useState(() => {
     try {
-      const params = new URLSearchParams(window.location.search);
-      return params.get('view') || 'home';
+      return viewFromURL(initialLocation);
     } catch(e) { return 'home'; }
   });
+  const viewRef = useRef(view);
+  viewRef.current = view;
 
   useEffect(() => {
     try {
-      window.history.replaceState({ view }, '', `?view=${view}`);
+      // Preserve article deep links (and other route parameters) on initial load.
+      window.history.replaceState({ ...window.history.state, view }, '', window.location.href);
       const handlePopState = (event) => {
         if (event.state && event.state.view) {
-          setViewState(event.state.view);
+          viewRef.current = event.state.view;setViewState(event.state.view);
         } else {
-          setViewState('home');
+          const next = viewFromURL();viewRef.current = next;setViewState(next);
         }
       };
       window.addEventListener('popstate', handlePopState);
@@ -34,19 +53,19 @@ export const StoreProvider = ({ children }) => {
   }, []);
 
   const setView = useCallback((newView) => {
-    setViewState(prev => {
-      if (prev !== newView) {
-        try { window.history.pushState({ view: newView }, '', `?view=${newView}`); } catch(e) {}
-      }
-      return newView;
-    });
+    if (viewRef.current !== newView) {
+      try { window.history.pushState({ view: newView }, '', viewHref(newView)); } catch(e) {}
+    }
+    viewRef.current = newView;setViewState(newView);
   }, []);
 
   const [cart, setCart] = useState([]);
   const [wishlist, setWishlist] = useState([]);
   const [user, setUser] = useState(null);
-  const [products, setProducts] = useState(INITIAL_PRODUCTS);
-  const [isProductsLoaded, setIsProductsLoaded] = useState(false);
+  const [products, setProducts] = useState(storeContent.products);
+  const [isProductsLoaded, setIsProductsLoaded] = useState(true);
+  const [content, setContent] = useState(storeContent);
+  const applyContent = useCallback(next => { setContent(next); setProducts(next.products); }, []);
   const [isMiniCartOpen, setIsMiniCartOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState(null);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
@@ -54,122 +73,81 @@ export const StoreProvider = ({ children }) => {
   const [globalSearchState, setGlobalSearchState] = useState({ query: '', gender: 'Semua', age: 'Semua' });
   const [aiSizeChart, setAiSizeChart] = useState(null);
 
+  const toastTimer = useRef(null);
   const showToast = useCallback((msg) => {
     setToastMessage(msg);
-    setTimeout(() => setToastMessage(null), 4000);
+    clearTimeout(toastTimer.current);
+    toastTimer.current = setTimeout(() => setToastMessage(null), 4000);
   }, []);
 
+  // Guests keep their basket across reloads; signed-in buyers use the account
+  // basket (useBuyerBaskets), so the local copy is dropped once they log in.
+  // Restored after mount rather than in useState so hydration matches the prerender.
+  const guestCartRestored = useRef(false);
+  useEffect(() => {
+    const saved = readGuestCart(storeContent.products);
+    if (saved.length) setCart(current => current.length ? current : saved);
+  }, []);
+  useEffect(() => {
+    if (!guestCartRestored.current) { guestCartRestored.current = true; return; }
+    try {
+      if (user?.email) localStorage.removeItem(GUEST_CART_KEY);
+      else localStorage.setItem(GUEST_CART_KEY, JSON.stringify(cart.map(({ id, size, qty, cartId }) => ({ id, size, qty, cartId }))));
+    } catch { /* Storage is optional. */ }
+  }, [cart, user?.email]);
+  const [basketOwner,setBasketOwner]=useState(null);
+  const basketReady=!user?.uid||basketOwner===user.uid;
+
   const addToCart = useCallback((p, s, q) => {
+    if (!canOrder(p, s) || !Number.isInteger(q) || q < 1) { showToast('Harga, ukuran atau stok produk belum tersedia.'); return; }
     setCart(prev => {
       const ex = prev.find(i => i.id === p.id && i.size === s);
       if(ex) return prev.map(i => i === ex ? {...i, qty: i.qty + q} : i);
-      return [...prev, {...p, size: s, qty: q, cartId: Date.now()}];
+      return [...prev, {...p, catalogPreview: p.catalogPreview === true || INITIAL_PRODUCTS.includes(p), size: s, qty: q, cartId: Date.now()}];
     });
     setIsMiniCartOpen(true);
+    track('add_to_cart', { currency: 'IDR', value: Number(p.price) * q, items: [analyticsItem(p, s, q)] });
     showToast('Baju lucu berhasil masuk keranjang! 🛍️');
   }, [showToast]);
 
   const updateCartQty = useCallback((id, d) => setCart(p => p.map(it => it.cartId === id ? {...it, qty: Math.max(1, it.qty + d)} : it)), []);
   const removeFromCart = useCallback((id) => setCart(p => p.filter(it => it.cartId !== id)), []);
 
+  // A motif chosen while logged out is saved once the account basket is ready.
+  const pendingWishlist = useRef(null);
+  useEffect(() => {
+    const id = pendingWishlist.current;
+    if (id === null || !user?.email || !basketReady) return;
+    pendingWishlist.current = null;
+    setWishlist(p => p.some(value => String(value) === String(id)) ? p : [...p, id]);
+    showToast('Motif pilihanmu sudah disimpan ke Favorit. ❤️');
+  }, [user?.email, basketReady, showToast]);
+
   const toggleWishlist = useCallback((e, id) => { 
     e.stopPropagation();
     if (!user || !user.email) {
+      pendingWishlist.current = id;
       showToast('Login dulu ya untuk menyimpan baju favorit! 🥰');
       setIsAuthModalOpen(true);
       return;
     }
     setWishlist(p => {
-      const isLoved = p.includes(id);
+      const isLoved = p.some(value => String(value) === String(id));
       if(!isLoved) showToast('Yeay! Berhasil ditambahkan ke Favorit. ❤️');
-      return isLoved ? p.filter(i => i !== id) : [...p, id];
+      return isLoved ? p.filter(i => String(i) !== String(id)) : [...p, id];
     }); 
   }, [user, showToast, setIsAuthModalOpen]);
 
   const value = { 
-    view, setView, cart, setCart, wishlist, setWishlist, user, setUser, 
-    products, setProducts, isProductsLoaded, setIsProductsLoaded,
+    view, setView, cart, setCart, wishlist, setWishlist, user, setUser, basketReady, setBasketOwner,
+    products, setProducts, isProductsLoaded, setIsProductsLoaded, content, applyContent,
     isMiniCartOpen, setIsMiniCartOpen, toastMessage, setToastMessage, showToast, 
     addToCart, updateCartQty, removeFromCart, toggleWishlist, isAuthModalOpen, setIsAuthModalOpen,
     globalGenderFilter, setGlobalGenderFilter,
     globalSearchState, setGlobalSearchState,
-    aiSizeChart, setAiSizeChart
+    aiSizeChart, setAiSizeChart, initialLocation
   };
 
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
 };
 
-export const DatabaseSync = () => {
-  const { setProducts, setIsProductsLoaded, setWishlist, setCart, user, setAiSizeChart } = useStore();
-
-  useEffect(() => {
-    const unsubProducts = onSnapshot(collection(db, 'artifacts', appId, 'public', 'data', 'products'), (snapshot) => {
-      const prods = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-      const firestoreIds = prods.map(p => String(p.id));
-      const merged = [
-        ...INITIAL_PRODUCTS.filter(p => !firestoreIds.includes(String(p.id))),
-        ...prods
-      ];
-      setProducts(merged);
-      setIsProductsLoaded(true);
-    });
-
-    const unsubAiSettings = onSnapshot(doc(db, 'artifacts', appId, 'public', 'data', 'config', 'aiSettings'), (docSnap) => {
-      if (docSnap.exists() && docSnap.data().sizeChart) {
-        setAiSizeChart(docSnap.data().sizeChart);
-      } else {
-        setAiSizeChart("Tinggi 90-100cm (Size S), Tinggi 100-110cm (Size M), Tinggi 110-120cm (Size L), Tinggi 120-130cm (Size XL)"); // Default fallback
-      }
-    });
-
-    return () => { unsubProducts(); unsubAiSettings(); };
-  }, [setProducts, setIsProductsLoaded, setAiSizeChart]);
-
-  useEffect(() => {
-    if (!user || !user.email) {
-      setWishlist([]); setCart([]);
-      return;
-    }
-    const unsubWishlist = onSnapshot(doc(db, 'artifacts', appId, 'users', user.uid, 'private', 'wishlist'), (docSnap) => {
-      if (docSnap.exists() && docSnap.data().items) setWishlist(docSnap.data().items);
-      else setWishlist([]);
-    });
-    const unsubCart = onSnapshot(doc(db, 'artifacts', appId, 'users', user.uid, 'private', 'cart'), (docSnap) => {
-      if (docSnap.exists() && docSnap.data().items) setCart(docSnap.data().items);
-      else setCart([]);
-    });
-    return () => { unsubWishlist(); unsubCart(); };
-  }, [user, setWishlist, setCart]);
-
-  return null;
-};
-
-export const AuthListenerSync = () => {
-  const { setUser } = useStore();
-
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(async (currentUser) => {
-      if (currentUser) {
-        if (currentUser.isAnonymous) {
-          setUser({ email: null, isAnonymous: true });
-        } else {
-          try {
-            const profileSnap = await getDoc(doc(db, 'artifacts', appId, 'users', currentUser.uid, 'profile', 'data'));
-            if (profileSnap.exists()) {
-              setUser({ ...currentUser, ...profileSnap.data() });
-            } else {
-              setUser({ ...currentUser, email: currentUser.email });
-            }
-          } catch(e) {
-            setUser({ ...currentUser, email: currentUser.email });
-          }
-        }
-      } else {
-        setUser(null);
-      }
-    });
-    return () => unsubscribe();
-  }, [setUser]);
-
-  return null;
-};

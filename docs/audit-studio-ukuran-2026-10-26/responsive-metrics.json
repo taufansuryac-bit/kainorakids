@@ -1,0 +1,134 @@
+[
+  {
+    "clientWidth": 375,
+    "inputs": [
+      {
+        "font": "16px",
+        "id": "ss-height"
+      },
+      {
+        "font": "16px",
+        "id": "ss-chest"
+      },
+      {
+        "font": "16px",
+        "id": "ss-arm"
+      }
+    ],
+    "mainCount": 1,
+    "scrollWidth": 375,
+    "stage": {
+      "bottom": 439.859375,
+      "height": 315,
+      "left": 19,
+      "right": 356,
+      "top": 124.859375,
+      "width": 337,
+      "x": 19,
+      "y": 124.859375
+    },
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  {
+    "clientWidth": 753,
+    "inputs": [
+      {
+        "font": "16px",
+        "id": "ss-height"
+      },
+      {
+        "font": "16px",
+        "id": "ss-chest"
+      },
+      {
+        "font": "16px",
+        "id": "ss-arm"
+      }
+    ],
+    "mainCount": 1,
+    "scrollWidth": 753,
+    "stage": {
+      "bottom": 761.5,
+      "height": 440,
+      "left": 22,
+      "right": 731,
+      "top": 321.5,
+      "width": 709,
+      "x": 22,
+      "y": 321.5
+    },
+    "viewport": {
+      "height": 1024,
+      "width": 768
+    }
+  },
+  {
+    "clientWidth": 829,
+    "inputs": [
+      {
+        "font": "16px",
+        "id": "ss-height"
+      },
+      {
+        "font": "16px",
+        "id": "ss-chest"
+      },
+      {
+        "font": "16px",
+        "id": "ss-arm"
+      }
+    ],
+    "mainCount": 1,
+    "scrollWidth": 829,
+    "stage": {
+      "bottom": 840.015625,
+      "height": 500,
+      "left": 349.15625,
+      "right": 786.734375,
+      "top": 340.015625,
+      "width": 437.578125,
+      "x": 349.15625,
+      "y": 340.015625
+    },
+    "viewport": {
+      "height": 390,
+      "width": 844
+    }
+  },
+  {
+    "clientWidth": 1009,
+    "inputs": [
+      {
+        "font": "16px",
+        "id": "ss-height"
+      },
+      {
+        "font": "16px",
+        "id": "ss-chest"
+      },
+      {
+        "font": "16px",
+        "id": "ss-arm"
+      }
+    ],
+    "mainCount": 1,
+    "scrollWidth": 1009,
+    "stage": {
+      "bottom": 876.125,
+      "height": 500,
+      "left": 419.765625,
+      "right": 957.546875,
+      "top": 376.125,
+      "width": 537.78125,
+      "x": 419.765625,
+      "y": 376.125
+    },
+    "viewport": {
+      "height": 768,
+      "width": 1024
+    }
+  }
+]

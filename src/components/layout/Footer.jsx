@@ -1,15 +1,14 @@
 import React from 'react';
 import { VideoIcon, Instagram, ShoppingCart, MessageCircle, Mail, ArrowUp, ArrowUpRight } from 'lucide-react';
-import { LOGO_URL, WA_NUMBER } from '../../firebase';
+import { WA_NUMBER } from '../../firebase';
 import { useStore } from '../../context/StoreContext';
 import { CheckerEdge, CheckerStrip } from '../neo/Checker';
 import { HalftoneWordmark } from '../neo/HalftoneWordmark';
 import { TextRoll } from '../motion/KineticText';
-import { Burst } from '../neo/Stickers';
 
 const SOCIALS = [
-  { label: 'TikTok', Icon: VideoIcon, action: () => window.open('https://www.tiktok.com/@taufansurc', '_blank') },
-  { label: 'Instagram', Icon: Instagram, action: () => window.open('https://www.instagram.com/taufansurc/', '_blank') },
+  { label: 'TikTok', Icon: VideoIcon, action: () => window.open('https://www.tiktok.com/@kainorastore.id', '_blank') },
+  { label: 'Instagram', Icon: Instagram, action: () => window.open('https://www.instagram.com/kainorakids/', '_blank') },
   { label: 'Shopee', Icon: ShoppingCart, action: () => window.open('https://shopee.co.id', '_blank') },
   { label: 'WhatsApp', Icon: MessageCircle, action: (n) => window.open(`https://wa.me/${n}`, '_blank') },
   { label: 'Mail', Icon: Mail, action: () => window.open('mailto:admin@kainorakids.com', '_blank') },
@@ -24,23 +23,14 @@ export const FooterComponent = ({ openPopup }) => {
   const go = (v) => { if (v === 'products') setGlobalGenderFilter('Semua'); setView(v); };
 
   return (
-    <footer className="relative z-10 mt-16 w-full">
-      {/* Tepi checkerboard bergerigi, persis pola referensi */}
-      <CheckerEdge size={18} color="var(--red)" className="max-sm:![--cs:12px]">
+    <footer className="editorial-footer relative z-10 mt-16 w-full">
+      {/* Aksen checkerboard tipis dan statis. */}
+      <CheckerEdge size={5} color="var(--red)">
         <div className="bg-brand-red px-3 pb-10 pt-8 sm:px-6 lg:px-10">
           <div className="relative mx-auto max-w-[1500px]">
-            <Burst fill="var(--yellow)" className="absolute -top-14 right-2 hidden h-28 w-28 rotate-12 sm:grid" textClass="text-[0.62rem]">
-              SAMPAI<br />JUMPA!
-            </Burst>
-
-            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <div className="footer-grid grid gap-4 md:grid-cols-2 xl:grid-cols-4">
               <section className="neo-panel bg-paper p-6 shadow-solid-sm">
-                <div className="mb-4 flex items-center gap-3">
-                  <span className="grid h-12 w-12 place-items-center rounded-full border-[3px] border-ink bg-brand-yellow">
-                    <img src={LOGO_URL} alt="Kainora Kids" className="h-7 w-7 object-contain" />
-                  </span>
-                  <span className="display text-2xl">Kainora</span>
-                </div>
+                <div className="footer-brand mb-4"><img src="/website-logo.png" alt="Kainora Kids" /></div>
                 <p className="text-sm font-semibold leading-relaxed">
                   Menghadirkan revolusi pakaian anak modern dengan perpaduan desain kekinian dan material premium.
                 </p>
@@ -106,7 +96,7 @@ export const FooterComponent = ({ openPopup }) => {
           <ArrowUp size={14} strokeWidth={3} /> Atas
         </button>
       </div>
-      <CheckerStrip size={12} tone="ink" />
+      <CheckerStrip size={4} tone="ink" />
       <div className="bg-ink px-4 py-4 text-center text-[0.62rem] font-black uppercase tracking-[0.2em] text-paper sm:text-[0.7rem]">
         © 2026 KAINORA KIDS. ALL RIGHTS RESERVED.
       </div>

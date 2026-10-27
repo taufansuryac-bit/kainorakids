@@ -1,0 +1,521 @@
+# Inventaris editorial Kainora Journal
+
+71 artikel; revisi 21 Oktober 2026. Urutan bukan peringkat kunjungan.
+
+## Parenting
+
+- **991 — Membacakan Buku Sebelum Tidur: Rutinitas Hangat untuk Balita**
+  - URL: /blog/membacakan-buku-sebelum-tidur/
+  - Judul SEO: Membacakan Buku Sebelum Tidur untuk Balita
+  - Fokus: membacakan buku sebelum tidur
+  - Deskripsi: Bangun rutinitas membacakan buku sebelum tidur yang nyaman untuk balita: pilih buku, ikuti minat anak, dan ajak berbicara tanpa memaksanya menamatkan cerita.
+  - Sampul: public/images/journal/991.webp
+  - Rujukan primer: 1
+- **995 — 5 Ide Akhir Pekan Bersama Anak Tanpa Gadget**
+  - URL: /blog/kegiatan-anak-tanpa-gadget/
+  - Judul SEO: 5 Kegiatan Akhir Pekan Anak Tanpa Gadget
+  - Fokus: kegiatan anak tanpa gadget
+  - Deskripsi: Lima kegiatan akhir pekan anak tanpa gadget yang bisa disiapkan di rumah: berburu warna, piknik, bercerita, menanam, dan membuat jalur gerak sederhana.
+  - Sampul: public/images/journal/995.webp
+  - Rujukan primer: 2
+- **2 — Memilih Baju untuk Anak Aktif agar Lebih Nyaman Bergerak**
+  - URL: /blog/baju-anak-aktif/
+  - Judul SEO: Baju Anak Aktif: Pilih Ukuran dan Bahan yang Pas
+  - Fokus: baju anak aktif
+  - Deskripsi: Panduan baju anak aktif: cek ruang gerak, kerah, pinggang, ketebalan, dan pakaian pengganti. Kenyamanan bukan hanya ditentukan nama bahan atau harga.
+  - Sampul: public/images/journal/2.webp
+  - Rujukan primer: 1
+- **8 — 5 Aktivitas Sensorik di Rumah dengan Persiapan Ringkas**
+  - URL: /blog/aktivitas-sensorik-anak-di-rumah/
+  - Judul SEO: 5 Aktivitas Sensorik Anak di Rumah yang Praktis
+  - Fokus: aktivitas sensorik anak di rumah
+  - Deskripsi: Coba aktivitas sensorik anak di rumah memakai kain, suara, bentuk besar, air sedikit, dan tekstur kertas. Siapkan area serta pendampingan sesuai usia.
+  - Sampul: public/images/journal/8.webp
+  - Rujukan primer: 2
+- **1001 — Rutinitas Pagi Anak: Persiapan Kecil agar Tidak Selalu Terburu-buru**
+  - URL: /blog/rutinitas-pagi-anak/
+  - Judul SEO: Rutinitas Pagi Anak yang Lebih Teratur
+  - Fokus: rutinitas pagi anak
+  - Deskripsi: Susun rutinitas pagi anak lewat persiapan malam, urutan singkat, pilihan pakaian terbatas, dan pembagian tugas. Evaluasi hambatan tanpa menuntut pagi sempurna.
+  - Sampul: public/images/journal/1001.webp
+  - Rujukan primer: 1
+- **1002 — Screen Time Anak pada 2026: Buat Aturan Media yang Bisa Dijalankan**
+  - URL: /blog/screen-time-anak-2026/
+  - Judul SEO: Screen Time Anak 2026: Aturan Media Keluarga
+  - Fokus: screen time anak 2026
+  - Deskripsi: Tinjau screen time anak pada 2026 dengan melihat usia, konten, pendampingan, dan rutinitas yang tergeser. Buat kesepakatan media keluarga yang realistis.
+  - Sampul: public/images/journal/1002.webp
+  - Rujukan primer: 1
+- **1003 — Mengajarkan Anak Memakai Baju Sendiri, Satu Langkah Setiap Kali**
+  - URL: /blog/anak-memakai-baju-sendiri/
+  - Judul SEO: Anak Memakai Baju Sendiri: Cara Mendampingi
+  - Fokus: anak memakai baju sendiri
+  - Deskripsi: Dampingi anak memakai baju sendiri dengan pakaian sederhana, satu langkah latihan, dan waktu yang santai. Beri bantuan secukupnya tanpa menuntut cepat mandiri.
+  - Sampul: public/images/journal/1003.webp
+  - Rujukan primer: 1
+- **1004 — Anak Menolak Ganti Baju: Periksa Kenyamanan dan Cara Beralih Kegiatan**
+  - URL: /blog/anak-menolak-ganti-baju/
+  - Judul SEO: Anak Menolak Ganti Baju? Coba Langkah Ini
+  - Fokus: anak menolak ganti baju
+  - Deskripsi: Saat anak menolak ganti baju, cek rasa nyaman, waktu transisi, dan pilihan yang diberikan. Gunakan langkah sederhana tanpa langsung melabeli anak keras kepala.
+  - Sampul: public/images/journal/1004.webp
+  - Rujukan primer: 0
+- **1005 — Quality Time 15 Menit Bersama Anak: Hadir Tanpa Banyak Persiapan**
+  - URL: /blog/quality-time-bersama-anak/
+  - Judul SEO: Quality Time 15 Menit Bersama Anak di Rumah
+  - Fokus: quality time bersama anak
+  - Deskripsi: Ide quality time bersama anak dalam sesi singkat: pilih kegiatan, simpan distraksi, ikuti minat anak, dan tutup dengan jelas. Lima belas menit hanyalah contoh.
+  - Sampul: public/images/journal/1005.webp
+  - Rujukan primer: 1
+
+## Fashion Anak
+
+- **992 — Gaya Baju Anak 2026: Nyaman Dipakai, Mudah Dipadukan**
+  - URL: /blog/gaya-baju-anak-2026/
+  - Judul SEO: Gaya Baju Anak 2026 yang Nyaman dan Praktis
+  - Fokus: gaya baju anak 2026
+  - Deskripsi: Inspirasi gaya baju anak 2026 dengan kaos grafis, potongan leluasa, dan warna yang mudah dipadukan. Pilih berdasarkan ukuran, kegiatan, serta isi lemari.
+  - Sampul: public/images/journal/992.webp
+  - Rujukan primer: 0
+- **994 — Panduan Memilih Sepatu Pertama untuk Anak yang Belajar Jalan**
+  - URL: /blog/sepatu-pertama-anak/
+  - Judul SEO: Memilih Sepatu Pertama Anak yang Belajar Jalan
+  - Fokus: sepatu pertama anak
+  - Deskripsi: Panduan memilih sepatu pertama anak: periksa kenyamanan, sol, ruang jari, dan kecocokan saat berjalan. Kenali kapan sepatu dibutuhkan untuk perlindungan.
+  - Sampul: public/images/journal/994.webp
+  - Rujukan primer: 1
+- **1 — Warna Baju Anak yang Mudah Dipadukan: Panduan Menyusun Palet**
+  - URL: /blog/warna-baju-anak/
+  - Judul SEO: Warna Baju Anak yang Mudah Dipadukan
+  - Fokus: warna baju anak
+  - Deskripsi: Pilih warna baju anak dari isi lemari, satu warna dasar, dan satu aksen favorit. Dapatkan contoh paduan serta cara mengecek warna ketika belanja online.
+  - Sampul: public/images/journal/1.webp
+  - Rujukan primer: 0
+- **4 — Baju Lebaran Anak: Memilih Set yang Rapi dan Tetap Nyaman**
+  - URL: /blog/baju-lebaran-anak/
+  - Judul SEO: Baju Lebaran Anak: Panduan Ukuran dan Padupadan
+  - Fokus: baju lebaran anak
+  - Deskripsi: Pilih baju Lebaran anak dengan memeriksa ukuran, kemudahan berganti, dan jadwal keluarga. Temukan ide padupadan serta checklist sebelum membeli.
+  - Sampul: public/images/journal/4.webp
+  - Rujukan primer: 0
+- **6 — OOTD Liburan Anak untuk Cuaca Hangat: Simpel dan Mudah Diganti**
+  - URL: /blog/ootd-liburan-anak/
+  - Judul SEO: OOTD Liburan Anak untuk Cuaca Hangat
+  - Fokus: ootd liburan anak
+  - Deskripsi: Siapkan OOTD liburan anak dengan pakaian yang mudah dipadukan dan diganti. Cek kegiatan, cuaca, alas kaki, serta pengganti sebelum menyusun tas.
+  - Sampul: public/images/journal/6.webp
+  - Rujukan primer: 1
+- **9 — Baju Formal Anak Laki-Laki: Rapi untuk Acara, Nyaman untuk Bergerak**
+  - URL: /blog/baju-formal-anak-laki-laki/
+  - Judul SEO: Baju Formal Anak Laki-Laki yang Tetap Nyaman
+  - Fokus: baju formal anak laki laki
+  - Deskripsi: Susun baju formal anak laki-laki dari kemeja, celana, dan alas kaki yang sudah nyaman. Periksa ukuran, bukaan, serta kebutuhan berganti saat acara panjang.
+  - Sampul: public/images/journal/9.webp
+  - Rujukan primer: 0
+- **10 — Warna Baju dan Mood Anak: Utamakan Preferensi serta Kenyamanan**
+  - URL: /blog/warna-baju-dan-mood-anak/
+  - Judul SEO: Warna Baju dan Mood Anak: Jangan Terburu Menyimpulkan
+  - Fokus: warna baju dan mood anak
+  - Deskripsi: Warna baju dan mood anak tidak perlu disimpulkan secara otomatis. Libatkan anak memilih, periksa kenyamanan pakaian, dan amati konteks kesehariannya.
+  - Sampul: public/images/journal/10.webp
+  - Rujukan primer: 0
+- **11 — Baju Anak Bahan Ribbed: Kenali Tekstur, Ukuran, dan Perawatannya**
+  - URL: /blog/bahan-ribbed-baju-anak/
+  - Judul SEO: Bahan Ribbed untuk Baju Anak: Panduan Memilih
+  - Fokus: bahan ribbed baju anak
+  - Deskripsi: Kenali bahan ribbed baju anak dari tekstur, komposisi, ukuran aktual, dan label perawatan. Tampilan bergaris tidak otomatis menunjukkan ketebalan tertentu.
+  - Sampul: public/images/journal/11.webp
+  - Rujukan primer: 1
+- **12 — Baju Oversize Anak: Potongan Leluasa atau Ukuran Kebesaran?**
+  - URL: /blog/baju-oversize-anak/
+  - Judul SEO: Baju Oversize Anak: Panduan Memilih Ukuran
+  - Fokus: baju oversize anak
+  - Deskripsi: Baju oversize anak tetap perlu ukuran yang sesuai. Bandingkan panjang, lebar, bukaan lengan, dan gerak anak agar potongan longgar tidak mengganggu kegiatan.
+  - Sampul: public/images/journal/12.webp
+  - Rujukan primer: 0
+- **15 — Streetwear Bayi: Padupadan Simpel yang Mudah Dipakai**
+  - URL: /blog/streetwear-bayi/
+  - Judul SEO: Streetwear Bayi: Gaya Simpel dan Praktis
+  - Fokus: streetwear bayi
+  - Deskripsi: Inspirasi streetwear bayi dengan pakaian sederhana, bukaan mudah, dan aksesori minimal. Utamakan kegiatan serta kebutuhan berganti dibanding meniru outfit dewasa.
+  - Sampul: public/images/journal/15.webp
+  - Rujukan primer: 1
+- **1101 — Capsule Wardrobe Anak: Mulai dari Enam Pakaian yang Saling Cocok**
+  - URL: /blog/capsule-wardrobe-anak/
+  - Judul SEO: Capsule Wardrobe Anak: Panduan Enam Pakaian
+  - Fokus: capsule wardrobe anak
+  - Deskripsi: Mulai capsule wardrobe anak dari tiga atasan, dua bawahan, dan satu lapisan yang saling cocok. Sesuaikan jumlah dengan kegiatan, laundry, dan kebutuhan keluarga.
+  - Sampul: public/images/journal/1101.webp
+  - Rujukan primer: 0
+- **1102 — Baju Anak untuk Sekolah dan Bermain: Satu Lemari, Dua Kebutuhan**
+  - URL: /blog/baju-anak-sekolah-dan-bermain/
+  - Judul SEO: Baju Anak untuk Sekolah dan Bermain
+  - Fokus: baju anak sekolah dan bermain
+  - Deskripsi: Pilih baju anak untuk sekolah dan bermain dengan melihat aturan sekolah, kemudahan bergerak, pergantian, dan akses laundry. Susun pasangan yang bisa diulang.
+  - Sampul: public/images/journal/1102.webp
+  - Rujukan primer: 0
+- **1103 — Boxy Fit dan Regular Fit pada Kaos Anak: Baca Ukurannya**
+  - URL: /blog/boxy-fit-regular-fit-kaos-anak/
+  - Judul SEO: Boxy Fit vs Regular Fit Kaos Anak: Bedanya Apa?
+  - Fokus: boxy fit regular fit kaos anak
+  - Deskripsi: Pahami boxy fit dan regular fit pada kaos anak melalui perbandingan lebar, panjang, bahu, dan lengan. Istilah potongan perlu dibaca bersama ukuran aktual.
+  - Sampul: public/images/journal/1103.webp
+  - Rujukan primer: 0
+- **1104 — Packing Baju Anak untuk Liburan: Kelompokkan per Kegiatan**
+  - URL: /blog/packing-baju-anak/
+  - Judul SEO: Packing Baju Anak untuk Liburan Tanpa Berlebihan
+  - Fokus: packing baju anak
+  - Deskripsi: Packing baju anak lebih mudah dengan daftar kegiatan, pasangan silang, kantong pengganti, dan rencana laundry. Sesuaikan isi tas dengan perjalanan keluarga.
+  - Sampul: public/images/journal/1104.webp
+  - Rujukan primer: 0
+- **1105 — Memadukan Kaos Grafis Anak agar Motifnya Tetap Menonjol**
+  - URL: /blog/kaos-grafis-anak/
+  - Judul SEO: Cara Memadukan Kaos Grafis Anak
+  - Fokus: kaos grafis anak
+  - Deskripsi: Padukan kaos grafis anak dengan memilih satu pusat perhatian, warna pendamping, dan bawahan yang sesuai. Coba beberapa pasangan dari isi lemari sebelum belanja.
+  - Sampul: public/images/journal/1105.webp
+  - Rujukan primer: 0
+
+## Kesehatan Anak
+
+- **993 — Anak Susah Makan Sayur: Mulai dari Porsi Kecil Tanpa Paksaan**
+  - URL: /blog/anak-susah-makan-sayur/
+  - Judul SEO: Anak Susah Makan Sayur? Coba Pendekatan Ini
+  - Fokus: anak susah makan sayur
+  - Deskripsi: Anak susah makan sayur tidak selalu selesai dengan menu tersembunyi. Coba pengenalan bertahap, porsi kecil, contoh makan bersama, dan catat kesulitannya.
+  - Sampul: public/images/journal/993.webp
+  - Rujukan primer: 1
+- **3 — Kulit Sensitif pada Anak: Periksa Pakaian dan Kebiasaan Mencuci**
+  - URL: /blog/pakaian-kulit-sensitif-anak/
+  - Judul SEO: Pakaian untuk Kulit Sensitif Anak: Yang Perlu Dicek
+  - Fokus: pakaian kulit sensitif anak
+  - Deskripsi: Periksa pakaian untuk kulit sensitif anak dari label, jahitan, deterjen, dan cara membilas. Kenali batas perawatan pakaian serta kapan perlu menemui dokter.
+  - Sampul: public/images/journal/3.webp
+  - Rujukan primer: 1
+- **19 — Pakaian untuk Anak dengan Eksim: Pendamping Rencana Perawatan**
+  - URL: /blog/pakaian-anak-eksim/
+  - Judul SEO: Pakaian Anak dengan Eksim: Panduan Memilih
+  - Fokus: pakaian anak eksim
+  - Deskripsi: Pilih pakaian anak dengan eksim dengan memperhatikan bahan, kelonggaran, jahitan, dan laundry. Pakaian nyaman mendampingi, bukan menggantikan, perawatan dokter.
+  - Sampul: public/images/journal/19.webp
+  - Rujukan primer: 2
+- **1201 — Biang Keringat pada Anak: Perhatikan Pakaian dan Kondisi Sekitar**
+  - URL: /blog/biang-keringat-anak/
+  - Judul SEO: Biang Keringat Anak: Pakaian dan Langkah Awal
+  - Fokus: biang keringat anak
+  - Deskripsi: Saat anak mengalami biang keringat, perhatikan pakaian, panas, dan kenyamanan kulit. Pelajari langkah umum serta kapan keluhan perlu diperiksa dokter.
+  - Sampul: public/images/journal/1201.webp
+  - Rujukan primer: 1
+- **1202 — Perlukah Baju Baru Anak Dicuci Sebelum Dipakai?**
+  - URL: /blog/mencuci-baju-baru-anak/
+  - Judul SEO: Mencuci Baju Baru Anak Sebelum Dipakai
+  - Fokus: mencuci baju baru anak
+  - Deskripsi: Siapkan baju baru anak dengan pemeriksaan pesanan dan pencucian sesuai label. Pelajari urutan yang praktis, terutama bila anak memiliki kebutuhan kulit tertentu.
+  - Sampul: public/images/journal/1202.webp
+  - Rujukan primer: 2
+- **1203 — Baju Anak Basah karena Keringat: Kapan Perlu Diganti?**
+  - URL: /blog/baju-anak-basah-keringat/
+  - Judul SEO: Baju Anak Basah Keringat: Kapan Perlu Ganti?
+  - Fokus: baju anak basah keringat
+  - Deskripsi: Periksa baju anak yang basah karena keringat berdasarkan kondisi dan kenyamanan, bukan jadwal kaku. Siapkan pengganti serta penanganan pakaian setelah kegiatan.
+  - Sampul: public/images/journal/1203.webp
+  - Rujukan primer: 1
+- **1204 — OEKO-TEX pada Baju Anak: Pahami Label dan Cara Memeriksanya**
+  - URL: /blog/oeko-tex-baju-anak/
+  - Judul SEO: OEKO-TEX Baju Anak: Arti dan Cara Cek Label
+  - Fokus: oeko tex baju anak
+  - Deskripsi: Pahami informasi OEKO-TEX pada baju anak, periksa nomor label melalui kanal resmi, dan bedakan pengujian tekstil dari jaminan kecocokan untuk semua kondisi kulit.
+  - Sampul: public/images/journal/1204.webp
+  - Rujukan primer: 2
+- **1205 — Pakaian Tidur Anak: Nyaman Dipakai, Tidak Berlebihan**
+  - URL: /blog/pakaian-tidur-anak/
+  - Judul SEO: Pakaian Tidur Anak dan Pertimbangan untuk Bayi
+  - Fokus: pakaian tidur anak
+  - Deskripsi: Pilih pakaian tidur anak berdasarkan ukuran, lingkungan, dan kemudahan berganti. Untuk bayi, ikuti panduan tidur aman yang berbeda dari kebutuhan anak lebih besar.
+  - Sampul: public/images/journal/1205.webp
+  - Rujukan primer: 1
+
+## Perawatan Pakaian
+
+- **5 — Cara Mencuci Baju Katun Anak agar Bentuk dan Motifnya Terjaga**
+  - URL: /blog/cara-mencuci-baju-katun-anak/
+  - Judul SEO: Cara Mencuci Baju Katun Anak dengan Tepat
+  - Fokus: cara mencuci baju katun anak
+  - Deskripsi: Cara mencuci baju katun anak dimulai dari label perawatan: pisahkan cucian, gunakan takaran deterjen yang tepat, dan perhatikan pengeringan serta sablon.
+  - Sampul: public/images/journal/5.webp
+  - Rujukan primer: 2
+- **18 — Kaos Anak Cepat Melar: Cek Ukuran, Konstruksi, dan Cara Merawatnya**
+  - URL: /blog/kaos-anak-cepat-melar/
+  - Judul SEO: Kaos Anak Cepat Melar? Periksa Hal Berikut
+  - Fokus: kaos anak cepat melar
+  - Deskripsi: Kaos anak cepat melar perlu dilihat dari pemakaian, ukuran, proses mencuci, dan pengeringan. Periksa kerah serta bentuknya tanpa mengandalkan janji anti melar.
+  - Sampul: public/images/journal/18.webp
+  - Rujukan primer: 1
+- **1301 — Noda Makanan di Baju Anak: Tangani dengan Memeriksa Bahannya**
+  - URL: /blog/noda-makanan-baju-anak/
+  - Judul SEO: Noda Makanan Baju Anak: Langkah Penanganan Awal
+  - Fokus: noda makanan baju anak
+  - Deskripsi: Tangani noda makanan pada baju anak dengan memeriksa label, mengangkat sisa makanan, dan memilih produk sesuai petunjuk. Hindari mencampur pembersih sembarangan.
+  - Sampul: public/images/journal/1301.webp
+  - Rujukan primer: 1
+- **1302 — Cara Merawat Sablon Kaos Anak dari Mencuci sampai Menyimpan**
+  - URL: /blog/merawat-sablon-kaos-anak/
+  - Judul SEO: Cara Merawat Sablon Kaos Anak
+  - Fokus: merawat sablon kaos anak
+  - Deskripsi: Rawat sablon kaos anak dengan mengikuti petunjuk pakaian, mengurangi gesekan yang tidak perlu, dan memeriksa pengeringan serta setrika sebelum digunakan.
+  - Sampul: public/images/journal/1302.webp
+  - Rujukan primer: 1
+- **1303 — Baju Anak Bau Apek: Periksa Pengeringan dan Penyimpanan**
+  - URL: /blog/baju-anak-bau-apek/
+  - Judul SEO: Baju Anak Bau Apek? Cek Rutinitas Laundry
+  - Fokus: baju anak bau apek
+  - Deskripsi: Baju anak bau apek perlu diperiksa dari cucian, waktu pengeringan, hingga kondisi lemari. Gunakan langkah perawatan sesuai label sebelum menambah pewangi.
+  - Sampul: public/images/journal/1303.webp
+  - Rujukan primer: 0
+- **1304 — Kaos Anak Menyusut: Apa yang Bisa Diperiksa dan Dilakukan?**
+  - URL: /blog/kaos-anak-menyusut/
+  - Judul SEO: Kaos Anak Menyusut: Periksa Sebelum Mencoba Trik
+  - Fokus: kaos anak menyusut
+  - Deskripsi: Ketika kaos anak menyusut, bandingkan ukuran kering, cek petunjuk perawatan, dan dokumentasikan prosesnya. Hindari janji mengembalikan semua kain ke ukuran awal.
+  - Sampul: public/images/journal/1304.webp
+  - Rujukan primer: 1
+- **1305 — Baju Anak Sudah Kekecilan: Simpan, Teruskan, atau Pilah Ulang**
+  - URL: /blog/baju-anak-kekecilan/
+  - Judul SEO: Baju Anak Kekecilan: Cara Memilah dan Menyimpan
+  - Fokus: baju anak kekecilan
+  - Deskripsi: Pilah baju anak yang kekecilan berdasarkan kondisi, ukuran, dan rencana penggunaan. Bersihkan sebelum menyimpan serta pastikan barang yang diteruskan masih layak.
+  - Sampul: public/images/journal/1305.webp
+  - Rujukan primer: 1
+
+## Panduan Belanja
+
+- **7 — Belanja Baju Anak Lebih Bijak: Pakai Lebih Lama, Beli Sesuai Kebutuhan**
+  - URL: /blog/belanja-baju-anak-bijak/
+  - Judul SEO: Belanja Baju Anak Lebih Bijak dan Tidak Berlebihan
+  - Fokus: belanja baju anak bijak
+  - Deskripsi: Belanja baju anak lebih bijak dimulai dari isi lemari, kebutuhan ukuran, perawatan, dan rencana pakai ulang. Hindari klaim ramah lingkungan tanpa penjelasan.
+  - Sampul: public/images/journal/7.webp
+  - Rujukan primer: 1
+- **13 — 7 Hal yang Perlu Dicek Sebelum Membeli Sepatu Balita**
+  - URL: /blog/membeli-sepatu-balita/
+  - Judul SEO: Membeli Sepatu Balita: Checklist 7 Hal Penting
+  - Fokus: membeli sepatu balita
+  - Deskripsi: Checklist membeli sepatu balita mencakup ukuran, pengencang, kaus kaki, uji jalan, kondisi bagian dalam, kebutuhan kegiatan, dan ketentuan penukaran.
+  - Sampul: public/images/journal/13.webp
+  - Rujukan primer: 1
+- **14 — Mengapa Harga Baju Katun Berbeda? Bandingkan Lebih dari Label**
+  - URL: /blog/harga-baju-katun/
+  - Judul SEO: Harga Baju Katun Berbeda? Ini yang Perlu Dibandingkan
+  - Fokus: harga baju katun
+  - Deskripsi: Bandingkan harga baju katun lewat komposisi, konstruksi, detail jahitan, informasi ukuran, dan rencana pemakaian. Kata premium saja belum cukup menjelaskan nilai.
+  - Sampul: public/images/journal/14.webp
+  - Rujukan primer: 0
+- **16 — Label Halal pada Pakaian Anak: Informasi Apa yang Perlu Diperiksa?**
+  - URL: /blog/label-halal-pakaian-anak/
+  - Judul SEO: Label Halal Pakaian Anak: Cara Memeriksa Klaim
+  - Fokus: label halal pakaian anak
+  - Deskripsi: Periksa klaim label halal pada pakaian anak melalui identitas produk dan sumber resmi. Bedakan informasi sertifikasi, komposisi bahan, dan kenyamanan pemakaian.
+  - Sampul: public/images/journal/16.webp
+  - Rujukan primer: 1
+- **17 — Kado Ulang Tahun Anak yang Terpakai: Pilih dari Kebutuhannya**
+  - URL: /blog/kado-ulang-tahun-anak/
+  - Judul SEO: Kado Ulang Tahun Anak yang Terpakai dan Sesuai
+  - Fokus: kado ulang tahun anak
+  - Deskripsi: Pilih kado ulang tahun anak dari kebutuhan, minat, ukuran, dan kemudahan penukaran. Temukan cara bertanya pada orang tua tanpa membuat hadiah kehilangan makna.
+  - Sampul: public/images/journal/17.webp
+  - Rujukan primer: 0
+- **20 — Kapan Mulai Belanja Pakaian Bayi? Susun dari Kebutuhan Dasar**
+  - URL: /blog/kapan-belanja-pakaian-bayi/
+  - Judul SEO: Kapan Belanja Pakaian Bayi? Panduan Persiapan
+  - Fokus: kapan belanja pakaian bayi
+  - Deskripsi: Rencanakan belanja pakaian bayi dari kebutuhan awal, ukuran, akses laundry, dan anggaran. Buat daftar sederhana agar tidak menumpuk barang yang cepat kekecilan.
+  - Sampul: public/images/journal/20.webp
+  - Rujukan primer: 0
+- **21 — Cara Menilai Kualitas Baju Anak Lokal Saat Belanja Online**
+  - URL: /blog/kualitas-baju-anak-lokal/
+  - Judul SEO: Kualitas Baju Anak Lokal: Panduan Belanja Online
+  - Fokus: kualitas baju anak lokal
+  - Deskripsi: Nilai kualitas baju anak lokal dari informasi ukuran, foto detail, konstruksi, bahan, dan layanan toko. Hindari menyamakan slogan premium dengan bukti mutu.
+  - Sampul: public/images/journal/21.webp
+  - Rujukan primer: 0
+- **1401 — Cara Mengukur Baju Anak untuk Belanja Online dengan Lebih Yakin**
+  - URL: /blog/cara-mengukur-baju-anak/
+  - Judul SEO: Cara Mengukur Baju Anak untuk Belanja Online
+  - Fokus: cara mengukur baju anak
+  - Deskripsi: Pelajari cara mengukur baju anak dari pakaian pembanding: lebar dada, panjang badan, dan bagian lain. Cocokkan titik ukur dengan tabel produk sebelum membeli.
+  - Sampul: public/images/journal/1401.webp
+  - Rujukan primer: 0
+- **1402 — Ukuran Baju Anak Berdasarkan Tinggi Badan: Gunakan sebagai Petunjuk**
+  - URL: /blog/ukuran-baju-anak-tinggi-badan/
+  - Judul SEO: Ukuran Baju Anak Berdasarkan Tinggi Badan
+  - Fokus: ukuran baju anak tinggi badan
+  - Deskripsi: Gunakan tinggi badan sebagai petunjuk ukuran baju anak, lalu bandingkan tabel merek dan pakaian aktual. Jangan menganggap angka usia atau tinggi berlaku seragam.
+  - Sampul: public/images/journal/1402.webp
+  - Rujukan primer: 0
+- **1403 — Belanja Baju Anak Saat Promo: Hitung Kebutuhan dan Total Pembayaran**
+  - URL: /blog/promo-baju-anak/
+  - Judul SEO: Belanja Baju Anak Saat Promo agar Lebih Terarah
+  - Fokus: promo baju anak
+  - Deskripsi: Nilai promo baju anak dengan memeriksa kebutuhan, ukuran, isi paket, biaya kirim, dan ketentuan toko. Potongan besar belum tentu memberi pembelian paling berguna.
+  - Sampul: public/images/journal/1403.webp
+  - Rujukan primer: 0
+- **1404 — Checklist Baju Anak untuk Daycare: Mudah Diganti dan Dikenali**
+  - URL: /blog/baju-anak-daycare/
+  - Judul SEO: Checklist Baju Anak untuk Daycare
+  - Fokus: baju anak daycare
+  - Deskripsi: Siapkan baju anak untuk daycare dengan menanyakan kebutuhan tempatnya, memilih pakaian mudah berganti, dan memeriksa paket pengganti serta penandaan barang.
+  - Sampul: public/images/journal/1404.webp
+  - Rujukan primer: 0
+- **1405 — Kaos Satuan atau Setelan Anak: Mana yang Sesuai Kebutuhan?**
+  - URL: /blog/kaos-satuan-setelan-anak/
+  - Judul SEO: Kaos Satuan atau Setelan Anak? Cara Membandingkan
+  - Fokus: kaos satuan setelan anak
+  - Deskripsi: Bandingkan kaos satuan dan setelan anak lewat kebutuhan atasan-bawahan, ukuran tiap bagian, pasangan di lemari, dan total belanja. Pilih yang paling terpakai.
+  - Sampul: public/images/journal/1405.webp
+  - Rujukan primer: 0
+
+## Pengembangan Diri & Karakter
+
+- **2001 — Mengenalkan Emosi pada Anak: Percakapan Kecil Sehari-hari**
+  - URL: /blog/mengenalkan-emosi-pada-anak/
+  - Judul SEO: Mengenalkan Emosi pada Anak Lewat Percakapan
+  - Fokus: mengenalkan emosi pada anak
+  - Deskripsi: Cara mengenalkan emosi pada anak lewat percakapan sehari-hari, kartu warna, dan contoh orang tua. Dengarkan perasaan sambil menjaga batas perilaku.
+  - Sampul: public/images/journal/2001.webp
+  - Rujukan primer: 0
+- **2002 — Belajar Menunggu Giliran: Permainan Kecil yang Bisa Diulang**
+  - URL: /blog/belajar-menunggu-giliran/
+  - Judul SEO: Belajar Menunggu Giliran Lewat Permainan Anak
+  - Fokus: belajar menunggu giliran
+  - Deskripsi: Latih anak menunggu giliran lewat permainan balok yang sederhana. Buat aturan jelas, beri contoh, dan sesuaikan waktu tunggu tanpa memaksa atau mempermalukan.
+  - Sampul: public/images/journal/2002.webp
+  - Rujukan primer: 0
+- **2003 — Mengajarkan Anak Berbagi Tanpa Memaksa Semua Barang Dipinjamkan**
+  - URL: /blog/mengajarkan-anak-berbagi/
+  - Judul SEO: Mengajarkan Anak Berbagi dan Menghormati Batas
+  - Fokus: mengajarkan anak berbagi
+  - Deskripsi: Ajarkan anak berbagi dengan membedakan barang pribadi dan mainan bersama. Siapkan aturan bergiliran, contoh meminta izin, serta pilihan saat belum siap.
+  - Sampul: public/images/journal/2003.webp
+  - Rujukan primer: 0
+- **2004 — Tanggung Jawab Anak: Tugas Rumah yang Bisa Dicoba Bersama**
+  - URL: /blog/tanggung-jawab-anak-tugas-rumah/
+  - Judul SEO: Melatih Tanggung Jawab Anak Lewat Tugas Rumah
+  - Fokus: tanggung jawab anak tugas rumah
+  - Deskripsi: Mulai latihan tanggung jawab anak dari tugas rumah yang ringan, aman, dan jelas. Contoh menyortir pakaian, merapikan barang, serta memberi bantuan secukupnya.
+  - Sampul: public/images/journal/2004.webp
+  - Rujukan primer: 0
+- **2005 — Membantu Anak Berani Mencoba Lagi Setelah Gagal**
+  - URL: /blog/anak-berani-mencoba-lagi/
+  - Judul SEO: Membantu Anak Berani Mencoba Lagi Setelah Gagal
+  - Fokus: anak berani mencoba lagi
+  - Deskripsi: Bantu anak mencoba lagi setelah gagal dengan jeda, bantuan yang disepakati, dan komentar yang spesifik. Contoh sederhana dari permainan balok sehari-hari.
+  - Sampul: public/images/journal/2005.webp
+  - Rujukan primer: 0
+- **2006 — Mengajarkan Terima Kasih Tanpa Menuntut Reaksi Tertentu**
+  - URL: /blog/mengajarkan-terima-kasih-pada-anak/
+  - Judul SEO: Mengajarkan Terima Kasih pada Anak Secara Wajar
+  - Fokus: mengajarkan terima kasih pada anak
+  - Deskripsi: Ajarkan terima kasih lewat contoh yang konkret dan pilihan respons yang nyaman. Anak boleh mengucapkan, memberi isyarat, atau membuat kartu sederhana.
+  - Sampul: public/images/journal/2006.webp
+  - Rujukan primer: 0
+- **2007 — Anak Pendiam dan Percaya Diri: Beri Ruang untuk Cara yang Berbeda**
+  - URL: /blog/anak-pendiam-percaya-diri/
+  - Judul SEO: Anak Pendiam dan Percaya Diri: Cara Mendampingi
+  - Fokus: anak pendiam percaya diri
+  - Deskripsi: Dampingi anak pendiam tanpa memberi label atau memaksanya tampil. Siapkan situasi baru, pilihan peran kecil, dan dukungan saat anak merasa kesulitan.
+  - Sampul: public/images/journal/2007.webp
+  - Rujukan primer: 0
+- **2008 — Melatih Anak Mengambil Keputusan Kecil dalam Keseharian**
+  - URL: /blog/melatih-anak-mengambil-keputusan/
+  - Judul SEO: Melatih Anak Mengambil Keputusan Kecil
+  - Fokus: melatih anak mengambil keputusan
+  - Deskripsi: Latih anak mengambil keputusan dengan dua pilihan yang nyata, batas aman dari orang dewasa, dan waktu mencoba. Mulai dari bahan kreasi atau pakaian.
+  - Sampul: public/images/journal/2008.webp
+  - Rujukan primer: 0
+- **2009 — Batas Tubuh Anak: Belajar Berkata Tidak dan Mencari Bantuan**
+  - URL: /blog/batas-tubuh-anak/
+  - Judul SEO: Batas Tubuh Anak: Berkata Tidak dan Cari Bantuan
+  - Fokus: batas tubuh anak
+  - Deskripsi: Mulai percakapan batas tubuh anak dengan bahasa yang tenang: hak menolak kontak, bagian pribadi, orang dewasa tepercaya, dan respons saat anak bercerita.
+  - Sampul: public/images/journal/2009.webp
+  - Rujukan primer: 1
+- **2010 — Belajar Meminta Maaf dan Memperbaiki Kesalahan Bersama Anak**
+  - URL: /blog/anak-belajar-meminta-maaf/
+  - Judul SEO: Belajar Meminta Maaf dan Memperbaiki Kesalahan
+  - Fokus: anak belajar meminta maaf
+  - Deskripsi: Bantu anak belajar meminta maaf lewat pemahaman dampak dan tindakan memperbaiki. Contoh percakapan saat menumpahkan air atau mengganggu permainan teman.
+  - Sampul: public/images/journal/2010.webp
+  - Rujukan primer: 0
+
+## Aktivitas & Kreativitas (DIY)
+
+- **2101 — Teater Bayangan dari Tangan dan Senter untuk Bermain di Rumah**
+  - URL: /blog/teater-bayangan-tangan-senter/
+  - Judul SEO: Teater Bayangan Tangan dan Senter di Rumah
+  - Fokus: teater bayangan tangan senter
+  - Deskripsi: Buat teater bayangan dengan tangan, senter LED, dan dinding kosong. Ikuti langkah bermain, ide cerita, serta pengaturan cahaya yang aman bersama anak.
+  - Sampul: public/images/journal/2101.webp
+  - Rujukan primer: 0
+- **2102 — Buku Mini dari Kertas Lipat: Cerita Buatan Anak Sendiri**
+  - URL: /blog/buku-mini-kertas-lipat/
+  - Judul SEO: Buku Mini Kertas Lipat: Cerita Buatan Anak
+  - Fokus: buku mini kertas lipat
+  - Deskripsi: Buat buku mini kertas lipat bersama anak tanpa tuntutan tulisan rapi. Siapkan halaman sederhana, gambar cerita, dan cara menyimpan buku hasil kreasi.
+  - Sampul: public/images/journal/2102.webp
+  - Rujukan primer: 0
+- **2103 — Kebun Mini dari Wadah Bekas: Menanam Bersama Anak**
+  - URL: /blog/kebun-mini-wadah-bekas/
+  - Judul SEO: Kebun Mini Wadah Bekas: Menanam Bersama Anak
+  - Fokus: kebun mini wadah bekas
+  - Deskripsi: Buat kebun mini dari wadah bekas yang bersih dan aman. Panduan memilih wadah, menanam bibit, mencatat perubahan, serta merapikan kegiatan bersama anak.
+  - Sampul: public/images/journal/2103.webp
+  - Rujukan primer: 0
+- **2104 — Cap Sayur di Kertas: Bermain Bentuk dan Warna Bersama Anak**
+  - URL: /blog/cap-sayur-di-kertas/
+  - Judul SEO: Cap Sayur di Kertas: Ide Kreasi Bentuk dan Warna
+  - Fokus: cap sayur di kertas
+  - Deskripsi: Coba cap sayur di kertas dengan potongan yang disiapkan orang dewasa, cat sesuai usia, dan alas kerja. Ikuti langkah mencap serta cara merapikannya.
+  - Sampul: public/images/journal/2104.webp
+  - Rujukan primer: 0
+- **2105 — Garasi Mobil dari Kardus Bekas untuk Permainan di Rumah**
+  - URL: /blog/garasi-mobil-kardus-bekas/
+  - Judul SEO: Garasi Mobil Kardus Bekas: Langkah Kreasi Anak
+  - Fokus: garasi mobil kardus bekas
+  - Deskripsi: Buat garasi mobil dari kardus bekas yang bersih: orang dewasa menyiapkan potongan, anak menata jalur dan tempat parkir. Lengkap dengan ide variasi bermain.
+  - Sampul: public/images/journal/2105.webp
+  - Rujukan primer: 0
+- **2106 — Kreasi Playdough: Bermain Bentuk dari Bahan Siap Pakai**
+  - URL: /blog/kreasi-playdough-anak/
+  - Judul SEO: Kreasi Playdough Anak dari Bahan Siap Pakai
+  - Fokus: kreasi playdough anak
+  - Deskripsi: Ide kreasi playdough anak dengan bahan siap pakai sesuai usia. Mulai dari gulungan dan bentuk besar, pilih alat sederhana, lalu rapikan bersama.
+  - Sampul: public/images/journal/2106.webp
+  - Rujukan primer: 0
+- **2107 — Kolase Tekstur dari Kertas dan Kain Sisa untuk Anak**
+  - URL: /blog/kolase-tekstur-anak/
+  - Judul SEO: Kolase Tekstur Kertas dan Kain Sisa untuk Anak
+  - Fokus: kolase tekstur anak
+  - Deskripsi: Buat kolase tekstur anak dari potongan kertas besar dan kain bersih. Panduan memilih bahan, menyusun tanpa contoh wajib, menempel, serta menyimpan hasilnya.
+  - Sampul: public/images/journal/2107.webp
+  - Rujukan primer: 0
+- **2108 — Eksperimen Es Berwarna: Mengamati Cair dan Beku Bersama Anak**
+  - URL: /blog/eksperimen-es-berwarna-anak/
+  - Judul SEO: Eksperimen Es Berwarna untuk Pengamatan Anak
+  - Fokus: eksperimen es berwarna anak
+  - Deskripsi: Ajak anak mengamati es berwarna mencair dalam baki dangkal. Siapkan bahan oleh orang dewasa, bandingkan perubahan, dan dampingi permainan air secara langsung.
+  - Sampul: public/images/journal/2108.webp
+  - Rujukan primer: 0
+- **2109 — Papan Rutinitas Bergambar Buatan Sendiri untuk Keseharian Anak**
+  - URL: /blog/papan-rutinitas-bergambar-anak/
+  - Judul SEO: Papan Rutinitas Bergambar Buatan Sendiri
+  - Fokus: papan rutinitas bergambar anak
+  - Deskripsi: Buat papan rutinitas bergambar anak dari kertas dan gambar benda sehari-hari. Pilih sedikit langkah, susun bersama, lalu ubah saat kebutuhan keluarga berubah.
+  - Sampul: public/images/journal/2109.webp
+  - Rujukan primer: 0
+- **2110 — Anyaman Kertas Sederhana: Kreasi Pola dari Potongan Lebar**
+  - URL: /blog/anyaman-kertas-sederhana-anak/
+  - Judul SEO: Anyaman Kertas Sederhana untuk Kreasi Anak
+  - Fokus: anyaman kertas sederhana anak
+  - Deskripsi: Buat anyaman kertas sederhana dari jalur potongan lebar. Orang dewasa menyiapkan bahan, anak mencoba pola atas-bawah, lalu merapikan karya bersama.
+  - Sampul: public/images/journal/2110.webp
+  - Rujukan primer: 0

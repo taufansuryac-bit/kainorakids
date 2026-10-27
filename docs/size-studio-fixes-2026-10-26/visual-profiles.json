@@ -1,0 +1,856 @@
+[
+  {
+    "category": "Atasan",
+    "type": "tee",
+    "asset": "tee-regular",
+    "alt": "Kaos lengan pendek ivory dibentangkan, tampak depan",
+    "marks": [
+      {
+        "id": "width",
+        "label": "Lebar dada",
+        "start": [
+          24,
+          48
+        ],
+        "end": [
+          77,
+          48
+        ]
+      },
+      {
+        "id": "length",
+        "label": "Panjang pakaian",
+        "start": [
+          63,
+          14
+        ],
+        "end": [
+          63,
+          84
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Atasan",
+    "type": "shirt",
+    "asset": "koko",
+    "alt": "Kemeja koko ivory berlengan panjang dibentangkan, tampak depan",
+    "marks": [
+      {
+        "id": "width",
+        "label": "Lebar dada",
+        "start": [
+          29,
+          55
+        ],
+        "end": [
+          70,
+          55
+        ]
+      },
+      {
+        "id": "length",
+        "label": "Panjang pakaian",
+        "start": [
+          62,
+          21
+        ],
+        "end": [
+          62,
+          81
+        ]
+      },
+      {
+        "id": "sleeve",
+        "label": "Panjang lengan",
+        "start": [
+          66,
+          23
+        ],
+        "end": [
+          87,
+          69
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Atasan",
+    "type": "outer",
+    "asset": "hoodie",
+    "alt": "Hoodie ivory dengan tudung dan lengan panjang, tampak depan",
+    "marks": [
+      {
+        "id": "width",
+        "label": "Lebar dada",
+        "start": [
+          25,
+          56
+        ],
+        "end": [
+          76,
+          56
+        ]
+      },
+      {
+        "id": "length",
+        "label": "Panjang pakaian",
+        "start": [
+          64,
+          32
+        ],
+        "end": [
+          64,
+          86
+        ]
+      },
+      {
+        "id": "sleeve",
+        "label": "Panjang lengan",
+        "start": [
+          70,
+          35
+        ],
+        "end": [
+          88,
+          75
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Bawahan",
+    "type": "trousers",
+    "asset": "trousers",
+    "alt": "Celana panjang ivory dengan pinggang elastis, tampak depan",
+    "marks": [
+      {
+        "id": "waistWidth",
+        "label": "Lebar pinggang",
+        "start": [
+          32,
+          13
+        ],
+        "end": [
+          66,
+          13
+        ]
+      },
+      {
+        "id": "hipWidth",
+        "label": "Lebar pinggul",
+        "start": [
+          31,
+          28
+        ],
+        "end": [
+          68,
+          28
+        ]
+      },
+      {
+        "id": "inseam",
+        "label": "Panjang kaki dalam",
+        "start": [
+          50,
+          38
+        ],
+        "end": [
+          58,
+          86
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Bawahan",
+    "type": "shorts",
+    "asset": "shorts",
+    "alt": "Celana pendek ivory dibentangkan dengan pinggang tidak ditarik",
+    "marks": [
+      {
+        "id": "waistWidth",
+        "label": "Lebar pinggang",
+        "start": [
+          29,
+          24
+        ],
+        "end": [
+          70,
+          24
+        ]
+      },
+      {
+        "id": "hipWidth",
+        "label": "Lebar pinggul",
+        "start": [
+          25,
+          40
+        ],
+        "end": [
+          74,
+          40
+        ]
+      },
+      {
+        "id": "length",
+        "label": "Panjang pakaian",
+        "start": [
+          69,
+          24
+        ],
+        "end": [
+          69,
+          76
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Bawahan",
+    "type": "legging",
+    "asset": "legging",
+    "alt": "Legging ivory dengan kaki ramping dan pinggang elastis, tampak depan",
+    "marks": [
+      {
+        "id": "waistWidth",
+        "label": "Lebar pinggang",
+        "start": [
+          35,
+          9
+        ],
+        "end": [
+          65,
+          9
+        ]
+      },
+      {
+        "id": "hipWidth",
+        "label": "Lebar pinggul",
+        "start": [
+          34,
+          23
+        ],
+        "end": [
+          66,
+          23
+        ]
+      },
+      {
+        "id": "inseam",
+        "label": "Panjang kaki dalam",
+        "start": [
+          50,
+          35
+        ],
+        "end": [
+          60,
+          91
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Bawahan",
+    "type": "skirt",
+    "asset": "skirt",
+    "alt": "Rok ivory dibentangkan dengan pinggang elastis tidak ditarik",
+    "marks": [
+      {
+        "id": "waistWidth",
+        "label": "Lebar pinggang",
+        "start": [
+          34,
+          24
+        ],
+        "end": [
+          68,
+          24
+        ]
+      },
+      {
+        "id": "hipWidth",
+        "label": "Lebar pinggul",
+        "start": [
+          28,
+          44
+        ],
+        "end": [
+          74,
+          44
+        ]
+      },
+      {
+        "id": "length",
+        "label": "Panjang pakaian",
+        "start": [
+          64,
+          24
+        ],
+        "end": [
+          64,
+          75
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Sepatu",
+    "type": "sneaker",
+    "asset": "foot-measure",
+    "productAsset": "shoe",
+    "alt": "Kaki telanjang di atas kertas, jari terpanjang di atas dan tumit di batas balok",
+    "marks": [
+      {
+        "id": "footLength",
+        "label": "Panjang kaki",
+        "start": [
+          68,
+          19
+        ],
+        "end": [
+          68,
+          80
+        ],
+        "extensions": [
+          [
+            [
+              56,
+              19
+            ],
+            [
+              72,
+              19
+            ]
+          ],
+          [
+            [
+              58,
+              80
+            ],
+            [
+              72,
+              80
+            ]
+          ]
+        ]
+      }
+    ],
+    "foot": true
+  },
+  {
+    "category": "Sepatu",
+    "type": "sandal",
+    "asset": "foot-measure",
+    "productAsset": "sandal",
+    "alt": "Kaki telanjang di atas kertas, jari terpanjang di atas dan tumit di batas balok",
+    "marks": [
+      {
+        "id": "footLength",
+        "label": "Panjang kaki",
+        "start": [
+          68,
+          19
+        ],
+        "end": [
+          68,
+          80
+        ],
+        "extensions": [
+          [
+            [
+              56,
+              19
+            ],
+            [
+              72,
+              19
+            ]
+          ],
+          [
+            [
+              58,
+              80
+            ],
+            [
+              72,
+              80
+            ]
+          ]
+        ]
+      }
+    ],
+    "foot": true
+  },
+  {
+    "category": "Bayi",
+    "type": "bodysuit",
+    "asset": "bodysuit",
+    "alt": "Bodysuit bayi ivory dengan kancing bawah tertutup, tampak depan",
+    "marks": [
+      {
+        "id": "width",
+        "label": "Lebar dada",
+        "start": [
+          30,
+          39
+        ],
+        "end": [
+          71,
+          39
+        ]
+      },
+      {
+        "id": "torsoLength",
+        "label": "Bahu ke selangkangan",
+        "start": [
+          60,
+          13
+        ],
+        "end": [
+          50,
+          81
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Bayi",
+    "type": "sleepsuit",
+    "asset": "sleepsuit",
+    "alt": "Sleepsuit bayi ivory dengan kaki tertutup, tampak depan",
+    "marks": [
+      {
+        "id": "width",
+        "label": "Lebar dada",
+        "start": [
+          31,
+          39
+        ],
+        "end": [
+          70,
+          39
+        ]
+      },
+      {
+        "id": "torsoLength",
+        "label": "Bahu ke selangkangan",
+        "start": [
+          61,
+          13
+        ],
+        "end": [
+          50,
+          59
+        ]
+      },
+      {
+        "id": "inseam",
+        "label": "Panjang kaki dalam",
+        "start": [
+          50,
+          59
+        ],
+        "end": [
+          57,
+          84
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Dress",
+    "type": "dress",
+    "asset": "dress",
+    "alt": "Dress tanpa lengan ivory dengan rok melebar, tampak depan",
+    "marks": [
+      {
+        "id": "width",
+        "label": "Lebar dada",
+        "start": [
+          34,
+          33
+        ],
+        "end": [
+          67,
+          33
+        ]
+      },
+      {
+        "id": "waistWidth",
+        "label": "Lebar pinggang",
+        "start": [
+          32,
+          44
+        ],
+        "end": [
+          69,
+          44
+        ]
+      },
+      {
+        "id": "length",
+        "label": "Panjang pakaian",
+        "start": [
+          62,
+          11
+        ],
+        "end": [
+          62,
+          85
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Dress",
+    "type": "jumpsuit",
+    "asset": "jumpsuit",
+    "alt": "Jumpsuit ivory dengan sambungan pinggang dan dua kaki, tampak depan",
+    "marks": [
+      {
+        "id": "width",
+        "label": "Lebar dada",
+        "start": [
+          34,
+          25
+        ],
+        "end": [
+          65,
+          25
+        ]
+      },
+      {
+        "id": "torsoLength",
+        "label": "Bahu ke selangkangan",
+        "start": [
+          60,
+          9
+        ],
+        "end": [
+          50,
+          56
+        ]
+      },
+      {
+        "id": "inseam",
+        "label": "Panjang kaki dalam",
+        "start": [
+          50,
+          56
+        ],
+        "end": [
+          56,
+          91
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Pakaian rumah",
+    "type": "pyjamas",
+    "asset": "pyjamas",
+    "alt": "Set piyama ivory, atasan di kiri dan celana panjang di kanan",
+    "marks": [
+      {
+        "id": "width",
+        "label": "Lebar dada",
+        "start": [
+          13,
+          43
+        ],
+        "end": [
+          46,
+          43
+        ]
+      },
+      {
+        "id": "length",
+        "label": "Panjang pakaian",
+        "start": [
+          35,
+          24
+        ],
+        "end": [
+          35,
+          66
+        ]
+      },
+      {
+        "id": "waistWidth",
+        "label": "Lebar pinggang",
+        "start": [
+          64,
+          17
+        ],
+        "end": [
+          87,
+          17
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Pakaian rumah",
+    "type": "singlet",
+    "asset": "singlet",
+    "alt": "Singlet tanpa lengan ivory dengan tali bahu, tampak depan",
+    "marks": [
+      {
+        "id": "width",
+        "label": "Lebar dada",
+        "start": [
+          35,
+          35
+        ],
+        "end": [
+          65,
+          35
+        ]
+      },
+      {
+        "id": "length",
+        "label": "Panjang pakaian",
+        "start": [
+          59,
+          13
+        ],
+        "end": [
+          59,
+          85
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Pakaian rumah",
+    "type": "underwear",
+    "asset": "underwear",
+    "alt": "Celana dalam anak ivory dibentangkan, tampak depan",
+    "marks": [
+      {
+        "id": "waistWidth",
+        "label": "Lebar pinggang",
+        "start": [
+          24,
+          26
+        ],
+        "end": [
+          77,
+          26
+        ]
+      },
+      {
+        "id": "rise",
+        "label": "Tinggi pesak",
+        "start": [
+          50,
+          27
+        ],
+        "end": [
+          50,
+          75
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Pakaian rumah",
+    "type": "socks",
+    "asset": "foot-measure",
+    "productAsset": "socks",
+    "alt": "Kaki telanjang di atas kertas, jari terpanjang di atas dan tumit di batas balok",
+    "marks": [
+      {
+        "id": "footLength",
+        "label": "Panjang kaki",
+        "start": [
+          68,
+          19
+        ],
+        "end": [
+          68,
+          80
+        ],
+        "extensions": [
+          [
+            [
+              56,
+              19
+            ],
+            [
+              72,
+              19
+            ]
+          ],
+          [
+            [
+              58,
+              80
+            ],
+            [
+              72,
+              80
+            ]
+          ]
+        ]
+      }
+    ],
+    "foot": true
+  },
+  {
+    "category": "Muslim",
+    "type": "koko",
+    "asset": "koko",
+    "alt": "Kemeja koko ivory berlengan panjang dibentangkan, tampak depan",
+    "marks": [
+      {
+        "id": "width",
+        "label": "Lebar dada",
+        "start": [
+          29,
+          55
+        ],
+        "end": [
+          70,
+          55
+        ]
+      },
+      {
+        "id": "length",
+        "label": "Panjang pakaian",
+        "start": [
+          62,
+          21
+        ],
+        "end": [
+          62,
+          81
+        ]
+      },
+      {
+        "id": "sleeve",
+        "label": "Panjang lengan",
+        "start": [
+          66,
+          23
+        ],
+        "end": [
+          87,
+          69
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Muslim",
+    "type": "gamis",
+    "asset": "gamis",
+    "alt": "Gamis ivory berlengan panjang dengan rok panjang, tampak depan",
+    "marks": [
+      {
+        "id": "width",
+        "label": "Lebar dada",
+        "start": [
+          31,
+          35
+        ],
+        "end": [
+          67,
+          35
+        ]
+      },
+      {
+        "id": "waistWidth",
+        "label": "Lebar pinggang",
+        "start": [
+          29,
+          47
+        ],
+        "end": [
+          69,
+          47
+        ]
+      },
+      {
+        "id": "length",
+        "label": "Panjang pakaian",
+        "start": [
+          61,
+          11
+        ],
+        "end": [
+          61,
+          91
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Muslim",
+    "type": "hijab",
+    "asset": "hijab",
+    "alt": "Hijab instan ivory dengan bukaan wajah oval, tampak depan",
+    "marks": [
+      {
+        "id": "faceOpening",
+        "label": "Lingkar bukaan wajah",
+        "start": [
+          49,
+          12
+        ],
+        "end": [
+          49,
+          12
+        ],
+        "path": "M49 12 C30 12 25 42 49 43 C73 42 69 12 49 12 Z",
+        "closed": true
+      },
+      {
+        "id": "coverage",
+        "label": "Panjang penutup depan",
+        "start": [
+          48,
+          9
+        ],
+        "end": [
+          48,
+          88
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Muslim",
+    "type": "mukena",
+    "asset": "mukena",
+    "alt": "Mukena anak ivory, atasan di kiri dan rok bawahan di kanan",
+    "marks": [
+      {
+        "id": "upperLength",
+        "label": "Panjang atasan",
+        "start": [
+          25,
+          10
+        ],
+        "end": [
+          25,
+          77
+        ]
+      },
+      {
+        "id": "lowerLength",
+        "label": "Panjang bawahan",
+        "start": [
+          72,
+          27
+        ],
+        "end": [
+          72,
+          90
+        ]
+      }
+    ]
+  }
+]

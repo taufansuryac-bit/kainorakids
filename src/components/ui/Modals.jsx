@@ -1,12 +1,14 @@
+export { AuthModal, EditProfileModal } from '../account/AccountDialogs';
+export { MiniCartDrawer } from '../account/MiniCartNotice';
+import { useDialog } from '../fashion/hooks';
 import React, { useState, useEffect, useRef } from 'react';
 import { useStore } from '../../context/StoreContext';
-import { auth, db, appId, googleProvider, LOGO_URL } from '../../firebase';
+import { auth, db, appId } from '../../firebase';
 import { 
   X, Star, Loader2, Ruler, Check, Heart, ShoppingCart, Send, ChevronDown, ChevronRight, Bot, Video as VideoIcon
 } from 'lucide-react';
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signInWithPopup, updateProfile } from "firebase/auth";
-import { doc, setDoc, updateDoc, collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { formatPrice, FOOTER_INFO, AVATARS_BUNDA, AVATARS_AYAH } from '../../constants/data';
+import { doc, getDoc, setDoc, updateDoc, collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { formatPrice, FOOTER_INFO } from '../../constants/data';
 import { cloudAIService } from '../../services/cloudAIService';
 
 // ============================================================================
@@ -189,82 +191,6 @@ export const ToastNotification = () => {
 };
 
 // --- 4.4 EDIT PROFILE MODAL ---
-export const EditProfileModal = ({ isOpen, onClose }) => {
-  const { user, setUser, showToast } = useStore();
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [address, setAddress] = useState('');
-  const [kodepos, setKodepos] = useState('');
-  const [gender, setGender] = useState('bunda');
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    if (user) {
-      setName(user.name || '');
-      setPhone(user.phone || '');
-      setAddress(user.address || '');
-      setKodepos(user.kodepos || '');
-      setGender(user.gender || 'bunda');
-    }
-  }, [user, isOpen]);
-
-  if (!isOpen || !user) return null;
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-    try {
-      await setDoc(doc(db, 'artifacts', appId, 'users', user.uid, 'profile', 'data'), {
-        name, phone, address, kodepos, gender
-      }, { merge: true });
-      setUser(prev => ({ ...prev, name, phone, address, kodepos, gender }));
-      showToast("Profil berhasil diperbarui! 🎉");
-      onClose();
-    } catch (error) {
-      showToast("Gagal memperbarui profil.");
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  return (
-    <div className="fixed inset-0 z-[6000] flex items-center justify-center p-4 bg-gray-900/80 backdrop-blur-sm" onClick={onClose}>
-      <div className="bg-white border-4 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] w-full max-w-md p-8 relative" onClick={e => e.stopPropagation()}>
-        <button onClick={onClose} className="absolute top-4 right-4 p-2 bg-gray-100 hover:bg-red-100 hover:text-red-500 transition-colors"><X size={20} strokeWidth={3}/></button>
-        <h2 className="text-2xl font-black uppercase tracking-tighter mb-6 border-b-2 border-gray-100 pb-4">Edit Profil</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-             <label className="block text-[10px] font-black uppercase mb-3 text-gray-500 tracking-widest">Panggilan Profil</label>
-             <div className="flex gap-6 mb-2 border-b-2 border-gray-100 pb-4">
-               <label className="flex items-center gap-2 text-xs font-bold cursor-pointer hover:text-brand-red transition-colors"><input type="radio" name="edit_gender" value="bunda" checked={gender === 'bunda'} onChange={(e) => setGender(e.target.value)} className="w-4 h-4 accent-amber-500" /> Bunda</label>
-               <label className="flex items-center gap-2 text-xs font-bold cursor-pointer hover:text-brand-red transition-colors"><input type="radio" name="edit_gender" value="ayah" checked={gender === 'ayah'} onChange={(e) => setGender(e.target.value)} className="w-4 h-4 accent-amber-500" /> Ayah</label>
-             </div>
-          </div>
-          <div>
-            <label className="block text-[10px] font-black uppercase mb-2 text-gray-500 tracking-widest">Nama Lengkap</label>
-            <input required type="text" value={name} onChange={e => setName(e.target.value)} className="w-full border-2 border-gray-900 p-3 font-bold text-sm outline-none focus:border-amber-500" />
-          </div>
-          <div>
-            <label className="block text-[10px] font-black uppercase mb-2 text-gray-500 tracking-widest">Nomor WhatsApp</label>
-            <input type="tel" value={phone} onChange={e => setPhone(e.target.value)} className="w-full border-2 border-gray-900 p-3 font-bold text-sm outline-none focus:border-amber-500" placeholder="08..." />
-          </div>
-          <div>
-            <label className="block text-[10px] font-black uppercase mb-2 text-gray-500 tracking-widest">Alamat Lengkap</label>
-            <textarea value={address} onChange={e => setAddress(e.target.value)} className="w-full border-2 border-gray-900 p-3 font-bold text-sm outline-none focus:border-amber-500 resize-none h-24" placeholder="Alamat rumah..." />
-          </div>
-          <div>
-            <label className="block text-[10px] font-black uppercase mb-2 text-gray-500 tracking-widest">Kode Pos</label>
-            <input type="number" value={kodepos} onChange={e => setKodepos(e.target.value)} className="w-full border-2 border-gray-900 p-3 font-bold text-sm outline-none focus:border-amber-500" placeholder="Kode pos..." />
-          </div>
-          <button type="submit" disabled={isLoading} className="w-full bg-gray-900 text-white font-black py-4 uppercase text-sm border-2 border-gray-900 shadow-solid-sm hover:translate-y-1 transition-all tracking-widest mt-4 flex items-center justify-center gap-2">
-            {isLoading ? <Loader2 size={16} className="animate-spin" /> : 'Simpan Perubahan'}
-          </button>
-        </form>
-      </div>
-    </div>
-  );
-};
-
 export const SmartSizePredictor = ({ onSelectSize, availableSizes }) => {
   const { showToast, aiSizeChart } = useStore();
   const [tinggi, setTinggi] = useState('');
@@ -354,68 +280,15 @@ Balas HANYA dengan nama ukuran yang direkomendasikan secara tepat (contoh: "3-4Y
   );
 };
 
-export const MiniCartDrawer = () => {
-  const { isMiniCartOpen, setIsMiniCartOpen, cart, setView } = useStore();
-
-  useEffect(() => {
-    let timer;
-    if (isMiniCartOpen) {
-      timer = setTimeout(() => {
-        setIsMiniCartOpen(false);
-      }, 4000);
-    }
-    return () => clearTimeout(timer);
-  }, [isMiniCartOpen, setIsMiniCartOpen]);
-
-  if (!isMiniCartOpen || cart.length === 0) return null;
-
-  const latestItem = cart[cart.length - 1];
-
-  return (
-    <div className="fixed bottom-4 left-4 right-4 md:top-24 md:bottom-auto md:left-auto md:right-8 md:w-[320px] bg-white border-4 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] z-[6000] flex flex-col transform transition-all animate-toast">
-      <div className="flex justify-between items-center p-3 border-b-2 border-gray-100 bg-amber-50">
-        <span className="font-black text-[10px] uppercase text-amber-700 flex items-center gap-1">
-          <Check size={14} strokeWidth={3} /> Berhasil Masuk Keranjang
-        </span>
-        <button onClick={() => setIsMiniCartOpen(false)} className="hover:text-red-500 transition-colors p-1">
-          <X size={14} strokeWidth={3} />
-        </button>
-      </div>
-      
-      <div className="flex gap-4 p-4 items-center bg-white">
-        <img src={latestItem.img || (latestItem.images && latestItem.images[0])} className="w-14 h-14 object-cover border-2 border-gray-900" alt={latestItem.name} />
-        <div className="flex-1">
-          <h3 className="font-bold text-[10px] uppercase line-clamp-1 text-gray-900">{latestItem.name}</h3>
-          <p className="text-[9px] text-gray-500 font-bold uppercase mt-1">Sz: {latestItem.size} | Qty: {latestItem.qty}</p>
-          <p className="font-black text-brand-red text-xs mt-1">{formatPrice(latestItem.price)}</p>
-        </div>
-      </div>
-
-      <div className="p-3 border-t-2 border-gray-100 flex gap-2 bg-white">
-        <button 
-          onClick={() => { setIsMiniCartOpen(false); setView('cart'); }} 
-          className="flex-1 bg-white text-gray-900 border-2 border-gray-900 font-black text-[9px] uppercase py-2.5 hover:bg-amber-100 transition-colors"
-        >
-          Lihat Keranjang
-        </button>
-        <button 
-          onClick={() => { setIsMiniCartOpen(false); setView('checkout'); }} 
-          className="flex-1 bg-gray-900 text-white font-black text-[9px] uppercase py-2.5 hover:bg-black transition-colors"
-        >
-          Checkout Lanjut
-        </button>
-      </div>
-    </div>
-  );
-};
 export const SizeGuideModal = ({ isOpen, onClose, availableSizes, onSelectSize }) => {
+  const dialogRef = useDialog(isOpen, onClose);
   if (!isOpen) return null;
   return (
-    <div className="fixed inset-0 z-[2000] flex items-center justify-center p-4 bg-gray-900/80 backdrop-blur-sm" onClick={onClose}>
+    <div ref={dialogRef} role="dialog" aria-modal="true" aria-label="Panduan ukuran baju anak" className="fixed inset-0 z-[2000] flex items-center justify-center p-4 bg-gray-900/80 backdrop-blur-sm" onClick={onClose}>
       <div className="bg-white border-4 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] w-full max-w-2xl p-6 md:p-8 max-h-[90vh] overflow-y-auto hide-scrollbar" onClick={e => e.stopPropagation()}>
         <div className="flex justify-between items-center mb-6 border-b-4 border-gray-900 pb-4">
           <h2 className="text-xl md:text-2xl font-black uppercase tracking-tighter">Panduan Ukuran Baju Anak</h2>
-          <button onClick={onClose} className="p-1 hover:bg-amber-100 transition-colors"><X strokeWidth={3}/></button>
+          <button onClick={onClose} aria-label="Tutup Panduan ukuran baju anak" className="p-1 hover:bg-amber-100 transition-colors"><X strokeWidth={3}/></button>
         </div>
 
         <SmartSizePredictor availableSizes={availableSizes || ['1-2Y', '3-4Y', '5-6Y', '7-8Y', '9-10Y']} onSelectSize={onSelectSize} />
@@ -440,14 +313,15 @@ export const SizeGuideModal = ({ isOpen, onClose, availableSizes, onSelectSize }
 };
 
 export const FooterPopupModal = ({ footerPopup, setFooterPopup }) => {
+  const dialogRef = useDialog(!!footerPopup, () => setFooterPopup(null));
   if (!footerPopup) return null;
   const content = FOOTER_INFO[footerPopup];
   return (
-    <div className="fixed inset-0 z-[2000] flex items-center justify-center p-4 bg-gray-900/80 backdrop-blur-sm" onClick={() => setFooterPopup(null)}>
+    <div ref={dialogRef} role="dialog" aria-modal="true" aria-label="Informasi toko" className="fixed inset-0 z-[2000] flex items-center justify-center p-4 bg-gray-900/80 backdrop-blur-sm" onClick={() => setFooterPopup(null)}>
       <div className="bg-white border-4 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] w-full max-w-2xl p-8 max-h-[90vh] flex flex-col" onClick={e => e.stopPropagation()}>
         <div className="flex justify-between items-center mb-6 border-b-2 border-gray-900 pb-4 flex-shrink-0">
           <h2 className="text-2xl font-black uppercase tracking-tighter">{content?.title}</h2>
-          <button onClick={() => setFooterPopup(null)} className="p-1 hover:bg-amber-100 transition-colors"><X strokeWidth={3}/></button>
+          <button onClick={() => setFooterPopup(null)} aria-label="Tutup informasi toko" className="p-1 hover:bg-amber-100 transition-colors"><X strokeWidth={3}/></button>
         </div>
         <div className="text-sm font-semibold leading-loose whitespace-pre-wrap text-gray-700 overflow-y-auto pr-2 custom-scrollbar">{content?.content}</div>
       </div>
@@ -508,116 +382,6 @@ export const ReviewModal = ({ isOpen, onClose, activeProduct, editData }) => {
           </div>
           <button type="submit" disabled={isLoading} className="w-full bg-gray-900 text-white font-black py-4 uppercase text-sm border-2 border-gray-900 shadow-solid-sm hover:translate-y-1 transition-all tracking-widest flex items-center justify-center gap-2">{isLoading ? <Loader2 size={18} className="animate-spin" /> : <Send size={18} />} {editData ? 'Simpan Perubahan' : 'Kirim Ulasan'}</button>
         </form>
-      </div>
-    </div>
-  );
-};
-
-export const AuthModal = ({ isOpen, onClose }) => {
-  const { setUser, showToast } = useStore();
-  const [isLogin, setIsLogin] = useState(true);
-  const [isResetPass, setIsResetPass] = useState(false);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [name, setName] = useState('');
-  const [gender, setGender] = useState('bunda'); 
-  const [isLoading, setIsLoading] = useState(false);
-  const [errorMsg, setErrorMsg] = useState('');
-  const [successMsg, setSuccessMsg] = useState('');
-
-  if (!isOpen) return null;
-
-  const translateError = (code) => {
-    switch (code) {
-      case 'auth/email-already-in-use': return 'Email sudah terdaftar, silakan ke menu Masuk.';
-      case 'auth/wrong-password': return 'Password salah.';
-      case 'auth/user-not-found': return 'Email belum terdaftar.';
-      case 'auth/invalid-credential': return 'Email atau Password salah.';
-      default: return 'Terjadi kesalahan sistem/koneksi.';
-    }
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoading(true); setErrorMsg(''); setSuccessMsg('');
-    try {
-      if (isResetPass) {
-        showToast("Fitur reset password belum diaktifkan penuh. Hubungi Admin.");
-        setIsResetPass(false);
-      } else {
-        let targetUser = auth.currentUser;
-        if (isLogin) {
-          try { const cred = await signInWithEmailAndPassword(auth, email, password); targetUser = cred.user; } catch(err) { if(err.code !== 'auth/operation-not-allowed') throw err; }
-          try { await setDoc(doc(db, 'artifacts', appId, 'users', targetUser.uid, 'profile', 'data'), { email }, { merge: true }); } catch(e) {}
-          setUser(prev => ({...prev, email})); showToast("Selamat datang kembali! 😊"); onClose();
-        } else {
-          const avatarsArray = gender === 'bunda' ? AVATARS_BUNDA : AVATARS_AYAH;
-          const randomPhotoURL = avatarsArray[Math.floor(Math.random() * avatarsArray.length)];
-          try { const cred = await createUserWithEmailAndPassword(auth, email, password); targetUser = cred.user; await updateProfile(targetUser, { displayName: name, photoURL: randomPhotoURL }); } catch(err) { if(err.code !== 'auth/operation-not-allowed') throw err; }
-          try { await setDoc(doc(db, 'artifacts', appId, 'users', targetUser.uid, 'profile', 'data'), { phone: '', address: '', kodepos: '', photoURL: randomPhotoURL, gender, nickname: '', email, createdAt: serverTimestamp() }, { merge: true }); } catch(e) {}
-          setUser(prev => ({...prev, name, email, photoURL: randomPhotoURL, gender})); showToast("Hore! Akun berhasil dibuat 🎉"); onClose();
-        }
-      }
-    } catch (error) { setErrorMsg(translateError(error.code) || error.message); } finally { setIsLoading(false); }
-  };
-
-  const handleGoogleLogin = async () => {
-    setIsLoading(true); setErrorMsg('');
-    try { 
-      let targetUser = auth.currentUser; let randomPhotoURL = AVATARS_BUNDA[0]; let displayName = "Bunda Google"; let authEmail = "bunda@google.com";
-      try { const res = await signInWithPopup(auth, googleProvider); targetUser = res.user; randomPhotoURL = res.user.photoURL || randomPhotoURL; displayName = res.user.displayName || displayName; authEmail = res.user.email || authEmail; } catch(err) { if (!targetUser) throw new Error("Gagal akses popup Google."); }
-      try { await setDoc(doc(db, 'artifacts', appId, 'users', targetUser.uid, 'profile', 'data'), { phone: '', address: '', kodepos: '', photoURL: randomPhotoURL, gender: 'bunda', nickname: '', email: authEmail, createdAt: serverTimestamp() }, { merge: true }); } catch(e) {}
-      setUser(prev => ({...prev, name: displayName, email: authEmail, photoURL: randomPhotoURL, gender: "bunda"})); showToast("Berhasil masuk dengan Google! ✨"); onClose(); 
-    } catch (error) { setErrorMsg('Gagal Login. Silakan coba lagi.'); } finally { setIsLoading(false); }
-  };
-
-  return (
-    <div className="fixed inset-0 z-[2000] flex items-center justify-center p-4 bg-gray-900/80 backdrop-blur-sm" onClick={onClose}>
-      <div className="bg-white border-4 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] w-full max-w-md p-8 relative overflow-hidden" onClick={e => e.stopPropagation()}>
-        <button onClick={onClose} className="absolute top-4 right-4 p-2 bg-gray-100 hover:bg-red-100 hover:text-red-500 transition-colors"><X size={20} strokeWidth={3}/></button>
-        <div className="text-center mb-8"><div className="flex justify-center mb-4"><img src={LOGO_URL} alt="Logo" className="h-8 md:h-10 w-auto object-contain" /></div><p className="text-xs font-bold text-gray-500 uppercase tracking-widest">{isResetPass ? 'Reset Password' : isLogin ? 'Masuk ke akun' : 'Daftar akun baru'}</p></div>
-        {!isResetPass && (
-          <div className="flex border-b-2 border-gray-200 mb-6">
-            <button onClick={() => { setIsLogin(true); setErrorMsg(''); }} className={`flex-1 pb-3 text-sm font-black uppercase tracking-widest transition-colors ${isLogin ? 'text-gray-900 border-b-4 border-amber-500' : 'text-gray-400'}`}>Masuk</button>
-            <button onClick={() => { setIsLogin(false); setErrorMsg(''); }} className={`flex-1 pb-3 text-sm font-black uppercase tracking-widest transition-colors ${!isLogin ? 'text-gray-900 border-b-4 border-amber-500' : 'text-gray-400'}`}>Daftar</button>
-          </div>
-        )}
-        {errorMsg && <div className="mb-6 p-3 bg-red-50 border-l-4 border-red-500 text-red-700 text-xs font-bold uppercase tracking-wider">{errorMsg}</div>}
-        {successMsg && <div className="mb-6 p-3 bg-green-50 border-l-4 border-green-500 text-green-700 text-xs font-bold uppercase tracking-wider">{successMsg}</div>}
-        <form onSubmit={handleSubmit} className="space-y-5">
-          {!isLogin && !isResetPass && (
-            <div>
-              <label className="block text-[10px] font-black uppercase mb-3 text-gray-500 tracking-widest">Pilihan Profil</label>
-              <div className="flex gap-6 mb-5 border-b-2 border-gray-100 pb-4">
-                <label className="flex items-center gap-2 text-xs font-bold cursor-pointer hover:text-brand-red transition-colors"><input type="radio" name="gender" value="bunda" checked={gender === 'bunda'} onChange={(e) => setGender(e.target.value)} className="w-4 h-4 accent-amber-500" /> Bunda</label>
-                <label className="flex items-center gap-2 text-xs font-bold cursor-pointer hover:text-brand-red transition-colors"><input type="radio" name="gender" value="ayah" checked={gender === 'ayah'} onChange={(e) => setGender(e.target.value)} className="w-4 h-4 accent-amber-500" /> Ayah</label>
-              </div>
-              <label className="block text-[10px] font-black uppercase mb-2 text-gray-500 tracking-widest">Nama Lengkap</label>
-              <input required type="text" value={name} onChange={e => setName(e.target.value)} className="w-full border-2 border-gray-900 p-3 font-bold text-sm outline-none focus:border-amber-500" placeholder={`Nama ${gender === 'bunda' ? 'Bunda' : 'Ayah'}`} />
-            </div>
-          )}
-          <div><label className="block text-[10px] font-black uppercase mb-2 text-gray-500 tracking-widest">Email Aktif</label><input required type="email" value={email} onChange={e => setEmail(e.target.value)} className="w-full border-2 border-gray-900 p-3 font-bold text-sm outline-none focus:border-amber-500" placeholder="nama@email.com" /></div>
-          {!isResetPass && (
-            <div>
-              <div className="flex justify-between items-center mb-2">
-                 <label className="block text-[10px] font-black uppercase text-gray-500 tracking-widest">Password</label>
-                 {isLogin && <button type="button" onClick={() => setIsResetPass(true)} className="text-[10px] font-black underline uppercase text-gray-500 hover:text-brand-red">Lupa Password?</button>}
-              </div>
-              <input required type="password" value={password} onChange={e => setPassword(e.target.value)} className="w-full border-2 border-gray-900 p-3 font-bold text-sm outline-none focus:border-amber-500" placeholder="••••••••" />
-            </div>
-          )}
-          <button type="submit" disabled={isLoading} className="w-full bg-gray-900 text-white font-black py-4 uppercase text-sm border-2 border-gray-900 shadow-solid-sm hover:translate-y-1 transition-all tracking-widest mt-4 disabled:opacity-70 flex justify-center items-center gap-2">{isLoading && <Loader2 size={16} className="animate-spin" />}{isResetPass ? 'Kirim Link Reset' : isLogin ? 'Masuk Sekarang' : 'Daftar Sekarang'}</button>
-          {isResetPass && <button type="button" onClick={() => setIsResetPass(false)} className="w-full mt-2 text-xs font-black uppercase text-gray-500 hover:text-gray-900">Kembali ke Login</button>}
-        </form>
-        {!isResetPass && (
-          <>
-            <div className="relative my-8 text-center"><div className="absolute inset-0 flex items-center"><div className="w-full border-t-2 border-gray-200"></div></div><div className="relative"><span className="bg-white px-4 text-[10px] font-black uppercase tracking-widest text-gray-400">ATAU</span></div></div>
-            <button onClick={handleGoogleLogin} disabled={isLoading} className="w-full bg-white text-gray-900 font-black py-4 uppercase text-sm border-2 border-gray-900 shadow-solid-sm hover:bg-gray-50 hover:translate-y-1 transition-all tracking-widest flex items-center justify-center gap-3 disabled:opacity-70">
-              <svg className="w-5 h-5" viewBox="0 0 24 24"><path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" /><path fill="#34A853" d="M12 24c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.05-3.71 1.05-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 21.53 7.7 24 12 24z" /><path fill="#FBBC05" d="M5.84 15.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V8.07H2.18C1.43 9.55 1 10.73 1 12s.43 2.45 1.18 3.93l3.66-2.84z" /><path fill="#EA4335" d="M12 4.75c1.61 0 3.06.56 4.2 1.64l3.15-3.15C17.45 1.43 14.97 0 12 0 7.7 0 3.99 2.47 2.18 6.07l3.66 2.84c.87-2.6 3.3-4.16 6.16-4.16z" /></svg>
-              Lanjut dengan Google
-            </button>
-          </>
-        )}
       </div>
     </div>
   );

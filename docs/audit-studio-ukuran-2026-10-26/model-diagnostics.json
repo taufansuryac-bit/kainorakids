@@ -1,0 +1,625 @@
+{
+  "boundaryChecks": 228,
+  "failures": [],
+  "missingVisualRows": [
+    {
+      "category": "tops",
+      "type": "shirt",
+      "asset": "koko",
+      "diagram": "shirt",
+      "requiredDimensions": [
+        "width",
+        "length",
+        "sleeve"
+      ],
+      "markedDimensions": [
+        "width",
+        "length"
+      ],
+      "missing": [
+        "sleeve"
+      ]
+    },
+    {
+      "category": "tops",
+      "type": "outer",
+      "asset": "hoodie",
+      "diagram": "shirt",
+      "requiredDimensions": [
+        "width",
+        "length",
+        "sleeve"
+      ],
+      "markedDimensions": [
+        "width",
+        "length"
+      ],
+      "missing": [
+        "sleeve"
+      ]
+    },
+    {
+      "category": "bottoms",
+      "type": "trousers",
+      "asset": "trousers",
+      "diagram": "trousers",
+      "requiredDimensions": [
+        "waistWidth",
+        "hipWidth",
+        "inseam"
+      ],
+      "markedDimensions": [
+        "waistWidth",
+        "inseam"
+      ],
+      "missing": [
+        "hipWidth"
+      ]
+    },
+    {
+      "category": "bottoms",
+      "type": "shorts",
+      "asset": "shorts",
+      "diagram": "shorts",
+      "requiredDimensions": [
+        "waistWidth",
+        "hipWidth",
+        "length"
+      ],
+      "markedDimensions": [
+        "waistWidth",
+        "length"
+      ],
+      "missing": [
+        "hipWidth"
+      ]
+    },
+    {
+      "category": "bottoms",
+      "type": "legging",
+      "asset": "trousers",
+      "diagram": "trousers",
+      "requiredDimensions": [
+        "waistWidth",
+        "hipWidth",
+        "inseam"
+      ],
+      "markedDimensions": [
+        "waistWidth",
+        "inseam"
+      ],
+      "missing": [
+        "hipWidth"
+      ]
+    },
+    {
+      "category": "bottoms",
+      "type": "skirt",
+      "asset": "skirt",
+      "diagram": "skirt",
+      "requiredDimensions": [
+        "waistWidth",
+        "hipWidth",
+        "length"
+      ],
+      "markedDimensions": [
+        "waistWidth",
+        "length"
+      ],
+      "missing": [
+        "hipWidth"
+      ]
+    },
+    {
+      "category": "shoes",
+      "type": "sneaker",
+      "asset": "shoe",
+      "diagram": "shoe",
+      "requiredDimensions": [
+        "footLength"
+      ],
+      "markedDimensions": [],
+      "missing": [
+        "footLength"
+      ]
+    },
+    {
+      "category": "shoes",
+      "type": "sandal",
+      "asset": "shoe",
+      "diagram": "shoe",
+      "requiredDimensions": [
+        "footLength"
+      ],
+      "markedDimensions": [],
+      "missing": [
+        "footLength"
+      ]
+    },
+    {
+      "category": "baby",
+      "type": "sleepsuit",
+      "asset": "sleepsuit",
+      "diagram": "sleepsuit",
+      "requiredDimensions": [
+        "width",
+        "torsoLength",
+        "inseam"
+      ],
+      "markedDimensions": [
+        "width",
+        "torsoLength"
+      ],
+      "missing": [
+        "inseam"
+      ]
+    },
+    {
+      "category": "dress",
+      "type": "dress",
+      "asset": "dress",
+      "diagram": "dress",
+      "requiredDimensions": [
+        "width",
+        "waistWidth",
+        "length"
+      ],
+      "markedDimensions": [
+        "width",
+        "length"
+      ],
+      "missing": [
+        "waistWidth"
+      ]
+    },
+    {
+      "category": "dress",
+      "type": "jumpsuit",
+      "asset": "jumpsuit",
+      "diagram": "jumpsuit",
+      "requiredDimensions": [
+        "width",
+        "torsoLength",
+        "inseam"
+      ],
+      "markedDimensions": [
+        "width",
+        "torsoLength"
+      ],
+      "missing": [
+        "inseam"
+      ]
+    },
+    {
+      "category": "home",
+      "type": "pyjamas",
+      "asset": "pyjamas",
+      "diagram": "pyjamas",
+      "requiredDimensions": [
+        "width",
+        "length",
+        "waistWidth"
+      ],
+      "markedDimensions": [
+        "width",
+        "waistWidth"
+      ],
+      "missing": [
+        "length"
+      ]
+    },
+    {
+      "category": "home",
+      "type": "socks",
+      "asset": "socks",
+      "diagram": "socks",
+      "requiredDimensions": [
+        "footLength"
+      ],
+      "markedDimensions": [],
+      "missing": [
+        "footLength"
+      ]
+    },
+    {
+      "category": "muslim",
+      "type": "koko",
+      "asset": "koko",
+      "diagram": "shirt",
+      "requiredDimensions": [
+        "width",
+        "length",
+        "sleeve"
+      ],
+      "markedDimensions": [
+        "width",
+        "length"
+      ],
+      "missing": [
+        "sleeve"
+      ]
+    },
+    {
+      "category": "muslim",
+      "type": "gamis",
+      "asset": "gamis",
+      "diagram": "dress",
+      "requiredDimensions": [
+        "width",
+        "waistWidth",
+        "length"
+      ],
+      "markedDimensions": [
+        "width",
+        "length"
+      ],
+      "missing": [
+        "waistWidth"
+      ]
+    },
+    {
+      "category": "muslim",
+      "type": "hijab",
+      "asset": "hijab",
+      "diagram": "hijab",
+      "requiredDimensions": [
+        "faceOpening",
+        "coverage"
+      ],
+      "markedDimensions": [
+        "coverage"
+      ],
+      "missing": [
+        "faceOpening"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "category": "tops",
+      "type": "tee",
+      "asset": "tee-regular",
+      "diagram": "tee",
+      "requiredDimensions": [
+        "width",
+        "length"
+      ],
+      "markedDimensions": [
+        "width",
+        "length"
+      ],
+      "missing": []
+    },
+    {
+      "category": "tops",
+      "type": "shirt",
+      "asset": "koko",
+      "diagram": "shirt",
+      "requiredDimensions": [
+        "width",
+        "length",
+        "sleeve"
+      ],
+      "markedDimensions": [
+        "width",
+        "length"
+      ],
+      "missing": [
+        "sleeve"
+      ]
+    },
+    {
+      "category": "tops",
+      "type": "outer",
+      "asset": "hoodie",
+      "diagram": "shirt",
+      "requiredDimensions": [
+        "width",
+        "length",
+        "sleeve"
+      ],
+      "markedDimensions": [
+        "width",
+        "length"
+      ],
+      "missing": [
+        "sleeve"
+      ]
+    },
+    {
+      "category": "bottoms",
+      "type": "trousers",
+      "asset": "trousers",
+      "diagram": "trousers",
+      "requiredDimensions": [
+        "waistWidth",
+        "hipWidth",
+        "inseam"
+      ],
+      "markedDimensions": [
+        "waistWidth",
+        "inseam"
+      ],
+      "missing": [
+        "hipWidth"
+      ]
+    },
+    {
+      "category": "bottoms",
+      "type": "shorts",
+      "asset": "shorts",
+      "diagram": "shorts",
+      "requiredDimensions": [
+        "waistWidth",
+        "hipWidth",
+        "length"
+      ],
+      "markedDimensions": [
+        "waistWidth",
+        "length"
+      ],
+      "missing": [
+        "hipWidth"
+      ]
+    },
+    {
+      "category": "bottoms",
+      "type": "legging",
+      "asset": "trousers",
+      "diagram": "trousers",
+      "requiredDimensions": [
+        "waistWidth",
+        "hipWidth",
+        "inseam"
+      ],
+      "markedDimensions": [
+        "waistWidth",
+        "inseam"
+      ],
+      "missing": [
+        "hipWidth"
+      ]
+    },
+    {
+      "category": "bottoms",
+      "type": "skirt",
+      "asset": "skirt",
+      "diagram": "skirt",
+      "requiredDimensions": [
+        "waistWidth",
+        "hipWidth",
+        "length"
+      ],
+      "markedDimensions": [
+        "waistWidth",
+        "length"
+      ],
+      "missing": [
+        "hipWidth"
+      ]
+    },
+    {
+      "category": "shoes",
+      "type": "sneaker",
+      "asset": "shoe",
+      "diagram": "shoe",
+      "requiredDimensions": [
+        "footLength"
+      ],
+      "markedDimensions": [],
+      "missing": [
+        "footLength"
+      ]
+    },
+    {
+      "category": "shoes",
+      "type": "sandal",
+      "asset": "shoe",
+      "diagram": "shoe",
+      "requiredDimensions": [
+        "footLength"
+      ],
+      "markedDimensions": [],
+      "missing": [
+        "footLength"
+      ]
+    },
+    {
+      "category": "baby",
+      "type": "bodysuit",
+      "asset": "bodysuit",
+      "diagram": "bodysuit",
+      "requiredDimensions": [
+        "width",
+        "torsoLength"
+      ],
+      "markedDimensions": [
+        "width",
+        "torsoLength"
+      ],
+      "missing": []
+    },
+    {
+      "category": "baby",
+      "type": "sleepsuit",
+      "asset": "sleepsuit",
+      "diagram": "sleepsuit",
+      "requiredDimensions": [
+        "width",
+        "torsoLength",
+        "inseam"
+      ],
+      "markedDimensions": [
+        "width",
+        "torsoLength"
+      ],
+      "missing": [
+        "inseam"
+      ]
+    },
+    {
+      "category": "dress",
+      "type": "dress",
+      "asset": "dress",
+      "diagram": "dress",
+      "requiredDimensions": [
+        "width",
+        "waistWidth",
+        "length"
+      ],
+      "markedDimensions": [
+        "width",
+        "length"
+      ],
+      "missing": [
+        "waistWidth"
+      ]
+    },
+    {
+      "category": "dress",
+      "type": "jumpsuit",
+      "asset": "jumpsuit",
+      "diagram": "jumpsuit",
+      "requiredDimensions": [
+        "width",
+        "torsoLength",
+        "inseam"
+      ],
+      "markedDimensions": [
+        "width",
+        "torsoLength"
+      ],
+      "missing": [
+        "inseam"
+      ]
+    },
+    {
+      "category": "home",
+      "type": "pyjamas",
+      "asset": "pyjamas",
+      "diagram": "pyjamas",
+      "requiredDimensions": [
+        "width",
+        "length",
+        "waistWidth"
+      ],
+      "markedDimensions": [
+        "width",
+        "waistWidth"
+      ],
+      "missing": [
+        "length"
+      ]
+    },
+    {
+      "category": "home",
+      "type": "singlet",
+      "asset": "tee-regular",
+      "diagram": "tee",
+      "requiredDimensions": [
+        "width",
+        "length"
+      ],
+      "markedDimensions": [
+        "width",
+        "length"
+      ],
+      "missing": []
+    },
+    {
+      "category": "home",
+      "type": "underwear",
+      "asset": "underwear",
+      "diagram": "underwear",
+      "requiredDimensions": [
+        "waistWidth",
+        "rise"
+      ],
+      "markedDimensions": [
+        "waistWidth",
+        "rise"
+      ],
+      "missing": []
+    },
+    {
+      "category": "home",
+      "type": "socks",
+      "asset": "socks",
+      "diagram": "socks",
+      "requiredDimensions": [
+        "footLength"
+      ],
+      "markedDimensions": [],
+      "missing": [
+        "footLength"
+      ]
+    },
+    {
+      "category": "muslim",
+      "type": "koko",
+      "asset": "koko",
+      "diagram": "shirt",
+      "requiredDimensions": [
+        "width",
+        "length",
+        "sleeve"
+      ],
+      "markedDimensions": [
+        "width",
+        "length"
+      ],
+      "missing": [
+        "sleeve"
+      ]
+    },
+    {
+      "category": "muslim",
+      "type": "gamis",
+      "asset": "gamis",
+      "diagram": "dress",
+      "requiredDimensions": [
+        "width",
+        "waistWidth",
+        "length"
+      ],
+      "markedDimensions": [
+        "width",
+        "length"
+      ],
+      "missing": [
+        "waistWidth"
+      ]
+    },
+    {
+      "category": "muslim",
+      "type": "hijab",
+      "asset": "hijab",
+      "diagram": "hijab",
+      "requiredDimensions": [
+        "faceOpening",
+        "coverage"
+      ],
+      "markedDimensions": [
+        "coverage"
+      ],
+      "missing": [
+        "faceOpening"
+      ]
+    },
+    {
+      "category": "muslim",
+      "type": "mukena",
+      "asset": "mukena",
+      "diagram": "mukena",
+      "requiredDimensions": [
+        "upperLength",
+        "lowerLength"
+      ],
+      "markedDimensions": [
+        "upperLength",
+        "lowerLength"
+      ],
+      "missing": []
+    }
+  ]
+}

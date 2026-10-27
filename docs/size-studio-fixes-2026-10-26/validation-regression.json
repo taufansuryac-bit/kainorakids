@@ -1,0 +1,30 @@
+{
+  "beforeErrors": [
+    {
+      "invalid": "true",
+      "name": "height"
+    },
+    {
+      "invalid": "true",
+      "name": "chest"
+    },
+    {
+      "invalid": "false",
+      "name": "weight"
+    }
+  ],
+  "afterErrors": [
+    {
+      "invalid": "false",
+      "name": "height"
+    },
+    {
+      "invalid": "true",
+      "name": "chest"
+    },
+    {
+      "invalid": "false",
+      "name": "weight"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "key": "oversized",
+    "source": "ASSET3D/1/obj.obj",
+    "url": "/models/kainora/oversized.glb",
+    "sourceTriangles": 1806256,
+    "triangles": 39825,
+    "bytes": 993376,
+    "normalizedMaxDimension": 2
+  }
+]

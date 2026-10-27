@@ -67,7 +67,7 @@ export const AdminDashboardView = () => {
 
   return (
     <main className="min-h-screen py-16 px-4 max-w-7xl mx-auto text-left">
-      <SEO title="Admin Dashboard | Kainora Kids" description="Panel kontrol admin." />
+      <SEO title="Admin Dashboard | Kainora Kids" description="Panel kontrol admin." canonicalPath="/?view=admin" robots="noindex, nofollow" />
       <button onClick={() => setView('home')} className="font-black mb-8 uppercase text-[10px] tracking-widest flex items-center gap-2 hover:text-indigo-500 transition-colors"><ChevronRight className="rotate-180" size={16}/> KEMBALI KE BERANDA</button>
       
       <div className="bg-white border-4 border-gray-900 shadow-solid p-6 md:p-12 mb-10">

@@ -1,63 +1,24 @@
+import { AnimatePresence, motion } from 'motion/react';
+import { ArrowLeft, ArrowUpRight, Heart, LockKeyhole, Minus, Plus, ShoppingBag, Trash2 } from 'lucide-react';
 import { SEO } from '../constants/data';
-import React, { useState, useEffect, useMemo } from 'react';
 import { useStore } from '../context/StoreContext';
-import { auth, db, ADMIN_EMAIL, WA_NUMBER } from '../firebase';
-import { 
-  ShoppingCart, Heart, ChevronRight, X, Minus, Plus, Star, Send, Package, Pencil, Trash, User
-} from 'lucide-react';
-import { collection, query, where, onSnapshot, addDoc, updateDoc, doc, deleteDoc, serverTimestamp } from "firebase/firestore";
-import { formatPrice } from '../constants/data';
-import { SplitReveal } from '../components/motion/KineticText';
-import { CheckerStrip } from '../components/neo/Checker';
-import { Cloud, Burst } from '../components/neo/Stickers';
+import { AccountButton, AccountEmpty, AccountHeading } from '../components/account/AccountUI';
+import { useMotionPreference } from '../components/fashion/useMotionPreference';
+import { buyerCartSummary } from '../utils/buyerUi';
+import { formatPrice, priceKnown } from '../utils/pricing';
+import { plainClick, productHref } from '../utils/productRoutes';
 
-export const CartView = () => {
-  const { cart, setView, updateCartQty, removeFromCart } = useStore();
-  const cartTotal = cart.reduce((s, item) => s + (item.price * item.qty), 0);
-  const cartCount = cart.reduce((s, item) => s + item.qty, 0);
-
-  if (cart.length === 0) return (
-    <main className="mx-auto flex min-h-[70vh] max-w-6xl flex-col items-center justify-center px-4 text-center">
-      <SEO title="Keranjang Belanja Kainora Kids" description="Keranjang belanja kaos anak premium." />
-      <div className="relative mb-6">
-        <Cloud width={190} className="animate-bob" />
-        <Burst fill="var(--yellow)" className="absolute -right-10 -top-6 h-20 w-20 rotate-12" textClass="text-[0.55rem]">YUK<br />BELANJA</Burst>
-      </div>
-      <h1 className="display mb-6 text-[clamp(2.4rem,8vw,5.5rem)]">Keranjang<br />Kosong</h1>
-      <button onClick={() => setView('products')} className="neo-btn">Cek Katalog Produk</button>
-    </main>
-  );
-  return (
-    <main className="min-h-screen py-24 px-4 max-w-6xl mx-auto">
-      <SEO title="Keranjang Belanja Pakaian Anak | Kainora Kids" description="Selesaikan pesanan pakaian anak premium dari Kainora Kids." />
-      <h1 className="display mb-6 text-[clamp(2.4rem,7.5vw,6rem)]"><SplitReveal text={`Keranjang Pakaian (${cartCount})`} /></h1>
-      <div className="mb-10 md:mb-14"><CheckerStrip size={12} /></div>
-      <div className="flex flex-col lg:flex-row gap-8 md:gap-16">
-        <div className="lg:w-2/3 bg-white border-4 border-gray-900 p-4 md:p-8 shadow-solid-sm space-y-6 md:space-y-8">
-          {cart.map(item => (
-            <div key={item.cartId} className="flex gap-3 md:gap-8 items-center border-b-2 border-gray-100 pb-6 md:pb-8 last:border-0 last:pb-0">
-              <img src={item.img || (item.images && item.images[0])} className="w-20 h-20 md:w-32 md:h-32 object-cover border-2 border-gray-900 shadow-sm" alt={item.alt} />
-              <div className="flex-1 text-left">
-                <h3 className="font-black text-[10px] md:text-base uppercase tracking-tight line-clamp-2 leading-snug">{item.name}</h3>
-                <p className="text-[9px] md:text-xs text-gray-400 font-black mt-1 uppercase tracking-widest">SIZE: {item.size}</p>
-                <p className="font-black text-xs text-gray-900 tracking-widest mt-2 md:hidden">{formatPrice(item.price * item.qty)}</p>
-              </div>
-              <div className="flex flex-col md:flex-row items-end md:items-center gap-3 md:gap-6">
-                <div className="flex items-center border-2 border-gray-900 bg-white h-8 md:h-12"><button className="px-2 md:px-3 h-full hover:bg-gray-100 transition-colors text-gray-900 flex items-center justify-center" onClick={() => updateCartQty(item.cartId, -1)}><Minus size={14} className="md:w-[18px] md:h-[18px]" strokeWidth={3}/></button><span className="w-6 md:w-10 text-center font-black text-sm md:text-lg text-gray-900">{item.qty}</span><button className="px-2 md:px-3 h-full hover:bg-gray-100 transition-colors text-gray-900 flex items-center justify-center" onClick={() => updateCartQty(item.cartId, 1)}><Plus size={14} className="md:w-[18px] md:h-[18px]" strokeWidth={3}/></button></div>
-                <p className="font-black text-base text-gray-900 tracking-widest w-28 text-right hidden md:block">{formatPrice(item.price * item.qty)}</p>
-                <button onClick={() => removeFromCart(item.cartId)} className="text-gray-400 hover:text-white hover:bg-red-500 transition-colors p-1.5 md:p-2 border-2 border-transparent hover:border-red-600 rounded-none"><Trash size={16} className="md:w-6 md:h-6"/></button>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="lg:w-1/3 bg-white border-4 border-gray-900 p-6 md:p-10 shadow-solid h-fit sticky top-32">
-          <h3 className="font-black text-2xl uppercase mb-8 border-b-4 border-gray-900 pb-4 tracking-tighter">Total Belanja</h3>
-          <div className="flex justify-between items-center mb-10 font-black text-xl uppercase tracking-tighter"><span>Subtotal</span><span className="text-brand-red">{formatPrice(cartTotal)}</span></div>
-          <button onClick={() => setView('checkout')} className="w-full bg-amber-500 text-gray-900 font-black py-5 uppercase text-base border-4 border-gray-900 shadow-solid hover:translate-y-1 transition-all tracking-widest">Lanjut Pembayaran</button>
-        </div>
-      </div>
-    </main>
-  );
-};
-
-// --- 6.7 CHECKOUT VIEW (Halaman Formulir & Pesan WA) ---
+const openProduct = (event,item) => {if (plainClick(event)) {event.preventDefault();window.dispatchEvent(new CustomEvent('OPEN_PRODUCT',{detail:item}));}};
+export function CartView() {
+  const store=useStore();
+  return <CartContent {...store}/>;
+}
+export function CartContent({cart,setView,updateCartQty,removeFromCart,user,basketReady=true}) {
+  const reduce=useMotionPreference(), summary=buyerCartSummary(cart);
+  return <main className="ka-page ka-cart"><SEO title="Keranjang Belanja | Kainora Kids" description="Periksa pilihan motif, ukuran, jumlah, dan ringkasan belanja Anda." canonicalPath="/?view=cart" robots="noindex, follow"/><AccountHeading eyebrow="YOUR NEXT LITTLE ADVENTURE" title="Pilihan kecilmu." description="Periksa motif dan ukuran. Cerita si kecil segera dimulai."><button type="button" className="ka-back" onClick={()=>setView('products')}><ArrowLeft size={17}/>Lanjut jelajahi koleksi</button></AccountHeading>
+    {!cart.length ? <AccountEmpty icon={ShoppingBag} title="Masih ada ruang untuk cerita." description="Keranjang Anda masih kosong. Temukan motif yang terasa paling seperti si kecil." action="Jelajahi koleksi" onAction={()=>setView('products')} secondary="Lihat favorit" onSecondary={()=>setView('wishlist')}/> : <>
+      {!basketReady && <p className="ka-message is-success" role="status">Menyiapkan keranjang akun Anda…</p>}
+      <div className="ka-cart-layout"><section aria-label="Produk dalam keranjang"><div className="ka-cart-list-head"><span>PILIHAN ANDA</span><span aria-live="polite">{summary.count} ITEM / {cart.length} PILIHAN</span></div><div className="ka-cart-list"><AnimatePresence initial={false}>{cart.map(item=>{const max=Math.max(1,Math.min(99,typeof item.stock==='number'?Math.floor(item.stock):99));return <motion.article key={item.cartId} className="ka-cart-row" layout={reduce?false:'position'} initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0,height:0,paddingTop:0,paddingBottom:0,overflow:'hidden'}} transition={{duration:reduce?0:.22}}><a href={productHref(item)} aria-label={`Lihat ${item.name}`} onClick={e=>openProduct(e,item)}><img src={item.img || item.images?.[0]} alt={item.alt || item.name} width="125" height="125"/></a><div><h2><a href={productHref(item)} onClick={e=>openProduct(e,item)}>{item.name}</a></h2><p>{item.warna || 'Lihat detail produk'} <span aria-hidden="true">/</span> Ukuran {item.size}</p><p className="ka-item-price">{formatPrice(item.price)} / item</p><div className="ka-cart-controls"><div className="ka-quantity"><button type="button" aria-label={`Kurangi jumlah ${item.name}`} disabled={item.qty<=1} onClick={()=>updateCartQty(item.cartId,-1)}><Minus size={15}/></button><output aria-label={`Jumlah ${item.name}`} aria-live="polite">{item.qty}</output><button type="button" aria-label={`Tambah jumlah ${item.name}`} disabled={item.qty>=max} onClick={()=>updateCartQty(item.cartId,1)}><Plus size={15}/></button></div><button type="button" className="ka-remove" aria-label={`Hapus ${item.name} dari keranjang`} onClick={()=>removeFromCart(item.cartId)}><Trash2 size={14}/>Hapus</button></div></div><strong className="ka-row-price">{priceKnown(item.price)?formatPrice(item.price*item.qty):'Harga menyusul'}</strong></motion.article>;})}</AnimatePresence></div><div className="ka-cart-footer"><button type="button" className="ka-text-link" onClick={()=>setView('wishlist')}><Heart size={16}/>Buka favorit Anda</button><p>Pastikan ukuran sesuai size chart produk.</p></div></section>
+      <aside className="ka-summary" aria-labelledby="cart-summary-title"><div className="ka-summary-top"><h2 id="cart-summary-title">Ringkasan belanja.</h2><span><ShoppingBag size={18}/></span></div><dl><div><dt>Jumlah produk</dt><dd>{summary.count} item</dd></div><div><dt>Subtotal produk</dt><dd>{formatPrice(summary.subtotal)}</dd></div><div><dt>Pengiriman</dt><dd>Mengikuti alamat</dd></div></dl><div className="ka-summary-total"><span>Subtotal</span><strong aria-live="polite">{formatPrice(summary.subtotal)}</strong></div><AccountButton disabled={!summary.ready || !basketReady} onClick={()=>setView('checkout')}>Lanjut ke checkout<ArrowUpRight size={19}/></AccountButton>{!summary.ready && <p className="ka-message" role="status">Ada produk yang perlu diperiksa kembali. Buka detail produk untuk memeriksa harga, ukuran, atau stoknya.</p>}<p>Ongkir dan ketersediaan akhir dikonfirmasi saat pemesanan. Subtotal belum mencakup ongkir.</p><div className="ka-trust"><LockKeyhole size={15}/>{user?.email?'Terhubung dengan akun Anda':'Masuk ke akun saat melanjutkan pesanan'}</div></aside></div></>}
+  </main>;
+}

@@ -7,7 +7,7 @@
 
   <!-- Mobile & PWA -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#FFE11A" />
+  <meta name="theme-color" content="#FFFFFF" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -19,482 +19,52 @@
   <meta name="format-detection" content="telephone=no" />
 
   <!-- Preconnect to external domains (PERFORMANCE) -->
-  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
-  <link rel="preconnect" href="https://www.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+  <script>
+    // The homepage hero is not used by every route (for example article pages).
+    if (location.pathname === '/' && (!(new URLSearchParams(location.search).get('view')) || new URLSearchParams(location.search).get('view') === 'home')) {
+      const heroPreload = document.createElement('link');
+      heroPreload.rel = 'preload'; heroPreload.as = 'image';
+      heroPreload.href = '/images/kainora-owned/hero-camp-portrait-800.webp'; heroPreload.imageSrcset = '/images/kainora-owned/hero-camp-portrait-480.webp 480w, /images/kainora-owned/hero-camp-portrait-800.webp 800w'; heroPreload.imageSizes = '(max-width:767px) 100vw, 54vw'; heroPreload.fetchPriority = 'high';
+      heroPreload.type = 'image/webp'; document.head.appendChild(heroPreload);
+    }
+  </script>
 
   <!-- Neo-brutalist type system: Archivo (variable width/weight), Bungee (arcade), Pixelify Sans -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Bungee&family=Pixelify+Sans:wght@400..700&family=Pacifico&display=swap" />
+  <link rel="preload" href="/fonts/archivo-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
 
-  <!-- Preload critical resources -->
-  <link rel="preload" href="/src/main.jsx" as="script" crossorigin />
-
-  <!-- ====================================================================== -->
-  <!-- GOD TIER SEO — LEVEL 1: CORE META TAGS                                 -->
-  <!-- ====================================================================== -->
-  <title>Kainora Kids — Toko Baju Anak Premium Katun Adem | Gratis Ongkir Jawa</title>
-  <meta name="description" content="Kainora Kids — Toko baju anak premium #1 Indonesia. Koleksi kaos, dress & setelan anak bahan 100% katun tebal, super adem, ramah kulit sensitif. Korean style oversize boxy. Gratis ongkir se-Jawa!" />
-  <meta name="keywords" content="baju anak premium, toko baju anak online terpercaya, baju anak katun adem, kaos anak oversize boxy, baju anak korean style, toko baju anak terdekat jakarta bandung surabaya semarang yogyakarta, racun tiktok baju anak, ootd anak pinterest, baju anak kekinian 2026, kainora kids" />
-  <meta name="author" content="Kainora Kids Team" />
-  <meta name="publisher" content="CV Marbella Utama Mandiri" />
-  <meta name="copyright" content="© 2026 Kainora Kids" />
-  <meta name="rating" content="general" />
-  <meta name="distribution" content="global" />
-  <meta name="revisit-after" content="3 days" />
-
-  <!-- Canonical URL -->
+  <!-- Defaults for the raw SPA shell. Build scripts (scripts/storefront-document.mjs)
+       replace title, description, canonical, robots, Open Graph and JSON-LD per page. -->
+  <title>Kaos Anak Oversize &amp; Baju Anak Katun | Kainora Kids</title>
+  <meta name="description" content="Kaos anak oversize boxy berbahan katun, ukuran S–XXL. Jelajahi motif grafis Kainora Kids, kaos putih Rp69.000, dikirim dari Bandung." />
   <link rel="canonical" href="https://kainorakids.com/" />
-
-  <!-- Robots: full indexing -->
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="googlebot" content="index, follow" />
-  <meta name="bingbot" content="index, follow" />
-  <meta name="yandex" content="index, follow" />
 
-  <!-- Hreflang -->
-  <link rel="alternate" hreflang="id" href="https://kainorakids.com/" />
-  <link rel="alternate" hreflang="x-default" href="https://kainorakids.com/" />
-
-  <!-- Google Search Console Verification -->
-  <meta name="google-site-verification" content="" />
-
-  <!-- Bing Webmaster Verification -->
+  <!-- Site ownership (Bing Webmaster Tools, Pinterest). Google Search Console: verify by DNS TXT. -->
   <meta name="msvalidate.01" content="7CBFE8574ED90168977E98E5B4E70795" />
+  <meta name="p:domain_verify" content="2969c73987152381f6391cd74b9cff37" />
 
-  <!-- Yandex Verification -->
-  <meta name="yandex-verification" content="" />
-
-  <!-- ====================================================================== -->
-  <!-- LEVEL 2: GEO TARGETING                                                  -->
-  <!-- ====================================================================== -->
-  <meta name="geo.region" content="ID" />
-  <meta name="geo.placename" content="Indonesia" />
-  <meta name="geo.position" content="-6.9175;107.6191" />
-  <meta name="ICBM" content="-6.9175, 107.6191" />
-  <meta name="language" content="Indonesian" />
-  <meta name="content-language" content="id-ID" />
-  <meta name="target" content="all" />
-
-  <!-- ====================================================================== -->
-  <!-- LEVEL 3: OPEN GRAPH (WhatsApp, Facebook, Pinterest)                     -->
-  <!-- ====================================================================== -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="id_ID" />
-  <meta property="og:locale:alternate" content="en_US" />
-  <meta property="og:title" content="Kainora Kids — Toko Baju Anak Premium Katun Adem | Gratis Ongkir Jawa" />
-  <meta property="og:description" content="Kainora Kids — Toko baju anak premium #1 Indonesia. Koleksi kaos, dress & setelan anak bahan 100% katun tebal, super adem, ramah kulit sensitif. Korean style oversize boxy. Gratis ongkir se-Jawa!" />
-  <meta property="og:image" content="https://kainorakids.com/link-logo.jpg" />
-  <meta property="og:image:secure_url" content="https://kainorakids.com/link-logo.jpg" />
+  <meta property="og:site_name" content="Kainora Kids" />
+  <meta property="og:title" content="Kaos Anak Oversize &amp; Baju Anak Katun | Kainora Kids" />
+  <meta property="og:description" content="Kaos anak oversize boxy berbahan katun, ukuran S–XXL. Jelajahi motif grafis Kainora Kids, kaos putih Rp69.000, dikirim dari Bandung." />
+  <meta property="og:url" content="https://kainorakids.com/" />
+  <meta property="og:image" content="https://kainorakids.com/images/og/kainora-kids-share.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:alt" content="Kainora Kids — Koleksi Baju Anak Premium Katun Adem Korean Style" />
-  <meta property="og:url" content="https://kainorakids.com/" />
-  <meta property="og:site_name" content="Kainora Kids" />
-  <meta property="og:updated_time" content="2026-07-22T00:00:00+07:00" />
-  <meta property="business:contact_data:locality" content="Bandung" />
-  <meta property="business:contact_data:region" content="Jawa Barat" />
-  <meta property="business:contact_data:country_name" content="Indonesia" />
-
-  <!-- Pinterest Verification -->
-  <meta name="p:domain_verify" content="2969c73987152381f6391cd74b9cff37" />
-
-  <!-- ====================================================================== -->
-  <!-- LEVEL 4: TWITTER/X CARD                                                -->
-  <!-- ====================================================================== -->
+  <meta property="og:image:alt" content="Dua anak memakai kaos grafis Kainora Kids di depan tenda piknik" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@kainorakids" />
-  <meta name="twitter:creator" content="@kainorakids" />
-  <meta name="twitter:title" content="Kainora Kids — Toko Baju Anak Premium Katun Adem | Gratis Ongkir Jawa" />
-  <meta name="twitter:description" content="Kainora Kids — Toko baju anak premium #1 Indonesia. Koleksi kaos, dress & setelan anak bahan 100% katun tebal, super adem, ramah kulit sensitif. Korean style oversize boxy. Gratis ongkir se-Jawa!" />
-  <meta name="twitter:image" content="https://kainorakids.com/link-logo.jpg" />
-  <meta name="twitter:image:alt" content="Koleksi Baju Anak Kainora Kids — Katun Premium Adem" />
-
-  <!-- Facebook Domain Verification -->
-  <meta name="facebook-domain-verification" content="" />
-
-  <!-- ====================================================================== -->
-  <!-- LEVEL 5: JSON-LD STRUCTURED DATA (Rich Snippets)                       -->
-  <!-- ====================================================================== -->
-
-  <!-- 5A. Organization Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Kainora Kids",
-    "alternateName": ["Kainora", "Kainora Store", "Kainora Kids Indonesia"],
-    "url": "https://kainorakids.com/",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://kainorakids.com/favicon.png",
-      "width": 512,
-      "height": 512
-    },
-    "image": "https://kainorakids.com/link-logo.jpg",
-    "description": "Toko baju anak premium Indonesia dengan bahan 100% katun berkualitas tinggi. Spesialis pakaian anak Korean style, oversize boxy yang nyaman dan ramah kulit sensitif.",
-    "foundingDate": "2024",
-    "slogan": "Premium Cotton for Happy Kids",
-    "award": "Top Rated Indonesian Kids Fashion Store 2025",
-    "areaServed": {
-      "@type": "Country",
-      "name": "Indonesia"
-    },
-    "sameAs": [
-      "https://www.tiktok.com/@kainorastore.id",
-      "https://www.instagram.com/kainorakids",
-      "https://shopee.co.id/kainorakids",
-      "https://www.facebook.com/kainorakids",
-      "https://twitter.com/kainorakids"
-    ],
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "telephone": "+6285822222430",
-        "contactType": "customer service",
-        "areaServed": "ID",
-        "availableLanguage": ["Indonesian", "English"],
-        "hoursAvailable": "Mo-Su 00:00-23:59"
-      },
-      {
-        "@type": "ContactPoint",
-        "telephone": "+6285822222430",
-        "contactType": "sales",
-        "areaServed": "ID",
-        "availableLanguage": ["Indonesian", "English"]
-      }
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Jl. Meranti I No.5, Rancaekek Wetan, Kec. Rancaekek",
-      "addressLocality": "Kabupaten Bandung",
-      "addressRegion": "Jawa Barat",
-      "postalCode": "40394",
-      "addressCountry": "ID"
-    }
-  }
-  </script>
-
-  <!-- 5B. WebSite Schema (Sitelinks Search Box) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Kainora Kids",
-    "url": "https://kainorakids.com/",
-    "description": "Toko baju anak premium Indonesia dengan 100% katun adem, Korean style oversize boxy, gratis ongkir se-Jawa.",
-    "inLanguage": "id-ID",
-    "copyrightYear": 2024,
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://kainorakids.com/?view=products&search={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Kainora Kids"
-    }
-  }
-  </script>
-
-  <!-- 5C. OnlineStore Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "OnlineStore",
-    "name": "Kainora Kids",
-    "url": "https://kainorakids.com/",
-    "description": "Pusat belanja baju anak premium online terpercaya. Koleksi kaos, dress, setelan anak bahan 100% katun heavyweight, Korean style, oversize boxy. Melayani pengiriman ke seluruh Indonesia, gratis ongkir Pulau Jawa.",
-    "@id": "https://kainorakids.com/#onlinestore",
-    "currenciesAccepted": "IDR",
-    "paymentAccepted": "Cash on Delivery, Bank Transfer, Credit Card, GoPay, OVO, Dana, ShopeePay",
-    "priceRange": "Rp89.000 - Rp200.000",
-    "image": [
-      "https://kainorakids.com/link-logo.jpg",
-      "https://kainorakids.com/favicon.png"
-    ],
-    "logo": "https://kainorakids.com/favicon.png",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "854",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Jl. Meranti I No.5, Rancaekek Wetan, Kec. Rancaekek",
-      "addressLocality": "Kabupaten Bandung",
-      "addressRegion": "Jawa Barat",
-      "postalCode": "40394",
-      "addressCountry": "ID"
-    },
-    "areaServed": [
-      { "@type": "State", "name": "DKI Jakarta" },
-      { "@type": "State", "name": "Jawa Barat" },
-      { "@type": "State", "name": "Jawa Tengah" },
-      { "@type": "State", "name": "Jawa Timur" },
-      { "@type": "State", "name": "DI Yogyakarta" },
-      { "@type": "State", "name": "Banten" },
-      { "@type": "Country", "name": "Indonesia" }
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Koleksi Baju Anak Premium Kainora Kids",
-      "itemListElement": [
-        {
-          "@type": "OfferCatalog",
-          "name": "Kaos Anak Premium",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Product",
-                "name": "Kaos Anak Premium Katun Adem",
-                "category": "Kaos Anak"
-              }
-            }
-          ]
-        },
-        {
-          "@type": "OfferCatalog",
-          "name": "Dress Anak Perempuan"
-        },
-        {
-          "@type": "OfferCatalog",
-          "name": "Setelan Anak Laki-Laki"
-        }
-      ]
-    }
-  }
-  </script>
-
-  <!-- 5D. ClothingStore Schema (Google Maps / Local SEO) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ClothingStore",
-    "name": "Kainora Kids",
-    "alternateName": "Kainora Store",
-    "image": [
-      "https://kainorakids.com/link-logo.jpg",
-      "https://kainorakids.com/favicon.png"
-    ],
-    "@id": "https://kainorakids.com/#store",
-    "url": "https://kainorakids.com/",
-    "telephone": "+6285822222430",
-    "priceRange": "Rp89.000 - Rp200.000",
-    "currenciesAccepted": "IDR",
-    "paymentAccepted": "Cash, Credit Card, E-Wallet",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Jl. Meranti I No.5, Rancaekek Wetan, Kec. Rancaekek",
-      "addressLocality": "Kabupaten Bandung",
-      "addressRegion": "Jawa Barat",
-      "postalCode": "40394",
-      "addressCountry": "ID"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -6.9175,
-      "longitude": 107.6191
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "00:00",
-        "closes": "23:59"
-      }
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "854",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "sameAs": [
-      "https://www.tiktok.com/@kainorastore.id",
-      "https://www.instagram.com/kainorakids",
-      "https://shopee.co.id/kainorakids"
-    ]
-  }
-  </script>
-
-  <!-- 5E. Service Schema (COD, Pengiriman, Garansi) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Penjualan Baju Anak Online",
-    "name": "Layanan Belanja Baju Anak Premium Kainora Kids",
-    "provider": {
-      "@type": "Organization",
-      "name": "Kainora Kids"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Indonesia"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Layanan Kainora Kids",
-      "itemListElement": [
-        {
-          "@type": "OfferCatalog",
-          "name": "Pengiriman",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "name": "COD (Cash on Delivery)",
-              "description": "Bayar di tempat saat barang diterima. Tersedia untuk seluruh Indonesia.",
-              "price": "0",
-              "priceCurrency": "IDR"
-            },
-            {
-              "@type": "Offer",
-              "name": "Gratis Ongkir Pulau Jawa",
-              "description": "Pengiriman gratis ke seluruh Pulau Jawa dengan ekspedisi JNE, J&T, SiCepat, AnterAja"
-            }
-          ]
-        },
-        {
-          "@type": "OfferCatalog",
-          "name": "Garansi & Retur",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "name": "Garansi 7 Hari",
-              "description": "Uang kembali 100% jika barang cacat atau tidak sesuai foto"
-            }
-          ]
-        }
-      ]
-    }
-  }
-  </script>
-
-  <!-- 5F. BreadcrumbList Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://kainorakids.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Katalog Baju Anak", "item": "https://kainorakids.com/?view=products" },
-      { "@type": "ListItem", "position": 3, "name": "Blog Parenting & Kesehatan Anak", "item": "https://kainorakids.com/?view=blog" },
-      { "@type": "ListItem", "position": 4, "name": "Program Affiliate", "item": "https://kainorakids.com/?view=affiliate" }
-    ]
-  }
-  </script>
-
-  <!-- 5G. FAQPage Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Apakah bahannya panas untuk anak?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Tidak Bunda, produk Kainora menggunakan Heavyweight 100% Premium Cotton yang breathable (menyerap keringat) sehingga sangat adem dan nyaman untuk si kecil yang super aktif."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Bagaimana cara mencucinya agar awet?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sebaiknya dicuci dengan air suhu normal dan hindari penggunaan pemutih. Jika disetrika, gunakan suhu sedang dan jangan menyetrika langsung pada bagian sablon."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Apakah ukurannya pasti sesuai dengan umur anak?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Gunakan Kalkulator Cerdas yang ada di website kami, cukup masukkan Berat dan Tinggi anak, sistem otomatis akan merekomendasikan ukuran paling tepat untuk pola Boxy Oversize Kainora Kids."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Apakah bisa pesan untuk kado/hampers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Tentu Bunda, silakan tambahkan Catatan Baju di halaman Checkout jika ingin menggunakan kotak kado atau kartu ucapan."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Apa saja metode pembayaran yang tersedia?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Kami menerima COD (Cash on Delivery), transfer bank BCA/Mandiri/BNI/BRI, e-wallet (OVO, Dana, GoPay, ShopeePay), dan kartu kredit."
-        }
-      }
-    ]
-  }
-  </script>
-
-  <!-- 5H. ImageObject (Hero Image) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ImageObject",
-    "contentUrl": "https://kainorakids.com/link-logo.jpg",
-    "url": "https://kainorakids.com/link-logo.jpg",
-    "name": "Kainora Kids — Koleksi Baju Anak Premium",
-    "description": "Koleksi baju anak premium 100% katun, Korean style oversize boxy, adem dan nyaman untuk si kecil.",
-    "width": 1200,
-    "height": 630,
-    "encodingFormat": "image/jpeg",
-    "creator": {
-      "@type": "Organization",
-      "name": "Kainora Kids"
-    },
-    "copyrightHolder": {
-      "@type": "Organization",
-      "name": "CV Marbella Utama Mandiri"
-    }
-  }
-  </script>
-
-  <!-- 5I. VideoObject (Marketing Video) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Kainora Kids — Perjalanan Brand Premium Baju Anak Indonesia",
-    "description": "Video perjalanan Kainora Kids dalam menghadirkan baju anak premium 100% katun, Korean style oversize boxy, yang nyaman dan ramah kulit sensitif.",
-    "thumbnailUrl": "https://kainorakids.com/link-logo.jpg",
-    "contentUrl": "https://kainorakids.com/video/VIDEO-WEB-PERJALANAN.mp4",
-    "embedUrl": "https://kainorakids.com/video/VIDEO-WEB-PERJALANAN.mp4",
-    "uploadDate": "2026-01-01T00:00:00+07:00",
-    "duration": "PT1M30S",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Kainora Kids",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://kainorakids.com/favicon.png"
-      }
-    }
-  }
-  </script>
+  <meta name="twitter:title" content="Kaos Anak Oversize &amp; Baju Anak Katun | Kainora Kids" />
+  <meta name="twitter:description" content="Kaos anak oversize boxy berbahan katun, ukuran S–XXL. Jelajahi motif grafis Kainora Kids, kaos putih Rp69.000, dikirim dari Bandung." />
+  <meta name="twitter:image" content="https://kainorakids.com/images/og/kainora-kids-share.jpg" />
 
   <link rel="manifest" href="/manifest.json" />
-  <link rel="canonical" href="https://kainorakids.com/" />
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "Kainora Kids", "url": "https://kainorakids.com/", "logo": "https://kainorakids.com/website-logo.png"}, {"@type": "WebSite", "name": "Kainora Kids", "url": "https://kainorakids.com/", "inLanguage": "id"}]}</script>
 </head>
 <body>
   <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+  <script type="module" src="/src/boot.js"></script>
 </body>
 </html>

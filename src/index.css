@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Archivo;
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+  src: url('/fonts/archivo-latin-variable.woff2') format('woff2');
+}
+
 /* ==========================================================================
    KAINORA KIDS — NEO-BRUTALIST DESIGN SYSTEM
    Token + primitif visual: checkerboard (strip / tepi / frame / lantai perspektif),
@@ -95,7 +104,7 @@
   --c2: transparent;
   width: 100%;
   height: calc(var(--cs) * 2);
-  background: repeating-conic-gradient(var(--c1) 0 25%, var(--c2) 0 50%) 0 0 / calc(var(--cs) * 2) calc(var(--cs) * 2) round no-repeat;
+  background: repeating-conic-gradient(var(--c1) 0 25%, var(--c2) 0 50%) 0 0 / calc(var(--cs) * 2) calc(var(--cs) * 2) repeat;
 }
 .checker-strip--ink { --c1: var(--ink); --c2: var(--paper); }
 .checker-strip--blue { --c1: var(--sky); --c2: var(--paper); }

@@ -7,7 +7,7 @@
 import { useEffect, useRef } from 'react';
 import { useReducedMotion } from 'motion/react';
 
-const RAMP = ['#FFF9EA', '#FFE11A', '#F28A2E', '#F59DC2', '#E0322B'];
+const RAMP = ['#0C0C0C', '#263014', '#546A13', '#A2BD1F', '#D9FF38'];
 
 export const HalftoneWordmark = ({ text = 'KAINORA', className = '' }) => {
   const reduce = useReducedMotion();

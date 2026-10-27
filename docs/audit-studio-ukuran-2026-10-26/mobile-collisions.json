@@ -1,0 +1,110 @@
+[
+  {
+    "artWidth": 315,
+    "category": "Atasan",
+    "labels": [
+      {
+        "outsideStage": false,
+        "tagOverlapArea": 0,
+        "text": "Lebar dada"
+      },
+      {
+        "outsideStage": false,
+        "tagOverlapArea": 0,
+        "text": "Panjang"
+      }
+    ],
+    "stageWidth": 267
+  },
+  {
+    "artWidth": 315,
+    "category": "Bawahan",
+    "labels": [
+      {
+        "outsideStage": false,
+        "tagOverlapArea": 287.98095703125,
+        "text": "Pinggang"
+      },
+      {
+        "outsideStage": false,
+        "tagOverlapArea": 0,
+        "text": "Kaki dalam"
+      }
+    ],
+    "stageWidth": 267
+  },
+  {
+    "artWidth": 315,
+    "category": "Sepatu",
+    "labels": [],
+    "stageWidth": 267
+  },
+  {
+    "artWidth": 315,
+    "category": "Bayi",
+    "labels": [
+      {
+        "outsideStage": false,
+        "tagOverlapArea": 0,
+        "text": "Lebar dada"
+      },
+      {
+        "outsideStage": false,
+        "tagOverlapArea": 0,
+        "text": "Bahu ke bawah"
+      }
+    ],
+    "stageWidth": 267
+  },
+  {
+    "artWidth": 315,
+    "category": "Dress",
+    "labels": [
+      {
+        "outsideStage": false,
+        "tagOverlapArea": 0,
+        "text": "Lebar dada"
+      },
+      {
+        "outsideStage": false,
+        "tagOverlapArea": 0,
+        "text": "Panjang"
+      }
+    ],
+    "stageWidth": 267
+  },
+  {
+    "artWidth": 315,
+    "category": "Pakaian rumah",
+    "labels": [
+      {
+        "outsideStage": false,
+        "tagOverlapArea": 0,
+        "text": "Lebar atasan"
+      },
+      {
+        "outsideStage": false,
+        "tagOverlapArea": 0,
+        "text": "Pinggang"
+      }
+    ],
+    "stageWidth": 267
+  },
+  {
+    "artWidth": 315,
+    "category": "Muslim",
+    "labels": [
+      {
+        "outsideStage": false,
+        "tagOverlapArea": 0,
+        "text": "Lebar dada"
+      },
+      {
+        "outsideStage": false,
+        "tagOverlapArea": 0,
+        "text": "Panjang"
+      }
+    ],
+    "stageWidth": 267
+  }
+]

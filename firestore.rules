@@ -1,0 +1,68 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Buyer profiles/private state are owner-only. Orders are pending quotations
+    // for manual store confirmation; no browser can set paid/fulfilled status.
+    // Canonical catalogue, highlights and 3D artwork belong to Git/Cloudflare.
+    function buyer() {
+      return request.auth != null && request.auth.token.email is string
+        && request.auth.token.firebase.sign_in_provider != 'anonymous';
+    }
+    function owner(uid) { return buyer() && request.auth.uid == uid; }
+    function textField(data, key, maximum) {
+      return !(key in data) || (data[key] is string && data[key].size() <= maximum);
+    }
+    function validProfile(data) {
+      return data.keys().hasAll(['email'])
+        && data.keys().hasOnly(['email','name','phone','address','kodepos','gender','nickname','photoURL','createdAt'])
+        && data.email == request.auth.token.email
+        && textField(data, 'name', 200) && textField(data, 'phone', 40)
+        && textField(data, 'address', 2000) && textField(data, 'kodepos', 20)
+        && textField(data, 'gender', 30) && textField(data, 'nickname', 100)
+        && textField(data, 'photoURL', 2048)
+        && (!('createdAt' in data) || data.createdAt is timestamp);
+    }
+    function validPrivate(data) {
+      return data.keys().hasAll(['items']) && data.keys().hasOnly(['items','updatedAt'])
+        && data.items is list && data.items.size() <= 200
+        && (!('updatedAt' in data) || data.updatedAt is timestamp);
+    }
+    function validOrder(data) {
+      return data.keys().hasAll(['orderId','userId','userEmail','customerName','whatsapp','address','kodepos','notes','items','subTotal','discount','promoCode','totalAmount','status','createdAt'])
+        && data.keys().hasOnly(['orderId','userId','userEmail','customerName','whatsapp','address','kodepos','notes','items','subTotal','discount','promoCode','totalAmount','status','createdAt'])
+        && data.userId == request.auth.uid && data.userEmail == request.auth.token.email
+        && data.status == 'pending' && data.createdAt == request.time
+        && textField(data,'orderId',60) && textField(data,'customerName',200)
+        && data.customerName.size() > 0 && textField(data,'whatsapp',40)
+        && data.whatsapp.size() >= 4 && textField(data,'address',2000)
+        && data.address.size() > 0 && textField(data,'kodepos',20)
+        && textField(data,'notes',3000) && (data.promoCode == null || (data.promoCode is string && data.promoCode.size() <= 80))
+        && data.items is list && data.items.size() > 0 && data.items.size() <= 30
+        && data.subTotal is number && data.subTotal >= 0 && data.subTotal <= 1000000000
+        && data.discount is number && data.discount >= 0 && data.discount <= data.subTotal
+        && data.totalAmount is number && data.totalAmount == data.subTotal - data.discount;
+    }
+    match /artifacts/kainora-kids-store/users/{uid}/profile/data {
+      allow get: if owner(uid);
+      allow create, update: if owner(uid) && validProfile(request.resource.data);
+    }
+    match /artifacts/kainora-kids-store/users/{uid}/private/{kind} {
+      allow get: if owner(uid) && kind in ['cart','wishlist'];
+      allow create, update: if owner(uid) && kind in ['cart','wishlist'] && validPrivate(request.resource.data);
+    }
+    match /artifacts/kainora-kids-store/public/data/orders/{id} {
+      allow create: if buyer() && validOrder(request.resource.data);
+      allow read: if buyer() && resource.data.userId == request.auth.uid;
+    }
+    match /artifacts/kainora-kids-store/public/data/config/{id} {
+      allow get: if buyer() && id == 'aiSettings';
+    }
+    match /artifacts/kainora-kids-store/public/data/promos/{id} {
+      allow read: if buyer();
+    }
+    match /artifacts/kainora-kids-store/public/data/reviews/{id} {
+      allow read: if buyer();
+    }
+    match /{document=**} { allow read, write: if false; }
+  }
+}

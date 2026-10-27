@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-22",
+  "origin": "http://127.0.0.1:4173/?view=home",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "checks": [
+    {
+      "id": "manifesto",
+      "step": "1",
+      "top": 78
+    },
+    {
+      "id": "manifesto",
+      "step": "2",
+      "top": 78
+    },
+    {
+      "id": "manifesto",
+      "step": "3",
+      "top": 78
+    },
+    {
+      "id": "manifesto",
+      "step": "2",
+      "top": 78
+    },
+    {
+      "id": "manifesto",
+      "step": "1",
+      "top": 78
+    },
+    {
+      "id": "lookbook",
+      "p": 0,
+      "clip": "inset(50% 49.8%)",
+      "opacity": "0",
+      "hidden": "true"
+    },
+    {
+      "id": "lookbook",
+      "p": 0.35,
+      "clip": "inset(18.9723% 27.5099%)",
+      "opacity": "1",
+      "hidden": "true"
+    },
+    {
+      "id": "lookbook",
+      "p": 0.9,
+      "clip": "inset(0%)",
+      "opacity": "1",
+      "hidden": "false"
+    },
+    {
+      "id": "lookbook",
+      "p": 0.35,
+      "clip": "inset(16.0513% 23.2743%)",
+      "opacity": "1",
+      "hidden": "true"
+    },
+    {
+      "id": "lookbook",
+      "p": 0,
+      "clip": "inset(50% 49.8%)",
+      "opacity": "0",
+      "hidden": "true"
+    }
+  ]
+}

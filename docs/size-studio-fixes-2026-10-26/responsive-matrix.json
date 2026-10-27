@@ -1,0 +1,86 @@
+[
+  {
+    "client": 345,
+    "contained": true,
+    "height": 800,
+    "inputFont": "16px",
+    "overflow": 0,
+    "targets": [
+      44,
+      44
+    ],
+    "width": 360
+  },
+  {
+    "client": 360,
+    "contained": true,
+    "height": 812,
+    "inputFont": "16px",
+    "overflow": 0,
+    "targets": [
+      44,
+      44
+    ],
+    "width": 375
+  },
+  {
+    "client": 399,
+    "contained": true,
+    "height": 896,
+    "inputFont": "16px",
+    "overflow": 0,
+    "targets": [
+      44,
+      44
+    ],
+    "width": 414
+  },
+  {
+    "client": 415,
+    "contained": true,
+    "height": 932,
+    "inputFont": "16px",
+    "overflow": 0,
+    "targets": [
+      44,
+      44
+    ],
+    "width": 430
+  },
+  {
+    "client": 753,
+    "contained": true,
+    "height": 1024,
+    "inputFont": "16px",
+    "overflow": 0,
+    "targets": [
+      44,
+      44
+    ],
+    "width": 768
+  },
+  {
+    "client": 829,
+    "contained": true,
+    "height": 390,
+    "inputFont": "16px",
+    "overflow": 0,
+    "targets": [
+      44,
+      44
+    ],
+    "width": 844
+  },
+  {
+    "client": 1009,
+    "contained": true,
+    "height": 768,
+    "inputFont": "16px",
+    "overflow": 0,
+    "targets": [
+      44,
+      44
+    ],
+    "width": 1024
+  }
+]

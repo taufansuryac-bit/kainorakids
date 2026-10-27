@@ -1,0 +1,20 @@
+{
+  "firestore": {
+    "database": "(default)",
+    "location": "asia-southeast2",
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "emulators": { "firestore": { "host": "127.0.0.1", "port": 8089 }, "ui": { "enabled": false }, "singleProjectMode": true },
+  "auth": {
+    "authorizedDomains": ["kainora-kids-store.firebaseapp.com", "kainora-kids-store.web.app", "kainorakids.com", "www.kainorakids.com", "localhost", "127.0.0.1"],
+    "providers": {
+      "anonymous": false,
+      "emailPassword": true,
+      "googleSignIn": {
+        "oAuthBrandDisplayName": "Kainora Kids",
+        "supportEmail": "arcanelabs.studio@gmail.com"
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@
  *  - WeightHover : huruf menebal/melebar mengikuti jarak kursor (sumbu wdth/wght Archivo)
  * Semua mengikuti prefers-reduced-motion.
  */
-import { useEffect, useId, useMemo, useRef, useState } from 'react';
+import { useEffect, useId, useRef } from 'react';
 import { motion, useInView, useReducedMotion } from 'motion/react';
 
 const chars = (s) => Array.from(String(s));
@@ -99,13 +99,9 @@ export const GooeyMorph = ({ texts, morphTime = 1.1, cooldown = 1.5, className =
   const a = useRef(null);
   const b = useRef(null);
   const wrap = useRef(null);
-  const [staticIdx, setStaticIdx] = useState(0);
 
   useEffect(() => {
-    if (reduce) {
-      const t = setInterval(() => setStaticIdx((i) => (i + 1) % texts.length), 2600);
-      return () => clearInterval(t);
-    }
+    if (reduce) return undefined;
     let idx = texts.length - 1;
     let morph = 0;
     let cool = cooldown;
@@ -158,7 +154,7 @@ export const GooeyMorph = ({ texts, morphTime = 1.1, cooldown = 1.5, className =
   }, [texts, morphTime, cooldown, reduce]);
 
   if (reduce) {
-    return <span className={className}>{texts[staticIdx]}</span>;
+    return <span className={className}>{texts[0]}</span>;
   }
 
   return (

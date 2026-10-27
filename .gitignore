@@ -138,4 +138,8 @@ coverage/
 # ═══ DEPLOY ═══
 .vercel/
 .netlify/
+.admin-backups/
+.wrangler/
+.dev.vars
+.dev.vars.*
 .vercel-build/
