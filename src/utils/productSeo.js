@@ -1,4 +1,5 @@
-import { PRODUCT_SITE, productHref, catalogHref } from './productRoutes.js';
+import { CATALOG_PAGE_SIZE, PRODUCT_SITE, productHref, catalogHref } from './productRoutes.js';
+import { priceForSize } from './pricing.js';
 import { productAvailability } from './productAvailability.js';
 import { merchantReturnPolicy } from '../content/commercePolicies.js';
 
@@ -18,13 +19,13 @@ export const productTitle = product => fitTitle([
   `${product.name} — Kaos Anak Oversize | Kainora`,
   `${product.name} | Kainora Kids`,
 ]);
-export const catalogTitle = page => `Koleksi Kaos Anak Oversize${page > 1 ? ` — Halaman ${page}` : ''} | Kainora Kids`;
+export const catalogTitle = page => `Koleksi Baju Anak Oversize${page > 1 ? ` — Halaman ${page}` : ''} | Kainora Kids`;
 // Page 1 keeps the collection pitch; later pages name their own motifs so each
 // paginated URL has a distinct description.
-export const catalogDescription = (products, page = 1, perPage = 12) => {
-  if (page <= 1) return `Jelajahi ${products.length} motif kaos anak Kainora Kids. Lihat foto studio, detail motif, harga, dan referensi pemakaian sebelum memilih gaya si kecil.`;
+export const catalogDescription = (products, page = 1, perPage = CATALOG_PAGE_SIZE) => {
+  if (page <= 1) return `Jelajahi ${products.length} motif baju anak oversize Kainora Kids. Lihat foto studio, detail kaos, harga, dan referensi pemakaian sebelum memilih gaya si kecil.`;
   const names = products.slice((page - 1) * perPage, page * perPage).slice(0, 3).map(product => product.name);
-  return `Halaman ${page} dari ${Math.ceil(products.length / perPage)} koleksi kaos anak Kainora Kids: ${names.join(', ')}, dan motif lain. Semua kaos putih Rp69.000.`;
+  return `Halaman ${page} dari ${Math.ceil(products.length / perPage)} koleksi baju anak oversize Kainora Kids: ${names.join(', ')}, dan motif lain. Ukuran S–XXL dengan warna sesuai pilihan masing-masing motif.`;
 };
 const absolute = path => new URL(path, PRODUCT_SITE).href;
 export function productSchema(product, reviews = []) {
@@ -38,15 +39,15 @@ export function productSchema(product, reviews = []) {
     sku: String(product.id), ...(product.sizes?.length ? {size: product.sizes} : {}),
     ...(product.bahan ? { material: product.bahan } : {}), ...(product.warna ? { color: product.warna } : {}),
     ...(product.catalogPreview !== true && typeof product.price === 'number' && Number.isFinite(product.price) && product.price >= 0 ? { offers: {
-      '@type': 'Offer', url: `${PRODUCT_SITE}${productHref(product)}`, price: product.price, priceCurrency: 'IDR',
+      '@type': 'Offer', url: `${PRODUCT_SITE}${productHref(product)}`, ...(new Set(Object.values(product.sizePrices||{})).size>1?{'@type':'AggregateOffer',lowPrice:Math.min(...Object.values(product.sizePrices)),highPrice:Math.max(...Object.values(product.sizePrices)),offerCount:product.sizes.length,offers:product.sizes.map(size=>({'@type':'Offer',name:`Ukuran ${size}`,url:`${PRODUCT_SITE}${productHref(product)}`,price:priceForSize(product,size),priceCurrency:'IDR',itemCondition:'https://schema.org/NewCondition',hasMerchantReturnPolicy:merchantReturnPolicy(PRODUCT_SITE),...(productAvailability(product)?{availability:`https://schema.org/${productAvailability(product)}`}:{})}))}:{price:product.price}), priceCurrency: 'IDR',
       itemCondition: 'https://schema.org/NewCondition', hasMerchantReturnPolicy: merchantReturnPolicy(PRODUCT_SITE),
       ...(productAvailability(product) ? { availability: `https://schema.org/${productAvailability(product)}` } : {}),
     } } : {}),
     ...(ratings.length ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: Number((ratings.reduce((sum, r) => sum + Number(r.rating), 0) / ratings.length).toFixed(2)), reviewCount: ratings.length } } : {}),
   };
 }
-export function productListSchema(products, page = 1, perPage = 12) {
-  return { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Koleksi Kaos Anak Kainora Kids', url: `${PRODUCT_SITE}${catalogHref(page)}`,
+export function productListSchema(products, page = 1, perPage = CATALOG_PAGE_SIZE) {
+  return { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Koleksi Baju Anak Oversize Kainora Kids', url: `${PRODUCT_SITE}${catalogHref(page)}`,
     mainEntity: { '@type': 'ItemList', numberOfItems: products.length, itemListElement: products.map((product, index) => ({ '@type': 'ListItem', position: (page - 1) * perPage + index + 1, name: product.name, url: `${PRODUCT_SITE}${productHref(product)}` })) },
   };
 }

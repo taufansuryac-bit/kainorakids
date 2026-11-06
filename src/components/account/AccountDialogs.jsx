@@ -49,7 +49,7 @@ export function AuthModal({ isOpen, onClose }) {
         await updateProfile(buyer, {displayName: name.trim(), photoURL});
         const profile = {name: name.trim(), phone: '', address: '', kodepos: '', photoURL, gender, nickname: '', email: buyer.email, createdAt: serverTimestamp()};
         await setDoc(doc(db, 'artifacts', appId, 'users', buyer.uid, 'profile', 'data'), profile);
-        setUser(buyerIdentity(buyer, profile));showToast('Akun berhasil dibuat. Selamat menjelajah.');onClose();
+        setUser(buyerIdentity(buyer, profile));showToast('Akun berhasil dibuat.');onClose();
       }
     } catch (e) {setError(buyerAuthError(e.code));} finally {setBusy(false);}
   };
@@ -58,11 +58,11 @@ export function AuthModal({ isOpen, onClose }) {
     try {const result = await signInWithPopup(auth, googleProvider);setUser(await hydrate(result.user));showToast('Berhasil masuk dengan Google.');onClose();}
     catch (e) {setError(buyerAuthError(e.code));} finally {setBusy(false);}
   };
-  const title = mode === 'reset' ? 'Kembali ke akunmu.' : mode === 'login' ? 'Senang bertemu lagi.' : 'Cerita baru dimulai.';
+  const title = mode === 'reset' ? 'Atur ulang kata sandi' : mode === 'login' ? 'Masuk ke akun' : 'Buat akun';
   return <AccountDialog open={isOpen} close={onClose} label="Akun Kainora Kids" className="ka-auth-dialog">
-    <div className="ka-auth-visual" aria-hidden="true"><img src="/images/kainora-owned/hero-camp.webp" alt=""/><span>KAINORA KIDS / YOUR EVERYDAY CLUB</span><div><span className="ka-brand-dot"><ArrowUpRight size={21}/></span><strong>Little fits.<br/>Big possibilities.</strong><p>Simpan favorit. Temukan gaya. Ikuti setiap cerita pesananmu.</p></div></div>
-    <div className="ka-auth-form"><img src="/website-logo.png" alt="Kainora Kids" width="145" height="35"/><span className="ka-kicker">YOUR LITTLE WORLD, ALL IN ONE PLACE.</span>
-      <h2>{title}</h2><p className="ka-auth-intro">{mode === 'reset' ? 'Masukkan email akun Anda. Kami akan mengirim tautan untuk membuat kata sandi baru.' : mode === 'login' ? 'Masuk untuk membuka favorit, data pengiriman, dan pesanan Anda.' : 'Buat akun untuk menyimpan pilihan kecil yang berarti.'}</p>
+    <div className="ka-auth-visual" aria-hidden="true"><img src="/images/kainora-owned/hero-camp.webp" alt=""/><span>KAINORA KIDS / FASHION ANAK</span><div><span className="ka-brand-dot"><ArrowUpRight size={21}/></span><strong>Graphic tee.<br/>Fashion anak.</strong><p>Simpan produk favorit dan kelola pesanan Anda.</p></div></div>
+    <div className="ka-auth-form"><img src="/website-logo.png" alt="Kainora Kids" width="145" height="35"/><span className="ka-kicker">AKUN PELANGGAN KAINORA</span>
+      <h2>{title}</h2><p className="ka-auth-intro">{mode === 'reset' ? 'Masukkan email akun Anda. Kami akan mengirim tautan untuk membuat kata sandi baru.' : mode === 'login' ? 'Masuk untuk membuka favorit, data pengiriman, dan pesanan Anda.' : 'Buat akun untuk menyimpan produk favorit, alamat pengiriman, dan riwayat pesanan.'}</p>
       {mode !== 'reset' && <div className="ka-auth-tabs" role="group" aria-label="Pilihan akun"><button type="button" disabled={busy} aria-pressed={mode === 'login'} onClick={() => changeMode('login')}>Masuk</button><button type="button" disabled={busy} aria-pressed={mode === 'register'} onClick={() => changeMode('register')}>Buat akun</button></div>}
       <AnimatePresence mode="wait" initial={false}><motion.form key={mode} onSubmit={submit} initial={reduce ? false : {opacity: 0, y: 8}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -5}} transition={{duration: reduce ? 0 : .16}}>
         {mode === 'register' && <><AccountField label="Nama lengkap" name="name" autoComplete="name" required minLength={2} maxLength={200} placeholder="Nama Anda" value={name} onChange={e => setName(e.target.value)} disabled={busy}/><fieldset className="ka-gender"><legend>Panggilan Anda</legend>{[['bunda','Bunda'],['ayah','Ayah']].map(([value,label]) => <label key={value}><input type="radio" name="account-gender" value={value} checked={gender === value} onChange={() => setGender(value)} disabled={busy}/>{label}</label>)}</fieldset></>}
@@ -73,7 +73,7 @@ export function AuthModal({ isOpen, onClose }) {
         {mode === 'reset' && <button type="button" className="ka-text-link" onClick={() => changeMode('login')}><ArrowLeft size={15}/>Kembali ke masuk</button>}
       </motion.form></AnimatePresence>
       {mode !== 'reset' && <><div className="ka-divider">atau lanjut dengan</div><AccountButton secondary className="ka-google" disabled={busy} onClick={google}><GoogleMark/>Google</AccountButton></>}
-      <p className="ka-form-note"><LockKeyhole size={12} style={{display:'inline',marginRight:5}}/>Akun pribadi Anda untuk pengalaman Kainora.</p>
+      <p className="ka-form-note"><LockKeyhole size={12} style={{display:'inline',marginRight:5}}/>Kelola data belanja melalui akun Anda.</p>
     </div>
   </AccountDialog>;
 }

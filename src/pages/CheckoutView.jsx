@@ -62,7 +62,7 @@ Kembalikan HANYA teks ucapannya saja, tanpa tanda kutip.`;
       setGiftOpen(false); setGiftContext('');
     } catch (err) {
       console.error(err);
-      setGiftError('Maaf, AI gagal membuat ucapan. Silakan tulis manual di kolom catatan.');
+      setGiftError('Ucapan belum dapat dibuat. Silakan tulis di kolom catatan.');
     } finally {
       setIsGeneratingMessage(false);
     }
@@ -119,15 +119,15 @@ Kembalikan HANYA teks ucapannya saja, tanpa tanda kutip.`;
     }
     const orderId = order.orderId;
 
-    let msg = `Halo Admin Kainora Kids! 💖
-Saya mau order baju anak yang super lucu ini. Berikut rinciannya:
+    let msg = `Halo tim Kainora Kids,
+Saya ingin memesan produk berikut:
 
 *ID Pesanan:* ${orderId}
 
 🛒 *Daftar Produk:*
 `;
     cart.forEach((it, i) => msg += `${i+1}. *${it.name}*
-   Size: ${it.size} | Qty: ${it.qty} | ${formatPrice(it.price * it.qty)}
+   Warna: ${it.color || it.warna || 'Lihat produk'} | Size: ${it.size} | Qty: ${it.qty} | ${formatPrice(it.price * it.qty)}
 `);
     
     msg += `
@@ -150,7 +150,7 @@ Saya mau order baju anak yang super lucu ini. Berikut rinciannya:
     if(form.notes) msg += `📝 Catatan: ${form.notes}
 `;
     msg += `
-Mohon dihitungkan total dengan ongkos kirimnya ya kak. Terima kasih! ✨`;
+Mohon konfirmasi ketersediaan dan total pembayaran beserta ongkos kirim. Terima kasih.`;
     
     setIsSaving(false);
     const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
@@ -163,14 +163,14 @@ Mohon dihitungkan total dengan ongkos kirimnya ya kak. Terima kasih! ✨`;
 
   if (!cart.length && !pendingWaUrl) return (
     <main className="ka-page ka-checkout">
-      <SEO title="Checkout Pakaian Anak | Kainora Kids" description="Selesaikan pesanan baju anak Anda melalui WhatsApp Admin yang responsif." canonicalPath="/?view=checkout" robots="noindex, follow" />
+      <SEO title="Checkout Pakaian Anak | Kainora Kids" description="Periksa pesanan dan lengkapi alamat pengiriman. Konfirmasikan stok, ongkir, dan pembayaran melalui WhatsApp Kainora Kids." canonicalPath="/?view=checkout" robots="noindex, follow" />
       <AccountEmpty icon={ShoppingBag} title="Belum ada yang perlu dipesan." description="Keranjang Anda kosong. Pilih motif dan ukuran dulu, lalu kembali ke sini untuk memesan." action="Jelajahi koleksi" onAction={() => setView('products')} secondary="Lihat keranjang" onSecondary={() => setView('cart')} />
     </main>
   );
 
   return (
     <main className="min-h-screen py-24 px-4 max-w-7xl mx-auto">
-      <SEO title="Checkout Pakaian Anak | Kainora Kids" description="Selesaikan pesanan baju anak Anda melalui WhatsApp Admin yang responsif." canonicalPath="/?view=checkout" robots="noindex, follow" />
+      <SEO title="Checkout Pakaian Anak | Kainora Kids" description="Periksa pesanan dan lengkapi alamat pengiriman. Konfirmasikan stok, ongkir, dan pembayaran melalui WhatsApp Kainora Kids." canonicalPath="/?view=checkout" robots="noindex, follow" />
       <button onClick={() => setView('cart')} className="text-gray-900 font-black uppercase tracking-widest text-[10px] hover:text-brand-red mb-10 flex items-center gap-2 transition-colors"><ChevronRight size={16} className="transform rotate-180" strokeWidth={3}/> KEMBALI KE KERANJANG</button>
       <div className="border-b-4 border-gray-900 pb-6 mb-12"><h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-left">Pemesanan Pakaian</h1></div>
       
@@ -180,13 +180,13 @@ Mohon dihitungkan total dengan ongkos kirimnya ya kak. Terima kasih! ✨`;
           {pendingWaUrl && <div role="alert" className="mb-6 border-4 border-gray-900 bg-amber-50 p-6 text-left space-y-4"><p className="font-bold text-gray-900">Pesanan sudah tersimpan, tetapi browser menahan jendela WhatsApp. Tekan tombol di bawah untuk mengirim rincian pesanan ke admin Kainora.</p><a href={pendingWaUrl} target="_blank" rel="noopener noreferrer" onClick={finishOrder} className="inline-flex items-center gap-2 bg-amber-500 border-4 border-gray-900 px-6 py-4 font-black uppercase text-sm tracking-widest text-gray-900">Kirim pesanan via WhatsApp <ArrowUpRight size={18}/></a></div>}
           <form id="checkoutForm" onSubmit={handleWA} className="bg-white border-4 border-gray-900 p-8 md:p-12 shadow-solid text-left space-y-8">
             <div className="flex justify-between items-center mb-8 border-b-2 border-gray-900 pb-4"><h2 className="font-black text-xl text-gray-900 uppercase tracking-wider">Informasi Penerima</h2>{!user?.email && <button type="button" onClick={() => setIsAuthModalOpen(true)} className="text-[10px] font-black underline uppercase text-gray-500 hover:text-brand-red">Punya Akun? Masuk</button>}</div>
-            <div><label htmlFor="checkout-name" className="block text-[10px] font-black uppercase mb-3 tracking-widest text-gray-500">Nama Lengkap Bunda *</label><input id="checkout-name" autoComplete="name" required className="w-full border-4 border-gray-900 p-5 font-bold outline-none focus:border-amber-500 transition-colors text-sm" value={form.name} onChange={e => setForm({...form, name: e.target.value})} placeholder="Cth: Bunda Kainora" /></div>
+            <div><label htmlFor="checkout-name" className="block text-[10px] font-black uppercase mb-3 tracking-widest text-gray-500">Nama Lengkap Penerima *</label><input id="checkout-name" autoComplete="name" required className="w-full border-4 border-gray-900 p-5 font-bold outline-none focus:border-amber-500 transition-colors text-sm" value={form.name} onChange={e => setForm({...form, name: e.target.value})} placeholder="Nama penerima pesanan" /></div>
             <div><label htmlFor="checkout-wa" className="block text-[10px] font-black uppercase mb-3 tracking-widest text-gray-500">WhatsApp Aktif *</label><input id="checkout-wa" autoComplete="tel" inputMode="tel" required type="tel" className="w-full border-4 border-gray-900 p-5 font-bold outline-none focus:border-amber-500 transition-colors text-sm" value={form.wa} onChange={e => setForm({...form, wa: e.target.value})} placeholder="Cth: 081234567890" /></div>
             <div><label htmlFor="checkout-address" className="block text-[10px] font-black uppercase mb-3 tracking-widest text-gray-500">Alamat Lengkap (Kecamatan & Kota) *</label><textarea id="checkout-address" autoComplete="street-address" required className="w-full border-4 border-gray-900 p-5 font-bold outline-none h-32 focus:border-amber-500 transition-colors resize-none text-sm leading-relaxed" value={form.address} onChange={e => setForm({...form, address: e.target.value})} placeholder="Nama Jalan, RT/RW, No. Rumah, Kecamatan, Kota/Kabupaten" /></div>
             <div><label htmlFor="checkout-kodepos" className="block text-[10px] font-black uppercase mb-3 tracking-widest text-gray-500">Kode Pos *</label><input id="checkout-kodepos" autoComplete="postal-code" inputMode="numeric" pattern="[0-9]{5}" maxLength={5} title="5 digit kode pos" required type="text" className="w-full border-4 border-gray-900 p-5 font-bold outline-none focus:border-amber-500 transition-colors text-sm" value={form.kodepos} onChange={e => setForm({...form, kodepos: e.target.value})} placeholder="Cth: 40123" /></div>
             <div>
                <div className="flex justify-between items-center mb-3">
-                 <label htmlFor="checkout-notes" className="block text-[10px] font-black uppercase tracking-widest text-gray-500">Catatan Baju / Ucapan Kado</label>
+                 <label htmlFor="checkout-notes" className="block text-[10px] font-black uppercase tracking-widest text-gray-500">Catatan Pesanan / Ucapan Kado</label>
                  <button type="button" onClick={() => setGiftOpen(open => !open)} aria-expanded={giftOpen} aria-controls="checkout-gift" disabled={isGeneratingMessage} className="text-[10px] font-black uppercase flex items-center gap-1 text-brand-red hover:text-brand-red transition-colors bg-amber-50 px-2 py-1 border-2 border-amber-200">
                    {isGeneratingMessage ? <Loader2 size={12} className="animate-spin" /> : <Sparkles size={12} />} Tulis Ucapan AI
                  </button>
@@ -206,9 +206,9 @@ Mohon dihitungkan total dengan ongkos kirimnya ya kak. Terima kasih! ✨`;
         </div>
         <aside className="lg:w-1/3">
           <div className="bg-white border-4 border-gray-900 p-8 shadow-solid sticky top-28">
-            <h2 className="font-black text-xl text-gray-900 mb-6 border-b-4 border-gray-900 pb-4 uppercase tracking-wider">Order Bunda</h2>
-            <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-6 border-2 border-gray-200 bg-gray-50 p-3 text-center">{isPreviewOrder ? 'PRATINJAU CHECKOUT — Produk contoh tidak dapat dikirim sebagai pesanan. Harga dan stok perlu divalidasi.' : 'Produk akan terkirim ke WhatsApp Admin'}</p>
-            <div className="space-y-6 mb-8 border-b-2 border-gray-100 pb-8 max-h-[40vh] overflow-y-auto custom-scrollbar pr-4 text-left">{cart.map(item => (<div key={item.cartId} className="flex gap-4 items-center"><img src={item.img || (item.images && item.images[0])} alt={item.alt} className="w-16 h-16 border-2 border-gray-900 object-cover bg-gray-100" /><div className="flex-1"><p className="font-bold text-gray-900 uppercase text-xs leading-snug line-clamp-2 mb-1">{item.name}</p><p className="text-gray-500 font-black text-[9px] uppercase tracking-widest">SZ: {item.size} | QTY: {item.qty}</p></div></div>))}</div>
+            <h2 className="font-black text-xl text-gray-900 mb-6 border-b-4 border-gray-900 pb-4 uppercase tracking-wider">Ringkasan Pesanan</h2>
+            <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-6 border-2 border-gray-200 bg-gray-50 p-3 text-center">{isPreviewOrder ? 'PRATINJAU CHECKOUT — Produk contoh tidak dapat dikirim sebagai pesanan. Harga dan stok perlu divalidasi.' : 'Rincian pesanan dikirim melalui WhatsApp untuk konfirmasi stok, ongkir, dan pembayaran.'}</p>
+            <div className="space-y-6 mb-8 border-b-2 border-gray-100 pb-8 max-h-[40vh] overflow-y-auto custom-scrollbar pr-4 text-left">{cart.map(item => (<div key={item.cartId} className="flex gap-4 items-center"><img src={item.img || (item.images && item.images[0])} alt={item.alt} className="w-16 h-16 border-2 border-gray-900 object-cover bg-gray-100" /><div className="flex-1"><p className="font-bold text-gray-900 uppercase text-xs leading-snug line-clamp-2 mb-1">{item.name}</p><p className="text-gray-500 font-black text-[9px] uppercase tracking-widest">{item.color&&`${item.color} | `}SZ: {item.size} | QTY: {item.qty}</p></div></div>))}</div>
             
             {/* Promo Code Section */}
             <div className="mb-8 border-b-2 border-gray-100 pb-8">
@@ -223,7 +223,7 @@ Mohon dihitungkan total dengan ongkos kirimnya ya kak. Terima kasih! ✨`;
             <div className="flex justify-between items-end mb-2"><span className="font-black text-gray-500 text-xs uppercase tracking-widest">Subtotal</span><span className="font-bold text-gray-900">{formatPrice(cartTotal)}</span></div>
             {appliedPromo && <div className="flex justify-between items-end mb-2"><span className="font-black text-green-600 text-xs uppercase tracking-widest flex items-center gap-1"><CheckCircle size={12}/> Diskon</span><span className="font-bold text-green-600">-{formatPrice(discountAmount)}</span></div>}
             <div className="flex justify-between items-end mb-10 mt-4 border-t-2 border-gray-900 pt-4"><span className="font-black text-gray-900 text-sm uppercase tracking-widest">Total Belanja</span><span className="font-black text-2xl text-brand-red tracking-widest">{formatPrice(finalTotal)}</span></div>
-            <button disabled={isSaving || isPreviewOrder || !!pendingWaUrl} onClick={() => document.getElementById('checkoutForm')?.requestSubmit()} className="hidden lg:flex w-full bg-amber-500 text-gray-900 font-black py-5 uppercase text-sm border-4 border-gray-900 shadow-solid hover:translate-y-1 transition-all tracking-widest items-center justify-center gap-3">{isSaving ? <Loader2 size={18} className="animate-spin"/> : <><Send size={18} strokeWidth={3}/> Kirim Pesanan WA</>}</button>
+            <button disabled={isSaving || isPreviewOrder || !!pendingWaUrl} onClick={() => document.getElementById('checkoutForm')?.requestSubmit()} className="hidden lg:flex w-full bg-amber-500 text-gray-900 font-black py-5 uppercase text-sm border-4 border-gray-900 shadow-solid hover:translate-y-1 transition-all tracking-widest items-center justify-center gap-3">{isSaving ? <Loader2 size={18} className="animate-spin"/> : <><Send size={18} strokeWidth={3}/> Pesan via WhatsApp</>}</button>
           </div>
         </aside>
       </div>

@@ -1,0 +1,37 @@
+{
+  "/models/kainora/candy-front.webp||black|large": {
+    "front": "/models/kainora/rail/black-candy-slot-8-front.png?v=hanger3d1",
+    "back": "/models/kainora/rail/black-candy-slot-8-back.png?v=hanger3d1",
+    "side": "/models/kainora/rail/black-candy-slot-8-side.png?v=hanger3d1"
+  },
+  "/models/kainora/kainora-fresh-front.webp|/models/kainora/kainora-fresh-back.webp|black|badge": {
+    "front": "/models/kainora/rail/black-kainora-fresh-slot-14-front.png?v=hanger3d1",
+    "back": "/models/kainora/rail/black-kainora-fresh-slot-14-back.png?v=hanger3d1",
+    "side": "/models/kainora/rail/black-kainora-fresh-slot-14-side.png?v=hanger3d1"
+  },
+  "/models/kainora/icecream-front.webp||black|large": {
+    "front": "/models/kainora/rail/black-icecream-slot-12-front.png?v=hanger3d1",
+    "back": "/models/kainora/rail/black-icecream-slot-12-back.png?v=hanger3d1",
+    "side": "/models/kainora/rail/black-icecream-slot-12-side.png?v=hanger3d1"
+  },
+  "/models/kainora/dinorex-front.webp|/models/kainora/dinorex-back.webp|black|badge": {
+    "front": "/models/kainora/rail/black-dinorex-front.png?v=hanger3d1",
+    "back": "/models/kainora/rail/black-dinorex-back.png?v=hanger3d1",
+    "side": "/models/kainora/rail/black-dinorex-side.png?v=hanger3d1"
+  },
+  "/models/kainora/key-front.webp|/models/kainora/key-back.webp|black|badge": {
+    "front": "/models/kainora/rail/black-key-slot-13-front.png?v=hanger3d1",
+    "back": "/models/kainora/rail/black-key-slot-13-back.png?v=hanger3d1",
+    "side": "/models/kainora/rail/black-key-slot-13-side.png?v=hanger3d1"
+  },
+  "/models/kainora/kainora-park-front.webp|/models/kainora/kainora-park-back.webp|white|chest": {
+    "front": "/models/kainora/rail/park-1-slot-15-front.png?v=hanger3d1",
+    "back": "/models/kainora/rail/park-1-slot-15-back.png?v=hanger3d1",
+    "side": "/models/kainora/rail/park-1-slot-15-side.png?v=hanger3d1"
+  },
+  "/models/kainora/egg-artwork.webp|/models/kainora/egg-artwork.webp|black|badge": {
+    "front": "/models/kainora/rail/black-egg-slot-10-front.png?v=hanger3d1",
+    "back": "/models/kainora/rail/black-egg-slot-10-back.png?v=hanger3d1",
+    "side": "/models/kainora/rail/black-egg-slot-10-side.png?v=hanger3d1"
+  }
+}

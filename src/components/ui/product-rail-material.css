@@ -1,0 +1,105 @@
+.clothing-rail-metal {
+  position: absolute;
+  inset-inline: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.clothing-rail-metal--continuous {
+  inset-inline: -32px;
+}
+
+.clothing-rail-metal__shaft {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, #16263212, #ffffff08 12%, #ffffff48 24%, #14263120 37%, #ffffff18 49%, #ffffff55 63%, #17253217 79%, #ffffff32 91%, #18263018),
+    linear-gradient(180deg, #4b555e 0%, #89959e 7%, #dbe1e5 15%, #fff 21%, #d1d9df 29%, #8c9aa5 43%, #aebbc4 53%, #f4f7f9 65%, #c3cdd4 73%, #7a8893 88%, #35424c 100%);
+  box-shadow: inset 0 1px 0 #ffffff7a, inset 0 -1px 0 #26343c7a, 0 1px 1px #24343e26;
+}
+
+.clothing-rail-metal__shaft::after {
+  content: '';
+  position: absolute;
+  inset: 1px 0;
+  border-radius: inherit;
+  opacity: .09;
+  background: repeating-linear-gradient(0deg, #fff 0 .4px, transparent .4px 1.7px);
+}
+
+.clothing-rail-metal__shadow {
+  position: absolute;
+  inset-inline: 0;
+  top: calc(100% + 2px);
+  height: 8px;
+  border-radius: 999px;
+  background: #1a2c3824;
+  filter: blur(4px);
+}
+
+.clothing-rail-metal__collar {
+  position: absolute;
+  top: 50%;
+  width: 13px;
+  height: calc(100% + 12px);
+  min-height: 21px;
+  max-height: 26px;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  border-inline: 1px solid #53616a8c;
+  background: linear-gradient(90deg, #77838c, #e1e7eb 14%, #fff 25%, #c1cbd2 44%, #87959f 68%, #bac6ce 84%, #56646f);
+  box-shadow: inset 0 1px 0 #ffffffd9, inset 0 -1px 1px #25354273, 1px 3px 4px #23344226;
+}
+
+.clothing-rail-metal__collar--left { left: 6px; }
+.clothing-rail-metal__collar--right { right: 6px; }
+
+.clothing-rail-metal__collar::before,
+.clothing-rail-metal__collar::after {
+  content: '';
+  position: absolute;
+  inset-inline: 1px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #fff9 28%, #3d505d80 75%, transparent);
+}
+.clothing-rail-metal__collar::before { top: 2px; }
+.clothing-rail-metal__collar::after { bottom: 2px; }
+
+.clothing-rail-metal__bolt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  transform: translate(-50%, -50%);
+  border: .5px solid #435661a6;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 25%, #f9fcfd, #9caab3 50%, #536470);
+  box-shadow: 0 .5px .5px #26394240;
+}
+.clothing-rail-metal__bolt::after {
+  content: '';
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  top: 1.5px;
+  height: .7px;
+  transform: rotate(-35deg);
+  background: #394b58;
+}
+
+.rail-product-detail{display:block;font-family:Archivo,Arial,sans-serif;overscroll-behavior:contain;scrollbar-width:none}
+.rail-product-detail::-webkit-scrollbar{display:none}
+.rail-product-detail>[data-rail-detail-backdrop]{position:fixed;background:linear-gradient(90deg,rgba(245,244,239,.42),rgba(245,244,239,.48) 44%,rgba(255,255,255,.97) 66%,#fff)}
+.rail-product-detail>button{position:fixed;color:#191917;font-weight:700;z-index:2}
+.rail-detail-layout{margin-inline:auto;min-height:calc(100dvh - 48px);padding-block:48px 24px}
+.rail-product-detail [data-rail-detail-figure]{aspect-ratio:2/3;height:min(64dvh,640px)}
+.rail-detail-count{font-size:10px;font-weight:700;letter-spacing:.12em;color:#414139;margin-bottom:18px}
+.rail-detail-information{overflow:visible;max-height:none}
+@media(max-width:767px){
+  .rail-product-detail{padding:20px}
+  .rail-detail-layout{padding-top:40px;gap:24px;min-height:calc(100dvh - 40px)}
+  .rail-product-detail [data-rail-detail-figure]{height:min(48dvh,440px)}
+  .rail-product-detail>[data-rail-detail-backdrop]{background:linear-gradient(180deg,rgba(245,244,239,.8),rgba(245,244,239,.88) 35%,rgba(255,255,255,.97) 60%,#fff)}
+}

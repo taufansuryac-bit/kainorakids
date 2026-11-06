@@ -1,0 +1,30 @@
+.f-scroll-manifesto.f-manifesto-with-film{height:460svh}
+.f-manifesto-with-film .f-scroll-manifesto-stage{padding:0}
+.f-manifesto-copy{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:40px var(--pad)}
+.f-manifesto-film{position:absolute;inset:0;z-index:2;display:flex;align-items:center;pointer-events:none}
+.f-manifesto-film-surface{position:relative;width:100%;height:100%;overflow:hidden}
+.f-manifesto-film-media,.f-manifesto-film-inner{position:absolute;inset:0;overflow:hidden}
+.f-manifesto-film-caption{position:absolute;inset:auto 0 0;display:grid;grid-template-columns:1fr auto;gap:12px 30px;align-items:end;background:linear-gradient(0deg,#10160ee8,#10160e9c 70%,transparent);color:#fff;padding:65px var(--pad) 28px}
+.f-manifesto-film-caption>.f-cap{grid-column:1;margin:0;font-size:10px;color:#e4edce}
+.f-manifesto-film-title{grid-column:1;font-size:clamp(27px,3vw,48px);font-weight:750;letter-spacing:-.05em;line-height:1.1}
+.f-manifesto-film-caption>button{grid-column:2;grid-row:2/4;display:inline-flex;align-items:center;justify-content:space-between;gap:25px;min-height:50px;padding:16px 22px;border:1px solid #fff;border-radius:5px;background:#fff;color:#17200e;font-size:11px;font-weight:750;pointer-events:auto}
+.f-manifesto-film-caption>button:hover{background:var(--acid);border-color:var(--acid)}
+.f-manifesto-with-film .f-manifesto-progress{z-index:3}
+.f-manifesto-with-film.is-static{height:auto}
+.f-manifesto-with-film.is-static .f-scroll-manifesto-stage{padding:0}
+.f-manifesto-with-film.is-static .f-manifesto-copy{position:relative;padding-block:100px 40px}
+.f-manifesto-with-film.is-static .f-manifesto-film{position:relative;display:block}
+.f-manifesto-with-film.is-static .f-manifesto-film-surface{height:auto;aspect-ratio:16/9}
+@media(max-width:767px){
+  .f-scroll-manifesto.f-manifesto-with-film{height:400svh}
+  .f-manifesto-copy{padding-inline:22px}
+  .f-manifesto-film-surface{height:auto;background:transparent}
+  .f-manifesto-film-media{position:relative;inset:auto;aspect-ratio:16/9}
+  .f-manifesto-film-caption{position:relative;inset:auto;grid-template-columns:1fr;gap:15px;padding:22px 22px 26px;background:#10160e}
+  .f-manifesto-film-title{font-size:32px}
+  .f-manifesto-film-caption .f-journey-chapters{gap:14px;font-size:8px;flex-wrap:wrap}
+  .f-manifesto-film-caption>button{grid-column:1;grid-row:auto;justify-self:start;margin-top:7px}
+  .f-manifesto-with-film.is-static{height:auto}
+  .f-manifesto-with-film.is-static .f-manifesto-copy{padding-block:85px 40px}
+  .f-manifesto-with-film.is-static .f-manifesto-film-surface{aspect-ratio:auto}
+}

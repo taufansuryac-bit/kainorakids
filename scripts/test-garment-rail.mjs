@@ -50,8 +50,9 @@ test('front/back starting views are independent from print URL',()=>{
 
 test('seven supplied motifs retain black colours and front-only print assignments through admin validation',async()=>{
   const data=validateContent(JSON.parse(await readFile('src/content/store.json','utf8')));
-  assert.equal(data.garments.length,7);
-  assert.equal(data.garments.filter(g=>g.color==='black').length,6);
+  const supplied=data.garments.filter(g=>!g.id.includes('-slot-'));
+  assert.equal(supplied.length,7);
+  assert.equal(supplied.filter(g=>g.color==='black').length,6);
   for(const id of ['black-candy','black-icecream']) {
     const entry=data.garments.find(g=>g.id===id);
     assert.equal(entry.initialView,'front');assert.equal(entry.frontLayout,'large');

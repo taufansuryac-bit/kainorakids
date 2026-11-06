@@ -2,7 +2,7 @@ import { Component, Suspense, useCallback, useEffect, useMemo, useRef, useState,
 import { Canvas, useFrame, useLoader, useThree } from '@react-three/fiber';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { CanvasTexture, MathUtils, NeutralToneMapping, SRGBColorSpace, TextureLoader, Vector2 } from 'three';
-import { GARMENT_PRINT_LAYOUT } from '../../constants/garmentPrintLayout';
+import { garmentPrintLayout } from '../../constants/garmentPrintLayout';
 import { GARMENT_VIEW } from '../../constants/garmentViewConfig';
 import { createWindGarment } from './garmentWind';
 import { advanceAutoTurn, createAutoTurnState, postponeAutoTurn } from './garmentAutoTurn';
@@ -48,8 +48,7 @@ function GarmentItem({ scene, entry, onReady, register }) {
     const prints = {};
     PRINT_SIDES.forEach(key => {
       if (!entry[key]) return;
-      const frontPreset = entry.frontLayout === 'large' ? 'frontLarge' : entry.frontLayout === 'badge' ? 'frontBadge' : 'front';
-      const layout = GARMENT_PRINT_LAYOUT[key === 'front' ? frontPreset : key];
+      const layout = garmentPrintLayout(entry, key);
       prints[key] = { layout, texture: fitArtwork(textures[urls.indexOf(entry[key])], layout.size[0], layout.size[1]) };
     });
     const wind = createWindGarment(scene, garmentSeed(entry.id), entry.color, prints);

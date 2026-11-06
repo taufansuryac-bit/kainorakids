@@ -32,7 +32,7 @@ export const FooterComponent = ({ openPopup }) => {
               <section className="neo-panel bg-paper p-6 shadow-solid-sm">
                 <div className="footer-brand mb-4"><img src="/website-logo.png" alt="Kainora Kids" /></div>
                 <p className="text-sm font-semibold leading-relaxed">
-                  Menghadirkan revolusi pakaian anak modern dengan perpaduan desain kekinian dan material premium.
+                  Graphic tee oversize anak dan fashion anak dari Kainora Kids. Lihat motif, bahan, serta panduan ukuran sebelum memesan.
                 </p>
                 <nav className="mt-5 flex flex-wrap gap-2" aria-label="Pintasan">
                   {[['Beranda', 'home'], ['Produk', 'products'], ['Blog', 'blog'], ['Affiliate', 'affiliate']].map(([l, v]) => (
@@ -44,7 +44,7 @@ export const FooterComponent = ({ openPopup }) => {
               </section>
 
               <section className="neo-panel bg-brand-yellow p-6 shadow-solid-sm">
-                <Title>Our Partner</Title>
+                <Title>Metode Pembayaran</Title>
                 <div className="flex flex-wrap gap-3">
                   <span className="rounded-lg border-[3px] border-ink bg-paper px-4 py-2 text-lg font-black italic tracking-wider text-blue-800">BCA</span>
                   <span className="rounded-lg border-[3px] border-ink bg-paper px-4 py-2 text-lg font-black italic tracking-wider text-brand-sky">BRI</span>
@@ -67,7 +67,7 @@ export const FooterComponent = ({ openPopup }) => {
               </section>
 
               <section className="neo-panel bg-brand-teal p-6 shadow-solid-sm">
-                <Title>Our Social Media</Title>
+                <Title>Media Sosial</Title>
                 <div className="flex flex-wrap gap-2.5">
                   {SOCIALS.map(({ label, Icon, action }) => (
                     <button key={label} onClick={() => action(WA_NUMBER)} className="neo-pill roll-host bg-paper py-2.5 transition-transform hover:-translate-y-1 hover:bg-brand-yellow">

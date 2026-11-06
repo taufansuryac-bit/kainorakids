@@ -19,6 +19,7 @@ export function merchantReturnPolicy(site = 'https://kainorakids.com') {
 export function storeOrganization(site = 'https://kainorakids.com') {
   return { '@context': 'https://schema.org', '@type': 'OnlineStore', '@id': `${site}/#organization`, name: 'Kainora Kids',
     url: `${site}/`, logo: `${site}/website-logo.png`, areaServed: 'ID',
+    description: 'Kainora Kids menyediakan graphic tee oversize anak dan fashion anak.',
     sameAs: ['https://www.instagram.com/kainorakids/', 'https://www.tiktok.com/@kainorastore.id'],
     hasMerchantReturnPolicy: merchantReturnPolicy(site),
     hasShippingService: { '@type': 'ShippingService', name: 'J&T Express — dari Bandung',

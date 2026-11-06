@@ -85,7 +85,7 @@ export const localBusinessSchema = () => ({
   image: DEFAULT_IMAGE,
   url: SITE_URL,
   telephone: WA_PHONE_E164,
-  priceRange: 'Rp69.000',
+  priceRange: 'Rp89.000–Rp94.000',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Jl. Meranti I No.5, Rancaekek Wetan, Kec. Rancaekek',

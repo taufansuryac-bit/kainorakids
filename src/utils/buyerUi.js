@@ -3,7 +3,7 @@ import { canOrder, priceKnown } from './pricing.js';
 export function buyerCartSummary(cart) {
   return { count: cart.reduce((sum, item) => sum + (Number.isInteger(item.qty) && item.qty > 0 ? item.qty : 0), 0),
     subtotal: cart.reduce((sum, item) => sum + (priceKnown(item.price) && Number.isInteger(item.qty) && item.qty > 0 ? item.price * item.qty : 0), 0),
-    ready: cart.length > 0 && cart.every(item => !item.catalogPreview && canOrder(item, item.size) && Number.isInteger(item.qty) && item.qty > 0 && item.qty <= 99 && (item.stock === undefined || item.qty <= item.stock)) };
+    ready: cart.length > 0 && cart.every(item => !item.catalogPreview && canOrder(item, item.size, item.color) && Number.isInteger(item.qty) && item.qty > 0 && item.qty <= 99 && (item.stock === undefined || item.qty <= item.stock)) };
 }
 export function buyerProfileFields(form) {
   const fields = Object.fromEntries(['name', 'phone', 'address', 'kodepos', 'gender'].map(key => [key, String(form[key] || '').trim()]));

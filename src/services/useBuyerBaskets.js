@@ -2,6 +2,8 @@ import {useEffect,useRef,useState} from 'react';
 import {doc,getDoc,setDoc} from 'firebase/firestore';
 import {db,appId,isFirebaseConfigured} from '../firebase';
 import {mergeBuyerCart} from './buyerCommerce';
+import {refreshCartItems} from '../utils/pricing';
+import storeContent from '../content/store.json';
 
 // Hydrate once per UID. A profile edit must not reload or clear a basket, and
 // a buyer's first login must preserve the items added while browsing as a guest.
@@ -18,7 +20,7 @@ export function useBuyerBaskets({user,cart,wishlist,setCart,setWishlist,showToas
     Promise.all(['cart','wishlist'].map(kind=>getDoc(doc(db,'artifacts',appId,'users',uid,'private',kind)))).then(([basket,favorites])=>{
       if(cancelled)return;
       const remoteCart=basket.exists()?basket.data().items||[]:[],remoteWishlist=favorites.exists()?favorites.data().items||[]:[];
-      const nextCart=mergeBuyerCart(changingBuyer?[]:current.current.cart,remoteCart);
+      const nextCart=refreshCartItems(mergeBuyerCart(changingBuyer?[]:current.current.cart,remoteCart),storeContent.products);
       persisted.current=JSON.stringify({cart:remoteCart,wishlist:remoteWishlist});
       setCart(nextCart);setWishlist(remoteWishlist);setReadyUid(uid);
     }).catch(()=>{if(!cancelled)showToast('Keranjang di perangkat ini tetap ada. Sinkronisasi akun belum berhasil.');});

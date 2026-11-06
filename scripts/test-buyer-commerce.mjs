@@ -34,6 +34,14 @@ test('a guest basket survives first buyer login and merges saved sizes without d
   const guest=[{id:4,size:'S',qty:2},{id:5,size:'M',qty:1}],saved=[{id:4,size:'S',qty:1},{id:4,size:'L',qty:1}];
   const result=mergeBuyerCart(guest,saved);assert.equal(result.length,3);assert.equal(result.find(p=>p.id===4&&p.size==='S').qty,3);assert.deepEqual(mergeBuyerCart(guest,[]),guest);assert.equal(saved[0].qty,1);
 });
+test('colour variants remain separate and XL prices reach the pending order',()=>{
+  const base={id:'new-tee',name:'TEE',sizes:['S','XL'],sizePrices:{S:89000,XL:94000},price:89000,size:'XL',qty:1};
+  const cart=mergeBuyerCart([{...base,color:'Putih'}],[{...base,color:'Hitam'}]);
+  assert.equal(cart.length,2);
+  const order=buildOrderRequest({cart,user:{uid:'buyer',email:'buyer@example.test'},form:{name:'Buyer',wa:'08123456789',address:'Address'}});
+  assert.equal(order.subTotal,188000);assert.equal(order.items[0].price,94000);
+  assert.deepEqual(order.items.map(item=>item.color),['Hitam','Putih']);
+});
 test('promo limits are honoured only when the admin sets them',async()=>{
   const {promoProblem}=await import('../src/services/buyerCommerce.js');
   const now=Date.parse('2026-10-27T00:00:00Z');

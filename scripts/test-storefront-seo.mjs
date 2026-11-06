@@ -11,6 +11,7 @@ import { BUYER_GUIDES } from '../src/content/buyerGuides.js';
 import { SIZE_CHART } from '../src/content/sizeChart.js';
 import { storefrontView, viewHref } from '../src/utils/productRoutes.js';
 import { WA_NUMBER, WA_PHONE_E164 } from '../src/config/shop.js';
+import { CATALOG_PAGE_SIZE } from '../src/utils/productRoutes.js';
 
 test('confirmed availability survives admin validation; numeric zero overrides a stale available label',async()=>{
   const content=JSON.parse(await readFile('src/content/store.json','utf8'));
@@ -80,6 +81,7 @@ test('product, catalogue and journal titles fit the ~60 character search display
   for(const product of products){assert.ok(productTitle(product).length<=60,productTitle(product));assert.ok(productMetaDescription(product).length<=160);}
   const long=BLOG_POSTS.filter(post=>journalTitle(post).length>60);
   assert.ok(long.every(post=>journalTitle(post)===post.seoTitle),'long journal titles drop the suffix rather than truncate');
-  const pages=[1,2,3,4].map(page=>catalogDescription(products,page));
-  assert.equal(new Set(pages).size,4);assert.equal(catalogTitle(2),'Koleksi Kaos Anak Oversize — Halaman 2 | Kainora Kids');
+  const pageCount=Math.ceil(products.length/CATALOG_PAGE_SIZE);
+  const pages=Array.from({length:pageCount},(_,index)=>catalogDescription(products,index+1));
+  assert.equal(new Set(pages).size,pageCount);assert.equal(catalogTitle(2),'Koleksi Baju Anak Oversize — Halaman 2 | Kainora Kids');
 });

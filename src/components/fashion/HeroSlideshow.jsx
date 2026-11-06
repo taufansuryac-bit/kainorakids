@@ -12,6 +12,12 @@ const SLIDES = [
 export function HeroSlideshow({ reduce = false }) {
   const host = useRef(null), visible = useInView(host, { amount: .1 });
   const [ready, setReady] = useState([0]), [active, setActive] = useState(0);
+  const [intro, setIntro] = useState(() => typeof document !== 'undefined' && document.documentElement.hasAttribute('data-brand-intro'));
+  useEffect(() => {
+    const update = () => setIntro(document.documentElement.hasAttribute('data-brand-intro'));
+    update(); document.addEventListener('kainora:intro-change', update);
+    return () => document.removeEventListener('kainora:intro-change', update);
+  }, []);
   const readyRef = useRef(ready);
   readyRef.current = ready;
   useEffect(() => {
@@ -32,17 +38,17 @@ export function HeroSlideshow({ reduce = false }) {
     return () => { cancelled = true; clearTimeout(timer); };
   }, [active, visible, ready]);
   useEffect(() => {
-    if (!visible) return;
+    if (!visible || intro || reduce) return;
     let timer;
     const schedule = () => {
       clearInterval(timer);
-      if (!document.hidden) timer = setInterval(() => setActive(current => readyRef.current.includes((current + 1) % SLIDES.length) ? (current + 1) % SLIDES.length : current), 2500);
+      if (!document.hidden) timer = setInterval(() => setActive(current => readyRef.current.includes((current + 1) % SLIDES.length) ? (current + 1) % SLIDES.length : current), 5000);
     };
     schedule();
     document.addEventListener('visibilitychange', schedule);
     return () => { clearInterval(timer); document.removeEventListener('visibilitychange', schedule); };
-  }, [visible]);
-  return <div ref={host} className="f-hero-slideshow" aria-label="Cerita visual Kainora Kids">
+  }, [visible, intro, reduce]);
+  return <div ref={host} className="f-hero-slideshow" aria-label="Koleksi graphic tee anak Kainora Kids">
     {SLIDES.map((slide, index) => ready.includes(index) && <motion.img key={slide.src} src={portrait(slide.src,800)} srcSet={portraitSrcSet(slide.src)} sizes="(max-width:767px) 100vw, 54vw" alt={slide.alt} aria-hidden={active !== index} width="800" height="1000" fetchpriority={index === 0 ? 'high' : 'low'} decoding="async" initial={false} animate={{ opacity: active === index ? 1 : 0 }} transition={{ duration: reduce ? 0 : .7, ease: 'easeInOut' }} />)}
   </div>;
 }

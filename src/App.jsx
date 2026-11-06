@@ -12,7 +12,6 @@ import { BuyerBackendGate } from './components/account/BuyerBackendGate';
 import { AccountDialog } from './components/account/AccountUI';
 import { Navbar } from './components/layout/Navbar';
 import { HalftoneFooter as Footer } from './components/fashion/HalftoneFooter';
-import { TypeRemixPreloader } from './components/fashion/motion';
 import { ChatLauncher } from './components/ai/ChatLauncher';
 import { CookieConsentBanner } from './components/ui/CookieConsentBanner';
 import { ToastNotification } from './components/ui/ToastNotification';
@@ -100,7 +99,6 @@ function App({initialLocation=globalThis.location,SizeStudioComponent=LazySizeSt
 
   return (
     <div className="store-shell fashion-shell min-h-screen bg-cream font-sans text-ink antialiased">
-      <TypeRemixPreloader enabled={view === 'home' && typeof document !== 'undefined' && document.getElementById('root')?.dataset.prerender !== 'home'} />
       <BuyerBackendGate immediate={isAuthModalOpen || ['profile','checkout','orders','allReviews'].includes(view)} />
 
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[9000] focus:rounded-full focus:border-[3px] focus:border-ink focus:bg-brand-yellow focus:px-4 focus:py-2 focus:font-black">

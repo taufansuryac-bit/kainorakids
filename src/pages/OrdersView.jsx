@@ -53,24 +53,24 @@ export const OrdersView = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
         <div className="bg-amber-100 border-4 border-gray-900 p-6 flex flex-col justify-center items-center text-center shadow-solid-sm cursor-pointer hover:-translate-y-1 transition-transform" onClick={() => setView('products')}>
-          <h3 className="font-black uppercase tracking-widest text-amber-900 mb-2">Promo Spesial</h3>
-          <p className="text-xs font-bold text-amber-700 uppercase">Diskon 20% Koleksi Baru</p>
+          <h3 className="font-black uppercase tracking-widest text-amber-900 mb-2">Koleksi Kaos Anak</h3>
+          <p className="text-xs font-bold text-amber-700 uppercase">Lihat pilihan motif dan ukuran</p>
         </div>
         <div className="bg-indigo-100 border-4 border-gray-900 p-6 flex flex-col justify-center items-center text-center shadow-solid-sm cursor-pointer hover:-translate-y-1 transition-transform" onClick={() => setView('products')}>
-          <h3 className="font-black uppercase tracking-widest text-indigo-900 mb-2">Gratis Ongkir</h3>
-          <p className="text-xs font-bold text-indigo-700 uppercase">Min. Belanja Rp 200.000</p>
+          <h3 className="font-black uppercase tracking-widest text-indigo-900 mb-2">Panduan Belanja</h3>
+          <p className="text-xs font-bold text-indigo-700 uppercase">Periksa detail produk sebelum memesan</p>
         </div>
       </div>
 
       <div className="bg-white border-4 border-gray-900 shadow-solid p-8 md:p-12">
-        <h1 className="text-3xl font-black uppercase tracking-tighter mb-8 border-b-4 border-gray-900 pb-4">Riwayat Pesanan Bunda</h1>
+        <h1 className="text-3xl font-black uppercase tracking-tighter mb-8 border-b-4 border-gray-900 pb-4">Riwayat Pesanan</h1>
         {isLoading ? (
           <div className="flex justify-center py-10"><Loader2 size={32} className="animate-spin text-brand-red"/></div>
         ) : orders.length === 0 ? (
           <div className="text-center py-10">
             <Package size={48} className="mx-auto text-gray-300 mb-4" strokeWidth={1}/>
             <h3 className="text-xl font-black text-gray-900 uppercase tracking-widest mb-2">Belum Ada Pesanan</h3>
-            <p className="text-xs font-bold text-gray-500 uppercase tracking-widest">Yuk mulai belanja baju lucu untuk si kecil!</p>
+            <p className="text-xs font-bold text-gray-500 uppercase tracking-widest">Pesanan Anda akan ditampilkan di sini setelah disimpan.</p>
           </div>
         ) : (
           <div className="space-y-6">
@@ -78,11 +78,11 @@ export const OrdersView = () => {
               <div key={order.id} className="border-2 border-gray-200 p-6 flex flex-col md:flex-row justify-between gap-4">
                 <div>
                   <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">ID: {order.id}</p>
-                  <p className="font-bold text-gray-900 text-sm">{order.items?.length || 0} Item Baju</p>
+                  <p className="font-bold text-gray-900 text-sm">{order.items?.length || 0} produk</p>
                   <p className="text-xs text-gray-500 mt-1">Total: {formatPrice(order.totalAmount)}</p>
                 </div>
                 <div className="flex flex-col items-end justify-center">
-                   <span className="bg-amber-100 text-amber-700 font-black text-[10px] px-3 py-1 uppercase tracking-widest border-2 border-amber-700">Diproses</span>
+                   <span className="bg-amber-100 text-amber-700 font-black text-[10px] px-3 py-1 uppercase tracking-widest border-2 border-amber-700">Konfirmasi dengan admin</span>
                 </div>
               </div>
             ))}

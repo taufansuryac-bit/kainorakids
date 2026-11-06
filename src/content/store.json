@@ -2,21 +2,22 @@
   "version": 1,
   "products": [
     {
-      "id": 1,
-      "name": "Kaos Sunshine",
-      "type": "Kaos",
-      "gender": "Laki-laki",
+      "id": "new-born-to-lead",
+      "name": "BORN TO LEAD",
+      "type": "Graphic tee",
+      "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Sunshine, potongan oversize boxy",
-      "desc": "Matahari cerah dan pesan You're My Sunshine memberi energi hangat pada gaya si kecil. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/sunshine-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif BORN TO LEAD, warna hitam",
+      "desc": "Graphic tee anak motif BORN TO LEAD, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/born-to-lead-hitam-1ffb9c36e6-1600.webp",
       "images": [
-        "/PRODUCT/sunshine-1.jpg",
-        "/PRODUCT/sunshine-2.jpg"
+        "/images/products/2026-11/born-to-lead-hitam-1ffb9c36e6-1600.webp",
+        "/images/products/2026-11/born-to-lead-putih-c92a355b18-1600.webp",
+        "/images/products/2026-11/born-to-lead-pemakaian-71d1de78f1-1600.webp"
       ],
       "sizes": [
         "S",
@@ -25,40 +26,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/born-to-lead-hitam-1ffb9c36e6-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/born-to-lead-putih-c92a355b18-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 1,
       "photoOnly": false,
       "catalogPreview": false,
-      "affiliateCommissionPercent": 12,
       "availability": "InStock"
     },
     {
-      "id": 2,
-      "name": "Kaos Breakfast Morning Club",
-      "type": "Kaos",
-      "gender": "Perempuan",
+      "id": "new-boys",
+      "name": "BOYS",
+      "type": "Graphic tee",
+      "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Breakfast Morning Club, potongan oversize boxy",
-      "desc": "Cerita sarapan dengan aksen biru dan oranye, untuk gaya yang terasa ceria sejak pagi. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/breakfastmorning-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif BOYS, warna hitam",
+      "desc": "Graphic tee anak motif BOYS, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/boys-hitam-8a74c05f39-1600.webp",
       "images": [
-        "/PRODUCT/breakfastmorning-1.jpg",
-        "/PRODUCT/breakfastmorning-2.jpg"
+        "/images/products/2026-11/boys-hitam-8a74c05f39-1600.webp",
+        "/images/products/2026-11/boys-putih-d9bcecb952-1600.webp",
+        "/images/products/2026-11/boys-pemakaian-db7ea5e1ba-1600.webp"
       ],
       "sizes": [
         "S",
@@ -67,39 +81,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/boys-hitam-8a74c05f39-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/boys-putih-d9bcecb952-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 2,
       "photoOnly": false,
       "catalogPreview": false,
-      "affiliateCommissionPercent": 12,
       "availability": "InStock"
     },
     {
-      "id": 3,
-      "name": "Kaos Kids Club",
-      "type": "Kaos",
+      "id": "new-candy-kainora",
+      "name": "CANDY KAINORA",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Kids Club, potongan oversize boxy",
-      "desc": "Grafis Kids Club bernuansa biru untuk si kecil dengan banyak cerita dan ide bermain. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/kidsclub-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif CANDY KAINORA, warna hitam",
+      "desc": "Graphic tee anak motif CANDY KAINORA, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/candy-kainora-hitam-c425cf8e97-1600.webp",
       "images": [
-        "/PRODUCT/kidsclub-1.jpg"
+        "/images/products/2026-11/candy-kainora-hitam-c425cf8e97-1600.webp",
+        "/images/products/2026-11/candy-kainora-putih-56f4709b00-1600.webp",
+        "/images/products/2026-11/candy-kainora-pemakaian-6503a06a08-1600.webp"
       ],
       "sizes": [
         "S",
@@ -108,38 +136,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/candy-kainora-hitam-c425cf8e97-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/candy-kainora-putih-56f4709b00-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 3,
       "photoOnly": false,
       "catalogPreview": false,
-      "affiliateCommissionPercent": 12,
       "availability": "InStock"
     },
     {
-      "id": 4,
-      "name": "Kaos Kainora Park",
-      "type": "Kaos",
+      "id": "new-creativity",
+      "name": "CREATIVITY",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Kainora Park, potongan oversize boxy",
-      "desc": "Hotdog, burger, nachos, dan baseball: suasana stadion dirangkum dalam grafis Kainora Park. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/kainorapark-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif CREATIVITY, warna hitam",
+      "desc": "Graphic tee anak motif CREATIVITY, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/creativity-hitam-8aece77dda-1600.webp",
       "images": [
-        "/PRODUCT/kainorapark-1.jpg",
-        "/PRODUCT/kainorapark-2.jpg"
+        "/images/products/2026-11/creativity-hitam-8aece77dda-1600.webp",
+        "/images/products/2026-11/creativity-putih-4341eec862-1600.webp",
+        "/images/products/2026-11/creativity-pemakaian-850d88a0a1-1600.webp"
       ],
       "sizes": [
         "S",
@@ -148,39 +191,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/creativity-hitam-8aece77dda-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/creativity-putih-4341eec862-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 4,
       "photoOnly": false,
       "catalogPreview": false,
-      "affiliateCommissionPercent": 12,
       "availability": "InStock"
     },
     {
-      "id": 5,
-      "name": "Kaos Born to Play",
-      "type": "Kaos",
-      "gender": "Laki-laki",
+      "id": "new-dad-fix-everything",
+      "name": "DAD FIX EVERYTHING",
+      "type": "Graphic tee",
+      "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Born to Play, potongan oversize boxy",
-      "desc": "Mesin arcade dan tulisan Born to Play membawa semangat permainan ke gaya sehari-hari. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/borntoplay-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif DAD FIX EVERYTHING, warna hitam",
+      "desc": "Graphic tee anak motif DAD FIX EVERYTHING, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/dad-fix-everything-hitam-6951078761-1600.webp",
       "images": [
-        "/PRODUCT/borntoplay-1.jpg"
+        "/images/products/2026-11/dad-fix-everything-hitam-6951078761-1600.webp",
+        "/images/products/2026-11/dad-fix-everything-putih-40cebec805-1600.webp",
+        "/images/products/2026-11/dad-fix-everything-pemakaian-6dc29b36d0-1600.webp"
       ],
       "sizes": [
         "S",
@@ -189,40 +246,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/dad-fix-everything-hitam-6951078761-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/dad-fix-everything-putih-40cebec805-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 5,
       "photoOnly": false,
       "catalogPreview": false,
-      "affiliateCommissionPercent": 12,
       "availability": "InStock"
     },
     {
-      "id": 6,
-      "name": "Kaos Be You",
-      "type": "Kaos",
+      "id": "new-dinorex",
+      "name": "DINOREX",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Be You, potongan oversize boxy",
-      "desc": "Komposisi grafis penuh warna memberi ruang bagi karakter si kecil untuk tampil apa adanya. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/beyou-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif DINOREX, warna hitam",
+      "desc": "Graphic tee anak motif DINOREX, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/dinorex-hitam-95e8e4cd15-1600.webp",
       "images": [
-        "/PRODUCT/beyou-1.jpg",
-        "/PRODUCT/beyou-2.jpg"
+        "/images/products/2026-11/dinorex-hitam-95e8e4cd15-1600.webp",
+        "/images/products/2026-11/dinorex-putih-f955eb410e-1600.webp",
+        "/images/products/2026-11/dinorex-pemakaian-32dc7e1033-1600.webp"
       ],
       "sizes": [
         "S",
@@ -231,42 +301,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/dinorex-hitam-95e8e4cd15-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/dinorex-putih-f955eb410e-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 6,
       "photoOnly": false,
       "catalogPreview": false,
-      "affiliateCommissionPercent": 12,
       "availability": "InStock"
     },
     {
-      "id": 7,
-      "name": "Kaos Love Peace Joy",
-      "type": "Kaos",
-      "gender": "Perempuan",
+      "id": "new-fresh-market",
+      "name": "FRESH MARKET",
+      "type": "Graphic tee",
+      "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Love Peach, potongan oversize boxy",
-      "desc": "Motif Love, Peace, Joy menggabungkan ilustrasi kecil dalam komposisi yang hangat dan playful. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/lovepeach-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif FRESH MARKET, warna hitam",
+      "desc": "Graphic tee anak motif FRESH MARKET, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/fresh-market-hitam-8530f9db9f-1600.webp",
       "images": [
-        "/PRODUCT/lovepeach-1.jpg",
-        "/PRODUCT/lovepeach-2.jpg"
+        "/images/products/2026-11/fresh-market-hitam-8530f9db9f-1600.webp",
+        "/images/products/2026-11/fresh-market-putih-451b0a0d93-1600.webp",
+        "/images/products/2026-11/fresh-market-pemakaian-ba6e1597b1-1600.webp"
       ],
       "sizes": [
         "S",
@@ -275,38 +356,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        5,
-        6,
-        7,
-        8
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/fresh-market-hitam-8530f9db9f-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/fresh-market-putih-451b0a0d93-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 7,
       "photoOnly": false,
       "catalogPreview": false,
-      "affiliateCommissionPercent": 12,
       "availability": "InStock"
     },
     {
-      "id": 8,
-      "name": "Kaos Hello World",
-      "type": "Kaos",
+      "id": "new-future-girl",
+      "name": "FUTURE GIRL",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Hello World, potongan oversize boxy",
-      "desc": "Sapaan Hello World dalam grafis bernuansa biru, untuk rasa penasaran yang terus tumbuh. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/helloworld-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif FUTURE GIRL, warna hitam",
+      "desc": "Graphic tee anak motif FUTURE GIRL, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/future-girl-hitam-bec365afc7-1600.webp",
       "images": [
-        "/PRODUCT/helloworld-1.jpg",
-        "/PRODUCT/helloworld-2.jpg"
+        "/images/products/2026-11/future-girl-hitam-bec365afc7-1600.webp",
+        "/images/products/2026-11/future-girl-putih-c475c23ff5-1600.webp",
+        "/images/products/2026-11/future-girl-pemakaian-c0abc37dea-1600.webp"
       ],
       "sizes": [
         "S",
@@ -315,40 +411,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/future-girl-hitam-bec365afc7-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/future-girl-putih-c475c23ff5-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 8,
       "photoOnly": false,
       "catalogPreview": false,
-      "affiliateCommissionPercent": 12,
       "availability": "InStock"
     },
     {
-      "id": "photo-avocado",
-      "name": "Kaos Avocado",
-      "type": "Kaos",
+      "id": "new-girl",
+      "name": "GIRL",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Avocado, potongan oversize boxy",
-      "desc": "Ilustrasi alpukat berpadu dengan huruf hijau dan merah yang mencuri perhatian pada kaos putih. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/avocado-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif GIRL, warna hitam",
+      "desc": "Graphic tee anak motif GIRL, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/girl-hitam-edde569513-1600.webp",
       "images": [
-        "/PRODUCT/avocado-1.jpg",
-        "/PRODUCT/avocado-2.jpg"
+        "/images/products/2026-11/girl-hitam-edde569513-1600.webp",
+        "/images/products/2026-11/girl-putih-c1a069910f-1600.webp",
+        "/images/products/2026-11/girl-pemakaian-327c978157-1600.webp"
       ],
       "sizes": [
         "S",
@@ -357,43 +466,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/girl-hitam-edde569513-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/girl-putih-c1a069910f-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 9,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "photo-cherryharvest",
-      "name": "Kaos Cherry Harvest",
-      "type": "Kaos",
+      "id": "new-happy-kids-world",
+      "name": "HAPPY KIDS WORLD",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Cherry Harvest, potongan oversize boxy",
-      "desc": "Cerita panen buah dengan sentuhan merah dan hijau menghadirkan tampilan segar yang playful. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/cherryharvest-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif HAPPY KIDS WORLD, warna hitam",
+      "desc": "Graphic tee anak motif HAPPY KIDS WORLD, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/happy-kids-world-hitam-40db148cbc-1600.webp",
       "images": [
-        "/PRODUCT/cherryharvest-1.jpg",
-        "/PRODUCT/cherryharvest-2.jpg"
+        "/images/products/2026-11/happy-kids-world-hitam-40db148cbc-1600.webp",
+        "/images/products/2026-11/happy-kids-world-putih-afb437afe0-1600.webp",
+        "/images/products/2026-11/happy-kids-world-pemakaian-915f60cf29-1600.webp"
       ],
       "sizes": [
         "S",
@@ -402,43 +521,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/happy-kids-world-hitam-40db148cbc-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/happy-kids-world-putih-afb437afe0-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 10,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "photo-goodlife",
-      "name": "Kaos Good Life",
-      "type": "Kaos",
+      "id": "new-happy-little-girl",
+      "name": "HAPPY LITTLE GIRL",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Good Life, potongan oversize boxy",
-      "desc": "Ilustrasi kecil dan nuansa lembut merayakan hal-hal sederhana yang membuat hari terasa menyenangkan. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/goodlife-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif HAPPY LITTLE GIRL, warna hitam",
+      "desc": "Graphic tee anak motif HAPPY LITTLE GIRL, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/happy-little-girl-hitam-a0f288ff8f-1600.webp",
       "images": [
-        "/PRODUCT/goodlife-1.jpg",
-        "/PRODUCT/goodlife-2.jpg"
+        "/images/products/2026-11/happy-little-girl-hitam-a0f288ff8f-1600.webp",
+        "/images/products/2026-11/happy-little-girl-putih-bc314535f1-1600.webp",
+        "/images/products/2026-11/happy-little-girl-pemakaian-89e668cf19-1600.webp"
       ],
       "sizes": [
         "S",
@@ -447,43 +576,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/happy-little-girl-hitam-a0f288ff8f-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/happy-little-girl-putih-bc314535f1-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 11,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "photo-candy",
-      "name": "Kaos Candy",
-      "type": "Kaos",
+      "id": "new-hello-world",
+      "name": "HELLO WORLD",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Candy, potongan oversize boxy",
-      "desc": "Pita merah muda menjadi pusat perhatian, memberi sentuhan manis pada potongan oversize. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/candy-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif HELLO WORLD, warna hitam",
+      "desc": "Graphic tee anak motif HELLO WORLD, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/hello-world-hitam-33f5f4cb6b-1600.webp",
       "images": [
-        "/PRODUCT/candy-1.jpg",
-        "/PRODUCT/candy-2.jpg"
+        "/images/products/2026-11/hello-world-hitam-33f5f4cb6b-1600.webp",
+        "/images/products/2026-11/hello-world-putih-97d4cee7f5-1600.webp",
+        "/images/products/2026-11/hello-world-pemakaian-af68ea02b1-1600.webp"
       ],
       "sizes": [
         "S",
@@ -492,43 +631,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/hello-world-hitam-33f5f4cb6b-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/hello-world-putih-97d4cee7f5-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 12,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-breakfast",
-      "name": "Kaos Breakfast Club",
-      "type": "Kaos",
+      "id": "new-high-level",
+      "name": "HIGH LEVEL",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Breakfast Club, potongan oversize boxy",
-      "desc": "Grafis sarapan bernuansa biru menjadikan momen pagi sebagai inspirasi gaya si kecil. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/breakfast-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif HIGH LEVEL, warna hitam",
+      "desc": "Graphic tee anak motif HIGH LEVEL, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/high-level-hitam-b15b4fbaf1-1600.webp",
       "images": [
-        "/PRODUCT/breakfast-1.jpg",
-        "/PRODUCT/breakfast-2.jpg"
+        "/images/products/2026-11/high-level-hitam-b15b4fbaf1-1600.webp",
+        "/images/products/2026-11/high-level-putih-b1db6dfad7-1600.webp",
+        "/images/products/2026-11/high-level-pemakaian-e7a61464cc-1600.webp"
       ],
       "sizes": [
         "S",
@@ -537,43 +686,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/high-level-hitam-b15b4fbaf1-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/high-level-putih-b1db6dfad7-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 13,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-breakfasttime",
-      "name": "Kaos Breakfast Time",
-      "type": "Kaos",
+      "id": "new-joy-juice",
+      "name": "JOY JUICE",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Breakfast Time, potongan oversize boxy",
-      "desc": "Warna biru dan oranye berpadu dalam grafis Breakfast Time yang cerah dan ekspresif. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/breakfasttime-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif JOY JUICE, warna hitam",
+      "desc": "Graphic tee anak motif JOY JUICE, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/joy-juice-hitam-2e31a541dc-1600.webp",
       "images": [
-        "/PRODUCT/breakfasttime-1.jpg",
-        "/PRODUCT/breakfasttime-2.jpg"
+        "/images/products/2026-11/joy-juice-hitam-2e31a541dc-1600.webp",
+        "/images/products/2026-11/joy-juice-putih-dd6c062b29-1600.webp",
+        "/images/products/2026-11/joy-juice-pemakaian-49dffb3b52-1600.webp"
       ],
       "sizes": [
         "S",
@@ -582,43 +741,52 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/joy-juice-hitam-2e31a541dc-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/joy-juice-putih-dd6c062b29-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 14,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-catchu",
-      "name": "Kaos Catch U",
-      "type": "Kaos",
+      "id": "new-kai-dps",
+      "name": "KAI DPS",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Catch U, potongan oversize boxy",
-      "desc": "Tipografi Catch U dan ilustrasi berwarna lembut memberi karakter yang ringan pada kaos putih. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/catchu-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif KAI DPS, warna hitam",
+      "desc": "Graphic tee anak motif KAI DPS, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/kai-dps-hitam-4a94f7e5d7-1600.webp",
       "images": [
-        "/PRODUCT/catchu-1.jpg",
-        "/PRODUCT/catchu-2.jpg"
+        "/images/products/2026-11/kai-dps-hitam-4a94f7e5d7-1600.webp",
+        "/images/products/2026-11/kai-dps-pemakaian-0670cadbc6-1600.webp"
       ],
       "sizes": [
         "S",
@@ -627,43 +795,47 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/kai-dps-hitam-4a94f7e5d7-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 15,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-cerealkai",
-      "name": "Kaos Cereal Kai",
-      "type": "Kaos",
+      "id": "new-kainora-cereal",
+      "name": "KAINORA CEREAL",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Cereal Kai, potongan oversize boxy",
-      "desc": "Grafis Cereal Kai dengan aksen hijau membawa suasana pagi yang santai dan menyenangkan. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/cerealkai-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif KAINORA CEREAL, warna hitam",
+      "desc": "Graphic tee anak motif KAINORA CEREAL, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/kainora-cereal-hitam-4348c75cff-1600.webp",
       "images": [
-        "/PRODUCT/cerealkai-1.jpg",
-        "/PRODUCT/cerealkai-2.jpg"
+        "/images/products/2026-11/kainora-cereal-hitam-4348c75cff-1600.webp",
+        "/images/products/2026-11/kainora-cereal-putih-1bd0e95bb6-1600.webp",
+        "/images/products/2026-11/kainora-cereal-pemakaian-b6ede223d7-1600.webp"
       ],
       "sizes": [
         "S",
@@ -672,43 +844,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/kainora-cereal-hitam-4348c75cff-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/kainora-cereal-putih-1bd0e95bb6-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 16,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-cherryblos",
-      "name": "Kaos Cherry Blossom",
-      "type": "Kaos",
+      "id": "new-kainora-egg",
+      "name": "KAINORA EGG",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Cherry Blossom, potongan oversize boxy",
-      "desc": "Buah ceri merah dan lettering Cherry Blossoms menghadirkan sentuhan klasik yang tetap playful. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/cherryblos-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif KAINORA EGG, warna hitam",
+      "desc": "Graphic tee anak motif KAINORA EGG, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/kainora-egg-hitam-5943294b7c-1600.webp",
       "images": [
-        "/PRODUCT/cherryblos-1.jpg",
-        "/PRODUCT/cherryblos-2.jpg"
+        "/images/products/2026-11/kainora-egg-hitam-5943294b7c-1600.webp",
+        "/images/products/2026-11/kainora-egg-putih-22827e4c39-1600.webp",
+        "/images/products/2026-11/kainora-egg-pemakaian-24bf6e1144-1600.webp"
       ],
       "sizes": [
         "S",
@@ -717,43 +899,52 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/kainora-egg-hitam-5943294b7c-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/kainora-egg-putih-22827e4c39-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 17,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-cherrypick",
-      "name": "Kaos Cherry Pick",
-      "type": "Kaos",
+      "id": "new-kainora-toys",
+      "name": "KAINORA TOYS",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Cherry Pick, potongan oversize boxy",
-      "desc": "Komposisi merah muda, hijau, dan ilustrasi buah memberi warna segar pada motif Cherry Pick. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/cherrypick-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif KAINORA TOYS, warna hitam",
+      "desc": "Graphic tee anak motif KAINORA TOYS, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/kainora-toys-hitam-a4130669ed-1600.webp",
       "images": [
-        "/PRODUCT/cherrypick-1.jpg",
-        "/PRODUCT/cherrypick-2.jpg"
+        "/images/products/2026-11/kainora-toys-hitam-a4130669ed-1600.webp",
+        "/images/products/2026-11/kainora-toys-pemakaian-f6aa868a1d-1600.webp"
       ],
       "sizes": [
         "S",
@@ -762,43 +953,47 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/kainora-toys-hitam-a4130669ed-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 18,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-dragonfruit",
-      "name": "Kaos Dragon Fruit",
-      "type": "Kaos",
+      "id": "new-keychain",
+      "name": "KEYCHAIN",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Dragon Fruit, potongan oversize boxy",
-      "desc": "Buah naga dengan aksen merah muda dan hijau tampil kontras di atas kaos putih. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/dragonfruit-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif KEYCHAIN, warna hitam",
+      "desc": "Graphic tee anak motif KEYCHAIN, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/keychain-hitam-dfda5ee1fe-1600.webp",
       "images": [
-        "/PRODUCT/dragonfruit-1.jpg",
-        "/PRODUCT/dragonfruit-2.jpg"
+        "/images/products/2026-11/keychain-hitam-dfda5ee1fe-1600.webp",
+        "/images/products/2026-11/keychain-putih-6244576c28-1600.webp",
+        "/images/products/2026-11/keychain-pemakaian-43ce1079f0-1600.webp"
       ],
       "sizes": [
         "S",
@@ -807,43 +1002,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/keychain-hitam-dfda5ee1fe-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/keychain-putih-6244576c28-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 19,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-farmermarket",
-      "name": "Kaos Farmers Market",
-      "type": "Kaos",
+      "id": "new-kind-tee",
+      "name": "KIND TEE",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Farmers Market, potongan oversize boxy",
-      "desc": "Ilustrasi hasil kebun dan nuansa hijau merangkum cerita kecil dari suasana pasar. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/farmermarket-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif KIND TEE, warna hitam",
+      "desc": "Graphic tee anak motif KIND TEE, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/kind-tee-hitam-0330ef1b92-1600.webp",
       "images": [
-        "/PRODUCT/farmermarket-1.jpg",
-        "/PRODUCT/farmermarket-2.jpg"
+        "/images/products/2026-11/kind-tee-hitam-0330ef1b92-1600.webp",
+        "/images/products/2026-11/kind-tee-putih-23e35f6081-1600.webp",
+        "/images/products/2026-11/kind-tee-pemakaian-5daad70d56-1600.webp"
       ],
       "sizes": [
         "S",
@@ -852,43 +1057,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/kind-tee-hitam-0330ef1b92-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/kind-tee-putih-23e35f6081-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 20,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-fruitbasket",
-      "name": "Kaos Fruit Basket",
-      "type": "Kaos",
+      "id": "new-little-joyfull",
+      "name": "LITTLE JOYFULL",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Fruit Basket, potongan oversize boxy",
-      "desc": "Warna-warni buah dalam komposisi yang ceria membuat motif Fruit Basket mudah menjadi pusat perhatian. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/fruitbasket-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif LITTLE JOYFULL, warna hitam",
+      "desc": "Graphic tee anak motif LITTLE JOYFULL, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/little-joyfull-hitam-640568356a-1600.webp",
       "images": [
-        "/PRODUCT/fruitbasket-1.jpg",
-        "/PRODUCT/fruitbasket-2.jpg"
+        "/images/products/2026-11/little-joyfull-hitam-640568356a-1600.webp",
+        "/images/products/2026-11/little-joyfull-putih-a7615ef6a8-1600.webp",
+        "/images/products/2026-11/little-joyfull-pemakaian-bca3fbc394-1600.webp"
       ],
       "sizes": [
         "S",
@@ -897,43 +1112,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/little-joyfull-hitam-640568356a-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/little-joyfull-putih-a7615ef6a8-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 21,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-fruitofspirit",
-      "name": "Kaos Fruit of the Spirit",
-      "type": "Kaos",
+      "id": "new-little-love-language",
+      "name": "LITTLE LOVE LANGUAGE",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Fruit of the Spirit, potongan oversize boxy",
-      "desc": "Tipografi penuh warna dan ilustrasi buah membuat pesan Fruit of the Spirit terasa ekspresif. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/fruitofspirit-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif LITTLE LOVE LANGUAGE, warna hitam",
+      "desc": "Graphic tee anak motif LITTLE LOVE LANGUAGE, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/little-love-language-hitam-a2f0c43073-1600.webp",
       "images": [
-        "/PRODUCT/fruitofspirit-1.jpg",
-        "/PRODUCT/fruitofspirit-2.jpg"
+        "/images/products/2026-11/little-love-language-hitam-a2f0c43073-1600.webp",
+        "/images/products/2026-11/little-love-language-putih-50f021b31c-1600.webp",
+        "/images/products/2026-11/little-love-language-pemakaian-4b579147fb-1600.webp"
       ],
       "sizes": [
         "S",
@@ -942,43 +1167,52 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/little-love-language-hitam-a2f0c43073-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/little-love-language-putih-50f021b31c-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 22,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-fruitspirit",
-      "name": "Kaos Fruit Spirit",
-      "type": "Kaos",
+      "id": "new-little-mona",
+      "name": "LITTLE MONA",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Fruit Spirit, potongan oversize boxy",
-      "desc": "Palet lembut dan ilustrasi buah memberi interpretasi ringan pada motif Fruit Spirit. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/fruitspirit-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif LITTLE MONA, warna hitam",
+      "desc": "Graphic tee anak motif LITTLE MONA, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/little-mona-hitam-edcaa4ef9a-1600.webp",
       "images": [
-        "/PRODUCT/fruitspirit-1.jpg",
-        "/PRODUCT/fruitspirit-2.jpg"
+        "/images/products/2026-11/little-mona-hitam-edcaa4ef9a-1600.webp",
+        "/images/products/2026-11/little-mona-pemakaian-99493fbf77-1600.webp"
       ],
       "sizes": [
         "S",
@@ -987,43 +1221,47 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/little-mona-hitam-edcaa4ef9a-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 23,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-kaimarket",
-      "name": "Kaos Kai Market",
-      "type": "Kaos",
+      "id": "new-love",
+      "name": "LOVE",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Kai Market, potongan oversize boxy",
-      "desc": "Grafis Kai Market bergaya poster memberi banyak detail kecil untuk dilihat dari dekat. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/kaimarket-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif LOVE, warna hitam",
+      "desc": "Graphic tee anak motif LOVE, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/love-hitam-a172f61150-1600.webp",
       "images": [
-        "/PRODUCT/kaimarket-1.jpg",
-        "/PRODUCT/kaimarket-2.jpg"
+        "/images/products/2026-11/love-hitam-a172f61150-1600.webp",
+        "/images/products/2026-11/love-putih-b665641db8-1600.webp",
+        "/images/products/2026-11/love-pemakaian-1bbe460c0d-1600.webp"
       ],
       "sizes": [
         "S",
@@ -1032,43 +1270,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/love-hitam-a172f61150-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/love-putih-b665641db8-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 24,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-kidsdinner",
-      "name": "Kaos Kids Dinner",
-      "type": "Kaos",
+      "id": "new-mom-heals",
+      "name": "MOM HEALS",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Kids Dinner, potongan oversize boxy",
-      "desc": "Burger, kentang goreng, dan lettering Kids Dinner menghadirkan suasana makan yang seru. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/kidsdinner-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif MOM HEALS, warna hitam",
+      "desc": "Graphic tee anak motif MOM HEALS, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/mom-heals-hitam-3058c87281-1600.webp",
       "images": [
-        "/PRODUCT/kidsdinner-1.jpg",
-        "/PRODUCT/kidsdinner-2.jpg"
+        "/images/products/2026-11/mom-heals-hitam-3058c87281-1600.webp",
+        "/images/products/2026-11/mom-heals-putih-0ee50d8859-1600.webp",
+        "/images/products/2026-11/mom-heals-pemakaian-8b21a07b74-1600.webp"
       ],
       "sizes": [
         "S",
@@ -1077,43 +1325,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/mom-heals-hitam-3058c87281-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/mom-heals-putih-0ee50d8859-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 25,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-lemarche",
-      "name": "Kaos Le Marché",
-      "type": "Kaos",
+      "id": "new-mystic-mind",
+      "name": "MYSTIC MIND",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Le Marché, potongan oversize boxy",
-      "desc": "Sentuhan merah dan biru berpadu dalam grafis Le Marché yang terinspirasi suasana pasar. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/lemarche-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif MYSTIC MIND, warna hitam",
+      "desc": "Graphic tee anak motif MYSTIC MIND, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/mystic-mind-hitam-dadeeea731-1600.webp",
       "images": [
-        "/PRODUCT/lemarche-1.jpg",
-        "/PRODUCT/lemarche-2.jpg"
+        "/images/products/2026-11/mystic-mind-hitam-dadeeea731-1600.webp",
+        "/images/products/2026-11/mystic-mind-putih-a35037f3c5-1600.webp",
+        "/images/products/2026-11/mystic-mind-pemakaian-26fc1f7831-1600.webp"
       ],
       "sizes": [
         "S",
@@ -1122,43 +1380,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/mystic-mind-hitam-dadeeea731-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/mystic-mind-putih-a35037f3c5-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 26,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-lemon",
-      "name": "Kaos Lemon",
-      "type": "Kaos",
+      "id": "new-one-sweet-world",
+      "name": "ONE SWEET WORLD",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Lemon, potongan oversize boxy",
-      "desc": "Lemon kuning dan lettering merah muda menciptakan pasangan warna yang segar di atas putih. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/lemon-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif ONE SWEET WORLD, warna hitam",
+      "desc": "Graphic tee anak motif ONE SWEET WORLD, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/one-sweet-world-hitam-88c3e91ffb-1600.webp",
       "images": [
-        "/PRODUCT/lemon-1.jpg",
-        "/PRODUCT/lemon-2.jpg"
+        "/images/products/2026-11/one-sweet-world-hitam-88c3e91ffb-1600.webp",
+        "/images/products/2026-11/one-sweet-world-putih-53620c1b3c-1600.webp",
+        "/images/products/2026-11/one-sweet-world-pemakaian-0c5ec2d00f-1600.webp"
       ],
       "sizes": [
         "S",
@@ -1167,43 +1435,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/one-sweet-world-hitam-88c3e91ffb-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/one-sweet-world-putih-53620c1b3c-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 27,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-mangkok",
-      "name": "Kaos Mangkok",
-      "type": "Kaos",
+      "id": "new-slide-of-a-good-day",
+      "name": "SLIDE OF A GOOD DAY",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Mangkok, potongan oversize boxy",
-      "desc": "Ilustrasi semangkuk makanan penuh warna menjadi cerita utama pada motif Mangkok. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/mangkok-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif SLIDE OF A GOOD DAY, warna hitam",
+      "desc": "Graphic tee anak motif SLIDE OF A GOOD DAY, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/slide-of-a-good-day-hitam-7f0b4a384e-1600.webp",
       "images": [
-        "/PRODUCT/mangkok-1.jpg",
-        "/PRODUCT/mangkok-2.jpg"
+        "/images/products/2026-11/slide-of-a-good-day-hitam-7f0b4a384e-1600.webp",
+        "/images/products/2026-11/slide-of-a-good-day-putih-92c68ae172-1600.webp",
+        "/images/products/2026-11/slide-of-a-good-day-pemakaian-1c66a199b8-1600.webp"
       ],
       "sizes": [
         "S",
@@ -1212,43 +1490,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/slide-of-a-good-day-hitam-7f0b4a384e-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/slide-of-a-good-day-putih-92c68ae172-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 28,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-orangeluch",
-      "name": "Kaos Orange Lunch",
-      "type": "Kaos",
+      "id": "new-super-cool-kids",
+      "name": "SUPER COOL KIDS",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Orange Lunch, potongan oversize boxy",
-      "desc": "Warna jeruk yang hangat bertemu aksen biru dalam grafis Orange Lunch yang berani. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/orangeluch-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif SUPER COOL KIDS, warna hitam",
+      "desc": "Graphic tee anak motif SUPER COOL KIDS, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/super-cool-kids-hitam-05ef1634d3-1600.webp",
       "images": [
-        "/PRODUCT/orangeluch-1.jpg",
-        "/PRODUCT/orangeluch-2.jpg"
+        "/images/products/2026-11/super-cool-kids-hitam-05ef1634d3-1600.webp",
+        "/images/products/2026-11/super-cool-kids-putih-807bc3e1b6-1600.webp",
+        "/images/products/2026-11/super-cool-kids-pemakaian-e39cdd31ef-1600.webp"
       ],
       "sizes": [
         "S",
@@ -1257,43 +1545,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/super-cool-kids-hitam-05ef1634d3-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/super-cool-kids-putih-807bc3e1b6-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 29,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-pancakemorning",
-      "name": "Kaos Pancake Morning",
-      "type": "Kaos",
+      "id": "new-superhero-toy-machine",
+      "name": "SUPERHERO TOY MACHINE",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Pancake Morning, potongan oversize boxy",
-      "desc": "Cerita pancake dan suasana pagi hadir lewat grafis bernuansa lembut yang hangat. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/pancakemorning-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif SUPERHERO TOY MACHINE, warna hitam",
+      "desc": "Graphic tee anak motif SUPERHERO TOY MACHINE, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/superhero-toy-machine-hitam-cfbfbc6e5c-1600.webp",
       "images": [
-        "/PRODUCT/pancakemorning-1.jpg",
-        "/PRODUCT/pancakemorning-2.jpg"
+        "/images/products/2026-11/superhero-toy-machine-hitam-cfbfbc6e5c-1600.webp",
+        "/images/products/2026-11/superhero-toy-machine-putih-5961975afa-1600.webp",
+        "/images/products/2026-11/superhero-toy-machine-pemakaian-731a8da079-1600.webp"
       ],
       "sizes": [
         "S",
@@ -1302,43 +1600,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/superhero-toy-machine-hitam-cfbfbc6e5c-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/superhero-toy-machine-putih-5961975afa-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 30,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-picnictime",
-      "name": "Kaos Picnic Time",
-      "type": "Kaos",
+      "id": "new-unleash-the-power",
+      "name": "UNLEASH THE POWER",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Picnic Time, potongan oversize boxy",
-      "desc": "Ilustrasi dan komposisi warna segar membawa suasana piknik ke gaya sehari-hari. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/picnictime-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif UNLEASH THE POWER, warna hitam",
+      "desc": "Graphic tee anak motif UNLEASH THE POWER, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/unleash-the-power-hitam-67e54fcf04-1600.webp",
       "images": [
-        "/PRODUCT/picnictime-1.jpg",
-        "/PRODUCT/picnictime-2.jpg"
+        "/images/products/2026-11/unleash-the-power-hitam-67e54fcf04-1600.webp",
+        "/images/products/2026-11/unleash-the-power-putih-a66d2897a7-1600.webp",
+        "/images/products/2026-11/unleash-the-power-pemakaian-7aa565ea1f-1600.webp"
       ],
       "sizes": [
         "S",
@@ -1347,43 +1655,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/unleash-the-power-hitam-67e54fcf04-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/unleash-the-power-putih-a66d2897a7-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 31,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-playground",
-      "name": "Kaos Playground",
-      "type": "Kaos",
+      "id": "new-waffle-kainora",
+      "name": "WAFFLE KAINORA",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Playground, potongan oversize boxy",
-      "desc": "Grafis Playground mengundang rasa penasaran lewat detail ilustrasi dan nuansa warna yang ringan. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/playground-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif WAFFLE KAINORA, warna hitam",
+      "desc": "Graphic tee anak motif WAFFLE KAINORA, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/waffle-kainora-hitam-35b4b64693-1600.webp",
       "images": [
-        "/PRODUCT/playground-1.jpg",
-        "/PRODUCT/playground-2.jpg"
+        "/images/products/2026-11/waffle-kainora-hitam-35b4b64693-1600.webp",
+        "/images/products/2026-11/waffle-kainora-putih-ff18bf66ef-1600.webp",
+        "/images/products/2026-11/waffle-kainora-pemakaian-e447fc3389-1600.webp"
       ],
       "sizes": [
         "S",
@@ -1392,43 +1710,53 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/waffle-kainora-hitam-35b4b64693-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/waffle-kainora-putih-ff18bf66ef-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 32,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     },
     {
-      "id": "motif-raspberry",
-      "name": "Kaos Raspberry",
-      "type": "Kaos",
+      "id": "new-wild-animals",
+      "name": "WILD ANIMALS",
+      "type": "Graphic tee",
       "gender": "Unisex",
       "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
+      "warna": "Hitam / Putih",
+      "model": "Oversize",
+      "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Raspberry, potongan oversize boxy",
-      "desc": "Motif buah bernuansa merah menghadirkan sentuhan manis pada siluet kaos putih yang luas. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/raspberry-1.jpg",
+      "alt": "Graphic tee oversize anak Kainora Kids motif WILD ANIMALS, warna hitam",
+      "desc": "Graphic tee anak motif WILD ANIMALS, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "img": "/images/products/2026-11/wild-animals-hitam-6bb8c66d74-1600.webp",
       "images": [
-        "/PRODUCT/raspberry-1.jpg",
-        "/PRODUCT/raspberry-2.jpg"
+        "/images/products/2026-11/wild-animals-hitam-6bb8c66d74-1600.webp",
+        "/images/products/2026-11/wild-animals-putih-5d492551ea-1600.webp",
+        "/images/products/2026-11/wild-animals-pemakaian-3d683a8d3f-1600.webp"
       ],
       "sizes": [
         "S",
@@ -1437,474 +1765,56 @@
         "XL",
         "XXL"
       ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "sizePrices": {
+        "S": 89000,
+        "M": 89000,
+        "L": 89000,
+        "XL": 94000,
+        "XXL": 94000
+      },
       "colors": [
-        "#FAF9F6"
+        "#111111",
+        "#FFFFFF"
       ],
-      "price": 69000,
+      "colorVariants": [
+        {
+          "name": "Hitam",
+          "hex": "#111111",
+          "image": "/images/products/2026-11/wild-animals-hitam-6bb8c66d74-1600.webp"
+        },
+        {
+          "name": "Putih",
+          "hex": "#FFFFFF",
+          "image": "/images/products/2026-11/wild-animals-putih-5d492551ea-1600.webp"
+        }
+      ],
+      "ages": [],
+      "price": 89000,
       "order": 33,
-      "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
-    },
-    {
-      "id": "motif-raspberrytart",
-      "name": "Kaos Raspberry Tart",
-      "type": "Kaos",
-      "gender": "Unisex",
-      "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
-      "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Raspberry Tart, potongan oversize boxy",
-      "desc": "Grafis Raspberry Tart merangkai cerita buah dan kudapan dengan lettering bernuansa merah. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/raspberrytart-1.jpg",
-      "images": [
-        "/PRODUCT/raspberrytart-1.jpg",
-        "/PRODUCT/raspberrytart-2.jpg"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "colors": [
-        "#FAF9F6"
-      ],
-      "price": 69000,
-      "order": 34,
-      "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
-    },
-    {
-      "id": "motif-soleil",
-      "name": "Kaos Soleil",
-      "type": "Kaos",
-      "gender": "Unisex",
-      "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
-      "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Soleil, potongan oversize boxy",
-      "desc": "Matahari dan warna cerah memberi karakter berenergi pada motif Soleil. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/soleil-1.jpg",
-      "images": [
-        "/PRODUCT/soleil-1.jpg",
-        "/PRODUCT/soleil-2.jpg"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "colors": [
-        "#FAF9F6"
-      ],
-      "price": 69000,
-      "order": 35,
-      "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
-    },
-    {
-      "id": "motif-speedchamp",
-      "name": "Kaos Speed Champ",
-      "type": "Kaos",
-      "gender": "Unisex",
-      "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
-      "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Speed Champ, potongan oversize boxy",
-      "desc": "Mobil balap, aksen merah dan biru, serta grafis Speed Champ membawa energi lintasan ke gaya si kecil. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/speedchamp-1.jpg",
-      "images": [
-        "/PRODUCT/speedchamp-1.jpg",
-        "/PRODUCT/speedchamp-2.jpg"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "colors": [
-        "#FAF9F6"
-      ],
-      "price": 69000,
-      "order": 36,
-      "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
-    },
-    {
-      "id": "motif-strawdream",
-      "name": "Kaos Strawberry Dream",
-      "type": "Kaos",
-      "gender": "Unisex",
-      "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
-      "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Strawberry Dream, potongan oversize boxy",
-      "desc": "Ilustrasi stroberi merah menjadi pusat cerita pada motif Strawberry Dream yang playful. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/strawdream-1.jpg",
-      "images": [
-        "/PRODUCT/strawdream-1.jpg",
-        "/PRODUCT/strawdream-2.jpg"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "colors": [
-        "#FAF9F6"
-      ],
-      "price": 69000,
-      "order": 37,
-      "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
-    },
-    {
-      "id": "motif-summer",
-      "name": "Kaos Summer",
-      "type": "Kaos",
-      "gender": "Unisex",
-      "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
-      "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Summer, potongan oversize boxy",
-      "desc": "Semangka merah dan hijau menghidupkan suasana musim panas pada motif Summer. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/summer-1.jpg",
-      "images": [
-        "/PRODUCT/summer-1.jpg",
-        "/PRODUCT/summer-2.jpg"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "colors": [
-        "#FAF9F6"
-      ],
-      "price": 69000,
-      "order": 38,
-      "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
-    },
-    {
-      "id": "motif-sunbalon",
-      "name": "Kaos Sun Balloon",
-      "type": "Kaos",
-      "gender": "Unisex",
-      "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
-      "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Sun Balloon, potongan oversize boxy",
-      "desc": "Pita dan nuansa pastel memberi sentuhan lembut dan ceria pada motif Sun Balloon. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/sunbalon-1.jpg",
-      "images": [
-        "/PRODUCT/sunbalon-1.jpg",
-        "/PRODUCT/sunbalon-2.jpg"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "colors": [
-        "#FAF9F6"
-      ],
-      "price": 69000,
-      "order": 39,
-      "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
-    },
-    {
-      "id": "motif-sweetscoops",
-      "name": "Kaos Sweet Scoops",
-      "type": "Kaos",
-      "gender": "Unisex",
-      "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
-      "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Sweet Scoops, potongan oversize boxy",
-      "desc": "Grafis es krim dan lettering Sweet Scoops membawa rasa manis ke tampilan sehari-hari. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/sweetscoops-1.jpg",
-      "images": [
-        "/PRODUCT/sweetscoops-1.jpg",
-        "/PRODUCT/sweetscoops-2.jpg"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "colors": [
-        "#FAF9F6"
-      ],
-      "price": 69000,
-      "order": 40,
-      "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
-    },
-    {
-      "id": "motif-thepicnic",
-      "name": "Kaos The Picnic",
-      "type": "Kaos",
-      "gender": "Unisex",
-      "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
-      "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif The Picnic, potongan oversize boxy",
-      "desc": "Pola kotak dan ilustrasi buah menghadirkan suasana piknik dalam palet merah muda dan hijau. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/thepicnic-1.jpg",
-      "images": [
-        "/PRODUCT/thepicnic-1.jpg",
-        "/PRODUCT/thepicnic-2.jpg"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "colors": [
-        "#FAF9F6"
-      ],
-      "price": 69000,
-      "order": 41,
-      "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
-    },
-    {
-      "id": "motif-tomatoes",
-      "name": "Kaos Tomatoes",
-      "type": "Kaos",
-      "gender": "Unisex",
-      "label": "",
-      "warna": "Putih",
-      "model": "Oversize Boxy",
-      "bahan": "100% Cotton / Heavyweight",
-      "jahitan": "",
-      "alt": "Kaos putih Kainora Kids motif Tomatoes, potongan oversize boxy",
-      "desc": "Tomat merah dan aksen hijau menghadirkan grafis yang segar, sederhana, dan mudah dikenali. Kaos putih oversize boxy berbahan 100% cotton / heavyweight, harga Rp69.000. Lihat foto studio dan referensi pemakaian bila tersedia. Pilih ukuran dengan bantuan size chart sebelum memesan.",
-      "img": "/PRODUCT/tomatoes-1.jpg",
-      "images": [
-        "/PRODUCT/tomatoes-1.jpg",
-        "/PRODUCT/tomatoes-2.jpg"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
-      "ages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "colors": [
-        "#FAF9F6"
-      ],
-      "price": 69000,
-      "order": 42,
       "photoOnly": false,
       "catalogPreview": false,
       "availability": "InStock"
     }
   ],
   "highlights": [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "photo-avocado",
-    "photo-cherryharvest",
-    "photo-goodlife",
-    "photo-candy"
+    "new-born-to-lead",
+    "new-boys",
+    "new-candy-kainora",
+    "new-creativity",
+    "new-dad-fix-everything",
+    "new-dinorex",
+    "new-fresh-market",
+    "new-future-girl",
+    "new-girl",
+    "new-happy-kids-world",
+    "new-happy-little-girl",
+    "new-hello-world"
   ],
   "garments": [
     {
-      "id": "park-1",
-      "name": "Kainora Park",
-      "description": "Little adventures. Big appetite for play.",
-      "color": "white",
-      "initialView": "back",
-      "frontLayout": "chest",
-      "front": "/models/kainora/kainora-park-front.webp",
-      "back": "/models/kainora/kainora-park-back.webp",
-      "productId": "4"
-    },
-    {
-      "id": "black-dinorex",
-      "name": "DinoRex",
-      "description": "Pixel adventure. Logo kecil di depan, cerita besar di belakang.",
-      "color": "black",
-      "initialView": "back",
-      "frontLayout": "badge",
-      "front": "/models/kainora/dinorex-front.webp",
-      "back": "/models/kainora/dinorex-back.webp",
-      "productId": ""
-    },
-    {
       "id": "black-candy",
       "name": "Candy",
-      "description": "Sweet little statement. Sablon besar di depan, belakang polos.",
+      "description": "Sablon besar di bagian depan, bagian belakang polos.",
       "color": "black",
       "initialView": "front",
       "frontLayout": "large",
@@ -1915,7 +1825,7 @@
     {
       "id": "black-kainora-fresh",
       "name": "Kainora Fresh",
-      "description": "Fresh colours. Koleksi grafis buah dengan badge kecil di dada.",
+      "description": "Grafis buah dengan logo kecil di bagian dada.",
       "color": "black",
       "initialView": "back",
       "frontLayout": "badge",
@@ -1926,7 +1836,7 @@
     {
       "id": "black-icecream",
       "name": "Icecream",
-      "description": "A scoop of personality. Grafis di depan, belakang polos.",
+      "description": "Grafis es krim di bagian depan, bagian belakang polos.",
       "color": "black",
       "initialView": "front",
       "frontLayout": "large",
@@ -1935,9 +1845,64 @@
       "productId": ""
     },
     {
+      "id": "black-candy-slot-8",
+      "name": "Candy",
+      "description": "Sablon besar di bagian depan, bagian belakang polos.",
+      "color": "black",
+      "initialView": "front",
+      "frontLayout": "large",
+      "front": "/models/kainora/candy-front.webp",
+      "back": "",
+      "productId": ""
+    },
+    {
+      "id": "black-dinorex-slot-11",
+      "name": "DinoRex",
+      "description": "Motif dinosaurus bergaya piksel, dengan logo kecil di depan dan grafis besar di belakang.",
+      "color": "black",
+      "initialView": "front",
+      "frontLayout": "badge",
+      "front": "/models/kainora/dinorex-front.webp",
+      "back": "/models/kainora/dinorex-back.webp",
+      "productId": ""
+    },
+    {
+      "id": "black-key",
+      "name": "Key",
+      "description": "Logo kecil di depan dan grafis gantungan kunci di belakang.",
+      "color": "black",
+      "initialView": "back",
+      "frontLayout": "badge",
+      "front": "/models/kainora/key-front.webp",
+      "back": "/models/kainora/key-back.webp",
+      "productId": ""
+    },
+    {
+      "id": "park-1-slot-9",
+      "name": "Kainora Park",
+      "description": "Graphic tee oversize anak dengan motif Kainora Park.",
+      "color": "white",
+      "initialView": "back",
+      "frontLayout": "chest",
+      "front": "/models/kainora/kainora-park-front.webp",
+      "back": "/models/kainora/kainora-park-back.webp",
+      "productId": ""
+    },
+    {
+      "id": "black-dinorex-slot-16",
+      "name": "DinoRex",
+      "description": "Motif dinosaurus bergaya piksel, dengan logo kecil di depan dan grafis besar di belakang.",
+      "color": "black",
+      "initialView": "back",
+      "frontLayout": "badge",
+      "front": "/models/kainora/dinorex-front.webp",
+      "back": "/models/kainora/dinorex-back.webp",
+      "productId": ""
+    },
+    {
       "id": "black-egg",
       "name": "Egg",
-      "description": "A playful K. Dua ukuran sablon untuk sisi depan dan belakang.",
+      "description": "Grafis K dengan ukuran sablon berbeda di bagian depan dan belakang.",
       "color": "black",
       "initialView": "back",
       "frontLayout": "badge",
@@ -1946,15 +1911,149 @@
       "productId": ""
     },
     {
-      "id": "black-key",
+      "id": "black-key-slot-13",
       "name": "Key",
-      "description": "Little details. Big character. Badge depan dan grafis gantungan kunci di belakang.",
+      "description": "Logo kecil di depan dan grafis gantungan kunci di belakang.",
       "color": "black",
       "initialView": "back",
       "frontLayout": "badge",
       "front": "/models/kainora/key-front.webp",
       "back": "/models/kainora/key-back.webp",
       "productId": ""
+    },
+    {
+      "id": "park-1",
+      "name": "Kainora Park",
+      "description": "Graphic tee oversize anak dengan motif Kainora Park.",
+      "color": "white",
+      "initialView": "back",
+      "frontLayout": "chest",
+      "front": "/models/kainora/kainora-park-front.webp",
+      "back": "/models/kainora/kainora-park-back.webp",
+      "productId": ""
+    },
+    {
+      "id": "black-kainora-fresh-slot-14",
+      "name": "Kainora Fresh",
+      "description": "Grafis buah dengan logo kecil di bagian dada.",
+      "color": "black",
+      "initialView": "front",
+      "frontLayout": "badge",
+      "front": "/models/kainora/kainora-fresh-front.webp",
+      "back": "/models/kainora/kainora-fresh-back.webp",
+      "productId": ""
+    },
+    {
+      "id": "park-1-slot-15",
+      "name": "Kainora Park",
+      "description": "Graphic tee oversize anak dengan motif Kainora Park.",
+      "color": "white",
+      "initialView": "back",
+      "frontLayout": "chest",
+      "front": "/models/kainora/kainora-park-front.webp",
+      "back": "/models/kainora/kainora-park-back.webp",
+      "productId": ""
+    },
+    {
+      "id": "black-egg-slot-10",
+      "name": "Egg",
+      "description": "Grafis K dengan ukuran sablon berbeda di bagian depan dan belakang.",
+      "color": "black",
+      "initialView": "back",
+      "frontLayout": "badge",
+      "front": "/models/kainora/egg-artwork.webp",
+      "back": "/models/kainora/egg-artwork.webp",
+      "productId": ""
+    },
+    {
+      "id": "black-icecream-slot-12",
+      "name": "Icecream",
+      "description": "Grafis es krim di bagian depan, bagian belakang polos.",
+      "color": "black",
+      "initialView": "back",
+      "frontLayout": "large",
+      "front": "/models/kainora/icecream-front.webp",
+      "back": "",
+      "productId": ""
+    },
+    {
+      "id": "black-dinorex",
+      "name": "DinoRex",
+      "description": "Motif dinosaurus bergaya piksel, dengan logo kecil di depan dan grafis besar di belakang.",
+      "color": "black",
+      "initialView": "back",
+      "frontLayout": "badge",
+      "front": "/models/kainora/dinorex-front.webp",
+      "back": "/models/kainora/dinorex-back.webp",
+      "productId": ""
+    }
+  ],
+  "arrivals": [
+    {
+      "id": "arrival-black",
+      "name": "Oversize Kids Tee — Hitam",
+      "description": "Kaos oversize anak polos dengan hanger kayu muda.",
+      "color": "black",
+      "front": "/images/new-arrival/templates/black-front.png",
+      "back": "/images/new-arrival/templates/black-back.png",
+      "side": "/images/new-arrival/templates/black-side.png"
+    },
+    {
+      "id": "arrival-white",
+      "name": "Oversize Kids Tee — Putih",
+      "description": "Kaos oversize anak polos dengan hanger kayu muda.",
+      "color": "white",
+      "front": "/images/new-arrival/templates/white-front.png",
+      "back": "/images/new-arrival/templates/white-back.png",
+      "side": "/images/new-arrival/templates/white-side.png"
+    },
+    {
+      "id": "arrival-black-2",
+      "name": "Oversize Kids Tee — Hitam",
+      "description": "Kaos oversize anak polos dengan hanger kayu muda.",
+      "color": "black",
+      "front": "/images/new-arrival/templates/black-front.png",
+      "back": "/images/new-arrival/templates/black-back.png",
+      "side": "/images/new-arrival/templates/black-side.png"
+    },
+    {
+      "id": "arrival-white-2",
+      "name": "Oversize Kids Tee — Putih",
+      "description": "Kaos oversize anak polos dengan hanger kayu muda.",
+      "color": "white",
+      "front": "/images/new-arrival/templates/white-front.png",
+      "back": "/images/new-arrival/templates/white-back.png",
+      "side": "/images/new-arrival/templates/white-side.png"
+    },
+    {
+      "id": "arrival-black-3",
+      "name": "Oversize Kids Tee — Hitam",
+      "description": "Kaos oversize anak polos dengan hanger kayu muda.",
+      "color": "black",
+      "front": "/images/new-arrival/templates/black-front.png",
+      "back": "/images/new-arrival/templates/black-back.png",
+      "side": "/images/new-arrival/templates/black-side.png"
+    },
+    {
+      "id": "arrival-white-3",
+      "name": "Oversize Kids Tee — Putih",
+      "description": "Kaos oversize anak polos dengan hanger kayu muda.",
+      "color": "white",
+      "front": "/images/new-arrival/templates/white-front.png",
+      "back": "/images/new-arrival/templates/white-back.png",
+      "side": "/images/new-arrival/templates/white-side.png"
+    }
+  ],
+  "promotions": [
+    {
+      "id": "promotion-left",
+      "image": "/images/kainora-owned/hero-garden.webp",
+      "alt": "Dua anak memakai kaos grafis Kainora di taman bunga"
+    },
+    {
+      "id": "promotion-right",
+      "image": "/images/kainora-owned/hero-blue.webp",
+      "alt": "Anak memakai koleksi Kainora di depan bangku kuning dan latar biru"
     }
   ]
 }

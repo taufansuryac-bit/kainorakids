@@ -136,8 +136,8 @@ export const Navbar = () => {
       <div ref={barRef} className="site-nav mx-auto flex items-center justify-between gap-2">
         {/* Logo */}
         <a href="/" onClick={event => { if (!plainClick(event)) return; event.preventDefault(); nav('home'); }} className="nav-brand" aria-label="Kainora Kids — ke beranda">
-          <span className="nav-logo"><img src="/website-logo.png" alt="Kainora Kids" width="400" height="120" /></span>
-          <span className="nav-brand-tagline">LITTLE FITS. BIG DAYS.</span>
+          <span className="nav-logo" data-intro-logo><img src="/website-logo-hd.svg" alt="Kainora Kids" width="400" height="120" /></span>
+          <span className="nav-brand-tagline">GRAPHIC TEE & FASHION ANAK</span>
         </a>
 
         {/* Menu desktop */}

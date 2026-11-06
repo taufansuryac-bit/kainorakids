@@ -54,9 +54,9 @@ export default function NotificationPrompt() {
         <div className="flex items-center space-x-3">
           <Bell className="w-5 h-5 text-amber-500" />
           <div>
-            <h3 className="font-oswald text-sm font-bold uppercase tracking-widest text-white">Dapatkan Info Promo Khusus!</h3>
+            <h3 className="font-oswald text-sm font-bold uppercase tracking-widest text-white">Informasi Koleksi Kainora</h3>
             <p className="text-xs text-gray-400 font-medium mt-1">
-              Izinkan notifikasi untuk diskon rahasia dan info baju anak terbaru.
+              Izinkan notifikasi untuk menerima informasi koleksi dan penawaran Kainora Kids.
             </p>
           </div>
         </div>
@@ -71,7 +71,7 @@ export default function NotificationPrompt() {
             onClick={handleAllow}
             className="flex-1 md:flex-none px-6 py-2 bg-amber-500 text-gray-900 font-oswald text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-gray-900 transition-colors"
           >
-            Ya, Izinkan!
+            Izinkan Notifikasi
           </button>
           <button onClick={handleDecline} className="hidden md:block text-gray-500 hover:text-white ml-2">
             <X className="w-5 h-5" />

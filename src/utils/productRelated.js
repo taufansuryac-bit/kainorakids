@@ -1,4 +1,4 @@
-// "Cerita lainnya" picks motifs that share a theme, then the nearest neighbour in
+// "Produk lainnya" picks motifs that share a theme, then the nearest neighbour in
 // catalogue order. Neighbour order spreads internal links so every product page is
 // linked from several others (a fixed top-4 left 36 products with one inbound link).
 // Shared by the React view and the static build so hydrated HTML stays identical.

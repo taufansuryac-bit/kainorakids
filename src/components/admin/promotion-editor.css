@@ -1,0 +1,10 @@
+.ca-promotion-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.ca-promotion-card{min-width:0;border:1px solid var(--ca-line);background:#fff}
+.ca-promotion-preview{display:block;width:100%;aspect-ratio:16/9;overflow:hidden;background:#f5f4ef;padding:0!important;border:0!important}
+.ca-promotion-preview>img{display:block;width:100%;height:100%;object-fit:cover}
+.ca-promotion-copy{padding:18px}
+.ca-promotion-copy>small{font-size:10px;letter-spacing:.08em}
+.ca-promotion-copy>h2{font-size:17px;line-height:1.35;margin:12px 0 18px}
+.ca-promotion-copy>button{font-size:12px}
+.ca-editor form>.ca-promotion-preview{max-width:900px;margin:0 auto 18px}
+@media(max-width:700px){.ca-promotion-grid{grid-template-columns:1fr;gap:14px}}

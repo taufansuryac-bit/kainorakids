@@ -36,22 +36,23 @@ test('structured data never fabricates availability, zero prices, reviews or uns
   assert.equal(productListSchema([product]).mainEntity.itemListElement[0].url, 'https://kainorakids.com'+productHref(product));
   assert.ok(!schemaJSON({ text: '</script><script>alert(1)</script>' }).includes('</script>'));
 });
-test('entire imported catalogue uses real yellow covers, paired assets and the approved white price', async () => {
-  const content = JSON.parse(await readFile('src/content/store.json', 'utf8'));
-  assert.equal(validateContent(content).products.length, 42);
-  assert.deepEqual(content.products.find(p => p.id === 1).sizes, ['S','M','L','XL','XXL']);
-  assert.deepEqual(content.products.find(p => p.id === 4).sizes, ['S','M','L','XL','XXL']);
-  assert.equal(content.products.length, 42);
-  assert.equal(new Set(content.products.map(p => p.img)).size, 42);
-  for (const p of content.products) {
-    assert.equal(p.price, 69000); assert.match(p.img, /^\/PRODUCT\/.+-1\.jpg$/);
-    assert.equal(p.availability,'InStock');
-    assert.ok(p.sizes.length > 0, `${p.name} must retain size choices`);
-    assert.equal(canOrder(p, p.sizes[0]), true);
-    assert.equal(canOrder(p, 'invalid-size'), false);
-    for (const image of p.images) await stat('public'+image);
+test('the 33 folder products retain size prices, available colour photos and orderable variants', async () => {
+  const content=validateContent(JSON.parse(await readFile('src/content/store.json','utf8')));
+  assert.equal(content.products.length,33);
+  assert.equal(new Set(content.products.map(p=>p.name)).size,33);
+  const blackOnly=[];
+  for(const product of content.products){
+    assert.equal(product.bahan,'Soft 20S Organic Cotton');assert.equal(product.model,'Oversize');
+    assert.deepEqual(product.sizePrices,{S:89000,M:89000,L:89000,XL:94000,XXL:94000});
+    assert.equal(product.price,89000);assert.equal(canOrder(product,'XL'),true);
+    assert.equal(canOrder(product,'invalid-size'),false);
+    if(product.colorVariants.length===1)blackOnly.push(product.name);
+    for(const variant of product.colorVariants){assert.ok(product.images.includes(variant.image));await stat('public'+variant.image);}
+    for(const image of product.images)await stat('public'+image);
+    assert.equal(productSchema(product).offers.highPrice,94000);
   }
-  assert.equal(content.highlights.length, 12);
+  assert.deepEqual(blackOnly.sort(),['KAI DPS','KAINORA TOYS','LITTLE MONA']);
+  assert.equal(content.highlights.length,12);
 });
 
 test('magnifier keeps the cursor source point centred and clamps outside coordinates', () => {

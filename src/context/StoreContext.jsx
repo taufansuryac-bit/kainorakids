@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, createContext, useContext, useMemo, useRef } from 'react';
 import storeContent from '../content/store.json';
-import { canOrder } from '../utils/pricing';
+import { canOrder, cartProduct, refreshCartItems } from '../utils/pricing';
 import { storefrontView, viewHref } from '../utils/productRoutes';
 import { INITIAL_PRODUCTS } from '../constants/data';
 import { analyticsItem, track } from '../utils/analytics';
@@ -19,10 +19,7 @@ function readGuestCart(products) {
     const saved = JSON.parse(localStorage.getItem(GUEST_CART_KEY) || '[]');
     if (!Array.isArray(saved)) return [];
     return saved.flatMap(item => {
-      const product = products.find(p => String(p.id) === String(item?.id));
-      const qty = Number(item?.qty);
-      if (!product || !canOrder(product, item.size) || !Number.isInteger(qty) || qty < 1) return [];
-      return [{ ...product, catalogPreview: product.catalogPreview === true, size: item.size, qty: Math.min(99, qty), cartId: item.cartId || Date.now() + Math.random() }];
+      return refreshCartItems([item],products);
     });
   } catch { return []; }
 }
@@ -92,22 +89,23 @@ export const StoreProvider = ({ children, initialLocation = globalThis.location 
     if (!guestCartRestored.current) { guestCartRestored.current = true; return; }
     try {
       if (user?.email) localStorage.removeItem(GUEST_CART_KEY);
-      else localStorage.setItem(GUEST_CART_KEY, JSON.stringify(cart.map(({ id, size, qty, cartId }) => ({ id, size, qty, cartId }))));
+      else localStorage.setItem(GUEST_CART_KEY, JSON.stringify(cart.map(({ id, size, color, qty, cartId }) => ({ id, size, ...(color?{color}:{}), qty, cartId }))));
     } catch { /* Storage is optional. */ }
   }, [cart, user?.email]);
   const [basketOwner,setBasketOwner]=useState(null);
   const basketReady=!user?.uid||basketOwner===user.uid;
 
-  const addToCart = useCallback((p, s, q) => {
-    if (!canOrder(p, s) || !Number.isInteger(q) || q < 1) { showToast('Harga, ukuran atau stok produk belum tersedia.'); return; }
+  const addToCart = useCallback((p, s, q, color) => {
+    if (!canOrder(p, s, color) || !Number.isInteger(q) || q < 1) { showToast('Harga, ukuran, warna, atau stok produk belum tersedia.'); return; }
+    const item=cartProduct(p,s,color);
     setCart(prev => {
-      const ex = prev.find(i => i.id === p.id && i.size === s);
+      const ex = prev.find(i => i.id === p.id && i.size === s && (i.color||'') === (item.color||''));
       if(ex) return prev.map(i => i === ex ? {...i, qty: i.qty + q} : i);
-      return [...prev, {...p, catalogPreview: p.catalogPreview === true || INITIAL_PRODUCTS.includes(p), size: s, qty: q, cartId: Date.now()}];
+      return [...prev, {...item, catalogPreview: p.catalogPreview === true || INITIAL_PRODUCTS.includes(p), qty: q, cartId: crypto.randomUUID()}];
     });
     setIsMiniCartOpen(true);
-    track('add_to_cart', { currency: 'IDR', value: Number(p.price) * q, items: [analyticsItem(p, s, q)] });
-    showToast('Baju lucu berhasil masuk keranjang! 🛍️');
+    track('add_to_cart', { currency: 'IDR', value: Number(item.price) * q, items: [analyticsItem(item, s, q)] });
+    showToast('Produk ditambahkan ke keranjang.');
   }, [showToast]);
 
   const updateCartQty = useCallback((id, d) => setCart(p => p.map(it => it.cartId === id ? {...it, qty: Math.max(1, it.qty + d)} : it)), []);

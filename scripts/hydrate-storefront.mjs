@@ -1,9 +1,9 @@
 import {createServer} from 'vite';
 import {readFile,writeFile} from 'node:fs/promises';
-import {productHref,catalogHref} from '../src/utils/productRoutes.js';
+import {CATALOG_PAGE_SIZE,productHref,catalogHref} from '../src/utils/productRoutes.js';
 
 const {products}=JSON.parse(await readFile('src/content/store.json','utf8'));
-const paths=['/','/panduan-ukuran-anak/',...Array.from({length:Math.ceil(products.length/12)},(_,i)=>catalogHref(i+1)),...products.map(productHref)];
+const paths=['/','/panduan-ukuran-anak/',...Array.from({length:Math.ceil(products.length/CATALOG_PAGE_SIZE)},(_,i)=>catalogHref(i+1)),...products.map(productHref)];
 const server=await createServer({server:{middlewareMode:true},appType:'custom',logLevel:'error'});
 try{
   const {render}=await server.ssrLoadModule('/src/ssr-storefront.jsx');

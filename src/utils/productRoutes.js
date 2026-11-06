@@ -1,4 +1,6 @@
 export const PRODUCT_SITE = 'https://kainorakids.com';
+// Four columns and six rows per catalogue page on desktop.
+export const CATALOG_PAGE_SIZE = 24;
 const slug = value => String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 export const productHref = product => `/products/${slug(product.name)}--${encodeURIComponent(product.id)}/`;
 // Crawlable URL for each storefront view; views without a static page fall back to ?view=.

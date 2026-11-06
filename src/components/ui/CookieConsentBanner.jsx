@@ -35,7 +35,7 @@ export const CookieConsentBanner = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="pointer-events-none fixed bottom-0 left-0 z-[9999] flex w-full items-end justify-center p-3 sm:p-4" role="dialog" aria-label="Izin cache dan cookie">
+    <div className="pointer-events-none fixed bottom-0 left-0 z-[9999] flex w-full items-end justify-center p-3 sm:p-4" role="dialog" aria-label="Pilihan cookie">
       <style>{`
         @keyframes popBanner {
           0% { transform: translateY(120%) rotate(-2deg); opacity: 0; }
@@ -51,9 +51,9 @@ export const CookieConsentBanner = () => {
             <Cookie size={26} strokeWidth={2.5} />
           </div>
           <div>
-            <h3 className="display mb-2 text-xl md:text-2xl">Izinkan Cache & Cookie?</h3>
+            <h3 className="display mb-2 text-xl md:text-2xl">Pilihan cookie</h3>
             <p className="text-sm font-semibold leading-relaxed">
-              Kami menggunakan <em>cache</em> dan teknologi serupa untuk memastikan Anda mendapatkan pengalaman berbelanja yang super cepat, personal, dan aman di website Kainora Kids.
+              Kami menggunakan penyimpanan browser untuk keranjang dan pilihan Anda. Jika Anda mengizinkan, cookie analitik membantu kami memahami penggunaan website. Menolak tidak menghalangi Anda berbelanja.
               <a href="/kebijakan-privasi/" className="ml-1 underline decoration-[3px] underline-offset-2 hover:text-brand-red">Pelajari lebih lanjut.</a>
             </p>
           </div>

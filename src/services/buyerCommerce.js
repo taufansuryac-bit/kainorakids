@@ -1,7 +1,7 @@
-import {canOrder} from '../utils/pricing.js';
+import {canOrder,priceForSize} from '../utils/pricing.js';
 export function mergeBuyerCart(guest,saved) {
   const result=saved.map(item=>({...item}));
-  for(const item of guest){const found=result.find(p=>String(p.id)===String(item.id)&&p.size===item.size);if(found)found.qty=Math.min(99,(Number(found.qty)||0)+(Number(item.qty)||0));else result.push({...item});}
+  for(const item of guest){const found=result.find(p=>String(p.id)===String(item.id)&&p.size===item.size&&(p.color||'')===(item.color||''));if(found)found.qty=Math.min(99,(Number(found.qty)||0)+(Number(item.qty)||0));else result.push({...item});}
   return result;
 }
 // Optional promo limits (active, validUntil, minSubtotal) are honoured when the admin
@@ -22,11 +22,11 @@ export function buyerIdentity(authUser,profile={}) {
 }
 export function buildOrderRequest({cart,user,form,promo=null}) {
   if(!user?.uid||!user.email||user.isAnonymous)throw new Error('Silakan masuk sebelum checkout.');
-  if(!Array.isArray(cart)||!cart.length||cart.length>30||cart.some(item=>item.catalogPreview||!canOrder(item,item.size)||!Number.isInteger(item.qty)||item.qty<1||item.qty>99))throw new Error('Keranjang berisi produk pratinjau atau detail yang belum tersedia.');
-  const subTotal=cart.reduce((sum,item)=>sum+Number(item.price)*item.qty,0);
+  if(!Array.isArray(cart)||!cart.length||cart.length>30||cart.some(item=>item.catalogPreview||!canOrder(item,item.size,item.color)||!Number.isInteger(item.qty)||item.qty<1||item.qty>99))throw new Error('Keranjang berisi produk pratinjau atau detail yang belum tersedia.');
+  const subTotal=cart.reduce((sum,item)=>sum+Number(priceForSize(item,item.size))*item.qty,0);
   // A submitted order is a quotation for manual confirmation by the store,
   // never proof of payment or an authority for a payment gateway charge.
   const discount=promo?Math.min(subTotal,Math.max(0,promo.type==='percent'?subTotal*Number(promo.value)/100:Number(promo.value))):0;
   if(!Number.isFinite(subTotal)||!Number.isFinite(discount))throw new Error('Nilai pesanan tidak valid.');
-  return {orderId:`ORD-${crypto.randomUUID().slice(0,8).toUpperCase()}`,userId:user.uid,userEmail:user.email,customerName:String(form.name||'').trim(),whatsapp:String(form.wa||'').trim(),address:String(form.address||'').trim(),kodepos:String(form.kodepos||'').trim(),notes:String(form.notes||''),items:cart.map(({id,name,size,qty,price,img})=>({id:String(id),name,size,qty,price,...(img?{img}:{})})),subTotal,discount,promoCode:promo?.code||null,totalAmount:subTotal-discount,status:'pending'};
+  return {orderId:`ORD-${crypto.randomUUID().slice(0,8).toUpperCase()}`,userId:user.uid,userEmail:user.email,customerName:String(form.name||'').trim(),whatsapp:String(form.wa||'').trim(),address:String(form.address||'').trim(),kodepos:String(form.kodepos||'').trim(),notes:String(form.notes||''),items:cart.map(item=>({id:String(item.id),name:item.name,size:item.size,qty:item.qty,price:priceForSize(item,item.size),...(item.color?{color:item.color}:{}),...(item.img?{img:item.img}:{})})),subTotal,discount,promoCode:promo?.code||null,totalAmount:subTotal-discount,status:'pending'};
 }

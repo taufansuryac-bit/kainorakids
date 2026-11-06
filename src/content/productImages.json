@@ -572,5 +572,677 @@
     "thumbnail": "/images/shop/tomatoes-2-2f203df6fd-320.webp",
     "width": 1015,
     "height": 1015
+  },
+  "/images/products/2026-11/born-to-lead-hitam-1ffb9c36e6-1600.webp": {
+    "src": "/images/products/2026-11/born-to-lead-hitam-1ffb9c36e6-640.webp",
+    "srcSet": "/images/products/2026-11/born-to-lead-hitam-1ffb9c36e6-320.webp 320w, /images/products/2026-11/born-to-lead-hitam-1ffb9c36e6-640.webp 640w, /images/products/2026-11/born-to-lead-hitam-1ffb9c36e6-1000.webp 1000w, /images/products/2026-11/born-to-lead-hitam-1ffb9c36e6-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/born-to-lead-hitam-1ffb9c36e6-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/born-to-lead-putih-c92a355b18-1600.webp": {
+    "src": "/images/products/2026-11/born-to-lead-putih-c92a355b18-640.webp",
+    "srcSet": "/images/products/2026-11/born-to-lead-putih-c92a355b18-320.webp 320w, /images/products/2026-11/born-to-lead-putih-c92a355b18-640.webp 640w, /images/products/2026-11/born-to-lead-putih-c92a355b18-1000.webp 1000w, /images/products/2026-11/born-to-lead-putih-c92a355b18-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/born-to-lead-putih-c92a355b18-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/born-to-lead-pemakaian-71d1de78f1-1600.webp": {
+    "src": "/images/products/2026-11/born-to-lead-pemakaian-71d1de78f1-640.webp",
+    "srcSet": "/images/products/2026-11/born-to-lead-pemakaian-71d1de78f1-320.webp 320w, /images/products/2026-11/born-to-lead-pemakaian-71d1de78f1-640.webp 640w, /images/products/2026-11/born-to-lead-pemakaian-71d1de78f1-1000.webp 1000w, /images/products/2026-11/born-to-lead-pemakaian-71d1de78f1-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/born-to-lead-pemakaian-71d1de78f1-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/boys-hitam-8a74c05f39-1600.webp": {
+    "src": "/images/products/2026-11/boys-hitam-8a74c05f39-640.webp",
+    "srcSet": "/images/products/2026-11/boys-hitam-8a74c05f39-320.webp 320w, /images/products/2026-11/boys-hitam-8a74c05f39-640.webp 640w, /images/products/2026-11/boys-hitam-8a74c05f39-1000.webp 1000w, /images/products/2026-11/boys-hitam-8a74c05f39-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/boys-hitam-8a74c05f39-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/boys-putih-d9bcecb952-1600.webp": {
+    "src": "/images/products/2026-11/boys-putih-d9bcecb952-640.webp",
+    "srcSet": "/images/products/2026-11/boys-putih-d9bcecb952-320.webp 320w, /images/products/2026-11/boys-putih-d9bcecb952-640.webp 640w, /images/products/2026-11/boys-putih-d9bcecb952-1000.webp 1000w, /images/products/2026-11/boys-putih-d9bcecb952-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/boys-putih-d9bcecb952-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/boys-pemakaian-db7ea5e1ba-1600.webp": {
+    "src": "/images/products/2026-11/boys-pemakaian-db7ea5e1ba-640.webp",
+    "srcSet": "/images/products/2026-11/boys-pemakaian-db7ea5e1ba-320.webp 320w, /images/products/2026-11/boys-pemakaian-db7ea5e1ba-640.webp 640w, /images/products/2026-11/boys-pemakaian-db7ea5e1ba-1000.webp 1000w, /images/products/2026-11/boys-pemakaian-db7ea5e1ba-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/boys-pemakaian-db7ea5e1ba-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/candy-kainora-hitam-c425cf8e97-1600.webp": {
+    "src": "/images/products/2026-11/candy-kainora-hitam-c425cf8e97-640.webp",
+    "srcSet": "/images/products/2026-11/candy-kainora-hitam-c425cf8e97-320.webp 320w, /images/products/2026-11/candy-kainora-hitam-c425cf8e97-640.webp 640w, /images/products/2026-11/candy-kainora-hitam-c425cf8e97-1000.webp 1000w, /images/products/2026-11/candy-kainora-hitam-c425cf8e97-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/candy-kainora-hitam-c425cf8e97-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/candy-kainora-putih-56f4709b00-1600.webp": {
+    "src": "/images/products/2026-11/candy-kainora-putih-56f4709b00-640.webp",
+    "srcSet": "/images/products/2026-11/candy-kainora-putih-56f4709b00-320.webp 320w, /images/products/2026-11/candy-kainora-putih-56f4709b00-640.webp 640w, /images/products/2026-11/candy-kainora-putih-56f4709b00-1000.webp 1000w, /images/products/2026-11/candy-kainora-putih-56f4709b00-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/candy-kainora-putih-56f4709b00-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/candy-kainora-pemakaian-6503a06a08-1600.webp": {
+    "src": "/images/products/2026-11/candy-kainora-pemakaian-6503a06a08-640.webp",
+    "srcSet": "/images/products/2026-11/candy-kainora-pemakaian-6503a06a08-320.webp 320w, /images/products/2026-11/candy-kainora-pemakaian-6503a06a08-640.webp 640w, /images/products/2026-11/candy-kainora-pemakaian-6503a06a08-1000.webp 1000w, /images/products/2026-11/candy-kainora-pemakaian-6503a06a08-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/candy-kainora-pemakaian-6503a06a08-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/creativity-hitam-8aece77dda-1600.webp": {
+    "src": "/images/products/2026-11/creativity-hitam-8aece77dda-640.webp",
+    "srcSet": "/images/products/2026-11/creativity-hitam-8aece77dda-320.webp 320w, /images/products/2026-11/creativity-hitam-8aece77dda-640.webp 640w, /images/products/2026-11/creativity-hitam-8aece77dda-1000.webp 1000w, /images/products/2026-11/creativity-hitam-8aece77dda-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/creativity-hitam-8aece77dda-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/creativity-putih-4341eec862-1600.webp": {
+    "src": "/images/products/2026-11/creativity-putih-4341eec862-640.webp",
+    "srcSet": "/images/products/2026-11/creativity-putih-4341eec862-320.webp 320w, /images/products/2026-11/creativity-putih-4341eec862-640.webp 640w, /images/products/2026-11/creativity-putih-4341eec862-1000.webp 1000w, /images/products/2026-11/creativity-putih-4341eec862-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/creativity-putih-4341eec862-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/creativity-pemakaian-850d88a0a1-1600.webp": {
+    "src": "/images/products/2026-11/creativity-pemakaian-850d88a0a1-640.webp",
+    "srcSet": "/images/products/2026-11/creativity-pemakaian-850d88a0a1-320.webp 320w, /images/products/2026-11/creativity-pemakaian-850d88a0a1-640.webp 640w, /images/products/2026-11/creativity-pemakaian-850d88a0a1-1000.webp 1000w, /images/products/2026-11/creativity-pemakaian-850d88a0a1-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/creativity-pemakaian-850d88a0a1-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/dad-fix-everything-hitam-6951078761-1600.webp": {
+    "src": "/images/products/2026-11/dad-fix-everything-hitam-6951078761-640.webp",
+    "srcSet": "/images/products/2026-11/dad-fix-everything-hitam-6951078761-320.webp 320w, /images/products/2026-11/dad-fix-everything-hitam-6951078761-640.webp 640w, /images/products/2026-11/dad-fix-everything-hitam-6951078761-1000.webp 1000w, /images/products/2026-11/dad-fix-everything-hitam-6951078761-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/dad-fix-everything-hitam-6951078761-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/dad-fix-everything-putih-40cebec805-1600.webp": {
+    "src": "/images/products/2026-11/dad-fix-everything-putih-40cebec805-640.webp",
+    "srcSet": "/images/products/2026-11/dad-fix-everything-putih-40cebec805-320.webp 320w, /images/products/2026-11/dad-fix-everything-putih-40cebec805-640.webp 640w, /images/products/2026-11/dad-fix-everything-putih-40cebec805-1000.webp 1000w, /images/products/2026-11/dad-fix-everything-putih-40cebec805-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/dad-fix-everything-putih-40cebec805-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/dad-fix-everything-pemakaian-6dc29b36d0-1600.webp": {
+    "src": "/images/products/2026-11/dad-fix-everything-pemakaian-6dc29b36d0-640.webp",
+    "srcSet": "/images/products/2026-11/dad-fix-everything-pemakaian-6dc29b36d0-320.webp 320w, /images/products/2026-11/dad-fix-everything-pemakaian-6dc29b36d0-640.webp 640w, /images/products/2026-11/dad-fix-everything-pemakaian-6dc29b36d0-1000.webp 1000w, /images/products/2026-11/dad-fix-everything-pemakaian-6dc29b36d0-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/dad-fix-everything-pemakaian-6dc29b36d0-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/dinorex-hitam-95e8e4cd15-1600.webp": {
+    "src": "/images/products/2026-11/dinorex-hitam-95e8e4cd15-640.webp",
+    "srcSet": "/images/products/2026-11/dinorex-hitam-95e8e4cd15-320.webp 320w, /images/products/2026-11/dinorex-hitam-95e8e4cd15-640.webp 640w, /images/products/2026-11/dinorex-hitam-95e8e4cd15-1000.webp 1000w, /images/products/2026-11/dinorex-hitam-95e8e4cd15-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/dinorex-hitam-95e8e4cd15-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/dinorex-putih-f955eb410e-1600.webp": {
+    "src": "/images/products/2026-11/dinorex-putih-f955eb410e-640.webp",
+    "srcSet": "/images/products/2026-11/dinorex-putih-f955eb410e-320.webp 320w, /images/products/2026-11/dinorex-putih-f955eb410e-640.webp 640w, /images/products/2026-11/dinorex-putih-f955eb410e-1000.webp 1000w, /images/products/2026-11/dinorex-putih-f955eb410e-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/dinorex-putih-f955eb410e-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/dinorex-pemakaian-32dc7e1033-1600.webp": {
+    "src": "/images/products/2026-11/dinorex-pemakaian-32dc7e1033-640.webp",
+    "srcSet": "/images/products/2026-11/dinorex-pemakaian-32dc7e1033-320.webp 320w, /images/products/2026-11/dinorex-pemakaian-32dc7e1033-640.webp 640w, /images/products/2026-11/dinorex-pemakaian-32dc7e1033-1000.webp 1000w, /images/products/2026-11/dinorex-pemakaian-32dc7e1033-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/dinorex-pemakaian-32dc7e1033-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/fresh-market-hitam-8530f9db9f-1600.webp": {
+    "src": "/images/products/2026-11/fresh-market-hitam-8530f9db9f-640.webp",
+    "srcSet": "/images/products/2026-11/fresh-market-hitam-8530f9db9f-320.webp 320w, /images/products/2026-11/fresh-market-hitam-8530f9db9f-640.webp 640w, /images/products/2026-11/fresh-market-hitam-8530f9db9f-1000.webp 1000w, /images/products/2026-11/fresh-market-hitam-8530f9db9f-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/fresh-market-hitam-8530f9db9f-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/fresh-market-putih-451b0a0d93-1600.webp": {
+    "src": "/images/products/2026-11/fresh-market-putih-451b0a0d93-640.webp",
+    "srcSet": "/images/products/2026-11/fresh-market-putih-451b0a0d93-320.webp 320w, /images/products/2026-11/fresh-market-putih-451b0a0d93-640.webp 640w, /images/products/2026-11/fresh-market-putih-451b0a0d93-1000.webp 1000w, /images/products/2026-11/fresh-market-putih-451b0a0d93-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/fresh-market-putih-451b0a0d93-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/fresh-market-pemakaian-ba6e1597b1-1600.webp": {
+    "src": "/images/products/2026-11/fresh-market-pemakaian-ba6e1597b1-640.webp",
+    "srcSet": "/images/products/2026-11/fresh-market-pemakaian-ba6e1597b1-320.webp 320w, /images/products/2026-11/fresh-market-pemakaian-ba6e1597b1-640.webp 640w, /images/products/2026-11/fresh-market-pemakaian-ba6e1597b1-1000.webp 1000w, /images/products/2026-11/fresh-market-pemakaian-ba6e1597b1-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/fresh-market-pemakaian-ba6e1597b1-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/future-girl-hitam-bec365afc7-1600.webp": {
+    "src": "/images/products/2026-11/future-girl-hitam-bec365afc7-640.webp",
+    "srcSet": "/images/products/2026-11/future-girl-hitam-bec365afc7-320.webp 320w, /images/products/2026-11/future-girl-hitam-bec365afc7-640.webp 640w, /images/products/2026-11/future-girl-hitam-bec365afc7-1000.webp 1000w, /images/products/2026-11/future-girl-hitam-bec365afc7-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/future-girl-hitam-bec365afc7-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/future-girl-putih-c475c23ff5-1600.webp": {
+    "src": "/images/products/2026-11/future-girl-putih-c475c23ff5-640.webp",
+    "srcSet": "/images/products/2026-11/future-girl-putih-c475c23ff5-320.webp 320w, /images/products/2026-11/future-girl-putih-c475c23ff5-640.webp 640w, /images/products/2026-11/future-girl-putih-c475c23ff5-1000.webp 1000w, /images/products/2026-11/future-girl-putih-c475c23ff5-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/future-girl-putih-c475c23ff5-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/future-girl-pemakaian-c0abc37dea-1600.webp": {
+    "src": "/images/products/2026-11/future-girl-pemakaian-c0abc37dea-640.webp",
+    "srcSet": "/images/products/2026-11/future-girl-pemakaian-c0abc37dea-320.webp 320w, /images/products/2026-11/future-girl-pemakaian-c0abc37dea-640.webp 640w, /images/products/2026-11/future-girl-pemakaian-c0abc37dea-1000.webp 1000w, /images/products/2026-11/future-girl-pemakaian-c0abc37dea-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/future-girl-pemakaian-c0abc37dea-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/girl-hitam-edde569513-1600.webp": {
+    "src": "/images/products/2026-11/girl-hitam-edde569513-640.webp",
+    "srcSet": "/images/products/2026-11/girl-hitam-edde569513-320.webp 320w, /images/products/2026-11/girl-hitam-edde569513-640.webp 640w, /images/products/2026-11/girl-hitam-edde569513-1000.webp 1000w, /images/products/2026-11/girl-hitam-edde569513-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/girl-hitam-edde569513-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/girl-putih-c1a069910f-1600.webp": {
+    "src": "/images/products/2026-11/girl-putih-c1a069910f-640.webp",
+    "srcSet": "/images/products/2026-11/girl-putih-c1a069910f-320.webp 320w, /images/products/2026-11/girl-putih-c1a069910f-640.webp 640w, /images/products/2026-11/girl-putih-c1a069910f-1000.webp 1000w, /images/products/2026-11/girl-putih-c1a069910f-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/girl-putih-c1a069910f-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/girl-pemakaian-327c978157-1600.webp": {
+    "src": "/images/products/2026-11/girl-pemakaian-327c978157-640.webp",
+    "srcSet": "/images/products/2026-11/girl-pemakaian-327c978157-320.webp 320w, /images/products/2026-11/girl-pemakaian-327c978157-640.webp 640w, /images/products/2026-11/girl-pemakaian-327c978157-1000.webp 1000w, /images/products/2026-11/girl-pemakaian-327c978157-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/girl-pemakaian-327c978157-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/happy-kids-world-hitam-40db148cbc-1600.webp": {
+    "src": "/images/products/2026-11/happy-kids-world-hitam-40db148cbc-640.webp",
+    "srcSet": "/images/products/2026-11/happy-kids-world-hitam-40db148cbc-320.webp 320w, /images/products/2026-11/happy-kids-world-hitam-40db148cbc-640.webp 640w, /images/products/2026-11/happy-kids-world-hitam-40db148cbc-1000.webp 1000w, /images/products/2026-11/happy-kids-world-hitam-40db148cbc-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/happy-kids-world-hitam-40db148cbc-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/happy-kids-world-putih-afb437afe0-1600.webp": {
+    "src": "/images/products/2026-11/happy-kids-world-putih-afb437afe0-640.webp",
+    "srcSet": "/images/products/2026-11/happy-kids-world-putih-afb437afe0-320.webp 320w, /images/products/2026-11/happy-kids-world-putih-afb437afe0-640.webp 640w, /images/products/2026-11/happy-kids-world-putih-afb437afe0-1000.webp 1000w, /images/products/2026-11/happy-kids-world-putih-afb437afe0-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/happy-kids-world-putih-afb437afe0-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/happy-kids-world-pemakaian-915f60cf29-1600.webp": {
+    "src": "/images/products/2026-11/happy-kids-world-pemakaian-915f60cf29-640.webp",
+    "srcSet": "/images/products/2026-11/happy-kids-world-pemakaian-915f60cf29-320.webp 320w, /images/products/2026-11/happy-kids-world-pemakaian-915f60cf29-640.webp 640w, /images/products/2026-11/happy-kids-world-pemakaian-915f60cf29-1000.webp 1000w, /images/products/2026-11/happy-kids-world-pemakaian-915f60cf29-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/happy-kids-world-pemakaian-915f60cf29-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/happy-little-girl-hitam-a0f288ff8f-1600.webp": {
+    "src": "/images/products/2026-11/happy-little-girl-hitam-a0f288ff8f-640.webp",
+    "srcSet": "/images/products/2026-11/happy-little-girl-hitam-a0f288ff8f-320.webp 320w, /images/products/2026-11/happy-little-girl-hitam-a0f288ff8f-640.webp 640w, /images/products/2026-11/happy-little-girl-hitam-a0f288ff8f-1000.webp 1000w, /images/products/2026-11/happy-little-girl-hitam-a0f288ff8f-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/happy-little-girl-hitam-a0f288ff8f-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/happy-little-girl-putih-bc314535f1-1600.webp": {
+    "src": "/images/products/2026-11/happy-little-girl-putih-bc314535f1-640.webp",
+    "srcSet": "/images/products/2026-11/happy-little-girl-putih-bc314535f1-320.webp 320w, /images/products/2026-11/happy-little-girl-putih-bc314535f1-640.webp 640w, /images/products/2026-11/happy-little-girl-putih-bc314535f1-1000.webp 1000w, /images/products/2026-11/happy-little-girl-putih-bc314535f1-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/happy-little-girl-putih-bc314535f1-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/happy-little-girl-pemakaian-89e668cf19-1600.webp": {
+    "src": "/images/products/2026-11/happy-little-girl-pemakaian-89e668cf19-640.webp",
+    "srcSet": "/images/products/2026-11/happy-little-girl-pemakaian-89e668cf19-320.webp 320w, /images/products/2026-11/happy-little-girl-pemakaian-89e668cf19-640.webp 640w, /images/products/2026-11/happy-little-girl-pemakaian-89e668cf19-1000.webp 1000w, /images/products/2026-11/happy-little-girl-pemakaian-89e668cf19-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/happy-little-girl-pemakaian-89e668cf19-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/hello-world-hitam-33f5f4cb6b-1600.webp": {
+    "src": "/images/products/2026-11/hello-world-hitam-33f5f4cb6b-640.webp",
+    "srcSet": "/images/products/2026-11/hello-world-hitam-33f5f4cb6b-320.webp 320w, /images/products/2026-11/hello-world-hitam-33f5f4cb6b-640.webp 640w, /images/products/2026-11/hello-world-hitam-33f5f4cb6b-1000.webp 1000w, /images/products/2026-11/hello-world-hitam-33f5f4cb6b-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/hello-world-hitam-33f5f4cb6b-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/hello-world-putih-97d4cee7f5-1600.webp": {
+    "src": "/images/products/2026-11/hello-world-putih-97d4cee7f5-640.webp",
+    "srcSet": "/images/products/2026-11/hello-world-putih-97d4cee7f5-320.webp 320w, /images/products/2026-11/hello-world-putih-97d4cee7f5-640.webp 640w, /images/products/2026-11/hello-world-putih-97d4cee7f5-1000.webp 1000w, /images/products/2026-11/hello-world-putih-97d4cee7f5-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/hello-world-putih-97d4cee7f5-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/hello-world-pemakaian-af68ea02b1-1600.webp": {
+    "src": "/images/products/2026-11/hello-world-pemakaian-af68ea02b1-640.webp",
+    "srcSet": "/images/products/2026-11/hello-world-pemakaian-af68ea02b1-320.webp 320w, /images/products/2026-11/hello-world-pemakaian-af68ea02b1-640.webp 640w, /images/products/2026-11/hello-world-pemakaian-af68ea02b1-1000.webp 1000w, /images/products/2026-11/hello-world-pemakaian-af68ea02b1-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/hello-world-pemakaian-af68ea02b1-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/high-level-hitam-b15b4fbaf1-1600.webp": {
+    "src": "/images/products/2026-11/high-level-hitam-b15b4fbaf1-640.webp",
+    "srcSet": "/images/products/2026-11/high-level-hitam-b15b4fbaf1-320.webp 320w, /images/products/2026-11/high-level-hitam-b15b4fbaf1-640.webp 640w, /images/products/2026-11/high-level-hitam-b15b4fbaf1-1000.webp 1000w, /images/products/2026-11/high-level-hitam-b15b4fbaf1-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/high-level-hitam-b15b4fbaf1-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/high-level-putih-b1db6dfad7-1600.webp": {
+    "src": "/images/products/2026-11/high-level-putih-b1db6dfad7-640.webp",
+    "srcSet": "/images/products/2026-11/high-level-putih-b1db6dfad7-320.webp 320w, /images/products/2026-11/high-level-putih-b1db6dfad7-640.webp 640w, /images/products/2026-11/high-level-putih-b1db6dfad7-1000.webp 1000w, /images/products/2026-11/high-level-putih-b1db6dfad7-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/high-level-putih-b1db6dfad7-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/high-level-pemakaian-e7a61464cc-1600.webp": {
+    "src": "/images/products/2026-11/high-level-pemakaian-e7a61464cc-640.webp",
+    "srcSet": "/images/products/2026-11/high-level-pemakaian-e7a61464cc-320.webp 320w, /images/products/2026-11/high-level-pemakaian-e7a61464cc-640.webp 640w, /images/products/2026-11/high-level-pemakaian-e7a61464cc-1000.webp 1000w, /images/products/2026-11/high-level-pemakaian-e7a61464cc-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/high-level-pemakaian-e7a61464cc-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/joy-juice-hitam-2e31a541dc-1600.webp": {
+    "src": "/images/products/2026-11/joy-juice-hitam-2e31a541dc-640.webp",
+    "srcSet": "/images/products/2026-11/joy-juice-hitam-2e31a541dc-320.webp 320w, /images/products/2026-11/joy-juice-hitam-2e31a541dc-640.webp 640w, /images/products/2026-11/joy-juice-hitam-2e31a541dc-1000.webp 1000w, /images/products/2026-11/joy-juice-hitam-2e31a541dc-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/joy-juice-hitam-2e31a541dc-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/joy-juice-putih-dd6c062b29-1600.webp": {
+    "src": "/images/products/2026-11/joy-juice-putih-dd6c062b29-640.webp",
+    "srcSet": "/images/products/2026-11/joy-juice-putih-dd6c062b29-320.webp 320w, /images/products/2026-11/joy-juice-putih-dd6c062b29-640.webp 640w, /images/products/2026-11/joy-juice-putih-dd6c062b29-1000.webp 1000w, /images/products/2026-11/joy-juice-putih-dd6c062b29-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/joy-juice-putih-dd6c062b29-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/joy-juice-pemakaian-49dffb3b52-1600.webp": {
+    "src": "/images/products/2026-11/joy-juice-pemakaian-49dffb3b52-640.webp",
+    "srcSet": "/images/products/2026-11/joy-juice-pemakaian-49dffb3b52-320.webp 320w, /images/products/2026-11/joy-juice-pemakaian-49dffb3b52-640.webp 640w, /images/products/2026-11/joy-juice-pemakaian-49dffb3b52-1000.webp 1000w, /images/products/2026-11/joy-juice-pemakaian-49dffb3b52-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/joy-juice-pemakaian-49dffb3b52-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/kai-dps-hitam-4a94f7e5d7-1600.webp": {
+    "src": "/images/products/2026-11/kai-dps-hitam-4a94f7e5d7-640.webp",
+    "srcSet": "/images/products/2026-11/kai-dps-hitam-4a94f7e5d7-320.webp 320w, /images/products/2026-11/kai-dps-hitam-4a94f7e5d7-640.webp 640w, /images/products/2026-11/kai-dps-hitam-4a94f7e5d7-1000.webp 1000w, /images/products/2026-11/kai-dps-hitam-4a94f7e5d7-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/kai-dps-hitam-4a94f7e5d7-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/kai-dps-pemakaian-0670cadbc6-1600.webp": {
+    "src": "/images/products/2026-11/kai-dps-pemakaian-0670cadbc6-640.webp",
+    "srcSet": "/images/products/2026-11/kai-dps-pemakaian-0670cadbc6-320.webp 320w, /images/products/2026-11/kai-dps-pemakaian-0670cadbc6-640.webp 640w, /images/products/2026-11/kai-dps-pemakaian-0670cadbc6-1000.webp 1000w, /images/products/2026-11/kai-dps-pemakaian-0670cadbc6-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/kai-dps-pemakaian-0670cadbc6-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/kainora-cereal-hitam-4348c75cff-1600.webp": {
+    "src": "/images/products/2026-11/kainora-cereal-hitam-4348c75cff-640.webp",
+    "srcSet": "/images/products/2026-11/kainora-cereal-hitam-4348c75cff-320.webp 320w, /images/products/2026-11/kainora-cereal-hitam-4348c75cff-640.webp 640w, /images/products/2026-11/kainora-cereal-hitam-4348c75cff-1000.webp 1000w, /images/products/2026-11/kainora-cereal-hitam-4348c75cff-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/kainora-cereal-hitam-4348c75cff-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/kainora-cereal-putih-1bd0e95bb6-1600.webp": {
+    "src": "/images/products/2026-11/kainora-cereal-putih-1bd0e95bb6-640.webp",
+    "srcSet": "/images/products/2026-11/kainora-cereal-putih-1bd0e95bb6-320.webp 320w, /images/products/2026-11/kainora-cereal-putih-1bd0e95bb6-640.webp 640w, /images/products/2026-11/kainora-cereal-putih-1bd0e95bb6-1000.webp 1000w, /images/products/2026-11/kainora-cereal-putih-1bd0e95bb6-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/kainora-cereal-putih-1bd0e95bb6-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/kainora-cereal-pemakaian-b6ede223d7-1600.webp": {
+    "src": "/images/products/2026-11/kainora-cereal-pemakaian-b6ede223d7-640.webp",
+    "srcSet": "/images/products/2026-11/kainora-cereal-pemakaian-b6ede223d7-320.webp 320w, /images/products/2026-11/kainora-cereal-pemakaian-b6ede223d7-640.webp 640w, /images/products/2026-11/kainora-cereal-pemakaian-b6ede223d7-1000.webp 1000w, /images/products/2026-11/kainora-cereal-pemakaian-b6ede223d7-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/kainora-cereal-pemakaian-b6ede223d7-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/kainora-egg-hitam-5943294b7c-1600.webp": {
+    "src": "/images/products/2026-11/kainora-egg-hitam-5943294b7c-640.webp",
+    "srcSet": "/images/products/2026-11/kainora-egg-hitam-5943294b7c-320.webp 320w, /images/products/2026-11/kainora-egg-hitam-5943294b7c-640.webp 640w, /images/products/2026-11/kainora-egg-hitam-5943294b7c-1000.webp 1000w, /images/products/2026-11/kainora-egg-hitam-5943294b7c-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/kainora-egg-hitam-5943294b7c-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/kainora-egg-putih-22827e4c39-1600.webp": {
+    "src": "/images/products/2026-11/kainora-egg-putih-22827e4c39-640.webp",
+    "srcSet": "/images/products/2026-11/kainora-egg-putih-22827e4c39-320.webp 320w, /images/products/2026-11/kainora-egg-putih-22827e4c39-640.webp 640w, /images/products/2026-11/kainora-egg-putih-22827e4c39-1000.webp 1000w, /images/products/2026-11/kainora-egg-putih-22827e4c39-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/kainora-egg-putih-22827e4c39-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/kainora-egg-pemakaian-24bf6e1144-1600.webp": {
+    "src": "/images/products/2026-11/kainora-egg-pemakaian-24bf6e1144-640.webp",
+    "srcSet": "/images/products/2026-11/kainora-egg-pemakaian-24bf6e1144-320.webp 320w, /images/products/2026-11/kainora-egg-pemakaian-24bf6e1144-640.webp 640w, /images/products/2026-11/kainora-egg-pemakaian-24bf6e1144-1000.webp 1000w, /images/products/2026-11/kainora-egg-pemakaian-24bf6e1144-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/kainora-egg-pemakaian-24bf6e1144-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/kainora-toys-hitam-a4130669ed-1600.webp": {
+    "src": "/images/products/2026-11/kainora-toys-hitam-a4130669ed-640.webp",
+    "srcSet": "/images/products/2026-11/kainora-toys-hitam-a4130669ed-320.webp 320w, /images/products/2026-11/kainora-toys-hitam-a4130669ed-640.webp 640w, /images/products/2026-11/kainora-toys-hitam-a4130669ed-1000.webp 1000w, /images/products/2026-11/kainora-toys-hitam-a4130669ed-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/kainora-toys-hitam-a4130669ed-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/kainora-toys-pemakaian-f6aa868a1d-1600.webp": {
+    "src": "/images/products/2026-11/kainora-toys-pemakaian-f6aa868a1d-640.webp",
+    "srcSet": "/images/products/2026-11/kainora-toys-pemakaian-f6aa868a1d-320.webp 320w, /images/products/2026-11/kainora-toys-pemakaian-f6aa868a1d-640.webp 640w, /images/products/2026-11/kainora-toys-pemakaian-f6aa868a1d-1000.webp 1000w, /images/products/2026-11/kainora-toys-pemakaian-f6aa868a1d-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/kainora-toys-pemakaian-f6aa868a1d-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/keychain-hitam-dfda5ee1fe-1600.webp": {
+    "src": "/images/products/2026-11/keychain-hitam-dfda5ee1fe-640.webp",
+    "srcSet": "/images/products/2026-11/keychain-hitam-dfda5ee1fe-320.webp 320w, /images/products/2026-11/keychain-hitam-dfda5ee1fe-640.webp 640w, /images/products/2026-11/keychain-hitam-dfda5ee1fe-1000.webp 1000w, /images/products/2026-11/keychain-hitam-dfda5ee1fe-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/keychain-hitam-dfda5ee1fe-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/keychain-putih-6244576c28-1600.webp": {
+    "src": "/images/products/2026-11/keychain-putih-6244576c28-640.webp",
+    "srcSet": "/images/products/2026-11/keychain-putih-6244576c28-320.webp 320w, /images/products/2026-11/keychain-putih-6244576c28-640.webp 640w, /images/products/2026-11/keychain-putih-6244576c28-1000.webp 1000w, /images/products/2026-11/keychain-putih-6244576c28-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/keychain-putih-6244576c28-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/keychain-pemakaian-43ce1079f0-1600.webp": {
+    "src": "/images/products/2026-11/keychain-pemakaian-43ce1079f0-640.webp",
+    "srcSet": "/images/products/2026-11/keychain-pemakaian-43ce1079f0-320.webp 320w, /images/products/2026-11/keychain-pemakaian-43ce1079f0-640.webp 640w, /images/products/2026-11/keychain-pemakaian-43ce1079f0-1000.webp 1000w, /images/products/2026-11/keychain-pemakaian-43ce1079f0-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/keychain-pemakaian-43ce1079f0-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/kind-tee-hitam-0330ef1b92-1600.webp": {
+    "src": "/images/products/2026-11/kind-tee-hitam-0330ef1b92-640.webp",
+    "srcSet": "/images/products/2026-11/kind-tee-hitam-0330ef1b92-320.webp 320w, /images/products/2026-11/kind-tee-hitam-0330ef1b92-640.webp 640w, /images/products/2026-11/kind-tee-hitam-0330ef1b92-1000.webp 1000w, /images/products/2026-11/kind-tee-hitam-0330ef1b92-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/kind-tee-hitam-0330ef1b92-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/kind-tee-putih-23e35f6081-1600.webp": {
+    "src": "/images/products/2026-11/kind-tee-putih-23e35f6081-640.webp",
+    "srcSet": "/images/products/2026-11/kind-tee-putih-23e35f6081-320.webp 320w, /images/products/2026-11/kind-tee-putih-23e35f6081-640.webp 640w, /images/products/2026-11/kind-tee-putih-23e35f6081-1000.webp 1000w, /images/products/2026-11/kind-tee-putih-23e35f6081-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/kind-tee-putih-23e35f6081-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/kind-tee-pemakaian-5daad70d56-1600.webp": {
+    "src": "/images/products/2026-11/kind-tee-pemakaian-5daad70d56-640.webp",
+    "srcSet": "/images/products/2026-11/kind-tee-pemakaian-5daad70d56-320.webp 320w, /images/products/2026-11/kind-tee-pemakaian-5daad70d56-640.webp 640w, /images/products/2026-11/kind-tee-pemakaian-5daad70d56-1000.webp 1000w, /images/products/2026-11/kind-tee-pemakaian-5daad70d56-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/kind-tee-pemakaian-5daad70d56-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/little-joyfull-hitam-640568356a-1600.webp": {
+    "src": "/images/products/2026-11/little-joyfull-hitam-640568356a-640.webp",
+    "srcSet": "/images/products/2026-11/little-joyfull-hitam-640568356a-320.webp 320w, /images/products/2026-11/little-joyfull-hitam-640568356a-640.webp 640w, /images/products/2026-11/little-joyfull-hitam-640568356a-1000.webp 1000w, /images/products/2026-11/little-joyfull-hitam-640568356a-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/little-joyfull-hitam-640568356a-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/little-joyfull-putih-a7615ef6a8-1600.webp": {
+    "src": "/images/products/2026-11/little-joyfull-putih-a7615ef6a8-640.webp",
+    "srcSet": "/images/products/2026-11/little-joyfull-putih-a7615ef6a8-320.webp 320w, /images/products/2026-11/little-joyfull-putih-a7615ef6a8-640.webp 640w, /images/products/2026-11/little-joyfull-putih-a7615ef6a8-1000.webp 1000w, /images/products/2026-11/little-joyfull-putih-a7615ef6a8-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/little-joyfull-putih-a7615ef6a8-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/little-joyfull-pemakaian-bca3fbc394-1600.webp": {
+    "src": "/images/products/2026-11/little-joyfull-pemakaian-bca3fbc394-640.webp",
+    "srcSet": "/images/products/2026-11/little-joyfull-pemakaian-bca3fbc394-320.webp 320w, /images/products/2026-11/little-joyfull-pemakaian-bca3fbc394-640.webp 640w, /images/products/2026-11/little-joyfull-pemakaian-bca3fbc394-1000.webp 1000w, /images/products/2026-11/little-joyfull-pemakaian-bca3fbc394-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/little-joyfull-pemakaian-bca3fbc394-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/little-love-language-hitam-a2f0c43073-1600.webp": {
+    "src": "/images/products/2026-11/little-love-language-hitam-a2f0c43073-640.webp",
+    "srcSet": "/images/products/2026-11/little-love-language-hitam-a2f0c43073-320.webp 320w, /images/products/2026-11/little-love-language-hitam-a2f0c43073-640.webp 640w, /images/products/2026-11/little-love-language-hitam-a2f0c43073-1000.webp 1000w, /images/products/2026-11/little-love-language-hitam-a2f0c43073-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/little-love-language-hitam-a2f0c43073-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/little-love-language-putih-50f021b31c-1600.webp": {
+    "src": "/images/products/2026-11/little-love-language-putih-50f021b31c-640.webp",
+    "srcSet": "/images/products/2026-11/little-love-language-putih-50f021b31c-320.webp 320w, /images/products/2026-11/little-love-language-putih-50f021b31c-640.webp 640w, /images/products/2026-11/little-love-language-putih-50f021b31c-1000.webp 1000w, /images/products/2026-11/little-love-language-putih-50f021b31c-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/little-love-language-putih-50f021b31c-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/little-love-language-pemakaian-4b579147fb-1600.webp": {
+    "src": "/images/products/2026-11/little-love-language-pemakaian-4b579147fb-640.webp",
+    "srcSet": "/images/products/2026-11/little-love-language-pemakaian-4b579147fb-320.webp 320w, /images/products/2026-11/little-love-language-pemakaian-4b579147fb-640.webp 640w, /images/products/2026-11/little-love-language-pemakaian-4b579147fb-1000.webp 1000w, /images/products/2026-11/little-love-language-pemakaian-4b579147fb-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/little-love-language-pemakaian-4b579147fb-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/little-mona-hitam-edcaa4ef9a-1600.webp": {
+    "src": "/images/products/2026-11/little-mona-hitam-edcaa4ef9a-640.webp",
+    "srcSet": "/images/products/2026-11/little-mona-hitam-edcaa4ef9a-320.webp 320w, /images/products/2026-11/little-mona-hitam-edcaa4ef9a-640.webp 640w, /images/products/2026-11/little-mona-hitam-edcaa4ef9a-1000.webp 1000w, /images/products/2026-11/little-mona-hitam-edcaa4ef9a-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/little-mona-hitam-edcaa4ef9a-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/little-mona-pemakaian-99493fbf77-1600.webp": {
+    "src": "/images/products/2026-11/little-mona-pemakaian-99493fbf77-640.webp",
+    "srcSet": "/images/products/2026-11/little-mona-pemakaian-99493fbf77-320.webp 320w, /images/products/2026-11/little-mona-pemakaian-99493fbf77-640.webp 640w, /images/products/2026-11/little-mona-pemakaian-99493fbf77-1000.webp 1000w, /images/products/2026-11/little-mona-pemakaian-99493fbf77-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/little-mona-pemakaian-99493fbf77-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/love-hitam-a172f61150-1600.webp": {
+    "src": "/images/products/2026-11/love-hitam-a172f61150-640.webp",
+    "srcSet": "/images/products/2026-11/love-hitam-a172f61150-320.webp 320w, /images/products/2026-11/love-hitam-a172f61150-640.webp 640w, /images/products/2026-11/love-hitam-a172f61150-1000.webp 1000w, /images/products/2026-11/love-hitam-a172f61150-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/love-hitam-a172f61150-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/love-putih-b665641db8-1600.webp": {
+    "src": "/images/products/2026-11/love-putih-b665641db8-640.webp",
+    "srcSet": "/images/products/2026-11/love-putih-b665641db8-320.webp 320w, /images/products/2026-11/love-putih-b665641db8-640.webp 640w, /images/products/2026-11/love-putih-b665641db8-1000.webp 1000w, /images/products/2026-11/love-putih-b665641db8-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/love-putih-b665641db8-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/love-pemakaian-1bbe460c0d-1600.webp": {
+    "src": "/images/products/2026-11/love-pemakaian-1bbe460c0d-640.webp",
+    "srcSet": "/images/products/2026-11/love-pemakaian-1bbe460c0d-320.webp 320w, /images/products/2026-11/love-pemakaian-1bbe460c0d-640.webp 640w, /images/products/2026-11/love-pemakaian-1bbe460c0d-1000.webp 1000w, /images/products/2026-11/love-pemakaian-1bbe460c0d-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/love-pemakaian-1bbe460c0d-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/mom-heals-hitam-3058c87281-1600.webp": {
+    "src": "/images/products/2026-11/mom-heals-hitam-3058c87281-640.webp",
+    "srcSet": "/images/products/2026-11/mom-heals-hitam-3058c87281-320.webp 320w, /images/products/2026-11/mom-heals-hitam-3058c87281-640.webp 640w, /images/products/2026-11/mom-heals-hitam-3058c87281-1000.webp 1000w, /images/products/2026-11/mom-heals-hitam-3058c87281-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/mom-heals-hitam-3058c87281-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/mom-heals-putih-0ee50d8859-1600.webp": {
+    "src": "/images/products/2026-11/mom-heals-putih-0ee50d8859-640.webp",
+    "srcSet": "/images/products/2026-11/mom-heals-putih-0ee50d8859-320.webp 320w, /images/products/2026-11/mom-heals-putih-0ee50d8859-640.webp 640w, /images/products/2026-11/mom-heals-putih-0ee50d8859-1000.webp 1000w, /images/products/2026-11/mom-heals-putih-0ee50d8859-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/mom-heals-putih-0ee50d8859-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/mom-heals-pemakaian-8b21a07b74-1600.webp": {
+    "src": "/images/products/2026-11/mom-heals-pemakaian-8b21a07b74-640.webp",
+    "srcSet": "/images/products/2026-11/mom-heals-pemakaian-8b21a07b74-320.webp 320w, /images/products/2026-11/mom-heals-pemakaian-8b21a07b74-640.webp 640w, /images/products/2026-11/mom-heals-pemakaian-8b21a07b74-1000.webp 1000w, /images/products/2026-11/mom-heals-pemakaian-8b21a07b74-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/mom-heals-pemakaian-8b21a07b74-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/mystic-mind-hitam-dadeeea731-1600.webp": {
+    "src": "/images/products/2026-11/mystic-mind-hitam-dadeeea731-640.webp",
+    "srcSet": "/images/products/2026-11/mystic-mind-hitam-dadeeea731-320.webp 320w, /images/products/2026-11/mystic-mind-hitam-dadeeea731-640.webp 640w, /images/products/2026-11/mystic-mind-hitam-dadeeea731-1000.webp 1000w, /images/products/2026-11/mystic-mind-hitam-dadeeea731-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/mystic-mind-hitam-dadeeea731-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/mystic-mind-putih-a35037f3c5-1600.webp": {
+    "src": "/images/products/2026-11/mystic-mind-putih-a35037f3c5-640.webp",
+    "srcSet": "/images/products/2026-11/mystic-mind-putih-a35037f3c5-320.webp 320w, /images/products/2026-11/mystic-mind-putih-a35037f3c5-640.webp 640w, /images/products/2026-11/mystic-mind-putih-a35037f3c5-1000.webp 1000w, /images/products/2026-11/mystic-mind-putih-a35037f3c5-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/mystic-mind-putih-a35037f3c5-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/mystic-mind-pemakaian-26fc1f7831-1600.webp": {
+    "src": "/images/products/2026-11/mystic-mind-pemakaian-26fc1f7831-640.webp",
+    "srcSet": "/images/products/2026-11/mystic-mind-pemakaian-26fc1f7831-320.webp 320w, /images/products/2026-11/mystic-mind-pemakaian-26fc1f7831-640.webp 640w, /images/products/2026-11/mystic-mind-pemakaian-26fc1f7831-1000.webp 1000w, /images/products/2026-11/mystic-mind-pemakaian-26fc1f7831-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/mystic-mind-pemakaian-26fc1f7831-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/one-sweet-world-hitam-88c3e91ffb-1600.webp": {
+    "src": "/images/products/2026-11/one-sweet-world-hitam-88c3e91ffb-640.webp",
+    "srcSet": "/images/products/2026-11/one-sweet-world-hitam-88c3e91ffb-320.webp 320w, /images/products/2026-11/one-sweet-world-hitam-88c3e91ffb-640.webp 640w, /images/products/2026-11/one-sweet-world-hitam-88c3e91ffb-1000.webp 1000w, /images/products/2026-11/one-sweet-world-hitam-88c3e91ffb-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/one-sweet-world-hitam-88c3e91ffb-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/one-sweet-world-putih-53620c1b3c-1600.webp": {
+    "src": "/images/products/2026-11/one-sweet-world-putih-53620c1b3c-640.webp",
+    "srcSet": "/images/products/2026-11/one-sweet-world-putih-53620c1b3c-320.webp 320w, /images/products/2026-11/one-sweet-world-putih-53620c1b3c-640.webp 640w, /images/products/2026-11/one-sweet-world-putih-53620c1b3c-1000.webp 1000w, /images/products/2026-11/one-sweet-world-putih-53620c1b3c-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/one-sweet-world-putih-53620c1b3c-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/one-sweet-world-pemakaian-0c5ec2d00f-1600.webp": {
+    "src": "/images/products/2026-11/one-sweet-world-pemakaian-0c5ec2d00f-640.webp",
+    "srcSet": "/images/products/2026-11/one-sweet-world-pemakaian-0c5ec2d00f-320.webp 320w, /images/products/2026-11/one-sweet-world-pemakaian-0c5ec2d00f-640.webp 640w, /images/products/2026-11/one-sweet-world-pemakaian-0c5ec2d00f-1000.webp 1000w, /images/products/2026-11/one-sweet-world-pemakaian-0c5ec2d00f-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/one-sweet-world-pemakaian-0c5ec2d00f-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/slide-of-a-good-day-hitam-7f0b4a384e-1600.webp": {
+    "src": "/images/products/2026-11/slide-of-a-good-day-hitam-7f0b4a384e-640.webp",
+    "srcSet": "/images/products/2026-11/slide-of-a-good-day-hitam-7f0b4a384e-320.webp 320w, /images/products/2026-11/slide-of-a-good-day-hitam-7f0b4a384e-640.webp 640w, /images/products/2026-11/slide-of-a-good-day-hitam-7f0b4a384e-1000.webp 1000w, /images/products/2026-11/slide-of-a-good-day-hitam-7f0b4a384e-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/slide-of-a-good-day-hitam-7f0b4a384e-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/slide-of-a-good-day-putih-92c68ae172-1600.webp": {
+    "src": "/images/products/2026-11/slide-of-a-good-day-putih-92c68ae172-640.webp",
+    "srcSet": "/images/products/2026-11/slide-of-a-good-day-putih-92c68ae172-320.webp 320w, /images/products/2026-11/slide-of-a-good-day-putih-92c68ae172-640.webp 640w, /images/products/2026-11/slide-of-a-good-day-putih-92c68ae172-1000.webp 1000w, /images/products/2026-11/slide-of-a-good-day-putih-92c68ae172-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/slide-of-a-good-day-putih-92c68ae172-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/slide-of-a-good-day-pemakaian-1c66a199b8-1600.webp": {
+    "src": "/images/products/2026-11/slide-of-a-good-day-pemakaian-1c66a199b8-640.webp",
+    "srcSet": "/images/products/2026-11/slide-of-a-good-day-pemakaian-1c66a199b8-320.webp 320w, /images/products/2026-11/slide-of-a-good-day-pemakaian-1c66a199b8-640.webp 640w, /images/products/2026-11/slide-of-a-good-day-pemakaian-1c66a199b8-1000.webp 1000w, /images/products/2026-11/slide-of-a-good-day-pemakaian-1c66a199b8-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/slide-of-a-good-day-pemakaian-1c66a199b8-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/super-cool-kids-hitam-05ef1634d3-1600.webp": {
+    "src": "/images/products/2026-11/super-cool-kids-hitam-05ef1634d3-640.webp",
+    "srcSet": "/images/products/2026-11/super-cool-kids-hitam-05ef1634d3-320.webp 320w, /images/products/2026-11/super-cool-kids-hitam-05ef1634d3-640.webp 640w, /images/products/2026-11/super-cool-kids-hitam-05ef1634d3-1000.webp 1000w, /images/products/2026-11/super-cool-kids-hitam-05ef1634d3-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/super-cool-kids-hitam-05ef1634d3-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/super-cool-kids-putih-807bc3e1b6-1600.webp": {
+    "src": "/images/products/2026-11/super-cool-kids-putih-807bc3e1b6-640.webp",
+    "srcSet": "/images/products/2026-11/super-cool-kids-putih-807bc3e1b6-320.webp 320w, /images/products/2026-11/super-cool-kids-putih-807bc3e1b6-640.webp 640w, /images/products/2026-11/super-cool-kids-putih-807bc3e1b6-1000.webp 1000w, /images/products/2026-11/super-cool-kids-putih-807bc3e1b6-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/super-cool-kids-putih-807bc3e1b6-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/super-cool-kids-pemakaian-e39cdd31ef-1600.webp": {
+    "src": "/images/products/2026-11/super-cool-kids-pemakaian-e39cdd31ef-640.webp",
+    "srcSet": "/images/products/2026-11/super-cool-kids-pemakaian-e39cdd31ef-320.webp 320w, /images/products/2026-11/super-cool-kids-pemakaian-e39cdd31ef-640.webp 640w, /images/products/2026-11/super-cool-kids-pemakaian-e39cdd31ef-1000.webp 1000w, /images/products/2026-11/super-cool-kids-pemakaian-e39cdd31ef-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/super-cool-kids-pemakaian-e39cdd31ef-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/superhero-toy-machine-hitam-cfbfbc6e5c-1600.webp": {
+    "src": "/images/products/2026-11/superhero-toy-machine-hitam-cfbfbc6e5c-640.webp",
+    "srcSet": "/images/products/2026-11/superhero-toy-machine-hitam-cfbfbc6e5c-320.webp 320w, /images/products/2026-11/superhero-toy-machine-hitam-cfbfbc6e5c-640.webp 640w, /images/products/2026-11/superhero-toy-machine-hitam-cfbfbc6e5c-1000.webp 1000w, /images/products/2026-11/superhero-toy-machine-hitam-cfbfbc6e5c-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/superhero-toy-machine-hitam-cfbfbc6e5c-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/superhero-toy-machine-putih-5961975afa-1600.webp": {
+    "src": "/images/products/2026-11/superhero-toy-machine-putih-5961975afa-640.webp",
+    "srcSet": "/images/products/2026-11/superhero-toy-machine-putih-5961975afa-320.webp 320w, /images/products/2026-11/superhero-toy-machine-putih-5961975afa-640.webp 640w, /images/products/2026-11/superhero-toy-machine-putih-5961975afa-1000.webp 1000w, /images/products/2026-11/superhero-toy-machine-putih-5961975afa-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/superhero-toy-machine-putih-5961975afa-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/superhero-toy-machine-pemakaian-731a8da079-1600.webp": {
+    "src": "/images/products/2026-11/superhero-toy-machine-pemakaian-731a8da079-640.webp",
+    "srcSet": "/images/products/2026-11/superhero-toy-machine-pemakaian-731a8da079-320.webp 320w, /images/products/2026-11/superhero-toy-machine-pemakaian-731a8da079-640.webp 640w, /images/products/2026-11/superhero-toy-machine-pemakaian-731a8da079-1000.webp 1000w, /images/products/2026-11/superhero-toy-machine-pemakaian-731a8da079-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/superhero-toy-machine-pemakaian-731a8da079-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/unleash-the-power-hitam-67e54fcf04-1600.webp": {
+    "src": "/images/products/2026-11/unleash-the-power-hitam-67e54fcf04-640.webp",
+    "srcSet": "/images/products/2026-11/unleash-the-power-hitam-67e54fcf04-320.webp 320w, /images/products/2026-11/unleash-the-power-hitam-67e54fcf04-640.webp 640w, /images/products/2026-11/unleash-the-power-hitam-67e54fcf04-1000.webp 1000w, /images/products/2026-11/unleash-the-power-hitam-67e54fcf04-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/unleash-the-power-hitam-67e54fcf04-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/unleash-the-power-putih-a66d2897a7-1600.webp": {
+    "src": "/images/products/2026-11/unleash-the-power-putih-a66d2897a7-640.webp",
+    "srcSet": "/images/products/2026-11/unleash-the-power-putih-a66d2897a7-320.webp 320w, /images/products/2026-11/unleash-the-power-putih-a66d2897a7-640.webp 640w, /images/products/2026-11/unleash-the-power-putih-a66d2897a7-1000.webp 1000w, /images/products/2026-11/unleash-the-power-putih-a66d2897a7-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/unleash-the-power-putih-a66d2897a7-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/unleash-the-power-pemakaian-7aa565ea1f-1600.webp": {
+    "src": "/images/products/2026-11/unleash-the-power-pemakaian-7aa565ea1f-640.webp",
+    "srcSet": "/images/products/2026-11/unleash-the-power-pemakaian-7aa565ea1f-320.webp 320w, /images/products/2026-11/unleash-the-power-pemakaian-7aa565ea1f-640.webp 640w, /images/products/2026-11/unleash-the-power-pemakaian-7aa565ea1f-1000.webp 1000w, /images/products/2026-11/unleash-the-power-pemakaian-7aa565ea1f-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/unleash-the-power-pemakaian-7aa565ea1f-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/waffle-kainora-hitam-35b4b64693-1600.webp": {
+    "src": "/images/products/2026-11/waffle-kainora-hitam-35b4b64693-640.webp",
+    "srcSet": "/images/products/2026-11/waffle-kainora-hitam-35b4b64693-320.webp 320w, /images/products/2026-11/waffle-kainora-hitam-35b4b64693-640.webp 640w, /images/products/2026-11/waffle-kainora-hitam-35b4b64693-1000.webp 1000w, /images/products/2026-11/waffle-kainora-hitam-35b4b64693-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/waffle-kainora-hitam-35b4b64693-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/waffle-kainora-putih-ff18bf66ef-1600.webp": {
+    "src": "/images/products/2026-11/waffle-kainora-putih-ff18bf66ef-640.webp",
+    "srcSet": "/images/products/2026-11/waffle-kainora-putih-ff18bf66ef-320.webp 320w, /images/products/2026-11/waffle-kainora-putih-ff18bf66ef-640.webp 640w, /images/products/2026-11/waffle-kainora-putih-ff18bf66ef-1000.webp 1000w, /images/products/2026-11/waffle-kainora-putih-ff18bf66ef-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/waffle-kainora-putih-ff18bf66ef-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/waffle-kainora-pemakaian-e447fc3389-1600.webp": {
+    "src": "/images/products/2026-11/waffle-kainora-pemakaian-e447fc3389-640.webp",
+    "srcSet": "/images/products/2026-11/waffle-kainora-pemakaian-e447fc3389-320.webp 320w, /images/products/2026-11/waffle-kainora-pemakaian-e447fc3389-640.webp 640w, /images/products/2026-11/waffle-kainora-pemakaian-e447fc3389-1000.webp 1000w, /images/products/2026-11/waffle-kainora-pemakaian-e447fc3389-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/waffle-kainora-pemakaian-e447fc3389-320.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/products/2026-11/wild-animals-hitam-6bb8c66d74-1600.webp": {
+    "src": "/images/products/2026-11/wild-animals-hitam-6bb8c66d74-640.webp",
+    "srcSet": "/images/products/2026-11/wild-animals-hitam-6bb8c66d74-320.webp 320w, /images/products/2026-11/wild-animals-hitam-6bb8c66d74-640.webp 640w, /images/products/2026-11/wild-animals-hitam-6bb8c66d74-1000.webp 1000w, /images/products/2026-11/wild-animals-hitam-6bb8c66d74-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/wild-animals-hitam-6bb8c66d74-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/wild-animals-putih-5d492551ea-1600.webp": {
+    "src": "/images/products/2026-11/wild-animals-putih-5d492551ea-640.webp",
+    "srcSet": "/images/products/2026-11/wild-animals-putih-5d492551ea-320.webp 320w, /images/products/2026-11/wild-animals-putih-5d492551ea-640.webp 640w, /images/products/2026-11/wild-animals-putih-5d492551ea-1000.webp 1000w, /images/products/2026-11/wild-animals-putih-5d492551ea-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/wild-animals-putih-5d492551ea-320.webp",
+    "width": 2000,
+    "height": 2000
+  },
+  "/images/products/2026-11/wild-animals-pemakaian-3d683a8d3f-1600.webp": {
+    "src": "/images/products/2026-11/wild-animals-pemakaian-3d683a8d3f-640.webp",
+    "srcSet": "/images/products/2026-11/wild-animals-pemakaian-3d683a8d3f-320.webp 320w, /images/products/2026-11/wild-animals-pemakaian-3d683a8d3f-640.webp 640w, /images/products/2026-11/wild-animals-pemakaian-3d683a8d3f-1000.webp 1000w, /images/products/2026-11/wild-animals-pemakaian-3d683a8d3f-1600.webp 1600w",
+    "thumbnail": "/images/products/2026-11/wild-animals-pemakaian-3d683a8d3f-320.webp",
+    "width": 1254,
+    "height": 1254
   }
 }

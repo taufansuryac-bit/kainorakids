@@ -6,7 +6,7 @@ export const journalTitle = post => {
   const base = post.seoTitle || post.title;
   return [`${base} | Kainora Journal`, `${base} | Kainora`].find(title => title.length <= 60) || base;
 };
-// "Cerita berikutnya": the editor's first picks plus the next article in the same topic,
+// "Artikel lainnya": the editor's first picks plus the next article in the same topic,
 // so every article is linked from its predecessor (authored picks alone left 7 of 71
 // articles without a single related link). Shared by BlogView and build-journal.js.
 export function journalRelated(post, posts, count = 3) {

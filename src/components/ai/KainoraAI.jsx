@@ -1,3 +1,4 @@
+import {sizePriceSummary,productPriceLabel} from '../../utils/pricing';
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import Fuse from 'fuse.js';
 import { Terminal, Send, X, Bot, Loader2 } from 'lucide-react';
@@ -5,36 +6,17 @@ import { useStore } from '../../context/StoreContext';
 import { useAIHealth } from '../../hooks/useAIHealth';
 import { cloudAIService } from '../../services/cloudAIService';
 import { conversationMemory } from '../../services/conversationMemory';
-import { KAINORA_SYSTEM_PROMPT } from '../../prompts/kainoraPrompts';
+import { KAINORA_SYSTEM_PROMPT, KAINORA_GREETINGS } from '../../prompts/kainoraPrompts';
 
-// --- SALES PSYCHOLOGY ARRAYS ---
+// Plain-language fallback text follows the same rules as the cloud prompt.
 const CONVERSATIONAL_OPENERS = [
-  "Halo Bunda! Senang banget bisa ngobrol sama Bunda hari ini. ",
-  "Hai Bun! Wah, paham banget deh rasanya. ",
-  "Halo Bunda kesayangan! Pas banget Bunda nanya ini. ",
-  "Wah, menarik nih pertanyaannya Bun! KAINORA bantu ya. "
+  'Berikut pilihan produk dari katalog Kainora Kids. ',
+  'Anda dapat melihat informasi produk pada kartu berikut. ',
 ];
-
 const SOFT_SELL_CLOSINGS = [
-  "Daripada penasaran, Bunda bisa cek dulu detail gemasnya di bawah ini ya!",
-  "Boleh banget klik kartu di bawah ini untuk intip pilihan warnanya.",
-  "Mumpung stoknya masih aman, yuk intip sebentar detailnya di bawah ini Bun!"
+  'Buka detail produk untuk memeriksa motif, bahan, dan ukuran.',
+  'Bandingkan ukuran kaos dengan tabel ukuran sebelum memesan.',
 ];
-
-const KAINORA_GREETINGS = {
-  firstTime: [
-    "Hai Bunda! 👋 Mimin KAINORA siap bantu. Mau cari baju anak atau baca tips parenting?",
-    "Welcome! ✨ Mimin KAINORA, asisten Kainora Kids. Ada yang bisa dibantu?"
-  ],
-  returning: [
-    "Bunda balik lagi! 🥰 Mimin kangen nih! Ada yang dicari?",
-    "Welcome back! 💃 Mimin siap bantu yang mana kali ini?"
-  ],
-  loyal: [
-    "🔥🔥🔥 VIP CUSTOMER! Mimin salute! Mau lihat koleksi terbaru?",
-    "Bunda favorit balik! 💎 Mimin siap maximal service!"
-  ]
-};
 
 const POSITIVE_PATTERNS = [
   /lucu|lhat|manis|gemes|imut|cantik|suka|love/i,
@@ -50,9 +32,9 @@ const NEGATIVE_PATTERNS = [
 
 const SUGGESTED_QUESTIONS = {
   product: [
-    "Baju apa yang lagi trend? 👗",
-    "Rekomendasiin baju untuk anak 2 tahun",
-    "Baju cowok yang adem apa ya?"
+    "Lihat pilihan graphic tee anak",
+    "Bagaimana memilih ukuran kaos anak?",
+    "Lihat bahan kaos anak laki-laki"
   ],
   blog: [
     "Tips memilih baju anak",
@@ -61,7 +43,7 @@ const SUGGESTED_QUESTIONS = {
   default: [
     "Lihat koleksi terbaru",
     "Bantu saya pilih kado",
-    "Baju terlaris apa?"
+    "Bagaimana cara memesan?"
   ]
 };
 
@@ -267,7 +249,7 @@ const KainoraAI = ({ initialOpen = false }) => {
     if (topProducts.length > 0) {
       productContext = '\n\n📦 PRODUK:\n';
       topProducts.forEach((p, i) => {
-        productContext += `${i + 1}. ${p.name} - Rp ${p.price?.toLocaleString('id-ID') || 'N/A'}\n`;
+        productContext += `${i + 1}. ${p.name} - ${sizePriceSummary(p)}\n`;
         if (p.description) productContext += `   ${p.description}\n`;
       });
       if (['product', 'consultation', 'objection'].includes(intentResult.intent)) {
@@ -288,7 +270,7 @@ const KainoraAI = ({ initialOpen = false }) => {
 
     const systemPrompt = KAINORA_SYSTEM_PROMPT;
     const fullContext = productContext + postContext;
-    let promptSuffix = `\n\nPertanyaan: ${input}\n\n📏 Max 3 paragraf, langsung to the point, tambah CTA.`;
+    let promptSuffix = `\n\nPertanyaan: ${input}\n\nMaksimal tiga paragraf. Jawab pertanyaan secara langsung menggunakan fakta yang tersedia.`;
 
     const fullPrompt = `${systemPrompt}\n\nDATA:${fullContext}\n\nWAJIB: Gunakan data di atas!${promptSuffix}`;
 
@@ -337,18 +319,18 @@ const KainoraAI = ({ initialOpen = false }) => {
 
     if (sentiment === 'positive' && intentResult.intent !== 'greeting') {
       return {
-        text: "Seneng banget Bunda suka! 💕 Mimin punya koleksi lain yang juga LUCU LUCU!",
+        text: "Anda juga dapat melihat pilihan motif lain dari katalog Kainora Kids.",
         product: products[Math.floor(Math.random() * products.length)],
         isUpsell: true
       };
     }
 
     if (intentResult.intent === 'greeting') {
-      return "Halo Bunda! Ada yang bisa KAINORA bantu hari ini? ✨";
+      return "Halo. Ada yang ingin Anda ketahui tentang produk atau pemesanan Kainora Kids?";
     }
 
     if (intentResult.intent === 'thanks') {
-      return "Sama-sama Bunda! Senang bisa membantu. Ada lagi yang ingin ditanyakan? 😊";
+      return "Sama-sama. Ada informasi produk atau pemesanan lain yang Anda perlukan?";
     }
 
     const productResults = cachedSearch(intentResult.searchStr, productFuse, searchCacheRef.current);
@@ -366,12 +348,12 @@ const KainoraAI = ({ initialOpen = false }) => {
 
     if (intentResult.intent === 'blog' && bestPost) {
       return {
-        text: `Fase ini memang punya tantangannya sendiri ya Bunda. Di Jurnal Kainora, kami punya panduan yang pas:\n\n📝 ${bestPost.title.toUpperCase()}\n\nBunda bisa membaca artikel lengkapnya dengan mengklik kartu di bawah ini. Semangat terus ya Bun!`,
+        text: `Artikel berikut membahas topik terkait:\n\n${bestPost.title}\n\nBuka kartu artikel untuk membaca panduannya.`,
         post: bestPost
       };
     }
 
-    return "Kainora belum punya jawaban untuk itu Bun. Fokus KAINORA AI saat ini adalah seputar katalog baju Kainora dan tips parenting di Jurnal.";
+    return "Informasi untuk pertanyaan tersebut belum tersedia. Saya dapat membantu mencari produk Kainora Kids dan panduan pakaian anak.";
   }, [detectIntent, analyzeSentiment, cachedSearch, productFuse, postFuse, products]);
 
   // Handle send
@@ -405,7 +387,7 @@ const KainoraAI = ({ initialOpen = false }) => {
       console.error('[KAINORA] Error:', err);
       setMessages(prev => [...prev, {
         sender: 'ai',
-        text: 'Maaf Bund, ada gangguan teknis. Coba lagi ya!'
+        text: 'Jawaban belum dapat dimuat. Silakan coba lagi.'
       }]);
     } finally {
       setIsTyping(false);
@@ -422,7 +404,7 @@ const KainoraAI = ({ initialOpen = false }) => {
         <button
           onClick={() => setIsOpen(true)}
           className="ai-launcher fixed bottom-4 right-4 z-50 flex items-center gap-2 rounded-full border-[3px] border-ink bg-brand-yellow px-4 py-3 text-ink shadow-solid-sm transition-all hover:-translate-y-0.5 hover:translate-x-0 hover:shadow-solid active:translate-x-[3px] active:translate-y-[3px] active:shadow-none group sm:bottom-6 sm:right-6"
-          aria-label="Open KAINORA AI Chat"
+          aria-label="Buka asisten Kainora Kids"
         >
           <Terminal className="w-5 h-5 animate-pulse" />
           <span className="font-arcade text-xs font-bold tracking-widest uppercase flex items-center gap-2">
@@ -453,28 +435,28 @@ const KainoraAI = ({ initialOpen = false }) => {
               {aiHealth.isChecking ? (
                 <div className="flex items-center gap-1 bg-ink px-2 py-1 border border-gray-600">
                   <Loader2 className="w-3 h-3 animate-spin text-gray-400" />
-                  <span className="text-[10px] font-bold text-gray-400 tracking-widest uppercase">CHECKING</span>
+                  <span className="text-[10px] font-bold text-gray-400 tracking-widest uppercase">MENGHUBUNGKAN</span>
                 </div>
               ) : aiHealth.isAvailable ? (
                 <div className="flex items-center gap-1 bg-ink px-2 py-1 border border-green-500">
                   <span className="text-green-500 text-[10px] animate-pulse">●</span>
                   <span className="text-[10px] font-bold text-green-500 tracking-widest uppercase">
-                    {aiHealth.primaryProvider || 'ONLINE'}
+                    ASISTEN AKTIF
                   </span>
                 </div>
               ) : (
                 <div className="flex items-center gap-1 bg-ink px-2 py-1 border border-red-500">
                   <span className="text-red-500 text-[10px]">○</span>
-                  <span className="text-[10px] font-bold text-red-500 tracking-widest uppercase">OFFLINE</span>
+                  <span className="text-[10px] font-bold text-red-500 tracking-widest uppercase">PENCARIAN KATALOG</span>
                 </div>
               )}
               {userProfile.isLoyal && (
-                <span className="text-[10px] bg-ink text-amber-500 px-2 py-1 font-bold border border-ink">⭐ VIP</span>
+                <span className="text-[10px] bg-ink text-amber-500 px-2 py-1 font-bold border border-ink">PELANGGAN KAINORA</span>
               )}
               <button
                 onClick={() => setIsOpen(false)}
                 className="p-1 hover:bg-ink hover:text-amber-500 transition-colors border-2 border-transparent hover:border-current"
-                aria-label="Close chat (Esc)"
+                aria-label="Tutup chat (Esc)"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -503,7 +485,7 @@ const KainoraAI = ({ initialOpen = false }) => {
                   >
                     <img src={msg.product.img} alt={msg.product.name} className="w-full h-32 object-cover border-2 border-ink mb-2 grayscale hover:grayscale-0 transition-all duration-300" />
                     <h4 className="text-ink font-black tracking-widest text-[10px] uppercase">{msg.product.name}</h4>
-                    <p className="text-amber-600 font-bold text-xs mt-1">Rp {msg.product.price?.toLocaleString('id-ID') || 'N/A'}</p>
+                    <p className="text-amber-600 font-bold text-xs mt-1">{productPriceLabel(msg.product)}</p>
                   </div>
                 )}
 
@@ -537,7 +519,7 @@ const KainoraAI = ({ initialOpen = false }) => {
             {isTyping && !streamedText && (
               <div className="flex justify-start">
                 <div className="bg-transparent text-amber-500 border-2 border-amber-500 p-3 rounded-tr-lg rounded-br-lg rounded-bl-lg">
-                  <span className="text-xs font-bold animate-pulse">🤖 MinKai .....</span>
+                  <span className="text-xs font-bold animate-pulse">Menyiapkan jawaban…</span>
                 </div>
               </div>
             )}

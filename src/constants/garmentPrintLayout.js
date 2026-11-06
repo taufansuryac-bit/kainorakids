@@ -1,6 +1,6 @@
 // Fixed print areas on the normalized oversized mesh (maximum dimension = 2).
-// Change artwork URLs to swap a motif. Keep these positions/sizes unchanged to
-// reuse the approved placement; artwork is fitted without stretching.
+// Artwork is fitted without stretching; the large front preset can be scaled
+// around its existing centre by each garment's saved percentage.
 export const GARMENT_PRINT_LAYOUT = Object.freeze({
   front: Object.freeze({
     side: 1,
@@ -24,6 +24,15 @@ export const GARMENT_PRINT_LAYOUT = Object.freeze({
     size: Object.freeze([1.02, 1.24, .55]),
   }),
 });
+
+export function garmentPrintLayout(entry, side) {
+  const preset = side === 'front' ? entry.frontLayout === 'large' ? 'frontLarge' : entry.frontLayout === 'badge' ? 'frontBadge' : 'front' : side;
+  const layout = GARMENT_PRINT_LAYOUT[preset];
+  if (preset !== 'frontLarge') return layout;
+  const percent = Number.isFinite(entry.frontPrintScale) ? Math.min(100, Math.max(20, entry.frontPrintScale)) : 100;
+  if (percent === 100) return layout;
+  return { ...layout, size: [layout.size[0] * percent / 100, layout.size[1] * percent / 100, layout.size[2]] };
+}
 
 export const GARMENT_ARTWORK = Object.freeze({
   front: '/models/kainora/kainora-park-front.webp',

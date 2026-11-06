@@ -9,6 +9,13 @@ export default {
   theme: {
     extend: {
       colors: {
+        background: 'rgb(var(--rail-background, 255 255 255) / <alpha-value>)',
+        foreground: 'rgb(var(--rail-foreground, 25 25 23) / <alpha-value>)',
+        'muted-foreground': 'rgb(var(--rail-muted, 105 105 96) / <alpha-value>)',
+        card: 'rgb(var(--rail-background, 255 255 255) / <alpha-value>)',
+        'card-foreground': 'rgb(var(--rail-foreground, 25 25 23) / <alpha-value>)',
+        border: 'rgb(208 208 200 / <alpha-value>)',
+        ring: '#536814',
         white: '#FFFFFF',
         ink: '#191917',
         paper: '#FFFFFF',

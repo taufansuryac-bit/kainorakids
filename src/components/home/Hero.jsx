@@ -27,7 +27,7 @@ export const Hero = ({ onShop }) => {
         <aside className="poster-manifesto">
           <RotatingBadge text="SMALL FITS • BIG DAYS" size={95} fill="var(--teal)" className="poster-badge" />
           <h2>BAJU SERU.<br />BUAT MAIN<br />TERUS.</h2>
-          <p>Motif penuh cerita. Bahan nyaman. Gaya yang tumbuh bareng si kecil.</p>
+          <p>Graphic tee oversize anak dengan pilihan motif grafis. Lihat ukuran dan detail bahan pada setiap produk.</p>
           <button onClick={onShop} className="poster-shop-link roll-host"><TextRoll>Jelajahi koleksi</TextRoll><ArrowUpRight size={16} /></button>
         </aside>
       </div>
@@ -36,7 +36,7 @@ export const Hero = ({ onShop }) => {
         <div className="poster-editorial">
           <div className="poster-panel-label"><span>THE EVERYDAY PLAY CLUB</span><span>NO BORING DAYS ↗</span></div>
           <div className="poster-editorial-photo"><img src={EDITORIAL[slide].media} alt={EDITORIAL[slide].alt} /><span className="poster-photo-sticker">GO OUT.<br />MAKE STORIES.</span></div>
-          <div className="poster-photo-caption"><span>BUKAN BAJU BUAT DIAM.</span><div><span>{String(slide + 1).padStart(2, '0')} / {String(EDITORIAL.length).padStart(2, '0')}</span><button onClick={() => go(-1)} aria-label="Foto editorial sebelumnya"><ArrowLeft size={17} /></button><button onClick={() => go(1)} aria-label="Foto editorial berikutnya"><ArrowRight size={17} /></button></div></div>
+          <div className="poster-photo-caption"><span>GRAPHIC TEE OVERSIZE ANAK</span><div><span>{String(slide + 1).padStart(2, '0')} / {String(EDITORIAL.length).padStart(2, '0')}</span><button onClick={() => go(-1)} aria-label="Foto editorial sebelumnya"><ArrowLeft size={17} /></button><button onClick={() => go(1)} aria-label="Foto editorial berikutnya"><ArrowRight size={17} /></button></div></div>
         </div>
         <div className="poster-side">
           <div className="poster-happy"><span>GOOD DAYS<br />START HERE.</span><Flower size={57} /></div>
@@ -47,7 +47,7 @@ export const Hero = ({ onShop }) => {
       <div className="poster-perks" aria-label="Keunggulan Kainora Kids">
         <div><Shirt size={21} /><span>100% KATUN<br /><small>Nyaman dipakai</small></span></div>
         <div><Heart size={21} /><span>BOXY & OVERSIZE<br /><small>Bebas bergerak</small></span></div>
-        <div><Flower size={27} /><span>MOTIF PENUH CERITA<br /><small>Ekspresikan gayanya</small></span></div>
+        <div><Flower size={27} /><span>PILIHAN MOTIF GRAFIS<br /><small>Lihat detail motif</small></span></div>
         <div><Truck size={23} /><span>GRATIS ONGKIR<br /><small>Se-Jawa</small></span></div>
       </div>
     </section>

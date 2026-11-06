@@ -6,6 +6,11 @@ import './mobile-refinements.css';
 import './pages/shop.css';
 import './pages/size-studio.css';
 import './components/fashion/hero-slideshow.css';
+import './components/fashion/brand-entrance.css';
+import { startBrandIntro } from './components/fashion/brandEntrance';
+
+const stopIntro = startBrandIntro();
+if (import.meta.hot) import.meta.hot.dispose(stopIntro);
 
 const start = () => import('./main.jsx');
 if (document.getElementById('root')?.hasChildNodes()) {

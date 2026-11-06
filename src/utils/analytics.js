@@ -1,3 +1,4 @@
+import { priceForSize } from './pricing.js';
 // Google Analytics 4 with Consent Mode v2. Nothing loads until VITE_GA_MEASUREMENT_ID
 // is set, and analytics_storage stays denied until the buyer accepts the cookie banner.
 // Never pass names, WhatsApp numbers, addresses or emails as event parameters.
@@ -44,5 +45,5 @@ export function track(name, params = {}) {
 export const analyticsItem = (product, size, quantity = 1) => ({
   item_id: String(product.id), item_name: product.name, item_brand: 'Kainora Kids',
   item_category: product.type || 'Kaos', ...(size ? { item_variant: size } : {}),
-  price: Number(product.price) || 0, quantity,
+  price: Number(priceForSize(product,size)) || 0, quantity,
 });

@@ -37,8 +37,8 @@ export const AllReviewsView = () => {
 
   return (
     <main className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-left">
-      <SEO title="Ulasan Pelanggan Kainora Kids" description="Baca ulasan pelanggan yang tersimpan untuk koleksi Kainora Kids." keywords="review baju anak kainora kids, testimoni baju anak premium, ulasan pelanggan toko baju anak, baju anak rating bintang 5" canonicalPath="/?view=allReviews" robots="noindex, follow" />
-      <button onClick={() => setView('productDetail')} className="font-black uppercase text-[10px] mb-8 flex items-center gap-2 transition-colors hover:text-brand-red tracking-widest"><ChevronRight className="rotate-180" size={16} strokeWidth={3}/> Kembali Ke Baju Terakhir</button>
+      <SEO title="Ulasan Pelanggan Kainora Kids" description="Baca ulasan pelanggan yang tersimpan untuk koleksi Kainora Kids." keywords="ulasan Kainora Kids, ulasan kaos anak, graphic tee oversize anak" canonicalPath="/?view=allReviews" robots="noindex, follow" />
+      <button onClick={() => setView('productDetail')} className="font-black uppercase text-[10px] mb-8 flex items-center gap-2 transition-colors hover:text-brand-red tracking-widest"><ChevronRight className="rotate-180" size={16} strokeWidth={3}/> Kembali ke Produk</button>
       
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 border-b-4 border-gray-900 pb-4 gap-4">
          <div><h1 className="text-3xl md:text-4xl font-black uppercase tracking-tighter">{totalReviewCount} Ulasan Pelanggan</h1></div>

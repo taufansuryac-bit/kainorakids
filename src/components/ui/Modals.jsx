@@ -1,3 +1,6 @@
+import { ProductSizeGuide } from '../shop/ProductSizeGuide';
+import { priceForSize, productPriceLabel } from '../../utils/pricing';
+import { KAINORA_COPY_RULES } from '../../prompts/kainoraPrompts';
 export { AuthModal, EditProfileModal } from '../account/AccountDialogs';
 export { MiniCartDrawer } from '../account/MiniCartNotice';
 import { useDialog } from '../fashion/hooks';
@@ -121,9 +124,9 @@ export const FadeIn = ({ children, delay = 0, className = '' }) => {
 export const TopBanner = () => {
   const [msgIdx, setMsgIdx] = useState(0);
   const messages = [
-    "✨ Finest Kids Local Brand In Indonesia ✨",
-    "🔥 Kualitas Premium, Nyaman & Tahan Lama 🔥",
-    "⭐ 100% Katun Combed Anti Alergi ⭐"
+    "GRAPHIC TEE OVERSIZE ANAK",
+    "KAINORA KIDS / FASHION ANAK",
+    "LIHAT BAHAN & UKURAN PADA DETAIL PRODUK"
   ];
 
   useEffect(() => {
@@ -280,37 +283,7 @@ Balas HANYA dengan nama ukuran yang direkomendasikan secara tepat (contoh: "3-4Y
   );
 };
 
-export const SizeGuideModal = ({ isOpen, onClose, availableSizes, onSelectSize }) => {
-  const dialogRef = useDialog(isOpen, onClose);
-  if (!isOpen) return null;
-  return (
-    <div ref={dialogRef} role="dialog" aria-modal="true" aria-label="Panduan ukuran baju anak" className="fixed inset-0 z-[2000] flex items-center justify-center p-4 bg-gray-900/80 backdrop-blur-sm" onClick={onClose}>
-      <div className="bg-white border-4 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] w-full max-w-2xl p-6 md:p-8 max-h-[90vh] overflow-y-auto hide-scrollbar" onClick={e => e.stopPropagation()}>
-        <div className="flex justify-between items-center mb-6 border-b-4 border-gray-900 pb-4">
-          <h2 className="text-xl md:text-2xl font-black uppercase tracking-tighter">Panduan Ukuran Baju Anak</h2>
-          <button onClick={onClose} aria-label="Tutup Panduan ukuran baju anak" className="p-1 hover:bg-amber-100 transition-colors"><X strokeWidth={3}/></button>
-        </div>
-
-        <SmartSizePredictor availableSizes={availableSizes || ['1-2Y', '3-4Y', '5-6Y', '7-8Y', '9-10Y']} onSelectSize={onSelectSize} />
-
-        <div>
-          <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-4 border-b-2 border-gray-100 pb-2">Tabel Ukuran Manual</p>
-          <table className="w-full border-collapse">
-            <thead><tr className="bg-gray-100 border-2 border-gray-900"><th className="p-3 text-[10px] font-black uppercase border-r-2 border-gray-900">Size</th><th className="p-3 text-[10px] font-black uppercase border-r-2 border-gray-900">Lebar (cm)</th><th className="p-3 text-[10px] font-black uppercase">Tinggi (cm)</th></tr></thead>
-            <tbody>
-              {[['1-2Y', '33', '33'], ['3-4Y', '36', '36'], ['5-6Y', '39', '39'], ['7-8Y', '42', '42'], ['9-10Y', '45', '45']].map((r, i) => (
-                <tr key={i} className="border-2 border-gray-900 font-bold"><td className="p-3 text-xs text-center border-r-2 border-gray-900">{r[0]}</td><td className="p-3 text-xs text-center border-r-2 border-gray-900">{r[1]}</td><td className="p-3 text-xs text-center">{r[2]}</td></tr>
-              ))}
-            </tbody>
-          </table>
-          <p className="text-[10px] font-bold text-gray-500 mt-4 leading-relaxed bg-amber-50 p-3 border-l-4 border-amber-500">
-            *Pola cuttingan Boxy Oversize dengan rasio 1:1. Toleransi ukuran 1-2 cm karena proses jahit.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
+export const SizeGuideModal = ({ isOpen, onClose, availableSizes, onSelectSize }) => <ProductSizeGuide open={isOpen} close={onClose} product={{sizes:availableSizes||['S','M','L','XL','XXL']}} selected="" onSelect={value=>onSelectSize?.(value)}/>;
 
 export const FooterPopupModal = ({ footerPopup, setFooterPopup }) => {
   const dialogRef = useDialog(!!footerPopup, () => setFooterPopup(null));
@@ -346,7 +319,7 @@ export const ReviewModal = ({ isOpen, onClose, activeProduct, editData }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if(!user?.email) return;
-    if(!selectedProductId) { showToast("Pilih produk yang ingin diulas terlebih dahulu ya Bunda."); return; }
+    if(!selectedProductId) { showToast("Pilih produk yang ingin diulas terlebih dahulu."); return; }
     setIsLoading(true);
     const selectedProd = products.find(p => p.id === parseInt(selectedProductId) || p.id === selectedProductId);
     try {
@@ -366,7 +339,7 @@ export const ReviewModal = ({ isOpen, onClose, activeProduct, editData }) => {
       <div className="bg-white border-4 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] w-full max-w-md p-8 relative overflow-hidden" onClick={e => e.stopPropagation()}>
         <button onClick={onClose} className="absolute top-4 right-4 p-2 bg-gray-100 hover:bg-red-100 hover:text-red-500 transition-colors"><X size={20} strokeWidth={3}/></button>
         <h2 className="text-2xl font-black uppercase tracking-tighter mb-2">{editData ? 'Edit Ulasan' : 'Berikan Ulasan'}</h2>
-        <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6 border-b-2 border-gray-100 pb-4">Bagikan pengalaman Bunda ke ibu-ibu lainnya</p>
+        <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6 border-b-2 border-gray-100 pb-4">Tulis ulasan berdasarkan pengalaman Anda dengan produk ini.</p>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="block text-[10px] font-black uppercase mb-3 text-gray-500 tracking-widest">Pilih Baju Yang Diulas</label>
@@ -405,21 +378,21 @@ export const AdminProductModal = ({ isOpen, onClose, editData }) => {
     }
     setIsGeneratingDesc(true);
     try {
-      const prompt = `Buatkan deskripsi produk marketing (jualan) yang sangat menarik, estetik, dan persuasif untuk toko pakaian anak premium "Kainora Kids".
+      const prompt = `Tulis deskripsi produk Kainora Kids berdasarkan data berikut. ${KAINORA_COPY_RULES}
 Nama Baju: ${form.name}
 Kategori: ${form.type}
-Bahan: ${form.bahan || 'Katun premium'}
-Model: ${form.model || 'Nyaman dipakai anak'}
-Harga: Rp ${form.price || 'Terjangkau'}
-Tulis dalam 1 atau 2 paragraf singkat saja tanpa tanda bintang (*). Jangan terlalu panjang.`;
+Bahan: ${form.bahan || 'Belum tersedia'}
+Model: ${form.model || 'Belum tersedia'}
+Harga: Rp ${form.price || 'Belum tersedia'}
+Tulis satu paragraf singkat tanpa tanda bintang atau emoji. Jangan menambahkan harga dalam narasi karena harga ditampilkan terpisah. Jangan mengarang detail motif atau bahan yang belum diberikan.`;
 
       const text = await cloudAIService.chat([
-        { role: 'system', content: 'Anda adalah copywriter handal untuk toko baju anak premium.' },
+        { role: 'system', content: KAINORA_COPY_RULES },
         { role: 'user', content: prompt }
       ], { temperature: 0.7, maxTokens: 200, stream: false });
 
       setForm(prev => ({ ...prev, desc: text.trim() }));
-      showToast("Deskripsi berhasil dibuat dengan AI! ✨");
+      showToast("Draf deskripsi dibuat. Periksa kesesuaian informasi sebelum menyimpan.");
     } catch (err) {
       console.error(err);
       showToast("Gagal membuat deskripsi dengan AI.");
@@ -608,7 +581,7 @@ export const HomeQuickViewModal = ({ selectedProduct, setSelectedProduct, setAct
         <div className="md:w-1/2 p-6 md:p-10 flex flex-col justify-center text-left bg-white">
           <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">{selectedProduct.type} / {selectedProduct.gender}</p>
           <h2 className="text-2xl md:text-3xl font-black uppercase mb-4 tracking-tighter leading-tight">{selectedProduct.name}</h2>
-          <p className="text-2xl md:text-3xl font-black text-brand-red mb-6 md:mb-8 border-b-2 border-gray-100 pb-4 md:pb-6">{formatPrice(selectedProduct.price)}</p>
+          <p className="text-2xl md:text-3xl font-black text-brand-red mb-6 md:mb-8 border-b-2 border-gray-100 pb-4 md:pb-6">{size?formatPrice(priceForSize(selectedProduct,size)):productPriceLabel(selectedProduct)}</p>
           <div className="mb-6 md:mb-8">
             <div className="flex justify-between items-center mb-4"><span className="text-xs font-black uppercase text-gray-900 tracking-widest">Pilih Ukuran Anak</span><button onClick={() => setIsSizeGuideOpen(true)} className="text-[10px] underline uppercase font-black text-gray-500 hover:text-brand-red">Size Guide</button></div>
             <div className="flex gap-2 md:gap-3 flex-wrap">{selectedProduct.sizes?.map(s => <button key={s} onClick={() => setSize(s)} className={`px-3 py-1.5 md:px-5 md:py-3 border-2 text-[10px] md:text-xs font-black uppercase tracking-widest transition-all ${size === s ? 'border-gray-900 bg-gray-900 text-white shadow-solid-sm -translate-y-1' : 'border-gray-300 text-gray-600 hover:border-gray-900 hover:text-gray-900'}`}>{s}</button>)}</div>
@@ -780,7 +753,7 @@ export const WriteReviewModal = ({ isOpen, onClose, product }) => {
               required 
               rows={4} 
               className="w-full border-4 border-gray-900 p-4 font-bold outline-none focus:border-amber-500 transition-colors text-sm resize-none" 
-              placeholder="Ceritakan pengalaman si kecil pakai baju ini..."
+              placeholder="Tulis ulasan tentang bahan, ukuran, atau detail produk…"
               value={text}
               onChange={e => setText(e.target.value)}
             ></textarea>

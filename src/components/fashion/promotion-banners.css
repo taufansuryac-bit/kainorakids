@@ -1,0 +1,6 @@
+.f-promotion-section{padding:0;border-block:1px solid #191917;background:#fff}
+.f-promotion-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;width:100%}
+.f-promotion-panel{margin:0;min-width:0;width:100%;aspect-ratio:16/9;max-height:500px;overflow:hidden;background:#f5f4ef}
+.f-promotion-panel>img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.f-promotion-section+.f-category-portals{border-top:0}
+@media(max-width:767px){.f-promotion-grid{grid-template-columns:1fr}}

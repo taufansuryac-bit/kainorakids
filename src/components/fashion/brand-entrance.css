@@ -1,0 +1,21 @@
+.brand-intro-overlay{position:fixed;inset:0;z-index:20000;isolation:isolate;pointer-events:auto;animation:brand-intro-timeout 1ms 2990ms forwards}
+.brand-intro-curtain{position:absolute;inset:0;background:#fff}
+.brand-intro-wordmark{position:absolute;width:min(560px,82vw);aspect-ratio:400 / 76;left:50%;top:50%;margin-left:calc(min(560px,82vw) / -2);margin-top:calc(min(560px,82vw) * 76 / 400 / -2);transform-origin:50% 50%}
+.brand-intro-part{position:absolute;inset:0;overflow:hidden}
+.brand-intro-part--kainora{clip-path:inset(0 25.5% 0 0)}
+.brand-intro-part--kids{clip-path:inset(0 0 0 74.5%)}
+.brand-intro-part img{position:absolute;left:0;top:-26.315789%;width:100%;height:auto;max-width:none;filter:grayscale(1) brightness(0)}
+html[data-brand-intro-logo=flying] .site-nav .nav-logo{visibility:hidden}
+html[data-brand-intro=branding] .f-hero-image{clip-path:inset(100% 0 0)}
+html[data-brand-intro=branding] .f-hero-title .f-line-mask{clip-path:inset(0 0 100% 0)}
+html[data-brand-intro=branding] :is(.f-hero-overline,.f-hero-bottom,.f-hero-edition,.site-nav>nav,.nav-actions,.nav-brand-tagline){opacity:0}
+html[data-brand-intro=reveal] .f-hero-image{animation:brand-hero-photo 1050ms cubic-bezier(.16,1,.3,1) both}
+html[data-brand-intro=reveal] .f-hero-title .f-line-mask{animation:brand-hero-type 850ms cubic-bezier(.16,1,.3,1) 80ms both}
+html[data-brand-intro=reveal] .f-hero-title .f-line-mask:last-child{animation-delay:200ms}
+html[data-brand-intro=reveal] :is(.f-hero-overline,.f-hero-bottom,.f-hero-edition){animation:brand-hero-settle 700ms cubic-bezier(.16,1,.3,1) 280ms both}
+html[data-brand-intro=reveal] :is(.site-nav>nav,.nav-actions,.nav-brand-tagline){animation:brand-hero-settle 550ms cubic-bezier(.16,1,.3,1) 150ms both}
+@keyframes brand-hero-photo{from{clip-path:inset(100% 0 0)}to{clip-path:inset(0 0 0)}}
+@keyframes brand-hero-type{from{clip-path:inset(0 0 100% 0);transform:translateY(12px)}to{clip-path:inset(0 0 0);transform:translateY(0)}}
+@keyframes brand-hero-settle{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes brand-intro-timeout{to{visibility:hidden;pointer-events:none}}
+@media(prefers-reduced-motion:reduce){.brand-intro-overlay{display:none}html[data-brand-intro] .site-nav .nav-logo{visibility:visible}html[data-brand-intro] :is(.f-hero-image,.f-hero-title .f-line-mask){clip-path:none;animation:none}html[data-brand-intro] :is(.f-hero-overline,.f-hero-bottom,.f-hero-edition,.site-nav>nav,.nav-actions,.nav-brand-tagline){opacity:1;animation:none}}

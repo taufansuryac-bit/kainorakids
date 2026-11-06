@@ -1,0 +1,5 @@
+.kainora-rail-section{--rail-background:255 255 255;--rail-foreground:25 25 23;--rail-muted:105 105 96;--color-background:#fff;--color-foreground:#191917;--color-muted-foreground:#77776e;--color-border:#d0d0c8;background:#fff;border-top:1px solid #191917;padding:40px 0 20px;min-height:560px;scroll-margin-top:85px}
+.kainora-rail-placeholder{min-height:520px;display:grid;place-items:center;font-size:10px;letter-spacing:.08em;color:#6a6a60}
+.kainora-rail{font-family:Archivo,Arial,sans-serif}.kainora-rail>header h2{font-size:clamp(29px,4.5vw,65px);font-weight:850;line-height:1.05;letter-spacing:-.055em}.kainora-rail>header>p{font-size:9px;letter-spacing:.1em;font-weight:700;margin-bottom:12px}
+.kainora-rail>.pointer-events-none.absolute.inset-0{background:none!important}
+@media(max-width:767px){.kainora-rail-section{padding-top:18px;min-height:530px}.kainora-rail-placeholder{min-height:510px}.kainora-rail>header h2{font-size:30px}.kainora-rail>header{padding-inline:22px}.kainora-rail [data-stage]{margin-top:12px}}

@@ -1,0 +1,42 @@
+.f-product-marquee{padding:28px 0;background:#fff;color:#191917}
+.f-product-marquee-viewport{--edge:clamp(44px,9vw,150px);position:relative;isolation:isolate;display:block;width:100%;max-width:1440px;margin-inline:auto;padding:14px 0;overflow:hidden;border:0;background:transparent;color:inherit;font:inherit;text-align:left;cursor:pointer;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.f-product-marquee-viewport::before,.f-product-marquee-viewport::after{content:'';position:absolute;top:0;bottom:0;z-index:2;width:var(--edge);pointer-events:none;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.f-product-marquee-viewport::before{left:0;-webkit-mask-image:linear-gradient(90deg,#000,transparent);mask-image:linear-gradient(90deg,#000,transparent)}
+.f-product-marquee-viewport::after{right:0;-webkit-mask-image:linear-gradient(270deg,#000,transparent);mask-image:linear-gradient(270deg,#000,transparent)}
+.f-product-marquee-viewport:focus-visible{outline:2px solid #536509;outline-offset:-3px}
+.f-product-marquee-track{display:flex;width:max-content;animation:kainora-product-marquee 46s linear infinite;animation-play-state:var(--marquee-play-state,paused)}
+.f-product-marquee-group{display:flex;flex:none;align-items:center;justify-content:space-around;min-width:min(1440px,100vw)}
+.f-product-marquee-item{display:inline-flex;flex:none;align-items:center;gap:clamp(26px,3.4vw,52px);padding-right:clamp(26px,3.4vw,52px);white-space:nowrap;font-size:clamp(15px,1.4vw,21px);font-weight:650;line-height:1.5;letter-spacing:-.025em}
+.f-product-marquee-feature{display:inline-flex;align-items:center;gap:12px}
+.f-product-marquee-icon{flex:none;overflow:visible;color:#596d32}
+.f-product-marquee-icon,.f-product-marquee-icon>*{animation-duration:3.6s;animation-timing-function:ease-in-out;animation-delay:var(--icon-delay,0s);animation-iteration-count:infinite;animation-play-state:var(--marquee-play-state,paused);transform-box:fill-box;transform-origin:center}
+.f-product-marquee-icon--shirt{animation-name:kainora-icon-shirt}
+.f-product-marquee-icon--layers>path{animation-name:kainora-icon-layer}
+.f-product-marquee-icon--layers>path:nth-of-type(2){animation-delay:calc(var(--icon-delay) + .16s)}
+.f-product-marquee-icon--layers>path:nth-of-type(3){animation-delay:calc(var(--icon-delay) + .32s)}
+.f-product-marquee-icon--cotton{animation-name:kainora-icon-leaf;transform-origin:20% 90%}
+.f-product-marquee-icon--droplets>path{animation-name:kainora-icon-drop}
+.f-product-marquee-icon--droplets>path:last-child{animation-delay:calc(var(--icon-delay) + .25s)}
+.f-product-marquee-icon--durable>path:last-child{animation-name:kainora-icon-check;stroke-dasharray:12;stroke-dashoffset:0}
+.f-product-marquee-icon--stitch>*{transform-box:view-box;transform-origin:12px 12px;animation-name:kainora-icon-cut}
+.f-product-marquee-icon--stitch>:nth-child(3),.f-product-marquee-icon--stitch>:nth-child(4){animation-name:kainora-icon-cut-reverse}
+.f-product-marquee-separator{color:#99998f;font-size:.8em;font-weight:500}
+@keyframes kainora-product-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes kainora-icon-shirt{0%,55%,100%{transform:rotate(0deg) scaleX(1)}15%{transform:rotate(-7deg) scaleX(1.05)}30%{transform:rotate(5deg) scaleX(1.05)}42%{transform:rotate(-2deg) scaleX(1)}}
+@keyframes kainora-icon-layer{0%,50%,100%{transform:translateY(0)}22%{transform:translateY(-1.8px)}36%{transform:translateY(.6px)}}
+@keyframes kainora-icon-leaf{0%,55%,100%{transform:rotate(0deg)}18%{transform:rotate(-12deg)}34%{transform:rotate(8deg)}46%{transform:rotate(-3deg)}}
+@keyframes kainora-icon-drop{0%,55%,100%{transform:translateY(0) scale(1);opacity:1}20%{transform:translateY(-1.3px) scale(.88);opacity:.55}38%{transform:translateY(.8px) scale(1.03);opacity:1}}
+@keyframes kainora-icon-check{0%,8%{stroke-dashoffset:12;opacity:0}32%,100%{stroke-dashoffset:0;opacity:1}}
+@keyframes kainora-icon-cut{0%,50%,100%{transform:rotate(0deg)}18%,34%{transform:rotate(-10deg)}26%,42%{transform:rotate(3deg)}}
+@keyframes kainora-icon-cut-reverse{0%,50%,100%{transform:rotate(0deg)}18%,34%{transform:rotate(10deg)}26%,42%{transform:rotate(-3deg)}}
+@media(max-width:767px){.f-product-marquee{padding-block:20px}.f-product-marquee-viewport{padding-block:12px}.f-product-marquee-track{animation-duration:40s}.f-product-marquee-item{font-size:15px;gap:26px;padding-right:26px}.f-product-marquee-icon{width:23px;height:23px}.f-product-marquee-feature{gap:10px}}
+@media(prefers-reduced-motion:reduce){
+  .f-product-marquee-viewport{overflow:visible;-webkit-mask-image:none;mask-image:none;padding-inline:22px}
+  .f-product-marquee-viewport::before,.f-product-marquee-viewport::after{display:none}
+  .f-product-marquee-track{width:100%;animation:none}
+  .f-product-marquee-group{min-width:0;width:100%;flex-wrap:wrap;justify-content:center;gap:14px 22px}
+  .f-product-marquee-group[aria-hidden=true]{display:none}
+  .f-product-marquee-item{padding:0;gap:22px}
+  .f-product-marquee-item:last-child .f-product-marquee-separator{display:none}
+  .f-product-marquee-icon,.f-product-marquee-icon>*{animation:none!important;transform:none!important;stroke-dasharray:none!important;opacity:1!important}
+}
