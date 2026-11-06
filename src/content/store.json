@@ -12,7 +12,8 @@
       "bahan": "Soft 20S Organic Cotton",
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif BORN TO LEAD, warna hitam",
-      "desc": "Graphic tee anak motif BORN TO LEAD, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "desc": "Graphic tee anak motif BORN TO LEAD, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan panduan ukuran sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/born-to-lead-hitam-1ffb9c36e6-1600.webp",
       "images": [
         "/images/products/2026-11/born-to-lead-hitam-1ffb9c36e6-1600.webp",
@@ -26,6 +27,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -33,10 +39,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -49,12 +51,10 @@
           "image": "/images/products/2026-11/born-to-lead-putih-c92a355b18-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 1,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-boys",
@@ -68,6 +68,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif BOYS, warna hitam",
       "desc": "Graphic tee anak motif BOYS, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/boys-hitam-8a74c05f39-1600.webp",
       "images": [
         "/images/products/2026-11/boys-hitam-8a74c05f39-1600.webp",
@@ -81,6 +82,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -88,10 +94,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -104,12 +106,10 @@
           "image": "/images/products/2026-11/boys-putih-d9bcecb952-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 2,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-candy-kainora",
@@ -123,6 +123,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif CANDY KAINORA, warna hitam",
       "desc": "Graphic tee anak motif CANDY KAINORA, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/candy-kainora-hitam-c425cf8e97-1600.webp",
       "images": [
         "/images/products/2026-11/candy-kainora-hitam-c425cf8e97-1600.webp",
@@ -136,6 +137,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -143,10 +149,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -159,12 +161,10 @@
           "image": "/images/products/2026-11/candy-kainora-putih-56f4709b00-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 3,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-creativity",
@@ -178,6 +178,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif CREATIVITY, warna hitam",
       "desc": "Graphic tee anak motif CREATIVITY, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/creativity-hitam-8aece77dda-1600.webp",
       "images": [
         "/images/products/2026-11/creativity-hitam-8aece77dda-1600.webp",
@@ -191,6 +192,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -198,10 +204,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -214,12 +216,10 @@
           "image": "/images/products/2026-11/creativity-putih-4341eec862-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 4,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-dad-fix-everything",
@@ -233,6 +233,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif DAD FIX EVERYTHING, warna hitam",
       "desc": "Graphic tee anak motif DAD FIX EVERYTHING, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/dad-fix-everything-hitam-6951078761-1600.webp",
       "images": [
         "/images/products/2026-11/dad-fix-everything-hitam-6951078761-1600.webp",
@@ -246,6 +247,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -253,10 +259,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -269,12 +271,10 @@
           "image": "/images/products/2026-11/dad-fix-everything-putih-40cebec805-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 5,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-dinorex",
@@ -288,6 +288,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif DINOREX, warna hitam",
       "desc": "Graphic tee anak motif DINOREX, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/dinorex-hitam-95e8e4cd15-1600.webp",
       "images": [
         "/images/products/2026-11/dinorex-hitam-95e8e4cd15-1600.webp",
@@ -301,6 +302,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -308,10 +314,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -324,12 +326,10 @@
           "image": "/images/products/2026-11/dinorex-putih-f955eb410e-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 6,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-fresh-market",
@@ -343,6 +343,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif FRESH MARKET, warna hitam",
       "desc": "Graphic tee anak motif FRESH MARKET, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/fresh-market-hitam-8530f9db9f-1600.webp",
       "images": [
         "/images/products/2026-11/fresh-market-hitam-8530f9db9f-1600.webp",
@@ -356,6 +357,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -363,10 +369,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -379,12 +381,10 @@
           "image": "/images/products/2026-11/fresh-market-putih-451b0a0d93-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 7,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-future-girl",
@@ -398,6 +398,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif FUTURE GIRL, warna hitam",
       "desc": "Graphic tee anak motif FUTURE GIRL, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/future-girl-hitam-bec365afc7-1600.webp",
       "images": [
         "/images/products/2026-11/future-girl-hitam-bec365afc7-1600.webp",
@@ -411,6 +412,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -418,10 +424,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -434,12 +436,10 @@
           "image": "/images/products/2026-11/future-girl-putih-c475c23ff5-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 8,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-girl",
@@ -453,6 +453,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif GIRL, warna hitam",
       "desc": "Graphic tee anak motif GIRL, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/girl-hitam-edde569513-1600.webp",
       "images": [
         "/images/products/2026-11/girl-hitam-edde569513-1600.webp",
@@ -466,6 +467,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -473,10 +479,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -489,12 +491,10 @@
           "image": "/images/products/2026-11/girl-putih-c1a069910f-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 9,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-happy-kids-world",
@@ -508,6 +508,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif HAPPY KIDS WORLD, warna hitam",
       "desc": "Graphic tee anak motif HAPPY KIDS WORLD, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/happy-kids-world-hitam-40db148cbc-1600.webp",
       "images": [
         "/images/products/2026-11/happy-kids-world-hitam-40db148cbc-1600.webp",
@@ -521,6 +522,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -528,10 +534,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -544,12 +546,10 @@
           "image": "/images/products/2026-11/happy-kids-world-putih-afb437afe0-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 10,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-happy-little-girl",
@@ -563,6 +563,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif HAPPY LITTLE GIRL, warna hitam",
       "desc": "Graphic tee anak motif HAPPY LITTLE GIRL, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/happy-little-girl-hitam-a0f288ff8f-1600.webp",
       "images": [
         "/images/products/2026-11/happy-little-girl-hitam-a0f288ff8f-1600.webp",
@@ -576,6 +577,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -583,10 +589,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -599,12 +601,10 @@
           "image": "/images/products/2026-11/happy-little-girl-putih-bc314535f1-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 11,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-hello-world",
@@ -618,6 +618,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif HELLO WORLD, warna hitam",
       "desc": "Graphic tee anak motif HELLO WORLD, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/hello-world-hitam-33f5f4cb6b-1600.webp",
       "images": [
         "/images/products/2026-11/hello-world-hitam-33f5f4cb6b-1600.webp",
@@ -631,6 +632,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -638,10 +644,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -654,12 +656,10 @@
           "image": "/images/products/2026-11/hello-world-putih-97d4cee7f5-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 12,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-high-level",
@@ -673,6 +673,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif HIGH LEVEL, warna hitam",
       "desc": "Graphic tee anak motif HIGH LEVEL, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/high-level-hitam-b15b4fbaf1-1600.webp",
       "images": [
         "/images/products/2026-11/high-level-hitam-b15b4fbaf1-1600.webp",
@@ -686,6 +687,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -693,10 +699,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -709,12 +711,10 @@
           "image": "/images/products/2026-11/high-level-putih-b1db6dfad7-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 13,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-joy-juice",
@@ -728,6 +728,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif JOY JUICE, warna hitam",
       "desc": "Graphic tee anak motif JOY JUICE, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/joy-juice-hitam-2e31a541dc-1600.webp",
       "images": [
         "/images/products/2026-11/joy-juice-hitam-2e31a541dc-1600.webp",
@@ -741,6 +742,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -748,10 +754,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -764,12 +766,10 @@
           "image": "/images/products/2026-11/joy-juice-putih-dd6c062b29-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 14,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-kai-dps",
@@ -783,6 +783,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif KAI DPS, warna hitam",
       "desc": "Graphic tee anak motif KAI DPS, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/kai-dps-hitam-4a94f7e5d7-1600.webp",
       "images": [
         "/images/products/2026-11/kai-dps-hitam-4a94f7e5d7-1600.webp",
@@ -795,6 +796,10 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -802,9 +807,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -812,12 +814,10 @@
           "image": "/images/products/2026-11/kai-dps-hitam-4a94f7e5d7-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 15,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-kainora-cereal",
@@ -831,6 +831,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif KAINORA CEREAL, warna hitam",
       "desc": "Graphic tee anak motif KAINORA CEREAL, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/kainora-cereal-hitam-4348c75cff-1600.webp",
       "images": [
         "/images/products/2026-11/kainora-cereal-hitam-4348c75cff-1600.webp",
@@ -844,6 +845,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -851,10 +857,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -867,12 +869,10 @@
           "image": "/images/products/2026-11/kainora-cereal-putih-1bd0e95bb6-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 16,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-kainora-egg",
@@ -886,6 +886,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif KAINORA EGG, warna hitam",
       "desc": "Graphic tee anak motif KAINORA EGG, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/kainora-egg-hitam-5943294b7c-1600.webp",
       "images": [
         "/images/products/2026-11/kainora-egg-hitam-5943294b7c-1600.webp",
@@ -899,6 +900,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -906,10 +912,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -922,12 +924,10 @@
           "image": "/images/products/2026-11/kainora-egg-putih-22827e4c39-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 17,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-kainora-toys",
@@ -941,6 +941,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif KAINORA TOYS, warna hitam",
       "desc": "Graphic tee anak motif KAINORA TOYS, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/kainora-toys-hitam-a4130669ed-1600.webp",
       "images": [
         "/images/products/2026-11/kainora-toys-hitam-a4130669ed-1600.webp",
@@ -953,6 +954,10 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -960,9 +965,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -970,12 +972,10 @@
           "image": "/images/products/2026-11/kainora-toys-hitam-a4130669ed-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 18,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-keychain",
@@ -989,6 +989,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif KEYCHAIN, warna hitam",
       "desc": "Graphic tee anak motif KEYCHAIN, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/keychain-hitam-dfda5ee1fe-1600.webp",
       "images": [
         "/images/products/2026-11/keychain-hitam-dfda5ee1fe-1600.webp",
@@ -1002,6 +1003,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -1009,10 +1015,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -1025,12 +1027,10 @@
           "image": "/images/products/2026-11/keychain-putih-6244576c28-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 19,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-kind-tee",
@@ -1044,6 +1044,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif KIND TEE, warna hitam",
       "desc": "Graphic tee anak motif KIND TEE, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/kind-tee-hitam-0330ef1b92-1600.webp",
       "images": [
         "/images/products/2026-11/kind-tee-hitam-0330ef1b92-1600.webp",
@@ -1057,6 +1058,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -1064,10 +1070,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -1080,12 +1082,10 @@
           "image": "/images/products/2026-11/kind-tee-putih-23e35f6081-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 20,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-little-joyfull",
@@ -1099,6 +1099,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif LITTLE JOYFULL, warna hitam",
       "desc": "Graphic tee anak motif LITTLE JOYFULL, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/little-joyfull-hitam-640568356a-1600.webp",
       "images": [
         "/images/products/2026-11/little-joyfull-hitam-640568356a-1600.webp",
@@ -1112,6 +1113,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -1119,10 +1125,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -1135,12 +1137,10 @@
           "image": "/images/products/2026-11/little-joyfull-putih-a7615ef6a8-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 21,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-little-love-language",
@@ -1154,6 +1154,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif LITTLE LOVE LANGUAGE, warna hitam",
       "desc": "Graphic tee anak motif LITTLE LOVE LANGUAGE, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/little-love-language-hitam-a2f0c43073-1600.webp",
       "images": [
         "/images/products/2026-11/little-love-language-hitam-a2f0c43073-1600.webp",
@@ -1167,6 +1168,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -1174,10 +1180,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -1190,12 +1192,10 @@
           "image": "/images/products/2026-11/little-love-language-putih-50f021b31c-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 22,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-little-mona",
@@ -1209,6 +1209,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif LITTLE MONA, warna hitam",
       "desc": "Graphic tee anak motif LITTLE MONA, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/little-mona-hitam-edcaa4ef9a-1600.webp",
       "images": [
         "/images/products/2026-11/little-mona-hitam-edcaa4ef9a-1600.webp",
@@ -1221,6 +1222,10 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -1228,9 +1233,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -1238,12 +1240,10 @@
           "image": "/images/products/2026-11/little-mona-hitam-edcaa4ef9a-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 23,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-love",
@@ -1257,6 +1257,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif LOVE, warna hitam",
       "desc": "Graphic tee anak motif LOVE, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/love-hitam-a172f61150-1600.webp",
       "images": [
         "/images/products/2026-11/love-hitam-a172f61150-1600.webp",
@@ -1270,6 +1271,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -1277,10 +1283,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -1293,12 +1295,10 @@
           "image": "/images/products/2026-11/love-putih-b665641db8-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 24,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-mom-heals",
@@ -1312,6 +1312,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif MOM HEALS, warna hitam",
       "desc": "Graphic tee anak motif MOM HEALS, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/mom-heals-hitam-3058c87281-1600.webp",
       "images": [
         "/images/products/2026-11/mom-heals-hitam-3058c87281-1600.webp",
@@ -1325,6 +1326,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -1332,10 +1338,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -1348,12 +1350,10 @@
           "image": "/images/products/2026-11/mom-heals-putih-0ee50d8859-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 25,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-mystic-mind",
@@ -1367,6 +1367,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif MYSTIC MIND, warna hitam",
       "desc": "Graphic tee anak motif MYSTIC MIND, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/mystic-mind-hitam-dadeeea731-1600.webp",
       "images": [
         "/images/products/2026-11/mystic-mind-hitam-dadeeea731-1600.webp",
@@ -1380,6 +1381,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -1387,10 +1393,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -1403,12 +1405,10 @@
           "image": "/images/products/2026-11/mystic-mind-putih-a35037f3c5-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 26,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-one-sweet-world",
@@ -1422,6 +1422,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif ONE SWEET WORLD, warna hitam",
       "desc": "Graphic tee anak motif ONE SWEET WORLD, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/one-sweet-world-hitam-88c3e91ffb-1600.webp",
       "images": [
         "/images/products/2026-11/one-sweet-world-hitam-88c3e91ffb-1600.webp",
@@ -1435,6 +1436,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -1442,10 +1448,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -1458,12 +1460,10 @@
           "image": "/images/products/2026-11/one-sweet-world-putih-53620c1b3c-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 27,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-slide-of-a-good-day",
@@ -1477,6 +1477,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif SLIDE OF A GOOD DAY, warna hitam",
       "desc": "Graphic tee anak motif SLIDE OF A GOOD DAY, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/slide-of-a-good-day-hitam-7f0b4a384e-1600.webp",
       "images": [
         "/images/products/2026-11/slide-of-a-good-day-hitam-7f0b4a384e-1600.webp",
@@ -1490,6 +1491,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -1497,10 +1503,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -1513,12 +1515,10 @@
           "image": "/images/products/2026-11/slide-of-a-good-day-putih-92c68ae172-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 28,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-super-cool-kids",
@@ -1532,6 +1532,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif SUPER COOL KIDS, warna hitam",
       "desc": "Graphic tee anak motif SUPER COOL KIDS, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/super-cool-kids-hitam-05ef1634d3-1600.webp",
       "images": [
         "/images/products/2026-11/super-cool-kids-hitam-05ef1634d3-1600.webp",
@@ -1545,6 +1546,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -1552,10 +1558,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -1568,12 +1570,10 @@
           "image": "/images/products/2026-11/super-cool-kids-putih-807bc3e1b6-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 29,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-superhero-toy-machine",
@@ -1587,6 +1587,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif SUPERHERO TOY MACHINE, warna hitam",
       "desc": "Graphic tee anak motif SUPERHERO TOY MACHINE, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/superhero-toy-machine-hitam-cfbfbc6e5c-1600.webp",
       "images": [
         "/images/products/2026-11/superhero-toy-machine-hitam-cfbfbc6e5c-1600.webp",
@@ -1600,6 +1601,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -1607,10 +1613,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -1623,12 +1625,10 @@
           "image": "/images/products/2026-11/superhero-toy-machine-putih-5961975afa-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 30,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-unleash-the-power",
@@ -1642,6 +1642,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif UNLEASH THE POWER, warna hitam",
       "desc": "Graphic tee anak motif UNLEASH THE POWER, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/unleash-the-power-hitam-67e54fcf04-1600.webp",
       "images": [
         "/images/products/2026-11/unleash-the-power-hitam-67e54fcf04-1600.webp",
@@ -1655,6 +1656,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -1662,10 +1668,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -1678,12 +1680,10 @@
           "image": "/images/products/2026-11/unleash-the-power-putih-a66d2897a7-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 31,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-waffle-kainora",
@@ -1697,6 +1697,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif WAFFLE KAINORA, warna hitam",
       "desc": "Graphic tee anak motif WAFFLE KAINORA, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/waffle-kainora-hitam-35b4b64693-1600.webp",
       "images": [
         "/images/products/2026-11/waffle-kainora-hitam-35b4b64693-1600.webp",
@@ -1710,6 +1711,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -1717,10 +1723,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -1733,12 +1735,10 @@
           "image": "/images/products/2026-11/waffle-kainora-putih-ff18bf66ef-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 32,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     },
     {
       "id": "new-wild-animals",
@@ -1752,6 +1752,7 @@
       "jahitan": "",
       "alt": "Graphic tee oversize anak Kainora Kids motif WILD ANIMALS, warna hitam",
       "desc": "Graphic tee anak motif WILD ANIMALS, berbahan Soft 20S Organic Cotton dengan potongan oversize. Tersedia dalam ukuran S, M, L, XL, dan XXL. Bandingkan ukuran kaos dengan size chart sebelum memesan.",
+      "availability": "InStock",
       "img": "/images/products/2026-11/wild-animals-hitam-6bb8c66d74-1600.webp",
       "images": [
         "/images/products/2026-11/wild-animals-hitam-6bb8c66d74-1600.webp",
@@ -1765,6 +1766,11 @@
         "XL",
         "XXL"
       ],
+      "ages": [],
+      "colors": [
+        "#111111",
+        "#FFFFFF"
+      ],
       "sizePrices": {
         "S": 89000,
         "M": 89000,
@@ -1772,10 +1778,6 @@
         "XL": 94000,
         "XXL": 94000
       },
-      "colors": [
-        "#111111",
-        "#FFFFFF"
-      ],
       "colorVariants": [
         {
           "name": "Hitam",
@@ -1788,12 +1790,10 @@
           "image": "/images/products/2026-11/wild-animals-putih-5d492551ea-1600.webp"
         }
       ],
-      "ages": [],
       "price": 89000,
       "order": 33,
       "photoOnly": false,
-      "catalogPreview": false,
-      "availability": "InStock"
+      "catalogPreview": false
     }
   ],
   "highlights": [
@@ -1988,6 +1988,18 @@
       "productId": ""
     }
   ],
+  "promotions": [
+    {
+      "id": "promotion-left",
+      "image": "/images/kainora-owned/hero-garden.webp",
+      "alt": "Dua anak memakai kaos grafis Kainora di taman bunga"
+    },
+    {
+      "id": "promotion-right",
+      "image": "/images/kainora-owned/hero-blue.webp",
+      "alt": "Anak memakai koleksi Kainora di depan bangku kuning dan latar biru"
+    }
+  ],
   "arrivals": [
     {
       "id": "arrival-black",
@@ -2042,18 +2054,6 @@
       "front": "/images/new-arrival/templates/white-front.png",
       "back": "/images/new-arrival/templates/white-back.png",
       "side": "/images/new-arrival/templates/white-side.png"
-    }
-  ],
-  "promotions": [
-    {
-      "id": "promotion-left",
-      "image": "/images/kainora-owned/hero-garden.webp",
-      "alt": "Dua anak memakai kaos grafis Kainora di taman bunga"
-    },
-    {
-      "id": "promotion-right",
-      "image": "/images/kainora-owned/hero-blue.webp",
-      "alt": "Anak memakai koleksi Kainora di depan bangku kuning dan latar biru"
     }
   ]
 }
