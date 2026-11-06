@@ -4,15 +4,16 @@ import { readFile, mkdtemp, mkdir, writeFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { validateContent, referencedMedia, removeProduct, MAX_ARRIVALS } from '../shared/contentSchema.js';
+import * as schema from '../shared/contentSchema.js';
 import { createLocalAdmin } from '../tools/admin-local.js';
 
 const source = JSON.parse(await readFile(new URL('../src/content/store.json', import.meta.url), 'utf8'));
 test('catalogue links persist for arrivals, reject dangling IDs and clear on product removal', () => {
-  const data = structuredClone(source); data.arrivals[0].productId = '4';
+  const data = structuredClone(source); data.arrivals[0].productId = 'new-born-to-lead';
   const saved = validateContent(data);
-  assert.equal(saved.arrivals[0].productId, '4');
-  assert.equal(removeProduct(saved, 4).arrivals[0].productId, '');
-  assert.doesNotThrow(() => validateContent(removeProduct(saved, 4)));
+  assert.equal(saved.arrivals[0].productId, 'new-born-to-lead');
+  assert.equal(removeProduct(saved, 'new-born-to-lead').arrivals[0].productId, '');
+  assert.doesNotThrow(() => validateContent(removeProduct(saved, 'new-born-to-lead')));
   data.arrivals[0].productId = 'missing-product';
   assert.throws(() => validateContent(data), /Tautan produk New Arrival/);
 });
@@ -24,16 +25,46 @@ test('New Arrival accepts its three local views and preserves every image refere
   assert.equal(saved.arrivals.filter(item => item.color === 'white').length, 3);
   const refs = referencedMedia(saved);
   for (const item of saved.arrivals) for (const side of ['front','back','side']) assert.ok(refs.has(item[side]));
-  assert.deepEqual(saved.arrivals, source.arrivals);
+  assert.deepEqual(saved.arrivals.map(({initialView,...item}) => item), source.arrivals);
+  assert.ok(saved.arrivals.every(item => item.initialView === 'front'));
   const legacy = { ...source }; delete legacy.arrivals;
   assert.equal('arrivals' in validateContent(legacy), false);
 });
-test('New Arrival rejects missing views, unsafe paths, duplicate IDs and excessive slots', () => {
-  for (const change of [data => data.arrivals[0].side = '', data => data.arrivals[0].front = '//evil.test/shirt.png', data => data.arrivals[0].color = 'red', data => data.arrivals.push(data.arrivals[0])]) {
+test('New Arrival rejects no front/back image, unsafe paths, invalid starting views, duplicate IDs and excessive slots', () => {
+  for (const change of [data => { data.arrivals[0].front = ''; data.arrivals[0].back = ''; }, data => data.arrivals[0].front = '//evil.test/shirt.png', data => data.arrivals[0].initialView = 'side', data => data.arrivals[0].color = 'red', data => data.arrivals.push(data.arrivals[0])]) {
     const data = structuredClone(source); change(data); assert.throws(() => validateContent(data));
   }
   assert.throws(() => validateContent({ ...source, arrivals: Array.from({ length: 11 }, (_, index) => ({ ...source.arrivals[0], id: `slot-${index}` })) }));
   assert.equal(validateContent({ ...source, arrivals: [] }).arrivals.length, 0);
+});
+
+test('front-only and back-only arrivals save without a side image and retain a valid starting face', () => {
+  for(const [front,back,want] of [['/front.png','','front'],['','/back.png','back']]) {
+    const data=structuredClone(source);
+    data.arrivals=[{...data.arrivals[0],front,back,side:'',initialView:want==='front'?'back':'front'}];
+    const saved=validateContent(data);
+    assert.equal(saved.arrivals[0].initialView,want);
+    assert.equal(saved.arrivals[0].front,front);
+    assert.equal(saved.arrivals[0].back,back);
+    assert.equal(saved.arrivals[0].side,'');
+    const refs=referencedMedia(saved);
+    assert.ok(refs.has(front||back));
+    assert.ok(!refs.has(''));
+  }
+});
+
+test('two-sided arrivals preserve a back-first choice through validation', () => {
+  const data=structuredClone(source);data.arrivals[0].initialView='back';
+  assert.equal(validateContent(data).arrivals[0].initialView,'back');
+});
+
+test('display state exposes only real faces and chooses the matching initial image orientation', () => {
+  for(const [entry,want] of [
+    [{front:'/front.png'}, {views:['front'],initialView:'front',initialAngle:0}],
+    [{back:'/back.png'}, {views:['back'],initialView:'back',initialAngle:180}],
+    [{front:'/front.png',initialView:'back'}, {views:['front'],initialView:'front',initialAngle:0}],
+    [{front:'/front.png',back:'/back.png',initialView:'back'}, {views:['front','back'],initialView:'back',initialAngle:180}],
+  ]) assert.deepEqual(schema.arrivalViews?.(entry),want);
 });
 test('all six PNG templates retain the matched full 1024 x 1536 RGBA canvas', async () => {
   for (const color of ['black','white']) for (const side of ['front','back','side']) {

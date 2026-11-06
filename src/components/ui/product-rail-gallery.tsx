@@ -5,6 +5,7 @@ import * as React from "react";
 import { createPortal } from "react-dom";
 import "./product-rail-material.css";
 import { ProductFocusInfo } from "../fashion/ProductFocusInfo";
+import { arrivalViews } from "../../../shared/contentSchema";
 
 const useBrowserLayoutEffect = typeof window === "undefined" ? React.useEffect : React.useLayoutEffect;
 
@@ -27,8 +28,9 @@ export interface RailGarment {
   trim?: string;
   /** Front photo. Best as a transparent cut-out on a 200 × 310 portrait canvas. Front, back and side photos of one piece must share the same canvas and scale, or the piece changes size as it turns. */
   image?: string;
-  /** Back photo; the front photo is reused when omitted. */
+  /** Back photo. A single supplied photo is displayed without flip controls. */
   backImage?: string;
+  initialView?: "front" | "back";
   /** Side-on photo shown while the piece rests on the rail; omit to show the front photo turned away. */
   sideImage?: string;
   /** Fraction of the portrait canvas occupied by the garment (local previews). */
@@ -606,10 +608,11 @@ export function ClothingRailHero({
   const returnFocus = React.useRef(null as number | null);
   const pendingOpen = React.useRef(-1);
   const pointer = React.useRef({ id: -1, index: -1, x: 0, y: 0, t: 0, moved: false, kind: "", swipe: 0, lastX: 0, lastT: 0, v: 0 });
-  const sideWidths = React.useMemo(() => items.map((item) => (item.image ? (item.sideImage ? 0.3 : 0.4) : SIDE[item.kind ?? "tee"].width)), [items]);
+  const photoViews = React.useMemo(() => items.map(item => arrivalViews({ front: item.image, back: item.backImage, initialView: item.initialView })), [items]);
+  const sideWidths = React.useMemo(() => items.map((item) => ((item.image || item.backImage) ? (item.sideImage ? 0.3 : 0.4) : SIDE[item.kind ?? "tee"].width)), [items]);
   const railHooks = React.useMemo(() => items.map(item => !!item.railHook), [items]);
-  const live = React.useRef({ active: null as number | null, size, reduced, count, openIndex: null as number | null, carouselIndex: 0, sideWidths, railHooks });
-  live.current = { ...live.current, active, size, reduced, count, openIndex, sideWidths, railHooks };
+  const live = React.useRef({ active: null as number | null, size, reduced, count, openIndex: null as number | null, carouselIndex: 0, sideWidths, railHooks, photoViews });
+  live.current = { ...live.current, active, size, reduced, count, openIndex, sideWidths, railHooks, photoViews };
 
   const carouselIndex = size.carousel ? (active ?? live.current.carouselIndex) : null;
 
@@ -671,7 +674,7 @@ export function ClothingRailHero({
     const tu = turns.current[i];
     const sd = sides.current[i];
     if (tu) {
-      tu.style.transform = `perspective(${PERSPECTIVE}px) rotateY(${angle.toFixed(2)}deg)`;
+      tu.style.transform = `perspective(${PERSPECTIVE}px) rotateY(${(angle + live.current.photoViews[i].initialAngle).toFixed(2)}deg)`;
       tu.style.opacity = sd ? clamp((e - 0.44) / 0.12, 0, 1).toFixed(3) : "1";
     }
     if (sd) {
@@ -998,7 +1001,12 @@ export function ClothingRailHero({
           const color = item.color ?? "var(--color-muted-foreground)";
           const trim = item.trim ?? mix(color, -0.12);
           const turned = active === i;
-          const mask = item.image ? `url("${item.image}")` : silhouetteMask(kind, "front");
+          const presentation = photoViews[i];
+          const hasPhotos = presentation.views.length > 0;
+          const initialView = presentation.initialView || "front";
+          const faces = (hasPhotos ? presentation.views : ["front", "back"]) as ("front" | "back")[];
+          const primaryImage = initialView === "back" ? item.backImage : item.image;
+          const mask = hasPhotos ? `url("${primaryImage}")` : silhouetteMask(kind, "front");
           const photoBox = hanger === "none" ? "inset-0" : "inset-x-0 bottom-0 top-[8%]";
           return (
             <button
@@ -1021,24 +1029,24 @@ export function ClothingRailHero({
                   {/* Fade the already-blurred shadow to zero before its bounds.
                       A hard clip here would cut the blur into a visible rectangle. */}
                   <span data-shadow-blur className="absolute inset-0" style={{ filter: `blur(${Math.max(3, h * (item.railHook ? .03 : .022)).toFixed(1)}px)`, ...(item.railHook ? { maskImage: "linear-gradient(to bottom, transparent 19%, #000 28%, #000 82%, transparent)", WebkitMaskImage: "linear-gradient(to bottom, transparent 19%, #000 28%, #000 82%, transparent)" } : {}) }}>
-                    <span ref={(node) => { shadows.current[i] = node; }} className={`absolute block bg-black opacity-[0.16] dark:opacity-60 ${item.image ? photoBox : "inset-0"}`} style={{ WebkitMask: `${mask} top center / contain no-repeat`, mask: `${mask} top center / contain no-repeat`, opacity: item.railHook ? .13 : undefined }} />
+                    <span ref={(node) => { shadows.current[i] = node; }} className={`absolute block bg-black opacity-[0.16] dark:opacity-60 ${hasPhotos ? photoBox : "inset-0"}`} style={{ WebkitMask: `${mask} top center / contain no-repeat`, mask: `${mask} top center / contain no-repeat`, opacity: item.railHook ? .13 : undefined }} />
                   </span>
                 </span>
-                {(item.sideImage || !item.image) && (
+                {(item.sideImage || !hasPhotos) && (
                   <span ref={(node) => { sides.current[i] = node; }} data-face="side" className="absolute inset-0" style={{ transform: `perspective(${PERSPECTIVE}px) rotateY(0deg)`, clipPath: item.railHook ? "inset(21% 0 0 0)" : undefined }}>
                     <SideHanger uid={uid} material={hanger} />
                     {item.sideImage ? <Photo src={item.sideImage} alt="" full={hanger === "none"} frame={item.imageFrames?.side} /> : <SideArt uid={uid} kind={kind} color={color} trim={trim} />}
                   </span>
                 )}
-                <span ref={(node) => { turns.current[i] = node; }} data-turn className="absolute inset-0 rounded-lg [transform-style:preserve-3d]" style={{ transform: `perspective(${PERSPECTIVE}px) rotateY(${REST}deg)`, opacity: item.image && !item.sideImage ? 1 : 0, clipPath: item.railHook ? "inset(21% 0 0 0)" : undefined }}>
-                  {(["front", "back"] as const).map((side) => (
+                <span ref={(node) => { turns.current[i] = node; }} data-turn className="absolute inset-0 rounded-lg [transform-style:preserve-3d]" style={{ transform: `perspective(${PERSPECTIVE}px) rotateY(${REST + presentation.initialAngle}deg)`, opacity: hasPhotos && !item.sideImage ? 1 : 0, clipPath: item.railHook ? "inset(21% 0 0 0)" : undefined }}>
+                  {faces.map((side) => (
                     <span key={side} data-face={side} className="absolute inset-0 [backface-visibility:hidden]" style={{ transform: side === "back" ? "rotateY(180deg)" : undefined, ["--garment-color" as string]: color, ["--garment-under" as string]: mix(color, -0.42) }}>
-                      <Hanger uid={uid} side={side} kind={item.image ? null : kind} material={hanger} />
-                      <span ref={side === "front" ? (node) => { drapes.current[i] = node; } : undefined} data-drape className="absolute inset-0 origin-top [transform:skewX(var(--drape,0deg))]" style={side === "back" ? { transform: "skewX(calc(var(--drape, 0deg) * -1))" } : undefined}>
-                        {item.image
-                          ? <Photo src={(side === "back" ? item.backImage : undefined) ?? item.image} alt="" full={hanger === "none"} frame={item.imageFrames?.[side]} />
+                      <Hanger uid={uid} side={side} kind={hasPhotos ? null : kind} material={hanger} />
+                      <span ref={side === initialView ? (node) => { drapes.current[i] = node; } : undefined} data-drape className="absolute inset-0 origin-top [transform:skewX(var(--drape,0deg))]" style={side === "back" ? { transform: "skewX(calc(var(--drape, 0deg) * -1))" } : undefined}>
+                        {hasPhotos
+                          ? <Photo src={(side === "back" ? item.backImage : item.image)!} alt="" full={hanger === "none"} frame={item.imageFrames?.[side]} />
                           : <Fabric uid={uid} kind={kind} side={side} color={color} trim={trim} artwork={item.artwork} />}
-                        <span ref={side === "front" ? (node) => { shades.current[i] = node; } : undefined} className={`pointer-events-none absolute bg-black ${item.image ? photoBox : "inset-0"}`} style={{ opacity: "var(--shade, 0.2)", WebkitMask: `${item.image ? `url("${(side === "back" ? item.backImage : undefined) ?? item.image}")` : silhouetteMask(kind, side)} top center / contain no-repeat`, mask: `${item.image ? `url("${(side === "back" ? item.backImage : undefined) ?? item.image}")` : silhouetteMask(kind, side)} top center / contain no-repeat` }} />
+                        <span ref={side === initialView ? (node) => { shades.current[i] = node; } : undefined} className={`pointer-events-none absolute bg-black ${hasPhotos ? photoBox : "inset-0"}`} style={{ opacity: "var(--shade, 0.2)", WebkitMask: `${hasPhotos ? `url("${side === "back" ? item.backImage : item.image}")` : silhouetteMask(kind, side)} top center / contain no-repeat`, mask: `${hasPhotos ? `url("${side === "back" ? item.backImage : item.image}")` : silhouetteMask(kind, side)} top center / contain no-repeat` }} />
                       </span>
                     </span>
                   ))}
@@ -1077,6 +1085,7 @@ export function ClothingRailHero({
 
       {openIndex !== null && items[openIndex] && (
         <Detail
+          key={items[openIndex].id}
           uid={uid}
           item={items[openIndex]}
           index={openIndex}
@@ -1109,9 +1118,12 @@ function Detail({ uid, item, index, total, hanger, labels, reduced, source, onLi
   const figureRef = React.useRef(null as HTMLDivElement | null);
   const spinRef = React.useRef(null as HTMLDivElement | null);
   const closeRef = React.useRef(null as HTMLButtonElement | null);
-  const [side, setSide] = React.useState("front" as "front" | "back");
+  const presentation = arrivalViews({ front: item.image, back: item.backImage, initialView: item.initialView });
+  const hasPhotos = presentation.views.length > 0;
+  const views = (hasPhotos ? presentation.views : ["front", "back"]) as ("front" | "back")[];
+  const [side, setSide] = React.useState((presentation.initialView || "front") as "front" | "back");
   const [shown, setShown] = React.useState(false);
-  const angle = React.useRef({ value: 0, target: 0, velocity: 0, raf: 0, last: 0 });
+  const angle = React.useRef({ value: presentation.initialAngle, target: presentation.initialAngle, velocity: 0, raf: 0, last: 0 });
   const closing = React.useRef(false);
   const kind = item.kind ?? "tee";
   const color = item.color ?? "var(--color-muted-foreground)";
@@ -1136,13 +1148,14 @@ function Detail({ uid, item, index, total, hanger, labels, reduced, source, onLi
   }, [reduced]);
 
   const turnTo = React.useCallback((next: "front" | "back") => {
+    if (!views.includes(next)) return;
     const a = angle.current;
     const base = Math.round(a.value / 360) * 360;
     a.target = base + (next === "back" ? 180 : 0);
     if (Math.abs(a.target - a.value) > 180) a.target -= 360 * Math.sign(a.target - a.value);
     setSide(next);
     spin();
-  }, [spin]);
+  }, [spin, views]);
 
   useBrowserLayoutEffect(() => {
     const figure = figureRef.current;
@@ -1216,12 +1229,12 @@ function Detail({ uid, item, index, total, hanger, labels, reduced, source, onLi
         className="absolute inset-0 touch-pan-y select-none"
         style={{ perspective: "1400px" }}
       >
-        <div ref={spinRef} className="absolute inset-0 [transform-style:preserve-3d]">
-          {(["front", "back"] as const).map((face) => (
-            <div key={face} className="absolute inset-0 [backface-visibility:hidden]" style={{ transform: face === "back" ? "rotateY(180deg)" : undefined, ["--garment-color" as string]: color, ["--garment-under" as string]: mix(color, -0.42) }}>
-              <Hanger uid={uid} side={face} kind={item.image ? null : kind} material={hanger} />
-              {item.image
-                ? <Photo src={(face === "back" ? item.backImage : undefined) ?? item.image} alt={face === "front" ? item.name : ""} full={hanger === "none"} frame={item.imageFrames?.[face]} />
+        <div ref={spinRef} className="absolute inset-0 [transform-style:preserve-3d]" style={{ transform: `rotateY(${angle.current.value}deg)` }}>
+          {views.map((face) => (
+            <div key={face} data-detail-face={face} aria-hidden={side !== face} className="absolute inset-0 [backface-visibility:hidden]" style={{ transform: face === "back" ? "rotateY(180deg)" : undefined, ["--garment-color" as string]: color, ["--garment-under" as string]: mix(color, -0.42) }}>
+              <Hanger uid={uid} side={face} kind={hasPhotos ? null : kind} material={hanger} />
+              {hasPhotos
+                ? <Photo src={(face === "back" ? item.backImage : item.image)!} alt={`${item.name}, ${face === "front" ? labels.front : labels.back}`} full={hanger === "none"} frame={item.imageFrames?.[face]} />
                 : <Fabric uid={uid} kind={kind} side={face} color={color} trim={trim} artwork={item.artwork} />}
             </div>
           ))}
@@ -1240,21 +1253,21 @@ function Detail({ uid, item, index, total, hanger, labels, reduced, source, onLi
       <div className="rail-detail-layout relative grid w-full max-w-5xl items-center gap-10 pt-10 md:grid-cols-[minmax(0,1fr)_minmax(0,22rem)]">
         {stage}
         <div className={`garment-focus-details rail-detail-information text-left transition-[opacity,transform] delay-150 duration-500 motion-reduce:transition-none ${shown ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"}`}>
-          <p className="rail-detail-count">{String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}</p>
+          <p className="rail-detail-count">{index + 1} / {total}</p>
           <ProductFocusInfo titleId={titleId} name={item.name} description={item.description} colorName={item.colorLabel || item.color || '—'} product={item.product} />
           {item.details && item.details.length > 0 && (
             <ul className="flex flex-wrap justify-center gap-2 md:justify-start">
               {item.details.map((detail) => <li key={detail} className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">{detail}</li>)}
             </ul>
           )}
-          <div role="group" aria-label={`${labels.front} / ${labels.back}`} className="mt-6 inline-flex justify-start gap-6">
-            {(["front", "back"] as const).map((face) => (
+          {views.length > 1 && <div role="group" aria-label={`${labels.front} / ${labels.back}`} className="mt-6 inline-flex justify-start gap-6">
+            {views.map((face) => (
               <button key={face} type="button" aria-pressed={side === face} onClick={() => turnTo(face)} className={`relative pb-1.5 text-sm outline-none transition-colors focus-visible:ring-2 focus-visible:ring-ring ${side === face ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`}>
                 {face === "front" ? labels.front : labels.back}
                 <span aria-hidden="true" className={`absolute inset-x-0 bottom-0 h-px origin-left bg-foreground transition-transform duration-300 motion-reduce:transition-none ${side === face ? "scale-x-100" : "scale-x-0"}`} />
               </button>
             ))}
-          </div>
+          </div>}
         </div>
       </div>
     </div>,

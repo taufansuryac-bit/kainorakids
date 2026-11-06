@@ -9,7 +9,7 @@
     "dev:admin": "vite --mode admin",
     "test:3d-grid": "node --test scripts/test-garment-grid.mjs",
     "test:new-arrival": "node --test scripts/test-new-arrival.mjs",
-    "test:admin": "node --test scripts/test-content-admin.mjs scripts/test-admin-server.mjs scripts/test-admin-local.mjs scripts/test-garment-rail.mjs scripts/test-garment-print-scale.mjs scripts/test-product-pricing.mjs scripts/test-admin-upload-state.mjs scripts/test-promotions.mjs",
+    "test:admin": "node --test scripts/test-content-admin.mjs scripts/test-admin-server.mjs scripts/test-admin-local.mjs scripts/test-garment-rail.mjs scripts/test-garment-print-scale.mjs scripts/test-product-pricing.mjs scripts/test-admin-upload-state.mjs scripts/test-promotions.mjs scripts/test-new-arrival.mjs",
     "build": "vite build && node scripts/build-journal.js && node scripts/build-products.mjs && node scripts/build-buyer-guides.mjs && node scripts/build-home.mjs && node scripts/hydrate-storefront.mjs",
     "build:cloudflare": "vite build --mode cloudflare && node scripts/build-journal.js && node scripts/build-products.mjs && node scripts/build-buyer-guides.mjs && node scripts/build-home.mjs && node scripts/hydrate-storefront.mjs && node scripts/check-cloudflare-assets.mjs",
     "test:buyers": "node --test scripts/test-buyer-commerce.mjs",

@@ -3,6 +3,7 @@ import { useInView } from 'motion/react';
 import { useStore } from '../../context/StoreContext';
 import arrivalImageFrames from '../../content/arrivalImageFrames.json';
 import HeroText from '../ui/hero-shutter-text';
+import { arrivalViews } from '../../../shared/contentSchema';
 import './product-rail.css';
 
 const ClothingRailHero = lazy(() => import('../ui/product-rail-gallery'));
@@ -17,7 +18,7 @@ export function ProductRailSection() {
   useEffect(() => { const update = () => setPageVisible(!document.hidden); update(); document.addEventListener('visibilitychange', update); return () => document.removeEventListener('visibilitychange', update); }, []);
   const items = useMemo(() => (content.arrivals || []).map(entry => ({
     id: entry.id, name: entry.name, kind: 'tee', color: entry.color === 'black' ? '#191919' : '#fff',
-    image: entry.front, backImage: entry.back, sideImage: entry.side, imageHem: .86, hookOffset: .13, railHook: true,
+    image: entry.front, backImage: entry.back, sideImage: entry.side, initialView: arrivalViews(entry).initialView, imageHem: .86, hookOffset: .13, railHook: true,
     imageFrames: Object.fromEntries(['front','back','side'].map(view => [view, arrivalImageFrames[`${entry.color}-${view}`]])),
     description: entry.description,
     colorLabel: entry.color === 'black' ? 'Hitam' : 'Putih', product: products.find(product => String(product.id) === entry.productId),

@@ -27,6 +27,11 @@ export function mediaPath(value, required = false) {
   if (!path.startsWith('/') || path.startsWith('//') || /[\\?#]/.test(decoded) || [...decoded].some(char => char.charCodeAt(0) < 32) || decoded.includes('..') || !/\.(png|webp|jpe?g)$/i.test(decoded)) fail('Gunakan gambar lokal PNG, WebP atau JPG.');
   return path;
 }
+export function arrivalViews(item) {
+  const views = ['front', 'back'].filter(view => !!item[view]);
+  const initialView = views.includes(item.initialView) ? item.initialView : views[0];
+  return { views, initialView, initialAngle: initialView === 'back' ? 180 : 0 };
+}
 export function validateContent(input) {
   if (!input || input.version !== 1) fail('Versi konten tidak didukung.');
   const products = list(input.products, 500).map(p => {
@@ -95,7 +100,10 @@ export function validateContent(input) {
     result.arrivals = list(input.arrivals, MAX_ARRIVALS).map(item => {
       if (!item || !['black', 'white'].includes(item.color)) fail('Warna New Arrival tidak valid.');
       const entry = { id: id(item.id), name: text(item.name, 120, true), description: text(item.description, 500), color: item.color,
-        front: mediaPath(item.front, true), back: mediaPath(item.back, true), side: mediaPath(item.side, true) };
+        front: mediaPath(item.front), back: mediaPath(item.back), side: mediaPath(item.side) };
+      if (!entry.front && !entry.back) fail('Upload minimal satu gambar depan atau belakang untuk New Arrival.');
+      if (item.initialView !== undefined && !['front', 'back'].includes(item.initialView)) fail('Tampak awal New Arrival tidak valid.');
+      entry.initialView = arrivalViews({ ...entry, initialView: item.initialView }).initialView;
       if (item.productId !== undefined) {
         entry.productId = item.productId ? id(item.productId) : '';
         if (entry.productId && !productIds.includes(entry.productId)) fail('Tautan produk New Arrival tidak ditemukan.');
