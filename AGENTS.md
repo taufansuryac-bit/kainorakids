@@ -13,6 +13,7 @@
 ## Implementasi dan pemeriksaan
 
 - Pertahankan perubahan pengguna yang sudah ada. Banyak file dapat memiliki perubahan lokal sebelum tugas dimulai.
+- Admin produksi dan publikasi otomatis mengikuti `docs/ADMIN_PUBLISHING.md`. Sumber produksi berada di branch GitHub `admin-production`; baca revisi terbaru sebelum deploy atau mengubah katalog. Jangan menimpa konten/gambar yang diterbitkan admin dengan salinan lokal lama atau melakukan force-push.
 - Periksa komponen aktif, komponen alternatif, `src/content/store.json`, modal, pesan kosong/error, aksesibilitas, serta `scripts/build-*.mjs`/`.js` agar teks lama tidak kembali lewat HTML statis.
 - Teks yang dibuat asisten chat dan generator deskripsi admin wajib mengikuti pedoman yang sama.
 - Pertahankan URL/canonical yang sudah ada saat menyunting teks. Pastikan title, deskripsi, H1, HTML statis, tampilan setelah JavaScript, dan JSON-LD konsisten. Hindari pengulangan keyword dan jangan menciptakan fakta hanya untuk SEO/AI SEO.
